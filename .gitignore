@@ -15,6 +15,9 @@
 # Permit .yml files in .github subdirectories for continuous integration
 !.github/**/*.yml
 
+# Permit .tex files in the directory config for the latex template
+!config/**/*.tex
+
 # Permit .tex files from second level of repository
 # (interni or esterni/doc/)
 !*/*/**/*.tex

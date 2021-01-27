@@ -1,0 +1,151 @@
+\usepackage[italian]{babel}
+\usepackage[margin=20mm, footskip = 20pt]{geometry}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{titling}
+\usepackage{lastpage}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{soulutf8}
+\usepackage{contour}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\usepackage{background}
+\usepackage{lmodern,textcomp} %per simbolo euro
+\usepackage{lastpage}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+
+% definizione dei percorsi in cui cercare immagini
+\graphicspath{ {./}
+    {./src/img/}
+}
+
+% setup della sottolineatura
+\setuldepth{Flat}
+\contourlength{0.8pt}
+
+\newcommand{\uline}[1]{%
+  \ul{{\phantom{#1}}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% setup dei link
+\hypersetup{
+  % set true if you want colored links (instead of boxes)
+  colorlinks=true,
+  % set to all if you want both sections and subsections linked
+  linktoc=all,
+  % set color for file links
+  filecolor=blue,
+  % set color for internal links
+  linkcolor=black,
+  % set url color
+  urlcolor=blue,
+  % set characters encoding in the bookmarks tab
+  pdfencoding=unicode,
+}
+
+% setup forma \paragraph e \subparagraph
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+% setup profondità indice di default
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\makeatletter %% non togliere, i comandi che definiscono i placeholder vanno qui
+% esempio di utilizzo: \appendToGraphicspath{./img/} (un comando diverso per ogni path da includere)
+% N.B.: ci DEVE essere un forward slash alla fine del path, a indicare che è una cartella.
+\newcommand\appendToGraphicspath[1]{%
+  \g@addto@macro\Ginput@path{{#1}}%
+}
+
+\newcommand{\setTitle}[1]{%
+  \newcommand{\@placeholderTitle}{#1}%
+}
+\newcommand{\placeholderTitle}{\@placeholderTitle}
+
+\newcommand{\setUso}[1]{%
+  \newcommand{\@uso}{#1}%
+}
+\newcommand{\uso}{\@uso}
+
+\newcommand{\setVersione}[1]{%
+  \newcommand{\@versione}{#1}%
+}
+\newcommand{\versione}{\@versione}
+
+\newcommand{\disabilitaVersione}{%
+  \renewcommand{\setVersione}[1]{}%
+  \renewcommand{\versione}{DISABILITATA}
+}
+
+\newcommand{\setResponsabile}[1]{%
+  \newcommand{\@responsabile}{#1}%
+}
+\newcommand{\responsabile}{\@responsabile}
+
+\newcommand{\setRedattori}[1]{%
+  \newcommand{\@redattori}{#1}%
+}
+\newcommand{\redattori}{\@redattori}
+
+\newcommand{\setVerificatori}[1]{%
+  \newcommand{\@verificatori}{#1}%
+}
+\newcommand{\verificatori}{\@verificatori}
+
+\newcommand{\setDestinatari}[1]{%
+  \newcommand{\@destinatari}{#1}%
+}
+\newcommand{\destinatari}{\@destinatari}
+
+\newcommand{\setDescrizione}[1]{%
+  \newcommand{\@descrizione}{#1}%
+}
+\newcommand{\descrizione}{\@descrizione}
+
+\newcommand{\setModifiche}[1]{%
+  \newcommand{\@modifiche}{#1}%
+}
+
+\newcommand{\modifiche}{\@modifiche}
+\makeatother %% non togliere, i comandi che definiscono i placeholder vanno qui
+
+% hook per lo script che genera il glossario
+\newcommand{\glossario}[1]{#1\textsubscript{G}}
+
+% comandi per rendere opzionali gli elenchi di figure
+\newcommand{\elencoFigure}{%
+  \renewcommand{\listfigurename}{Elenco delle figure}%
+  \listoffigures%
+}
+
+\newcommand{\disabilitaElencoFigure}{%
+  \renewcommand{\elencoFigure}{}%
+}
+
+% comandi per rendere opzionali le tabelle
+\newcommand{\elencoTabelle}{%
+  \renewcommand{\listtablename}{Elenco delle tabelle}%
+  \listoftables%
+}
+
+\newcommand{\disabilitaElencoTabelle}{%
+  \renewcommand{\elencoTabelle}{}%
+}
+
+% comando per riferirsi ad una sezione
+\newcommand{\refSec}[1]{%
+  \hyperref[#1]{\S\ref*{#1}}%
+}
