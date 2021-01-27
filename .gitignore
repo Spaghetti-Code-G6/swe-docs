@@ -1,0 +1,29 @@
+# Remove all files and hidden directories
+*.*
+
+# Whitelist files and filetypes
+
+# Permit .gitignore
+!.gitignore
+
+# Permit github hidden directory for templates and github actions
+!.github/
+
+# Permit .md files everywhere (templates and readme)
+!*.md
+
+# Permit .yml files in .github subdirectories for continuous integration
+!.github/**/*.yml
+
+# Permit .tex files from second level of repository
+# (interni or esterni/doc/)
+!*/*/**/*.tex
+
+# Permit .pdf in subdirectory of img for document's resources
+!**/src/**/img/**/*.pdf
+
+# Permit .jpg in subdirectory of img for document's resources
+!**/src/**/img/**/*.jpg
+
+# Permit .png in subdirectory of img for document's resources
+!**/src/**/img/**/*.png
