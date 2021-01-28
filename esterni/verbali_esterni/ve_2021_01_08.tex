@@ -1,0 +1,120 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Verbale Esterno 2021-01-08}
+
+\setVersione{v1.0.0}
+
+\setResponsabile{
+	Paparazzo Giorgia
+}
+
+\setRedattori{
+	Rizzo Stefano
+}
+
+\setVerificatori{
+	Kostadinov Samuel
+}
+
+\setUso{Esterno}
+
+\setDestinatari{
+	prof. Vardanega Tullio \\ &
+	prof. Cardin Riccardo \\ &
+	SpaghettiCode
+}
+
+\setDescrizione{Riassunto dell'incontro realizzato dal gruppo SpaghettiCode tenutosi l'8 gennaio 2021 in forma di meeting online con Piccoli Gregorio.}
+
+\setModifiche{
+	v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-10 & Approvazione del documento \\
+	v0.1.0 & Kostadinov Samuel & Verificatore & 2021-01-10 & Verifica del documento \\
+	v0.0.1 & Rizzo Stefano & Analista & 2020-01-09 & Creazione del documento e prima stesura
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Informazioni generali}
+\label{sec:info_generali}
+
+\subsection{Informazioni incontro}
+\label{sub:info_incontro}
+
+\begin{itemize}
+	\item \textbf{Luogo}: Applicazione desktop \glossario{Zoom};
+	\item \textbf{Data}: 2021-01-09;
+	\item \textbf{Ora}: 15:30-16:30
+	\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item Contro Daniel Eduardo
+		\item Fichera Jacopo
+		\item Kostadinov Samuel
+		\item Masevski Martin
+		\item Pagotto Manuel
+		\item Paparazzo Giorgia
+		\item Rizzo Stefano
+		\item Piccoli Gregorio
+	\end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+Di seguito vengono riportati i punti dell'ordine del giorno discussi:
+\begin{itemize}
+    \item Discussione funzionalità HD Viz;
+    \item Chiarimenti presenza Database.
+\end{itemize}
+
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+\begin{itemize}
+    \item Analisi dei requisiti versione 0.4.2;
+	\item VE\_2020\_12\_17 1.0.0.
+\end{itemize}
+
+\section{Resoconto}
+\label{sec:resoconto}
+
+	L'incontro con il proponente è stato fissato al termine della prima stesura dell'Analisi dei Requisiti per discutere delle funzionalità  rilevate durante l'attività di analisi.
+	Inoltre, l'incontro è servito anche a chiarire dei dubbi affiorati in seguito alla prima riunione con il proponente il 17/12/2020.
+	Dopo una breve descrizione del funzionamento generale dell'applicativo, si ha proseguito l'incontro esponendo al proponente le varie funzionalità, discutendone l'utilità e eventuali miglioramenti.
+	Di seguito sono elencati i punti più rilevanti trattati durante l'incontro.
+	\begin{itemize}
+	    \item È stato confermato che i dati da prelevare saranno contenuti in un database esterno. Questo conferma quanto detto nel capitolato e rettifica la riunione del 17/12.
+		\item La funzionalità di modifica delle proprietà grafiche dei punti in uno Scatterplot matrix è stata rivista. Invece di evidenziare le dimensioni visualizzate con colori diversi, è stato deciso di utilizzare il colore come modo per rappresentare ulteriori dimensioni. A tale scopo sono stati introdotti gli use case:
+		\begin {itemize}
+			\item \textbf{UC4.2.2}: rappresentazione dimensione mediante tinta;
+			\item \textbf{UC4.2.3}: rappresentazione dimensione mediante brillanza;
+		\end{itemize}
+		\item Nella visualizzazione Force Field è stato consigliato di aggiungere alcune funzionalità, tra cui:
+		\begin {itemize}
+		 	\item \textbf{preprocessing dei dati}: prima di effettuare il calcolo della matrice delle distanze, si potrà scegliere se normalizzare o standardizzare le dimensioni. In questa maniera sarà possibile evidenziare più facilmente diversi tipi di relazione tra i nodi.
+			\item \textbf{assegnare pesi alle dimensioni}: poichè normalizzare o standardizzare le dimensioni può "appiattire" determinate relazioni tra dati, è stato consigliato di inserire un sistema per poter manualmente assegnare dei pesi alle dimensioni.
+			\item \textbf{taglio di archi}: in diverse situazioni può essere vantaggioso eliminare collegamenti tra nodi che hanno forze di attrazione al di fuori di un certo intervallo.
+		\end {itemize}
+		\item La visualizzazione Heatmap è quella che ha subito più modifiche, questo perchè quella che il software "Orange canvas" chiama Heatmap, e che è stata usata come punto di partenza per l'analisi, non è la visualizzazione inizialmente richiesta dal proponente. Questa modalità di visualizzazione è stata modificata nel seguente modo:
+		\begin {itemize}
+			\item Quella che il proponente chiama "Heatmap" verrà obbligatoriamente implementata. Questa visualizzazione avrà il medesimo funzionamento della visualizzazione che il programma "Orange canvas" chiama "Distance map".
+			\item La visualizzazione "Heatmap", com'era stata inizialmente intesa, è stata considerata interessante dal proponente. La sua implementazione è stata giudicata desiderabile.
+			\item Entrambe le visualizzazioni dovranno prevedere una serie di funzionalità base come cambiare la scala di colori, ordinare righe e colonne mediante clustering gerarchico e visualizzazione delle label dei dati.
+			\item Poichè le visualizzazioni Distance map e Force field prevedono entrambe l'utilizzo di una matrice delle distanze, è stato scelto di permettere le operazioni su suddetta matrice (preprocessing e assegnazione di pesi alle dimensioni) in entrambe le visualizzazioni.
+		\end {itemize}
+		\item Nella Proiezione Lineare Multi asse, viene espresso come "desiderabile" la funzionalità di poter interagire in tre dimensioni con il grafico.m
+	  \end{itemize}
+
+\section{Conclusione dell'incontro}
+\label{sec:conclusione}
+L'incontro ha chiarito i dubbi sulla presenza del database e ci ha permesso di correggere ed aggiungere gli use case nel documento Analisi dei Requisiti 0.4.2
+
+\end{document}
