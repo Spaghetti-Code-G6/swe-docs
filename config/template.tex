@@ -12,7 +12,7 @@
 	placement=top,
 	contents={%
 			\iffirstpage
-				\includegraphics[width=\paperwidth]{datascience-og_colori.png}%
+				\includegraphics[width=\paperwidth]{datascience_og_colori.png}%
 				\global\firstpagefalse
 			\fi
 		}%
@@ -24,7 +24,7 @@
 	\hspace{0.05\textwidth}% spazio tra linea e testo
 	% lasciare questa riga per il corretto funzionamento di \parbox
 	\parbox[b]{0.4\textwidth}{% cambiando la larghezza del testo il paragrafo si muove a destra o a sinistra 
-	{\hspace{0.05\textwidth}\includegraphics[width=4cm,height=4cm]{logo-colori.png}}\\[3\baselineskip] % logo
+	{\hspace{0.05\textwidth}\includegraphics[width=4cm,height=4cm]{logo_colori.png}}\\[3\baselineskip] % logo
 	{\Huge\bfseries SpaghettiCode}\\ [\baselineskip] %titolo
 	{\texttt{spaghetti.code.g6@gmail.com}}\\[\baselineskip]\\[4\baselineskip] % 
 	{\Large\textsc\mbox{\placeholderTitle{}}}\\[4\baselineskip] % nome del documento
@@ -61,13 +61,13 @@
 % setup di header e footer nelle pagine senza numero
 \fancypagestyle{nopage}{%
 	\fancyhf{}%
-	\fancyhead[R]{\includegraphics[width=1.3cm]{logo-colori.png}}%
+	\fancyhead[R]{\includegraphics[width=1.3cm]{logo_colori.png}}%
 	\fancyhead[L]{\emph{SpaghettiCode}\\\placeholderTitle{}}%
 }
 % setup di header e footer nelle pagine col numero
 \fancypagestyle{usual}{%
 	\fancyhf{}%
-	\fancyhead[R]{\includegraphics[width=1.3cm]{logo-colori.png}}%
+	\fancyhead[R]{\includegraphics[width=1.3cm]{logo_colori.png}}%
 	\fancyhead[L]{\emph{SpaghettiCode}\\\placeholderTitle{}}%
 	\fancyfoot[R]{\thepage\ di~\pageref{LastPage}}%
 }
