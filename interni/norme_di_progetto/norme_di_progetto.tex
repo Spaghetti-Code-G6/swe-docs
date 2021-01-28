@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+%aggiungere percorsi dai quali il documento prende le immagini
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Norme di Progetto}
+
+\setVersione{v1.0.0}
+
+\setResponsabile{Paparazzo Giorgia}
+
+\setRedattori{
+  Kostadinov Samuel \\ &
+	Masevski Martin
+}
+
+\setVerificatori{
+  Kostadinov Samuel \\ &
+	Masevski Martin
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+  prof. Vardanega Tullio \\ &
+  prof. Cardin Riccardo \\ &
+  SpaghettiCode
+}
+
+\setDescrizione{Documento contenente tutte le convenzioni, regole e strumenti di cui il gruppo \emph{SpaghettiCode} ha 
+deciso di avvalersi per lo sviluppo del capitolato \emph{HD Viz}.}
+
+\setModifiche{
+  v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-05 & Verifica e approvazione documento \\
+  v0.3.0 & Kostadinov Samuel & Verificatore & 2021-01-05 & Verifica capitolo \S\ref{sec:processi_organizativi} \\
+  v0.2.0 & Masevski Martin & Verificatore & 2021-01-04 & Verifica capitoli \S\ref{sec:processi_primari} e \S\ref{sec:processi_di_supporto} \\
+  v0.1.2 & Kostadinov Samuel & Amministratore & 2021-01-03 & Fine stesura capitolo \S\ref{sec:processi_di_supporto} \\
+  v0.1.1 & Kostadinov Samuel & Amministratore & 2021-01-01 & Stesura metriche capitolo \S\ref{sec:processi_primari} \\
+  v0.1.0 & Masevski Martin & Verificatore & 2021-01-01 & Verifica \S\ref{sec:introduzione} \\
+  v0.0.7 & Masevski Martin & Amministratore & 2020-12-31 & Fine stesura \S\ref{sec:processi_organizativi} \\
+  v0.0.6 & Kostadinov Samuel & Amministratore & 2020-12-30 & Inizio stesura capitolo \S\ref{sec:processi_di_supporto} \\
+  v0.0.5 & Masevski Martin & Amministratore & 2020-12-29 & Stesura capitolo \S\ref{sec:processi_organizativi} \\
+  v0.0.4 & Kostadinov Samuel & Amministratore & 2020-12-28 & Fine stesura \S\ref{sec:processi_primari} \\
+  v0.0.3 & Kostadinov Samuel & Amministratore & 2020-12-27 & Continuazione stesura \S\ref{sec:processi_primari} \\
+  v0.0.2 & Kostadinov Samuel & Amministratore & 2020-12-26 & Stesura \S\ref{sec:introduzione} e inizio stesura \S\ref{sec:processi_primari} \\
+  v0.0.1 & Pagotto Manuel & Analista & 2020-12-17 & Creazione del documento
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\input{src/1_introduzione.tex}
+\newpage
+
+
+\input{src/2_processi_primari.tex}
+\newpage
+
+
+\input{src/3_processi_di_supporto.tex}
+\newpage
+
+\input{src/4_processi_organizzativi.tex}
+
+\end{document}
+
+% TODO: aggiungere al glossario: Aspell, branch, GitHub Projects, punto elenco, trattino, Trello, underscore
