@@ -1,0 +1,47 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:c6_informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: RGP: Realtime Gaming Platform.
+	\item \textbf{Proponente}: Zero12.
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c6_descrizione}
+Si vuole realizzare un gioco a scorrimento verticale di navicelle viste dall’alto in cui il giocatore deve eliminare nemici ed evitare proiettili. Viene richiesto che il gioco possa essere giocato sia in modalità a giocatore singolo che multiplo. In una sessione a più giocatori non è possibile interagire direttamente con gli altri partecipanti che saranno visualizzati come “fantasmi” però sarà condivisa la plancia di gioco.
+
+\subsection{Finalità del progetto}%
+\label{sub:c6_finalita_del_progetto}
+Il proponente chiede che venga effettuato:
+\begin{itemize}
+	\item Scouting di una tecnologia AWS per trovare quella che si presta meglio ad un gioco in real time fornendo motivazioni che supportano la scelta;
+	\item Sviluppo di \glossario{Architettura} Server-Cloud based su tecnologia Amazon Web Services scalabile per poter effettuare partite multigiocatore per un massimo di 6 device che metta a disposizione a tutti i giocatori lo stesso ambiente di gioco con il quale interagire e i movimenti e azioni degli altri giocatori;
+	\item Implementazione del gioco con una visualizzazione dell’intera applicazione per iOS ed eventualmente, a discrezione del gruppo per Android.
+\end{itemize}
+
+
+\subsection{Tecnologie interessate}%
+\label{sub:c6_tecnologie_interessate}
+\begin{itemize}
+	\item Viene richiesto l’uso di Node.js se possibile;
+	\item Sviluppo nativo parte client: Kotlin per Android e Swift per iOS.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:aspetti_positivi}
+Si tratta di una tipologia di giochi diffusa e si potrebbe prendere spunto da progetti già esistenti.
+L’azienda provvede a fornire gli asset per la realizzazione della grafica, quindi il risultato finale potrebbe risultare gradevole alla vista in quanto realizzata da persone di competenza.
+
+\subsection{Rischi}%
+\label{sub:c6_rischi}
+Viene richiesto di sviluppare con i servizi forniti da Amazon, tra i quali si deve scegliere quelli più adatti. Individuarli potrebbe non essere banale ma potrebbe semplificare l’architettura.
+Si dovrà garantire una bassa latenza: il gioco dovrà essere ben ottimizzato. Lo sviluppo dei giochi, tuttavia, non è considerato semplice.
+
+\subsection{Conclusioni}%
+\label{sub:c6_conclusioni}
+Nonostante le premesse sembrino incoraggianti e vista la semplicità del gioco, non essendo il tema del capitolato di interesse per il gruppo è stato deciso di scartarlo.
+\end{document}

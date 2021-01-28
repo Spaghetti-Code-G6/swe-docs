@@ -1,0 +1,53 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:c4_informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: HD Viz: visualizzazione di dati multidimensionali.
+	\item \textbf{Proponente}: Zucchetti S.p.A.
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c4_descrizione}
+Il capitolato richiede lo sviluppo di una \glossario{web application} che abbia come scopo la
+traduzione di dati con molte dimensioni in grafici che aiutino l’utente a trarre delle interpretazioni e conclusioni. Questi dati dovranno essere inseriti tramite file CSV oppure ottenuti tramite query da un database.
+
+\subsection{Finalità del progetto}%
+\label{sub:c4_finalita_del_progetto}
+L’azienda richiede che l’applicazione presenti almeno le seguenti visualizzazioni:
+\begin{itemize}
+	\item \textbf{Scatter plot matrix}: è una delle visualizzazioni facilmente ottenibili con D3.js, ed è la presentazione a riquadri disposti a matrice di tutte le combinazioni di scatter plot;
+	\item \textbf{Force field}: è un \glossario{grafico} che interpreta le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio bidimensionale o tridimensionale;
+	\item \textbf{Heat map}: trasforma la distanza tra i punti i colori più o meno intensi, facendo così capire quali oggetti sono vicini tra loro e quali sono distanti;
+	\item \textbf{Proiezione lineare multi-asse}: si occupa di posizionare i punti dello spazio multidimensionale in un piano cartesiano, rappresentando a 2 dimensioni anche dati con molte più dimensioni.
+\end{itemize}
+
+
+\subsection{Tecnologie interessate}%
+\label{sub:c4_tecnologie_interessate}
+Il capitolato prevede quindi lo sviluppo di:
+\begin{itemize}
+	\item Una parte di HTML e CSS che dia una struttura e una presentazione all’applicazione;
+	\item Un database che abbia la possibilità di memorizzare i dati in ingresso;
+	\item Una parte di Java con server Tomcat o in JavaScript con server Node.js per comunicare col server;
+	\item Una parte di JavaScript che visualizzi i dati multidimensionali con l'utilizzo di D3.js, una libreria JavaScript;
+	\item Una parte di JavaScript che si occupi di caricare i dati da file CSV;
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:c4_aspetti_positivi}
+Gli aspetti positivi che si sono evidenziati sono la possibilità di approfondire la conoscenza di JavaScript tramite l’utilizzo di D3.js; il gruppo ritiene molto utile poter studiare e applicare direttamente uno dei linguaggi più richiesti ed utilizzati nel mondo del lavoro, inoltre sono richiesti alcuni linguaggi che verranno affrontati con Tecnologie Web.
+
+
+\subsection{Rischi}%
+\label{sub:c4_rischi}
+Alcuni aspetti negativi invece sono lo studio di algoritmi matematici complessi lontani dalla nostra preparazione accademica, quali ad esempio quelli che trattano le distanze tra i dati. Inoltre, è richiesto molto intuito e capacità interpretative per poter capire quali siano i grafici più adeguati o esplicativi per determinati tipi di dato.
+
+\subsection{Conclusioni}%
+\label{sub:c4_conclusioni}
+Il gruppo ha accolto con entusiasmo il progetto proposto dalla \emph{Zucchetti S.p.A.}, soprattutto a seguito del seminario esplicativo che ha stimolato curiosità ed interesse verso l’argomento. C’è stato inoltre molto fervore verso le molteplici possibilità esplorative che offre il progetto nella sua applicazione d’uso.
+
+\end{document}

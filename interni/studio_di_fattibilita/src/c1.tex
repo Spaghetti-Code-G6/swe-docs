@@ -1,0 +1,70 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: BlockCOVID - supporto digitale al contrasto della pandemia;
+	\item \textbf{Proponente}: Imola Informatica;
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c1_descrizione}
+Il capitolato, data la situazione di pandemia globale, nasce dalla necessità di garantire ai fruitori dei luoghi di interesse il rispetto degli standard igienici. Esso ha come obiettivo, a fini di sicurezza e controllo, il tracciamento real-time, immutabile e certificato, di postazioni di lavoro in merito al loro stato di utilizzo e/o di pulizia. Date le responsabilità legali dei datori di lavoro nei confronti dei dipendenti, nel caso gli stessi datori di lavoro non mettano in atto le misure di sicurezza, è necessario che il tracciamento sia opponibile a terzi.
+
+\subsection{Finalità del progetto}%
+\label{sub:c1_finalita_del_progetto}
+Il prodotto finale dovrebbe essere costituito da due componenti principali:
+\begin{itemize}
+	\item \textbf{Applicazione mobile}: l’applicazione dovrà essere necessariamente installata nello smartphone (Android o iOS) degli utilizzatori del servizio e permetterà l’individuazione delle postazioni libere e l’eventuale prenotazione di esse; la segnalazione dell’occupazione di una postazione in tempo reale tramite il tag RFID; la segnalazione di avvenuta pulizia di una postazione; la visualizzazione dello storico delle postazioni occupate e dello storico di quelle igienizzate;
+	\item \textbf{Server}: ha il compito di garantire la gestione di più stanze e/o postazioni, in particolare deve permettere la visualizzazione dello stato di ciascuna postazione; la visualizzazione delle prenotazioni con le loro relative informazioni e il blocco delle prenotazioni di una specifica stanza in caso di bisogno; deve essere disponibile il tracciamento autenticato di tutti i cambiamenti di stato delle postazioni, nello specifico quelli relativi alla pulizia, di modo che espongano le corrispondenti informazioni. Inoltre, il server deve essere fornito di una UI che permetta l’interazione da parte dell’amministratore con il sistema.
+\end{itemize}
+
+\subsection{Tecnologie interessate}%
+\label{sub:c1_tecnologie_interessate}
+Sebbene il capitolato non ponga vincoli sotto il punto di vista tecnologico, sono state consigliate una o più tecnologie per le varie componenti.
+Per lo sviluppo del server è stato consigliato di scegliere tra uno dei seguenti linguaggi:
+\begin{itemize}
+	\item \textbf{Java}: linguaggio di programmazione ad alto livello, \glossario{orientato agli oggetti} e a tipizzazione statica, progettato per rendere il più indipendente possibile il software dalla piattaforma hardware.
+	\item \textbf{Python}: linguaggio di programmazione ad alto livello, interpretato, fortemente impiegato nello sviluppo di applicazioni distribuite; supporta diversi paradigmi tra cui quello orientato agli oggetti, quello funzionale e quello riflessivo.
+	\item \textbf{Node.js}: runtime di JavaScript open source e multipiattaforma, basata sul paradigma ad eventi per eseguire codice JavaScript.
+\end{itemize}
+
+Per le comunicazioni app mobile-server è stato consigliato l’utilizzo di protocolli asincroni: protocolli di trasmissione nei quali la sincronizzazione tra i dispositivi coinvolti avviene utilizzando i dati stessi. \par
+
+Per le funzionalità esposte dal server è stato consigliato di utilizzare una tra le seguenti architetture:
+\begin{itemize}
+	\item \textbf{\glossario{API REST}}: particolare architettura di sistemi distribuiti che non prevede il concetto di sessione, bensì si basa sulla trasmissione di dati mediante il protocollo HTTP senza ulteriori livelli;
+	\item \textbf{gRPC}: sistema open source per la chiamata di procedure remote che permette di instaurare connessioni client-server cross-platform per diversi linguaggi.
+\end{itemize}
+
+
+%TODO opponibilità ?????
+
+Per garantire l’opponibilità a terzi è stata suggerita la tecnologia Blockchain: struttura dati condivisa ed immutabile, la cui integrità è garantita; una modifica ad essa comporta l’invalidazione della stessa.
+\begin{itemize}
+	\item \textbf{Kubernetes}: sistema open source di orchestrazione e gestione di \glossario{container};
+	\item \textbf{Openshift}: piattaforma per applicazioni \glossario{cloud} che permette di facilitarne lo sviluppo, la distribuzione e la scalabilità;
+	\item \textbf{Rancher}: sistema open source per la gestione di cluster di container multipli.
+\end{itemize}
+
+Per l’identificazione fisica degli utenti è richiesta RFID: tecnologia per l’identificazione e la memorizzazione di informazioni inerenti ad oggetti, basata sull’utilizzo di etichette elettroniche (tag) interrogate a distanza da sistemi ad-hoc mediante radiofrequenze.
+
+\subsection{Aspetti positivi}%
+\label{sub:c1_aspetti_positivi}
+Lo sviluppo di un’applicazione per garantire sicurezza nel luogo di lavoro o di studio è stato ritenuto oggettivamente di grande utilità da parte del gruppo.
+Le tecnologie coinvolte sono largamente utilizzate in ambito lavorativo e anche utili a fini didattici.
+
+\subsection{Rischi}%
+\label{sub:c1_rischi}
+Per poter effettuare il testing del sistema sarebbe necessario sviluppare un ambiente ad-hoc e ciò comporterebbe un maggiore dispendio di risorse.
+Il capitolato richiede diverse tecnologie non conosciute dai membri del gruppo e dunque sarebbe necessario un sostanzioso periodo di formazione.
+Il gruppo non ha trovato di interesse comune l’argomento del capitolato.
+
+\subsection{Conclusioni}%
+\label{sub:c1_Conclusioni}
+Il gruppo ha optato per alternative ritenute più interessanti e affini alle conoscenze ed abilità pregresse dei vari membri. In luce delle considerazioni presentate.
+
+\end{document}
