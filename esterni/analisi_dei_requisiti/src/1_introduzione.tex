@@ -1,0 +1,76 @@
+\documentclass[../analisi_dei_requisiti.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo del documento}%
+\label{sub:scopo_del_documento}
+Questo documento ha lo scopo di descrivere i requisiti e i casi d'uso individuati in seguito allo studio del \glossario{capitolato} \emph{HD Viz} proposto da \emph{Zucchetti S.p.A.}. 
+
+\subsection{Scopo del prodotto}%
+\label{sub:scopo_del_prodotto}
+Il capitolato richiede lo sviluppo di una \glossario{web application} che abbia come scopo la 
+traduzione di dati con molte dimensioni in grafici che aiutino l’utente a trarre delle interpretazioni e conclusioni sugli stessi. 
+Questi dati dovranno essere inseriti tramite file \glossario{CSV} oppure ottenuti tramite \glossario{query} da un \glossario{database}.
+Verrà utilizzata la libreria \glossario{JavaScript} \glossario{D3.js} per creare le visualizzazioni dei dati in modo dinamico ed interattivo.
+Il \glossario{back end} potrà essere sviluppato in \glossario{Java} con un server \glossario{Tomcat},  oppure 
+in JavaScript utilizzando il framework \glossario{Node.js}. 
+
+
+\subsection{Glossario}
+\label{sub:glossario}
+Alcuni termini all'interno di questo documento possono risultare ambigui a seconda del contesto in cui sono utilizzati.
+La prima occorrenza nel documento di questi termini é segnalata con una 'G' a pedice, e nel documento 
+\textsc{Glossario v1.0.0} é esplicitato il loro significato specifico.
+
+
+\subsection{Riferimenti}
+\label{sub:riferimenti}
+
+\subsubsection{Normativi}%
+\label{ssub:normativi}
+
+
+\begin{itemize}
+  \item \textbf{Capitolato d'appalto C4 - HD Viz}: \\
+  \url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf};
+  \item \textbf{Norme di progetto}: \textsc{Norme di progetto v1.0.0};
+  \item \textbf{Verbali esterni}:
+  \begin{itemize}
+    \item \textsc{Verbale Esterno 2020-12-17 v1.0.0};
+    \item \textsc{Verbale Esterno 2021-01-08 v1.0.0}.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Informativi}%
+\label{ssub:informativi}
+% TODO aggiungere i vari riferimenti usati nel documento
+\begin{itemize}
+  \item \textbf{Materiale didattico del corso di Ingegneria del Software}:
+  \begin{itemize}
+    \item Analisi dei requisiti: \\
+    \url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L07.pdf};
+    \item Diagrammi dei Casi d'Uso: \\
+    \url{https://www.math.unipd.it/%7Ercardin/swea/2021/Diagrammi%20Use%20Case_4x4.pdf};
+  \end{itemize}
+  \item \textbf{Studio di fattibilità}: \textsc{Studio di fattibilità v1.0.0};
+  
+  \item \textbf{Documentazione libreria D3.js}: \\
+  \url{https://github.com/d3/d3/wiki}.
+
+  \item \textbf{Documentazione framework Node.js}: \\
+  \url{https://nodejs.org/en/docs/}
+
+  \item \glossario{\textbf{Scatter Plot Matrix}}: \\ 
+  \url{https://observablehq.com/@d3/brushable-scatterplot-matrix};
+        
+  \item \glossario{\textbf{Force Field}}: \\  
+  \url{https://observablehq.com/@d3/force-directed-graph};
+
+  \item \glossario{\textbf{Heat Map}}: \\ 
+  \url{https://observablehq.com/@eliaslevy/d3-heatmap}; 
+        
+  \item \glossario{\textbf{Proiezione Lineare Multi Asse}}: \\ 
+  \url{https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html}
+\end{itemize}
+
+\end{document}
