@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+%aggiungere percorsi dai quali il documento prende le immagini
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Studio di Fattibilità}
+
+\setVersione{v1.0.0}
+
+\setResponsabile{
+  Paparazzo Giorgia
+}
+
+\setRedattori{
+  Rizzo Stefano \\ &
+  Contro Daniel Eduardo \\ &
+  Fichera Jacopo \\ &
+  Pagotto Manuel 
+}
+
+\setVerificatori{
+  Rizzo Stefano \\ & 
+  Masevski Martin \\ & 
+  Kostadinov Samuel \\ &
+  Pagotto Manuel \\ &
+  Paparazzo Giorgia
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+  prof. Vardanega Tullio \\ &
+  prof. Cardin Riccardo \\ &
+  SpaghettiCode
+}
+
+\setDescrizione{Questo documento ha lo scopo di descrivere l'analisi dei capitolati d'appalto realizzata dal gruppo al fine di valutarne la fattibilità.}
+
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\setModifiche{
+  v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-01 & Approvazione documento \\
+  v0.6.0 & Rizzo Stefano & Verificatore & 2020-12-19 & Verifica \nameref{sec:c6} e \nameref{sec:c7} \\
+  v0.5.0 & Masevski Martin & Verificatore & 2020-12-19 & Verifica \nameref{sec:c5} \\
+  v0.4.0 & Paparazzo Giorgia & Verificatore & 2020-12-19 & Verifica \nameref{sec:c3} \\
+  v0.3.0 & Pagotto Manuel & Verificatore & 2020-12-19 & Verifica \nameref{sec:c2} \\
+  v0.2.0 & Rizzo Stefano & Verificatore & 2020-12-19 & Verifica \nameref{sec:c1} \\
+  v0.1.0 & Kostadinov Samuel & Verificatore & 2020-12-17 & Verifica \nameref{sec:c4} \\
+  v0.0.8 & Pagotto Manuel & Analista & 2020-12-17 & Stesura \nameref{sec:c7} \\
+  v0.0.7 & Fichera Jacopo & Analista & 2020-12-17 & Stesura \nameref{sec:c6} \\
+  v0.0.6 & Fichera Jacopo & Analista & 2020-12-17 & Stesura \nameref{sec:c5} \\
+  v0.0.5 & Paparazzo Giorgia & Responsabile & 2020-12-18 & Stesura \nameref{sec:c4} \\
+  v0.0.4 & Masevski Martin & Amministratore & 2020-12-17 & Stesura \nameref{sec:c3} \\
+  v0.0.3 & Rizzo Stefano & Analista & 2020-12-17 & Stesura \nameref{sec:c2} \\
+  v0.0.2 & Contro Daniel Eduardo & Analista & 2020-12-17 & Stesura \nameref{sec:c1} \\
+  v0.0.1 & Pagotto Manuel & Analista & 2020-12-12 & Creazione del documento 
+}
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+\subsection{Scopo del documento}%
+\label{sub:scopo_del_documento}
+Lo scopo dello \textsc{\placeholderTitle} è quello di fornire le motivazioni che hanno indotto alla scelta del \glossario{capitolato} C4 \emph{HD Viz}, e quindi con l'esclusione degli altri capitolati d'appalto proposti.
+
+\subsection{Glossario}%
+\label{sub:glossario}
+Alcuni termini all'interno di questo documento possono risultare ambigui a secondo del contesto in cui sono utilizzati.
+Questi termini sono segnalati con un 'G' a pedice del termine ambiguo; nel documento \textsc{Glossario v1.0.0} sono presenti questi termini con il loro significato specifico.
+
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+
+\subsubsection{Normativi}%
+\label{subs:normativi}
+
+\begin{itemize}
+	\item \textbf{Norme di progetto}: \textsc{Norme di progetto v1.0.0}
+\end{itemize}
+
+\subsubsection{Informativi}%
+\label{subs:informativi}
+
+\begin{itemize}
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C1.pdf}{Capitolato d'appalto C1} - BlockCOVID: supporto digitale al contrasto della pandemia};
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf}{Capitolato d'appalto C2} - EmporioLambda: piattaforma di e-commerce in stile Serverless};
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C3.pdf}{Capitolato d'appalto C3} - GDP: Gathering Detection Platform};
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf}{Capitolato d'appalto C4} - HD Viz: visualizzazione di dati multidimensionali};
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf}{Capitolato d'appalto C5} - PORTACS: piattaforma di controllo mobilità autonoma};
+	\item \textbf{\href{https://sesaspa-my.sharepoint.com/:b:/g/personal/s_dindo_vargroup_it/EThvay0f6KVCoXydYOce2lkBt-MYcnW1yafRXFXVIOIsHg?e=2emZZI}{Capitolato d'appalto C6} - RGP: Realtime Gaming Platform};
+	\item \textbf{\href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C7.pdf}{Capitolato d'appalto C7} - SSD: soluzioni di sincronizzazione desktop}.
+\end{itemize}
+
+\newpage
+\section{Capitolato C4 - HD Viz}
+\label{sec:c4}
+\subfile{src/c4.tex}
+
+\newpage
+\section{Capitolato C1 - BlockCOVID}
+\label{sec:c1}
+\subfile{src/c1.tex}
+
+\newpage
+\section{Capitolato C2 - EmporioLambda}
+\label{sec:c2}
+\subfile{src/c2.tex}
+
+\newpage
+\section{Capitolato C3 - GDP}
+\label{sec:c3}
+\subfile{src/c3.tex}
+
+\newpage
+\section{Capitolato C5 - PORTACS}
+\label{sec:c5}
+\subfile{src/c5.tex}
+
+\newpage
+\section{Capitolato C6 - RGP}
+\label{sec:c6}
+\subfile{src/c6.tex}
+
+\newpage
+\section{Capitolato C7 - SSD}
+\label{sec:c7}
+\subfile{src/c7.tex}
+
+\end{document}

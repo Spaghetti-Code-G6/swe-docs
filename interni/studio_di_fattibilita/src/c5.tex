@@ -1,0 +1,50 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:c5_informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: PORTACS: piattaforma di controllo mobilità autonoma.
+	\item \textbf{Proponente}: Sanmarco Informatica S.p.A.
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c5_descrizione}
+Si vuole realizzare un sistema per la gestione dei percorsi di unità robotiche. Ogni entità nel sistema si sposta su una scacchiera virtuale da una posizione verso un punto d’interesse. In viaggio ogni singola unità deve evitare di creare rallentamenti o di scontrarsi con altre unità.
+
+\subsection{Finalità del progetto}%
+\label{sub:c5_finalita_del_progetto}
+Il proponente chiede che vengano sviluppati:
+\begin{itemize}
+	\item Un sistema centralizzato con il quale le entità comunichino costantemente per tracciare il percorso e la posizione. Il sistema si prende carico di dare un corretto indirizzamento delle entità sulla scacchiera. La scacchiera presenta corsie, ognuna di esse è dotata di una capacità limitata di entità che possono attraversarla contemporaneamente. L’indirizzamento deve evitare che si formino code o avvengano collisioni. Non è richiesto che i percorsi siano ottimi.
+	\item Un’interfaccia utente che mostri le entità presenti nel sistema e i loro spostamenti in real time, per ognuna  di essa, inoltre, deve essere anche visualizzata la velocità di crociera e il percorso scelto. Si deve avere la possibilità di interrompere la navigazione di un’entità o di farla riprendere.
+	\item Un database per la memorizzazione delle griglie in cui vengono definiti ostacoli, corsie eventualmente direzionate, e le entità registrate per ogni mappa.
+\end{itemize}
+
+\subsection{Tecnologie interessate}%
+\label{sub:c5_tecnologie_interessate}
+\begin{itemize}
+	\item Java Servlet oppure Node.js, per la realizzazione del back-end.
+	\item HTML, CSS, JavaScript (Angular, etc..) per la realizzazione del front-end.
+	\item Un database per la memorizzazione dei dati.
+	\item \glossario{Docker} per la realizzazione delle componenti in modo modulare.
+	\item Ambiente di simulazione per poter eseguire testing runtime.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:c5_aspetti_positivi}
+Non è richiesto l’ottimizzazione dei percorsi, tuttavia, essendo stato svolto il corso di Ricerca Operativa da parte di tutti i membri del gruppo, si hanno le competenze necessarie per considerare l’opzione senza dover generare troppe difficoltà nella realizzazione del prodotto.
+L’uso di Docker suggerisce modularità del progetto, di conseguenza potrebbe essere semplice da dividere tra i membri del gruppo e collaudare diverse le macro-componenti.
+
+\subsection{Rischi}%
+\label{sub:c5_rischi}
+La struttura del prodotto richiesto è complessa in quanto richiede numerose componenti: un server centralizzato che opera logica non banale, un database per tutte le componenti e la realizzazione di una applicazione \glossario{responsive} per la gestione e il monitoraggio delle unità.
+Non conoscendo la tecnologia Docker si rischia di usarla in modo improprio e di non sfruttare a pieno i vantaggi che essa comporta.
+
+\subsection{Conclusioni}%
+\label{sub:c5_conclusioni}
+L'apparente complessità della richiesta non è stato considerato un aspetto negativo in quanto è un’idea accattivante, tuttavia, nonostante un grande apprezzamento del gruppo è stato deciso di rinunciare il progetto per via della forte affluenza da parte degli altri.
+
+\end{document}

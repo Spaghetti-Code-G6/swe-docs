@@ -1,0 +1,56 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:c3_informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: GDP: Gathering Detection Platform.
+	\item \textbf{Proponente}: Sync Lab.
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c3_descrizione}
+Il capitolato richiede di realizzare una piattaforma web nella quale si raccolgono e mostrano a video dei flussi di dati proveniente da varie fonti, come ad esempio i flussi dei passeggeri sui mezzi pubblici. Nasce come idea di prevenzione di assembramenti, dato dall’attuale periodo in cui stiamo vivendo a causa del COVID-19. Oltre a mostrare dati in tempo reale, si chiede che la piattaforma visualizzi anche una storicizzazione dei dati del passato e tramite algoritmi di machine learning mostri delle previsioni per il futuro.
+
+\subsection{Finalità del progetto}%
+\label{sub:c3_finalita_del_progetto}
+L’azienda proponente chiede in particolare di realizzare tre moduli principali:
+\begin{itemize}
+	\item \textbf{Flussi di persone all’interno dei mezzi pubblici e/o alle fermate}: questa parte si divide in 2 sotto moduli:
+	      \begin{enumerate}
+		      \item la prima parte riguarda le previsioni sui flussi, infatti, si chiede una stima del numero di persone che ci potrebbero essere ad una certa fermata/linea autobus in un particolare orario di un determinato giorno;
+		      \item la seconda parte è opzionale e chiede la realizzazione di un software che, tramite video, conti quante persone ci sono all'interno di un mezzo o un locale. Questo software deve essere costruito tramite librerie già esistenti/\glossario{open source}.
+	      \end{enumerate}
+	\item \textbf{Affollamento esercizi commerciali}: si chiede di sfruttare i dati forniti da Google Maps che indicano se e quando un luogo è affollato, allo scopo di determinare la presenza di persone, e sfruttare questi dati per allenare gli algoritmi di \glossario{machine learning} nella predizione degli affollamenti;
+	\item \textbf{Uber}: il terzo ed ultimo modulo proposto riguarda le corse effettuate dai mezzi Uber, infatti si vogliono sfruttare i dati delle partenze e degli arrivi per poter stimare quante persone si troveranno in un esatto luogo.
+\end{itemize}
+Sync Lab rimane aperta ad altre proposte da parte nostra per poter stimare al meglio le previsioni e creare delle heatmap più precise.
+
+\subsection{Tecnologie interessate}%
+\label{sub:c3_tecnologie_interessate}
+Per lo sviluppo del software del capitolato viene consigliato l’uso delle seguenti tecnologie:
+\begin{itemize}
+	\item \textbf{Kafka}: accentratore di dati, piattaforma open-source di stream processing;
+	\item \textbf{NumPy, Keras, TesorFlow, pytorch , scikit-learn}: vari algoritmi di machine learning per le predizioni;
+	\item \textbf{TypeScript}: superset del linguaggio ECMAScript 6 (ES6);
+	\item \textbf{Angular}: web framework basato su TypeScript per lo sviluppo \glossario{front-end};
+	\item \textbf{Java spring}: framework basato sul linguaggio Java per lo sviluppo back-end;
+	\item \textbf{Librerie open source}: motori software “contapersone” attraverso stream/immagini
+	\item \textbf{Leaflet}: framework per la gestione delle heatmap.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:c3_aspetti_positivi}
+L’aspetto che più ci è sembrato interessante di questo progetto è la possibilità di poter contribuire ad un software che possa aiutare nella situazione attuale, qualora il progetto venisse poi sviluppato e adattato al mondo reale. Un altro aspetto che ci è parso molto interessante è la possibilità di vedere da vicino come funzionano alcune tecnologie che durante gli anni della triennale non vengono affrontate durante le lezioni, ad esempio algoritmi di machine learning, Angular, TypeScript, Java spring.
+
+\subsection{Rischi}%
+\label{sub:c3_rischi}
+La mancanza di esperienza, è un grosso rischio, poiché l’unica formazione che avremo su questi nuovi argomenti sarà lo studio autodidatta. Un’altra difficoltà, da non sottovalutare è il fatto che non ci verranno forniti dei database già pronti dai quali prendere i dati e poi elaborarli, ma sarà compito nostro, come richiesto dal capitolato, sviluppare un sistema che simuli tutti questi flussi in maniera più realistica possibile. Quindi non andremo a lavorare con dati reali, ma dovremo produrli noi.
+
+\subsection{Conclusioni}%
+\label{sub:c3_conclusioni}
+Nonostante fosse uno dei capitolati che più ci interessava dal punto di vista tecnologico, lo abbiamo scartato per via dei rischi. Non ci ha convinto la parte di simulazione dei dati, e abbiamo pensato che avremmo impiegato troppe risorse solo per simulare i dati in modo realistico e avremmo avuto meno tempo per lavorare effettivamente con la parte che più ci interessava, ovvero l’uso degli algoritmi di machine learning per la predizione degli affollamenti.
+
+\end{document}
