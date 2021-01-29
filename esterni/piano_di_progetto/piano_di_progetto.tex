@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+%aggiungere percorsi dai quali il documento prende le immagini
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Piano di Progetto}
+
+\setVersione{v1.0.0}
+
+\setResponsabile{
+  Masevski Martin
+}
+
+\setRedattori{
+  Paparazzo Giorgia
+}
+
+\setVerificatori{
+  Pagotto Manuel \\ &
+  Kostadinov Samuel
+}
+
+\setUso{Esterno}
+
+\setDestinatari{
+  prof. Vardanega Tullio \\ &
+  prof. Cardin Riccardo 
+}
+
+\setDescrizione{Questo documento ha lo scopo di descrivere la pianificazione del gruppo \emph{SpaghettiCode} nello sviluppo del progetto \emph{HD Viz}.}
+
+\setModifiche{
+  v1.0.0 & Masevski Martin & Responsabile & 2021-01-18 & Approvazione documento \\
+  v0.2.1 & Paparazzo Giorgia & Responsabile & 2021-01-16 & Modifica \S\ref{sec:cons} \\
+  v0.2.0 & Kostadinov Samuel & Verificatore & 2021-01-07 & Verifica \S\ref{sec:introduzione}, \S\ref{sec:rischi}, \S\ref{sec:sviluppo} \\
+  v0.1.0 & Pagotto Manuel & Verificatore & 2021-01-06 & Verifica \S\ref{sec:pianif}, \S\ref{sec:prev}, \S\ref{sec:cons}, \S\ref{sec:org} \\
+  v0.0.6 & Paparazzo Giorgia & Responsabile & 2021-01-05 & Modifica \S\ref{sec:pianif}, \S\ref{sec:org} \\
+  v0.0.5 & Paparazzo Giorgia  & Responsabile & 2021-01-04 & Modifica \S\ref{sec:rischi}, \S\ref{sec:prev}, \S\ref{sec:cons} \\ 
+  v0.0.4 & Paparazzo Giorgia & Responsabile & 2020-12-27 & Modifica  \S\ref{sec:org}, \S\ref{sec:cons}, \S\ref{sec:prev} \\
+  v0.0.3 & Paparazzo Giorgia & Responsabile & 2020-12-21 & Inizio \S\ref{sec:prev}, proseguimento \S\ref{sec:pianif}  \\
+  v0.0.2 & Paparazzo Giorgia & Responsabile & 2020-12-18 & Stesura \S\ref{sec:introduzione}, \S\ref{sec:rischi} ,\S\ref{sec:sviluppo}, \S\ref{sec:pianif}  \\
+  v0.0.1 & Paparazzo Giorgia & Responsabile & 2020-12-17 & Inizio stesura \S\ref{sec:org}
+}
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Introduzione}
+\label{sec:introduzione}
+\subfile{src/1_introduzione.tex}
+
+\newpage
+\section{Analisi dei rischi}
+\label{sec:rischi}
+\subfile{src/2_analisi_rischi.tex}
+
+\newpage
+\section{Modello di sviluppo}
+\label{sec:sviluppo}
+\subfile{src/3_modello_di_sviluppo.tex}
+
+\newpage
+\section{Pianificazione}
+\label{sec:pianif}
+\subfile{src/4_pianificazione.tex}
+
+\newpage
+\section{Preventivo}
+\label{sec:prev}
+\subfile{src/5_preventivo.tex}
+
+\newpage
+\section{Consuntivo}
+\label{sec:cons}
+\subfile{src/6_consuntivo.tex}
+
+\newpage
+\section{Organigramma}
+\label{sec:org}
+\subfile{src/7_organigramma.tex}
+
+\end{document}
