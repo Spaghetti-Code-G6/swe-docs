@@ -1,0 +1,165 @@
+\documentclass[../piano_di_qualifica.tex]{subfiles}
+
+\begin{document}
+
+Per garantire la qualità del prodotto il gruppo ha deciso di fare riferimento allo \glossario{standard ISO/IEC 9126}, il quale regolamenta le modalità con cui produrre un software di buona qualità. Di questo standard il gruppo sceglie di seguire alcune delle metriche esposte, e sceglie di stabilirne altre da seguire per rendere il prodotto qualitativamente valido; qui di seguito vengono elencate. \\
+Saranno adottati i seguenti codici identificativi:\par
+
+\begin{center}
+	\textbf{M}[Metrica]\textbf{QP}[Qualità Prodotto]\textbf{ID}[Indice]\\
+	\textbf{O}[Obiettivo]\textbf{QP}[Qualità Prodotto]\textbf{ID}[Indice]
+\end{center}
+
+\subsection{Modello di qualità}
+Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.\par
+Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:\par
+\begin{itemize}
+	\item \textbf{Funzionale}: è la capacità di un prodotto software di fornire funzioni che soddisfino esigenze stabilite, necessarie per operare sotto condizioni specifiche.
+	      \begin{itemize}
+		      \item Il prodotto software sarà in grado di fornire un appropriato insieme di funzioni per i compiti prefissati dall’utente; sarà in grado di fornire i risultati concordati con il proponente; sarà in grado di interagire ed operare con più sistemi specificati dal proponente; se richiesto dal proponente, sarà in grado di proteggere informazioni negando accessi non autorizzati.
+	      \end{itemize}
+	\item \textbf{Affidabile}: è la capacità del prodotto software di mantenere uno specificato livello di prestazioni quando usato in date condizioni e per un dato periodo.
+	      \begin{itemize}
+		      \item Il prodotto software sarà in grado di evitare errori e malfunzionamenti; in caso questi dovessero presentarsi sarà possibile recuperare i dati su cui si stava lavorando; sarà in grado di aderire agli standard definiti con il proponente.
+	      \end{itemize}
+	\item \textbf{Efficiente}: è la capacità di fornire appropriate prestazioni relative alla quantità di risorse usate.
+	      \begin{itemize}
+		      \item Il prodotto software sarà in grado di fornire adeguati tempi di risposta, elaborazione e velocità di attraversamento; sarà in grado di sfruttare adeguatamente le risorse e sarà efficiente.
+	      \end{itemize}
+	\item \textbf{Usabile}: è la capacità del prodotto software di essere capito, appreso e usato dall'utente.
+	      \begin{itemize}
+		      \item Il prodotto software sarà di facile comprensione per l’utente; assieme ad esso verrà consegnato il manuale d’utente per consentire a chiunque il suo utilizzo.
+	      \end{itemize}
+	\item \textbf{Mantenibile}: è la capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
+	      \begin{itemize}
+		      \item Il prodotto software sarà in grado di essere analizzato lato codice; sarà in grado di essere modificato e soggetto ad evoluzioni; sarà facilmente testabile per verificare le modifiche apportate.
+	      \end{itemize}
+	\item \textbf{Portabile}: è la capacità del software di essere trasportato da un ambiente di lavoro ad un altro.
+	      \begin{itemize}
+		      \item il prodotto software sarà in grado di essere adattato a diversi ambienti sulla base degli accordi presi con il proponente.
+	      \end{itemize}
+\end{itemize}
+
+\subsection{Prodotti}
+Per prodotto si intende ciò che è concretamente utilizzabile, consultabile o eseguibile. In questo caso si tratta dei documenti e del software.
+
+\subsubsection{Documenti}
+Come trattato nel precedente capitolo i documenti devono essere letti e capiti da chiunque abbia almeno la licenza media.\\
+Gli obiettivi per un documento sono quindi: \\
+
+\setlength{\parindent}{0pt}\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{OQP01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
+	\item \textbf{OQP02 Correttezza ortografica}: i documenti non devono presentare errori.
+\end{itemize}
+
+\textbf{Metriche:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{MQP01 Indice di Gulpease};
+	\item \textbf{MQP02 Errori ortografici}.
+\end{itemize}
+
+Per verificare questi requisiti si farà ricorso all’ \glossario{indice di Gulpease}. L'Indice Gulpease è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+La formula è la seguente:\par
+\begin{center}
+	$G = 89\ +\ \frac{300 * (numero\ di\ frasi) - 10 * (numero\ di\ lettere)}{numero\ di\ parole} $
+\end{center}
+Come descritto nella seguente tabella, ci aspettiamo che i documenti siano entro uno specifico range di valori e che siano corretti, quindi che la quantità di errori presenti sia 0. \par
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{ID metrica}      & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
+		\hline
+		MQP01 Indice di Gulpease & \(\ge 80\)                  & \(\ge 60\)                  \\
+		MQP02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
+		\hline
+	\end{tabular}
+	\caption{Indici di qualità per le metriche di comprensione del prodotto}
+\end{table}
+
+\paragraph{Software}
+Il software rilasciato deve essere di qualità, e per renderlo tale si farà riferimento al \emph{Modello di qualità} descritto sopra. \\
+Di seguito presentiamo alcune delle metriche che intendiamo adottare. \\
+\emph{Questo paragrafo verrà ampliato in futuro, in quanto attualmente è ancora prematuro definire delle metriche più complete.} \\
+
+\smallbreak
+\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{OQP03 Assenza di bug}: il prodotto non deve presentare bug;
+	\item \textbf{OQP04 Assenza di errori}: il prodotto deve presentare meno errori possibile;
+	\item \textbf{OQP05 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
+	\item \textbf{OQP05 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
+\end{itemize}
+
+\textbf{Metriche:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{MQP03 Presenza di bug};
+	\item \textbf{MQP04 Densità di errori};
+	\item \textbf{MQP05 File senza intestazione};
+	\item \textbf{MQP06 Usabilità del prodotto}.
+\end{itemize}
+
+
+\paragraph{MQP04 - Densità di errori}
+La densità di errori è l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:\par
+
+\begin{center}
+	$M = \frac{N_{er}}{N_{te}} * 100$
+\end{center}
+
+dove
+\smallbreak
+\begin{itemize}
+	\item N\textsubscript{ER} indica il numero di errori rilevati durante il testing;
+	\item N\textsubscript{TE} indica il numero di test effettuati.
+\end{itemize}
+
+Il valore preferibile è lo 0\%; il valore accettabile è inferiore al 10\%.
+
+\paragraph{MQP06 Usabilità del prodotto}
+L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che vuole; viene rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato, infatti un software poco annidato è più usabile per l'utente medio.
+\smallbreak
+\begin{itemize}
+	\item misurazione: quantità di click per raggiungere l'obiettivo;
+	\item valore preferibile: inferiore a 6;
+	\item valore accettabile: inferiore a 10.
+\end{itemize}
+
+\subsection{Tabella qualità di prodotto}
+La seguente tabella indica gli obiettivi di qualità che i prodotti devono possedere.\\
+Ogni obiettivo di qualità è indicato con:
+\smallbreak
+\begin{itemize}
+	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
+	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
+	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
+	\item \textbf{Preferibile}: indica il valore a cui si punta per avere la massima qualità.
+\end{itemize}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l|l|c|c|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Obiettivo}                    & \textbf{Metrica}              & \textbf{Accettabile} & \textbf{Preferibile} \\
+		OQP01 Leggibilità del testo           & MQP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
+		OQP02 Correttezza ortografica         & MQP02 Errori ortografici      & 0                    & 0                    \\
+		OQP03 Assenza di bug                  & MQP03 Presenza di bug         & 0                    & 0                    \\
+		OQP04 Assenza di errori               & MQP04 Densità di errori       & 10\%                 & 0\%                  \\
+		OQP05 Assenza file senza intestazione & MQP05 File senza intestazione & 0                    & 0                    \\
+		OQP06 Usabilità del prodotto          & MQP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
+		\hline
+	\end{tabular}
+	\caption{Metriche qualità di prodotto}
+\end{table}
+
+\clearpage
+
+\end{document}
