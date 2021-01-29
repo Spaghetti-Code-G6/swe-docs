@@ -1,0 +1,54 @@
+\documentclass[../studio_di_fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:c2_informazioni_generale}
+\begin{description}
+	\item \textbf{Nome}: EmporioLambda: piattaforma di e-commerce in stile \glossario{serverless}.
+	\item \textbf{Proponente}: Red Babel.
+	\item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:c2_descrizione}
+EmporioLambda è una piattaforma di e-commerce costruita interamente con tecnologie serverless.
+Viene richiesto di creare una generica piattaforma di e-commerce che possa essere presentata come prototipo software da vendere a dei commercianti.
+
+
+\subsection{Finalità del progetto}%
+\label{sub:c2_finalita_del_progetto}
+Viene richiesta una piattaforma di e-commerce serverless costruita mediante un’architettura a microservizi. Questa piattaforma dovrà soddisfare i seguenti requisiti:
+\begin{itemize}
+	\item \textbf{Calcolo delle tasse}: paesi diversi possono prevedere accise differenti sullo stesso prodotto;
+	\item \textbf{Sistemi di fidelizzazione}: si vuole avere un sistema di punti, sconti e promozioni che fidelizzi il cliente;
+	\item \textbf{Presenza di un Inventario}: si vuole tenere traccia dello stato dei prodotti, in maniera tale da automatizzare i rifornimenti ed avvisare il cliente quando un prodotto va out of stock;
+	\item \textbf{Soddisfare vincoli geografici e/o legali}: certi prodotti possono essere vietati all’acquisto o la spedizione potrebbe non essere effettuata da/verso certi stati;
+	\item \textbf{Interfaccia riusabile}: distinzione tra Model e View, permettendo di scollegare la logica dell’e-commerce dalla sua presentazione.
+\end{itemize}
+
+
+\subsection{Tecnologie interessate}%
+\label{sub:c2_tecnologie_interessate}
+Il capitolato richiede l’utilizzo obbligatorio di alcune tecnologie, tra le quali:
+\begin{itemize}
+	\item \textbf{\glossario{Amazon Web Services}}: EmporioLambda dovrà necessariamente funzionare senza la necessità di installazioni su server dedicati. L’utilizzo di questa architettura permette di ottenere un sistema scalabile, ridurre i costi di installazione e di manutenzione. Amazon AWS è la \glossario{suite} consigliata che permette di adempiere allo scopo;
+	\item \textbf{TypeScript}: variante di JavaScript tipizzato. Dovrà essere il linguaggio adottato per lo sviluppo;
+	\item \textbf{Next.js}: \glossario{framework} JavaScript da adottare per lo sviluppo dell’interfaccia grafica;
+	\item \textbf{Auth0}: identity manager consigliato per la gestione delle credenziali;
+	\item \textbf{isStripe}: provider obbligatorio per la gestione del pagamento.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:c2_aspetti_positivi}
+Uno degli aspetti più interessanti di questo capitolato è lo sviluppo mediante microservizi. L’approccio serverless ed i microservizi sono tecnologie che si stanno affermando in maniera sempre più decisa nel mondo dell’informatica negli ultimi anni. Approfondire questi argomenti potrebbe essere un buon tornaconto personale. Inoltre, il proponente Red Babel sembra essere stata chiaro nell’esposizione dei requisiti.
+
+\subsection{Rischi}%
+\label{sub:c2_rischi}
+Il \glossario{rischio} maggiore è che questo capitolato richiede molto lavoro di integrazione di tecnologie diverse, che sembra essere un timore diffuso all’interno del gruppo, inoltre l’utilizzo massiccio di JavaScript potrebbe essere un ulteriore ostacolo.
+
+\subsection{Conclusioni}%
+\label{sub:c2_conclusioni}
+Per i motivi sopracitati, è stato scelto di non considerare questo capitolato come prima scelta. Visto comunque il potenziale apporto positivo alla crescita personale e l’interesse da parte del gruppo, il capitolato è stato classificato come terza scelta.
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Caratteristiche del prodotto}
+\label{sub:caratteristiche_del_prodotto}
+Il progetto \emph{HD Viz} mette a disposizione diverse funzionalità per la visualizzazione e l'esplorazione dei
+dati. L'applicativo offre una serie di servizi tra cui la possibilità di importare dati mediante file CSV o attraverso query da database esterno; la possibilità di scegliere e visualizzare diverse tipologie di grafici e strumenti per la manipolazione delle visualizzazioni.
+
+In seguito al caricamento dei dati e alla scelta della visualizzazione, l'utente può esplorare e manipolare il grafico
+al fine di analizzare i dati e scovare schemi intrinseci nella loro natura.
+
+La tipologia della visualizzazione inoltre può essere cambiata in corso d'opera per mettere in risalto aspetti diversi
+dei dati caricati, così da poter evidenziare situazioni interessanti che altrimenti non si sarebbero presentate.
+
+\subsection{Obiettivi del prodotto}
+\label{sub:obiettivo_del_prodotto}
+L'obiettivo del progetto presentato è la realizzazione di una web application che permetta la visualizzazione di dati a
+molte dimensioni mediante diverse tipologie di grafici.
+I dati potranno essere caricati tramite file CSV o query da database esterno, mentre le visualizzazioni messe a
+disposizione saranno l'elemento cardine dell'applicativo; esse andranno infatti a fornire supporto all'utente
+nella fase esplorativa dell'analisi dei dati (\glossario{EDA}), facilitando così la visualizzazione di schemi e modelli
+altrimenti difficilmente individuabili.
+
+\subsection{Caratteristiche degli utenti}
+\label{sub:caratteristiche_degli_utenti}
+
+Il prodotto é rivolto ad un'utenza che possieda dati ad alto numero dimensionale in formato CSV o all'interno di un
+database, e desideri esplorarne la conformazione e la struttura. Per poter utilizzare l'applicazione \emph{HD Viz} gli
+utenti non necessiteranno di autenticazione né di registrazione.
+% TODO: Check
+% Agli utenti viene fornita una breve guida introduttiva per orientarsi nell'interfaccia e per usare al meglio i vari strumenti offerti da \emph{HD Viz}.
+
+% Non fa parte dell'analisi dei requisiti ma della Progettazione
+% \subsection{Architetture del progetto}
+% \label{sub:architetture_e_tecnologie_del_progetto}
+
+% Il back end verrà sviluppato in JavaScript con l'ausilio del framework \glossario{Node.js}, inoltre l'applicazione
+% immagazzinerà i dati caricati in un database all'interno del server. \\
+% Il \glossario{front end} sarà costituito da diverse pagine web accessibili dai principali \glossario{browser} desktop. \\
+% La \glossario{UI} verrà sviluppata principalmente in \glossario{HTML} e \glossario{CSS}, verranno inoltre aggiunti elementi dinamici in JavaScript. I grafici che verranno visualizzati saranno sviluppati con JavaScript utilizzando la libreria D3.js.
+% Sarà messa a disposizione dell'utente una piccola guida introduttiva per orientarsi e usare al meglio l'applicazione.
+
+
+\subsection{Vincoli progettuali}
+\label{sub:vincoli_progettuali}
+
+L'implementazione del progetto dovrà rispettare i seguenti vincoli obbligatori specificati nel documento
+\textsc{Capitolato d'Appalto C4 - HD Viz}, reperibile al link indicato nella sezione \refSec{ssub:normativi}:
+\begin{itemize}
+    \item Il lato \glossario{front end} dell'applicazione dovrà essere sviluppato prevalentemente con le tecnologie
+    \glossario{HTML}, \glossario{CSS} e JavaScript, e dovrà utilizzare la libreria D3.js, per la
+    visualizzazione dei dati;
+    \item Il back end dell'applicazione dovrà essere sviluppato in Java con server Tomcat,
+    oppure in JavaScript con l'ausilio del framework Node.js
+    \item I dati dovranno essere forniti al sistema tramite caricamento di file CSV o tramite query da database
+    esterno, inoltre essi dovranno poter arrivare ad almeno 15 dimensioni;
+    \item Dovranno essere disponibili le seguenti tipologie di visualizzazione:
+    \begin{itemize}
+        \item Scatter Plot Matrix: disposizione matriciale di \glossario{Scatter Plot} dove in ciascuno di essi compare
+        sugli assi una differente coppia di dimensioni;
+        \item Force Field: visualizzazione che traduce le distanze tra punti nello spazio multidimensionale in forze
+        di attrazione e repulsione proiettate in uno spazio bidimensionale;
+        \item Heat Map: visualizzazione che trasforma la distanza tra coppie di punti nello spazio multidimensionale in
+        colori di varia intensità. In questo grafico dovrà inoltre essere possibile svolgere l'ordinamento dei dati in
+        modo che le strutture presenti siano più visibili all'utente;
+        \item Proiezione Lineare Multi Asse: rappresentazione che dispone i punti dello spazio multidimensionale nel
+        piano cartesiano e permette all'utente di spostare degli assi delle diverse dimensioni sul piano, in modo da
+        favorire l'individuazione di strutture e di raggruppamenti.
+    \end{itemize}
+\end{itemize}
+Inoltre sono stati presentati i seguenti requisiti opzionali:
+\begin{itemize}
+    \item La possibilità di visualizzare altre tipologie di grafici adatte alla visualizzazione di dati
+    pluridimensionali;
+    \item La possibilità di utilizzare ulteriori funzioni di calcolo della distanza oltre alla
+    \glossario{distanza euclidea} in tutte le visualizzazioni che necessitano del concetto di distanza;
+    \item La possibilità di scegliere funzioni di forza diverse rispetto a quelle automaticamente previste nel grafico
+    Force Field dalla libreria D3.js;
+    \item L'implementazione dell'analisi automatica dei dati per dare evidenza a situazioni di particolare interesse;
+    \item L'implementazione dell'utilizzo di algoritmi di preparazione del dato di modo da effettuare le dovute
+    trasformazioni precedentemente alla visualizzazione stessa.
+\end{itemize}
+
+\end{document}

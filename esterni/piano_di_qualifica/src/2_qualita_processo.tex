@@ -1,0 +1,167 @@
+\documentclass[../piano_di_qualifica.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo}
+In questa sezione saranno presentati gli obiettivi di qualità che si vogliono raggiungere relativi ai processi implementati e ai loro prodotti, così da rendere efficace la valutazione della qualità e di selezionare le migliori metriche.\\
+La qualità di un prodotto è fortemente influenzata dai processi utilizzati, per questo motivo si è deciso di usare come riferimento lo standard ISO/IEC 15504 (SPICE)  e il metodo PDCA (o \glossario{ciclo di Deming}) per il miglioramento continuo della qualità durante tutto l'arco del progetto.\\
+Saranno adottati i seguenti codici identificativi:\par
+
+\begin{center}
+	\textbf{QPR}[Qualità di processo]\textbf{ID}[Indice]\textbf{N}[Nome]\\
+	\textbf{MPR}[Metrica di processo]\textbf{ID}[Indice]\textbf{N}[Nome]
+\end{center}
+
+Per ogni processo sono elencate le sue funzioni principali, gli obiettivi prefissati e le metriche adottate per raggiungere quell’obiettivo.
+
+\begin{center}
+	\textbf{PROC}[Processo]\textbf{ID}[Indice]\textbf{N} [Nome]
+\end{center}
+
+\subsubsection{PROC01 Gestione progetto}
+Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lavoro da svolgere per adempiere ai requisiti trovati. L'esito dell'intero progetto è dipendente da questo processo, che deve strutturare il \glossario{way of working} del gruppo.\\
+
+\setlength{\parindent}{0pt}\textbf{Funzioni:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{Scelta standard}: trovare gli standard che si adattano meglio allo sviluppo di questo progetto;
+	\item \textbf{Sviluppo sotto-processi}: i processi devo poter essere associati ad azioni mirate;
+	\item \textbf{Suddivisione lavoro}: assegnazione di compiti ai membri del gruppo;
+	\item \textbf{Programmare scadenze}: stabilire delle baseline;
+	\item \textbf{Programmare formazione}: prevedere dei periodi di autoformazione;
+	\item \textbf{Rispettare budget}: rimanere nei limiti di budget stimati durante il preventivo.
+\end{itemize}
+
+\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{QPR01 Scadenze}: rispettare il più possibile le date di scadenza presenti all'interno del \textsc{Piano di Progetto};
+	\item \textbf{QPR02 Budget}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata;
+	\item \textbf{QPR03 Miglioramento}: i processi devono seguire le fasi del ciclo di vita di Deming per migliorare la qualità;
+	\item \textbf{QPR04 Versionamento}: i prodotti devono essere versionati per poterne conoscere lo storico delle modifiche.
+\end{itemize}
+
+\textbf{Metriche:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{MPR01 Rispetto degli standard};
+	\item \textbf{MPR02 Varianza della pianificazione};
+	\item \textbf{MPR03 Varianza dei costi}.
+\end{itemize}
+
+\subsubsection{PROC02 Analisi}
+Questo macro-processo si riferisce ad ogni tipo di analisi presente in questo progetto, non solo l'analisi dei requisiti.\\
+
+\textbf{Funzioni:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{Individuare requisiti}: individuare i requisiti espliciti e impliciti e classificarli;
+	\item \textbf{Individuare rischi}: individuare i rischi e classificarli per poterli evitare o per mitigare i loro effetti;
+	\item \textbf{Individuare obiettivi}: individuare gli obiettivi per poter perseguire la qualità nel progetto;
+	\item \textbf{Individuare norme}: trovare delle norme e poi adattarle per migliorare il lavoro del gruppo.
+\end{itemize}
+
+\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{QPR05 Adempimento requisiti obbligatori}: tutti i requisiti obbligatori devono essere soddisfatti;
+	\item \textbf{QPR06 Adempimento requisiti non obbligatori}: i requisiti non obbligatori, cioè desiderabili e opzionali, potranno essere soddisfatti solo se tutti i requisiti obbligatori sono stati completati prima della fine del progetto;
+	\item \textbf{QPR07 Rischi non previsti}: non dovranno verificarsi rischi non previsti che potrebbero portare rallentamenti;
+	\item \textbf{QPR08 Rispetto obiettivi}: tutti gli obiettivi dovranno essere rispettati per avere un prodotto di qualità;
+	\item \textbf{QPR09 Rispetto delle norme}: tutte le norme dovranno essere seguite; se ci fosse necessità di fare diversamente, dovranno essere riadattate.
+\end{itemize}
+
+\textbf{Metriche:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{MPR04 Requisiti obbligatori};
+	\item \textbf{MPR05 Requisiti non obbligatori desiderabili};
+	\item \textbf{MPR06 Obiettivi soddisfatti};
+	\item \textbf{MPR07 Norme rispettate}.
+\end{itemize}
+
+Nello specifico il calcolo usato per verificare la percentuale di requisiti soddisfatti sarà il seguente: \par
+\begin{center}
+	$C = \frac{N_{fni}}{N_{fi}} * 100$
+\end{center}
+
+dove
+\begin{enumerate}
+	\item N\textsubscript{FnI} è il numero di funzionalità non implementate;
+	\item N\textsubscript{FI} è il numero di funzionalità implementate.
+\end{enumerate}
+
+\subsubsection{PROC03 Documentazione}
+Questo processo ha lo scopo di garantire la produzione di documenti di qualità. Di seguito, si riportano le scelte effetturate, gli strumenti utilizzati e le modifiche attuate durante l'intero progetto.\\
+
+\textbf{Funzioni:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{Verifica documenti}: controllo dei documenti da parte dei verificatori;
+	\item \textbf{Approvazione documenti}: controllo e approvazione finale da parte del responsabile.
+\end{itemize}
+
+\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{QPR10 Ciclo di vita dei documenti}: i documenti devono rispettare ogni fase del loro ciclo di vita e le scadenze prefissate;
+	\item \textbf{QPR11 Leggibilità}: i documenti devono poter essere letti e capiti da chiunque abbia almeno una licenza media.
+\end{itemize}
+
+\subsubsection{PROC04 Verifica}
+Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano errori, se rispettano gli obiettivi di qualità e se sono corretti nella loro forma e contenuto. \\
+
+\textbf{Funzioni:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{Verificare funzionalità}:  i prodotti devono rispettare i requisiti prefissati e quindi bisogna controllare che il loro output sia quello atteso;
+	\item \textbf{Verifica processi}:  controllare che i processi rispettino il loro ciclo di vita;
+	\item \textbf{Verifica qualità}:  bisogna verificare che le metriche degli obiettivi di qualità siano entro limiti accettabili;
+	\item \textbf{Verifica rispetto norme}: bisogna verificare costantemente che le norme prefissate siano sempre rispettate.
+\end{itemize}
+
+\textbf{Obiettivi:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{QPR12 Verifica costante}: tutti i prodotti devono essere costantemente sotto verifica e le verifiche devono essere sempre le medesime, per avere consistenza con i risultati e poter apportare miglioramenti di qualità.
+\end{itemize}
+
+\textbf{Metriche:}
+\smallbreak
+\begin{itemize}
+	\item \textbf{MPR8 Frequenza di controllo};
+\end{itemize}
+
+\subsection{Tabella qualità di processo}
+La seguente tabella indica gli obiettivi di qualità che i processi devono possedere.\\
+Ogni obiettivo di qualità è indicato con:
+\smallbreak
+\begin{itemize}
+	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
+	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
+	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
+	\item \textbf{Preferibile}: indica il valore a cui si punta per avere la massima qualità;
+\end{itemize}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|p{5.5cm}|p{4.5cm}|c|c|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Obiettivo}                          & \textbf{Metrica}                    & \textbf{Accettabile} & \textbf{Preferibile} \\
+		\hline
+		QPR01 Scadenze                              & MPR02 Varianza della pianificazione & 4 giorni             & 0 giorni             \\
+		QPR02 Budget                                & MPR03 Varianza dei costi            & $\pm$5\%             & 0\%                  \\
+		QPR05 Adempimento requisiti obbligatori     & MPR04 Requisiti obbligatori         & 100\%                & 100\%                \\
+		QPR06 Adempimento requisiti non obbligatori & MPR05 Requisiti non obbligatori     & da definire          & 100\%                \\
+		QPR08 Rispetto obiettivi                    & MPR07 Obiettivi soddisfatti         & 100\%                & 100\%                \\
+		QPR09 Rispetto delle norme                  & MPR08 Norme rispettate              & 100\%                & 100\%                \\
+		QPR12 Verifica costante                     & MPR10 Frequenza di controllo        & Ad ogni Milestone    & Ad ogni modifica     \\
+		\hline
+	\end{tabular}
+	\caption{Metriche qualità di processo}
+\end{table}
+
+\clearpage
+
+\end{document}

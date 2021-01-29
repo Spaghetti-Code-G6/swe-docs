@@ -1,0 +1,183 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Verbale Esterno 2020-12-17}
+
+\setVersione{v1.0.0}
+
+\setResponsabile{
+	Paparazzo Giorgia
+}
+
+\setRedattori{
+	Masevski Martin
+}
+
+\setVerificatori{
+	Rizzo Stefano
+}
+
+\setUso{Esterno}
+
+\setDestinatari{
+	prof. Vardanega Tullio \\ &
+	prof. Cardin Riccardo \\ &
+	SpaghettiCode
+}
+
+\setDescrizione{Riassunto dell'incontro realizzato dal gruppo SpaghettiCode tenutosi il 17 Dicembre 2020 in forma di meeting online con Piccoli Gregorio.}
+
+\setModifiche{
+    v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-01 & Approvazione del documento \\
+	v0.1.0 & Rizzo Stefano & Verificatore & 2020-12-29 & Verifica del documento \\
+	v0.0.1 & Masevski Martin & Amministratore & 2020-12-17 & Creazione del documento e prima stesura
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+	
+\input{../../config/template.tex}	
+
+\section{Informazioni generali}
+\label{sec:info_generali}
+
+\subsection{Informazioni incontro}
+\label{sub:info_incontro}
+
+\begin{itemize}
+	\item \textbf{Luogo}: Applicazione desktop \glossario{Skype};
+	\item \textbf{Data}: 2020-12-17;
+	\item \textbf{Ora}: 10:15-11:30
+	\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item SpaghettiCode
+		\item Gruppo 5
+		\item Gruppo 10
+		\item Gruppo 15
+		\item Piccoli Gregorio
+	\end{itemize}
+\end{itemize}
+    
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+
+\begin{itemize}
+    \item \textbf{link1}: \url{https://observablehq.com/@mbostock/the-wealth-health-of-nations};
+    \item \textbf{link1}: \url{https://github.com/mljs/distance};
+    \item \textbf{link1}: \url{https://cs.stanford.edu/people/karpathy/convnetjs};
+    \item \textbf{link1}: \url{https://github.com/karpathy/tsnejs};
+    \item \textbf{link1}: \url{https://github.com/PAIR-code/umap-js}.
+  \end{itemize}
+
+\section{Domande poste}
+\label{sec:domande_poste}
+	Vengono riportate le domande che sono state poste nel corso del meeting:
+	\begin{itemize}
+		\item \nameref{sub:domanda_01};
+		\item \nameref{sub:domanda_02};
+		\item \nameref{sub:domanda_03};
+		\item \nameref{sub:domanda_04};
+		\item \nameref{sub:domanda_05};
+		\item \nameref{sub:domanda_06};
+		\item \nameref{sub:domanda_07};
+		\item \nameref{sub:domanda_08};
+		\item \nameref{sub:domanda_09};
+		\item \nameref{sub:domanda_10};
+		\item \nameref{sub:domanda_11};
+		\item \nameref{sub:domanda_12};
+        \item \nameref{sub:domanda_13}.
+    	\end{itemize}
+
+\section{Resoconto}
+\label{sec:resoconto}
+
+	\subsection{Necessità di gestire autenticazione e registrazione}
+	\label{sub:domanda_01}
+    La gestione della sicurezza non è una priorità: la visualizzazione dei grafici lo è. L'autenticazione viene lasciata a discrezione del gruppo.
+    
+    \subsection{Necessità di prevedere formati di file diversi da .csv}
+	\label{sub:domanda_02}
+	Per recuperare i dati si potrà eseguire query da database o da file, il formato .csv è quello più comune e facile da ottenere. È necessario permettere l'upload diretto di un file.
+	
+    \subsection{Supporto ai browser}
+    \label{sub:domanda_03}
+    La retrocompatibilità con i browser più datati non è un requisito necessario. I browser presi in considerazione sono Firefox e Google Chrome. Viene espresso il desiderio di poter usare il software anche da piattaforme mobile, ma l'implementazione viene lasciata a discrezione del gruppo.
+
+    \subsection{Visualizzazione contemporanea di più grafici}
+    \label{sub:domanda_04}
+    Il capitolato richiede almeno un grafico per volta. La possibilità di visualizzare insieme più grafici è gradita.
+
+    \subsection{Necessità di implementare algoritmi di clustering}
+    \label{sub:domanda_05}
+    Viene considerata un'idea interessante.
+
+    \subsection{Guida introduttiva nell'applicativo}
+    \label{sub:domanda_06}
+    Deve essere presente una guida che aiuti i meno esperti con delle interfacce introduttive o dei percorsi di presentazione.
+
+    \subsection{Scopo del progetto}
+    \label{sub:domanda_07}
+    Con il progetto si vuole solamente raccogliere delle idee, altrimenti il progetto verrà rimaneggiato.
+
+    \subsection{Necessità di salvare il lavoro}
+    \label{sub:domanda_08}
+    Viene consigliato di non introdurre questa funzionalità, in quanto renderebbe più complessa la preparazione degli ambienti di test.
+    
+    \subsection{Necessità di esportare i grafici}
+    \label{sub:domanda_09}
+    La funzionalità non è prevista.
+    
+    \subsection{Necessità di effettuare pulizia sui dati forniti}
+    \label{sub:domanda_10}
+    Verranno forniti dati a molte dimensioni anonimizzati. Viene consigliato di cominciare lo sviluppo con dataset facilmente reperibili su Internet. Se ci sarà la necessità di pulire i dataset forniti ci verrà detto più avanti. Verosimilmente i dati saranno da visualizzare as-is. Non si dovrà fare analisi sul contenuto dei dati, ma sulla loro visualizzazione. Ogni possibile scrematura dei dati dovrà essere sempre finalizzata alla visualizzazione.
+
+    \subsection{Necessità di dare importanza all'aspetto grafico}
+    \label{sub:domanda_11}
+    Viene consigliato di rendere visivamente gradevole il software. Il grafico dovrà necessariamente essere informativo, in secondo luogo potrà essere gradevole alla vista.
+
+    \subsection{Presenza di file o database da cui prendere i dati}
+    \label{sub:domanda_12}
+    Non sarà necessario collegarsi a database esterni. Saranno forniti file .csv. La presenza di un database interno all'applicativo a scopo interno viene lasciato a discrezione del gruppo.
+
+    \subsection{Esempio di utilizzo del prodotto finale}
+    \label{sub:domanda_13}
+    Si parte da una query o da un file .csv, la si importa nel sistema il quale mostra i grafici che producono le proiezioni. Quindi a questo punto si ha un grafico in 2D o 3D prodotto a partire da dati con N dimensioni. Se sono contento del grafico bene, altrimenti proseguo con modifiche sulla proiezione dei dati per ottenere una riduzione che sia utile.
+
+    \subsection{Limite alle dimensioni dei dati}
+    \label{sub:domanda_14}
+    Mediante operazioni di riduzione dimensionale è possibile ridurre il numero di dimensioni. Non sarà necessario effettuare operazioni di riduzione dimensionale.  
+    Viene presentato un esempio relativo al grafico scatter plot, che è in grado di includere al massimo 6 dimensioni. le rimanenti (15-6) 9 verranno rappresentate mediante altri grafici.
+
+    \subsection{Formazione autonoma o verranno forniti materiali di studio}
+    \label{sub:domanda_15}
+    La formazione sarà autonoma, in caso di difficoltà si potrà discutere.
+
+    \subsection{Obbligo sull'utilizzo di JavaScript}
+    \label{sub:domanda_16}
+    Non ci sono obblighi ma viene sconsigliato l'utilizzo di TypeScript per via della tipizzazione.
+
+    \subsection{Consigli sulle librerie}
+    \label{sub:domanda_17}
+    ml.js raccoglie molti modi diversi di calcolare le distanza. D3.js permette la visualizzazione ed è caldamente consigliata, tuttavia non è un obbligo. 
+    convnet.js fornisce metodi di riduzione dimensionale. Vengono anche mostrati algoritmi per la visualizzazione di cluster come karpathy/tsnejs e umap-js. 
+
+    \subsection{Presenza di requisiti particolari per il Front-End?}
+    \label{sub:domanda_18}
+    Nessuno.
+
+    \subsection{Utilizzo di tipi diversi di grafici per dati diversi}
+    \label{sub:domanda_19}
+    Bisogna poter visualizzare i dati con vari grafici. 
+
+\section{Conclusione dell'incontro}
+\label{sec:conclusione}
+Zucchetti anonimizzerà i dati. Il posizionamento dei dati sui vari assi è una scelta che spetta all'utente. Il software potrebbe sottolineare somiglianze tra i dati. È probabile che chi ha fatto il grafico dell'aspettativa di vita, preso d'esempio durante le domande, abbia fatto delle prove per evidenziare certe proprietà. Ad esempio, ci siamo resi conto che la popolazione non influenza molto il PIL.
+
+Zucchetti chiuderà per Natale, quindi non saranno reperibili fino al loro rientro.
+
+\end{document}
