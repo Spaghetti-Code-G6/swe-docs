@@ -30,3 +30,6 @@
 
 # Permit .png in subdirectory of img for document's resources
 !**/src/**/img/**/*.png
+
+# Permit .sh files in utils directory
+!utils/**/*.sh
