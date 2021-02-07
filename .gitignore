@@ -31,5 +31,8 @@
 # Permit .png in subdirectory of img for document's resources
 !**/src/**/img/**/*.png
 
+# Permit .xml in subdirectory of gantt for document's resources
+!**/src/**/gantt/**/*.xml
+
 # Permit .sh files in utils directory
 !utils/**/*.sh
