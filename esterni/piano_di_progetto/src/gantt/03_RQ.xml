@@ -4,9 +4,6 @@
         <field id="tpd3" name="Name" width="193" order="0"/>
         <field id="tpd4" name="Begin date" width="73" order="1"/>
         <field id="tpd5" name="End date" width="72" order="2"/>
-        <timeline>
-            <![CDATA[33,49]]>
-        </timeline>
         <option id="color.recent">
             <![CDATA[#000000 #00ff66 #f4f4f4 #0033ff #ff0033 #ff3333]]>
         </option>
@@ -51,7 +48,7 @@
             <task id="74" name="Aggiornamento" color="#8cb6ce" meeting="false" start="2021-03-01" duration="30" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
             <task id="75" name="Verifica" color="#00ff66" meeting="false" start="2021-03-25" duration="7" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="55" name="Consegna RA" color="#ff0033" meeting="true" start="2021-04-02" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" priority="4" expand="true"/>
+        <task id="55" name="Consegna RQ" color="#ff0033" meeting="true" start="2021-04-02" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" priority="4" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
