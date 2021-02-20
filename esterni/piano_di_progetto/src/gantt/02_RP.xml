@@ -5,7 +5,7 @@
         <field id="tpd4" name="Begin date" width="73" order="1"/>
         <field id="tpd5" name="End date" width="72" order="2"/>
         <timeline>
-            <![CDATA[49,33]]>
+            <![CDATA[33,49]]>
         </timeline>
         <option id="color.recent">
             <![CDATA[#0033ff #00ff66 #ff0033 #f4f4f4 #ff3333]]>
@@ -63,10 +63,10 @@
             <task id="38" name="analisi tecnologica" color="#8cb6ce" meeting="false" start="2021-02-08" duration="5" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
             <task id="40" name="descrizione architettura" color="#8cb6ce" meeting="false" start="2021-02-12" duration="5" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
             <task id="45" name="design pattern" color="#8cb6ce" meeting="false" start="2021-02-12" duration="5" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
-            <task id="46" name="Proof of concept" meeting="false" start="2021-02-15" duration="11" complete="0" expand="true">
-                <task id="48" name="incremento 1" color="#8cb6ce" meeting="false" start="2021-02-15" duration="8" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
-                <task id="49" name="Milestone 2" color="#ff0033" meeting="true" start="2021-02-22" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
-                <task id="52" name="incremento 2" color="#8cb6ce" meeting="false" start="2021-02-21" duration="5" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
+            <task id="46" name="Proof of concept" meeting="false" start="2021-02-11" duration="16" complete="0" expand="true">
+                <task id="48" name="incremento 1" color="#8cb6ce" meeting="false" start="2021-02-11" duration="10" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
+                <task id="49" name="Milestone 2" color="#ff0033" meeting="true" start="2021-02-21" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
+                <task id="52" name="incremento 2" color="#8cb6ce" meeting="false" start="2021-02-21" duration="6" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="53" name="verifica" color="#00ff66" meeting="false" start="2021-02-24" duration="4" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" expand="true"/>
         </task>

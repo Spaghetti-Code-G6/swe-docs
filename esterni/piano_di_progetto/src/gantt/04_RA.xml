@@ -36,16 +36,16 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Codice" color="#000000" meeting="false" start="2021-04-03" duration="27" complete="0" thirdDate="2021-01-21" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Codice" color="#000000" meeting="false" start="2021-04-03" duration="25" complete="0" thirdDate="2021-01-21" thirdDate-constraint="0" expand="true">
             <task id="68" name="Codifica" color="#8cb6ce" meeting="false" start="2021-04-03" duration="20" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
             <task id="70" name="Verifica" color="#00ff66" meeting="false" start="2021-04-20" duration="8" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
-            <task id="79" name="Rilascio ultima versione" color="#ff0033" meeting="true" start="2021-04-30" duration="0" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
+            <task id="79" name="Rilascio ultima versione" color="#ff0033" meeting="true" start="2021-04-28" duration="0" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="58" name="Documenti" color="#000000" meeting="false" start="2021-04-03" duration="29" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true">
             <task id="74" name="Aggiornamento" color="#8cb6ce" meeting="false" start="2021-04-03" duration="25" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
             <task id="75" name="Verifica" color="#00ff66" meeting="false" start="2021-04-27" duration="5" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="55" name="Consegna RQ" color="#ff0033" meeting="true" start="2021-05-03" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" priority="4" expand="true"/>
+        <task id="55" name="Consegna RA" color="#ff0033" meeting="true" start="2021-05-03" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" priority="4" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
