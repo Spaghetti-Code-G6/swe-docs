@@ -14,7 +14,7 @@ Verranno usate le seguenti sigle:\par
 \end{itemize}
 
 
-\subsection{ Fase di analisi}%
+\subsection{Analisi}%
 \label{sub:fase_analisi}
 \subsubsection{Prospetto Orario}
 
@@ -40,7 +40,7 @@ Verranno usate le seguenti sigle:\par
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_analisi}
+\includegraphics[width=12cm]{src/img/report/report_analisi}
 \caption{Report della suddivisione dei ruoli nella fase di analisi}
 \end{figure}
 
@@ -69,7 +69,7 @@ Verranno usate le seguenti sigle:\par
 \end{longtable}
 
 
-\subsection{ Fase di consolidamento requisiti}%
+\subsection{Consolidamento dei requisiti}%
 \label{sub:fase_cons}
 \subsubsection{Prospetto Orario}
 
@@ -88,6 +88,7 @@ Verranno usate le seguenti sigle:\par
 		Pagotto Manuel & 0 & 0 & 2 & 0 & 0 & 3 & 5 \\			
 		Paparazzo Giorgia & 1 & 0 & 1 & 0 & 0 & 3 & 5 \\
 		Rizzo Stefano & 0 & 0 & 2 & 0 & 0 & 3 & 5 \\
+		\textbf{Ore totali ruolo} & 2 & 1 & 11 & 0 & 0 & 21 & 35 \\
 	\hline	
 	\end{tabular}
 	\caption{Tabella contenente la suddivisione delle ore nella fase di consolidamento}
@@ -95,7 +96,7 @@ Verranno usate le seguenti sigle:\par
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_consolidamento}
+\includegraphics[width=12cm]{src/img/report/report_consolidamento}
 \caption{Report della suddivisione dei ruoli nella fase di consolidamento}
 \end{figure}
 
@@ -104,24 +105,24 @@ Verranno usate le seguenti sigle:\par
 \begin{longtable}{|l|c|c|}
 	\hline
 	\rowcolor{lightgray}
-	\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €}\\
+	\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo}\\
 	\endhead
 	\hline
-	Responsabile & 2 & 60,00 \\
-	Amministratore & 1 & 25,00 \\
-	Analista & 11 & 275,00 \\
+	Responsabile & 2 & € 60,00 \\
+	Amministratore & 1 & € 25,00 \\
+	Analista & 11 & € 275,00 \\
 	Progettista & 0 & 0 \\
 	Programmatore & 0 & 0 \\
-	Verificatore & 21 & 315 \\
+	Verificatore & 21 & € 315,00 \\
 	\hline
-	\textbf{Totale} & 35 & 670,00 \\
+	\textbf{Totale} & 35 & € 670,00 \\
 	\hline
 	\rowcolor{white}
 	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella fase di consolidamento} 
 \end{longtable}
 
 
-\subsection{ Fase di progettazione architetturale}%
+\subsection{Progettazione architetturale}%
 \label{sub:fase_prog_arc}
 \subsubsection{Prospetto Orario}
 
@@ -156,7 +157,7 @@ Verranno usate le seguenti sigle:\par
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_prog_arc}
+\includegraphics[width=12cm]{src/img/report/report_prog_arc}
 \caption{Report della suddivisione dei ruoli nella fase di progettazione architetturale}
 \end{figure}
 
@@ -183,7 +184,9 @@ Verranno usate le seguenti sigle:\par
 	\end{longtable}
 \end{center}
 
-\subsection{ Fase di progettazione di dettaglio}%
+
+%TODO Sembrare progettazione di dettaglio negli incementi necessari per il completamento del progetto
+\subsection{Progettazione di dettaglio}%
 \label{sub:fase_prog_dett}
 \subsubsection{Prospetto Orario}
 
@@ -201,6 +204,7 @@ Verranno usate le seguenti sigle:\par
 			Pagotto Manuel & 8 & 0 & 0 & 9 & 16 & 17 & 50 \\		
 			Paparazzo Giorgia & 0 & 6 & 2 & 17 & 10 & 15 & 50 \\
 			Rizzo Stefano & 0 & 8 & 0 & 12 & 14 & 16 & 50 \\
+			\textbf{Ore tatali ruolo} & \textbf{27} & \textbf{14} & \textbf{7} & \textbf{86} & \textbf{103} & \textbf{113} & \textbf{350} \\
 		\hline	
 		\rowcolor{white}
 		\caption{Tabella contenente la suddivisione delle ore nella fase di Progettazione di dettaglio}
@@ -209,7 +213,7 @@ Verranno usate le seguenti sigle:\par
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_prog_dett}
+\includegraphics[width=12cm]{src/img/report/report_prog_dett}
 \caption{Report della suddivisione dei ruoli nella fase di progettazione di dettaglio}
 \end{figure}
 
@@ -237,7 +241,7 @@ Verranno usate le seguenti sigle:\par
 	\end{longtable}
 \end{center}
 
-\subsection{ Fase di validazione e collaudo}%
+\subsection{Validazione e collaudo}%
 \label{sub:fase_valid_collaudo}
 \subsubsection{Prospetto Orario}
 
@@ -263,7 +267,7 @@ Verranno usate le seguenti sigle:\par
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_valid_collaudo}
+\includegraphics[width=12cm]{src/img/report/report_valid_collaudo}
 \caption{Report della suddivisione dei ruoli nella fase di validazione e collaudo}
 \end{figure}
 
@@ -294,8 +298,9 @@ Verranno usate le seguenti sigle:\par
 
 \subsection{Riepilogo}%
 \label{sub:riepilog}
-Nella seguente tabella viene riportato il riepilogo delle ore impiegate, incluse le ore svolte in fase di analisi e di studio personale: \\
 
+\subsubsection{Ore totali}
+Nella seguente tabella viene riportato il riepilogo delle ore impiegate, incluse le ore svolte in fase di analisi e di studio personale: \\ \\
 \textbf{Prospetto Orario}
 
 \begin{center}
@@ -312,15 +317,16 @@ Nella seguente tabella viene riportato il riepilogo delle ore impiegate, incluse
 			Pagotto Manuel & 18 & 4 & 27 & 15 & 16 & 52 & 132 \\			
 			Paparazzo Giorgia & 14 & 6 & 20 & 25 & 20 & 47 & 132 \\
 			Rizzo Stefano & 8 & 17 & 19 & 16 & 18 & 54 & 132 \\
+			\textbf{Ore totali ruolo} & \textbf{84} & \textbf{60} & \textbf{132} & \textbf{145} & \textbf{144} & \textbf{359} & \textbf{924} \\
 		\hline	
 		\rowcolor{white}
-		\caption{Tabella contenente il totale delle ore impiegate, non rendicontate}
+		\caption{Distribuzione oraria delle ore totali non rendicontate}
 	\end{longtable}
 \end{center}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=12cm]{img/report/report_ruoli_tot}
+\includegraphics[width=12cm]{src/img/report/report_ruoli_tot}
 \caption{Report della suddivisione dei ruoli nel totale del progetto, incluso le ore non rendicontate}
 \end{figure}
 
@@ -350,14 +356,13 @@ Nella seguente tabella viene riportato il riepilogo delle ore impiegate, incluse
 		\hline
 		\textbf{Totale} & \textbf{889} & \textbf{17.755,00}\\
 		\hline
-
-		\caption{Tabella contenente il prospetto economico in riferimento al totale delle ore impiegate, non rendicontate}
+		\rowcolor{white}
+		\caption{Prospetto economico in riferimento al totale delle ore impiegate non rendicontate}
 	\end{longtable}
 \end{center}
 
-
-Di seguito invece viene riportato il prospetto rendicontato:\\
-
+\subsubsection{Ore rendicontate}
+Di seguito invece viene riportato il prospetto rendicontato:\\ \\
 \textbf{Prospetto Orario}
 
 \begin{center}
@@ -374,9 +379,10 @@ Di seguito invece viene riportato il prospetto rendicontato:\\
 			Pagotto Manuel & 18 & 4 & 9 & 15 & 16 & 38 & 100 \\			
 			Paparazzo Giorgia & 0 & 6 & 12 & 25 & 20 & 37 & 100 \\
 			Rizzo Stefano & 8 & 17 & 2 & 16 & 18 & 39 & 100 \\
+			\textbf{Ore totali ruolo} & \textbf{65} & \textbf{38} & \textbf{36} & \textbf{145} & \textbf{144} & \textbf{272} & \textbf{700} \\
 		\hline	
 		\rowcolor{white}
-		\caption{Tabella contenente il totale delle ore impiegate rendicontate}
+		\caption{Distribuzione oraria delle ore totali rendicontate}
 	\end{longtable}
 \end{center}
 
@@ -402,8 +408,12 @@ Di seguito invece viene riportato il prospetto rendicontato:\\
 		\textbf{Totale} & \textbf{700} & \textbf{13.040,00}\\
 		\hline
 		\rowcolor{white}
-		\caption{Tabella contenente il prospetto economico in riferimento al totale delle ore impiegate rendicontate}
+		\caption{Prospetto economico in riferimento al totale delle ore impiegate rendicontate}
 	\end{longtable}
 \end{center}
+
+\subsubsection{Conclusioni}
+\label{ssub:prev_conc}
+Il rendicontato totale a carico del committente risulta \textbf{€ 13.040,00}.
 
 \end{document}
