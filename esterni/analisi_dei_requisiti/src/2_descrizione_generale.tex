@@ -81,34 +81,30 @@ Inoltre sono stati presentati i seguenti requisiti opzionali:
     trasformazioni precedentemente alla visualizzazione stessa.
 \end{itemize}
 
-\subsection{Supporto browser}
-\label{sub:supporto_browser}
-
-%Durante l'incontro con il proponente (fare riferimento a VE\_2020\_12\_17) è stato specificato che il supporto ai browser meno recenti (es IE8, IE9, IE10) non è richiesto, anzi, è stato consigliato di non perdere tempo nel cercare di rendere il prodotto retrocompatibile con questi software datati.
-
-%Si è scelto, considerando quanto stabilito con il proponente (riferimento a |VE\_2020\_12\_17) di prendere in considerazione una delle ultime versioni del browser di Google, Google Chrome v87.0.0, che è il browser che verrà usato dal porponente e dalla maggior parte degli utenti. 
-%Inoltre è stato deciso di supportare le ultime versioni delle alternative più diffuse, quindi Firefox dalla versione 85.0.0, Opera dalla versione 74.0.0, e Safari per Mac dalla versione 14.0.0.
-
 Il prodotto, secondo quanto specificato in \textsc{VE\_2020\_12\_17}, dovrà supportare i seguenti browser a partire dalla versione specificata:
 
-\rowcolors{2}{white!80!lightgray!90}{white}
-\renewcommand{\arraystretch}{2} %
-\begin{tabular}{|c|c|}
-
+\begin{table}
+  \centering
+  \label{tab:supporto_browser}
+  \rowcolors{2}{white!80!lightgray!90}{white}
+  \renewcommand{\arraystretch}{2} 
+  
+  \begin{tabular}{|c|c|}
+  
     \hline
     \rowcolor{lightgray}
-	
-	Broswer & Versione minima\\
-	Google Chrome & 87.0.0 \\
-	Mozilla Firefox & 85.0.0\\
-	Opera & 74.0.0 \\
-	Safari (per Mac) & 14.0.0\\
-	
+    
+    \textbf{Browser} & \textbf{Versione}\\
+    \hline
+    Google Chrome & 87.0.0 \\
+    Mozilla Firefox & 85.0.0\\
+    Opera & 74.0.0 \\
+    Safari & 14.0.0\\
     \hline
     \rowcolor{white}
-    %\caption{Supporto browser}%
-    %\label{tab:supporto_browser}
-\end{tabular}
-
+    
+  \end{tabular}
+  \caption{Browser supportati}
+\end{table}
 
 \end{document}
