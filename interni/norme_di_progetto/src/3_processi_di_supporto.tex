@@ -272,13 +272,11 @@ Un documento ha sempre associato un codice di versione, che si presenta nella fo
 \begin{center}
     \textbf{[X].[Y].[Z]}
 \end{center}
-In questa notazione i significati sono i seguenti:
+Ciascun codice di versione viene assegnato ad una modifica o ad un incremento pianificato, e a seconda dell'entit\`{a} della modifica pu\`{o} essere aumentato:
 \begin{itemize}
-    \item La \textbf{X} indica l'ultima versione approvata dal \emph{responsabile};
-    \item La \textbf{Y} indica l'ultima versione verificata da uno dei \emph{verificatori}, la numerazione ricomincia 
-    da 0 quando cambia \textbf{X};
-    \item La \textbf{Z} indica l'ultima versione stesa dai \emph{redattori}, la numerazione ricomincia da 0 quando 
-    cambia \textbf{X} o \textbf{Y}.
+	\item La \textbf{X}
+	\item La \textbf{Y}
+	\item La \textbf{Z}
 \end{itemize}
 
 \paragraph{Tecnologie adottate}
@@ -290,37 +288,36 @@ sistema di versionamento \emph{Git}.
 \paragraph{Repository}
 \label{par:repo}
 
-Il gruppo ha creato per il progetto un'organizzazione su \emph{GitHub} e ha provveduto a creare due repository:
+Il gruppo ha creato per il progetto un'organizzazione su \emph{GitHub} e ha provveduto a creare tre repository:
 \begin{itemize}
-    \item \textbf{Documenti}: al link \url{https://github.com/Spaghetti-Code-G6/Documenti} si trova il repository di 
-    tutti i documenti prodotti dal gruppo;
-    \item \textbf{Codice}: al link \url{https://github.com/Spaghetti-Code-G6/Codice} è possibile, invece, trovare il 
-    repository con il codice prodotto dal gruppo.
+    \item \textbf{swe-docs}: contenente tutti i documenti prodotti dal gruppo ed individuabile al link 
+    	\url{https://github.com/Spaghetti-Code-G6/swe-docs};
+    \item \textbf{HD-Viz}: contenente il codice del prodotto HD Viz, individuabile al link \url{https://github.com/Spaghetti-Code-G6/HD-Viz};
+    \item \textbf{HD-Viz-PoC}: contenente il \emph{Proof of Concept} del prodotto, sviluppato dal gruppo per la \emph{Technology Baseline}.
 \end{itemize}
 
 \paragraph{Struttura del repository}
 \label{par:struttura_repo}
-Il repository \emph{Codice} è ancora inutilizzato, mentre il repository \glossario{Documenti} è così strutturato:
+
+Il repository \glossario{swe-docs} è così strutturato:
 \begin{itemize}
-    \item \textbf{Documenti esterni}: questa directory contiene tutti i documenti destinati ad uso esterno, ovvero 
+    \item \textbf{esterni}: questa directory contiene tutti i documenti destinati ad uso esterno, ovvero 
     indirizzati al proponente e ai committenti. All'interno della cartella ogni documento si trova nell'omonima 
     directory, la quale a sua volta segue le regole di struttura descritte nel paragrafo \refSec{ssub:cartella_doc};
-    \item \textbf{Documenti interni}: questa directory contiene tutti i documenti destinati ad uso interno ed ha una 
+    \item \textbf{interni}: questa directory contiene tutti i documenti destinati ad uso interno ed ha una 
     struttura analoga a quella dei documenti esterni;
-    \item \textbf{Presentazione}: in questa directory è presente solo la presentazione preparata per la RR;
-    \item \textbf{Risorse}: in questa directory è presente una sottodirectory che raggruppa tutte le immagini che il 
-    gruppo utilizza in tutti i documenti prodotti, inoltre sono presenti i file \emph{config.tex} e \emph{template.tex} 
-    che definiscono il template dei documenti;
+    \item \textbf{config}: in questa directory sono presenti i file \emph{config.tex} e \emph{template.tex} 
+    	che definiscono il template dei documenti, inoltre è presente una sottodirectory \emph{src} contenente tutte le risorse necessarie al template (immagini, loghi, ecc.);
+    \item \textbf{utils}: directory contenente gli script di utilit\`{a} per compilazione dei sorgenti e rimozione dei file intermedi di compilazione.
     \item \textbf{.gitignore}
-    \item \textbf{Readme}
+    \item \textbf{README}
 \end{itemize}
 
 \paragraph{Tipi di file}
 \label{par:tipi_file}
 Nella directory dei documenti sono presenti i seguenti tipi di file:
 \begin{itemize}
-    \item File \textbf{.tex}: file sorgenti \LaTeX\ che il gruppo contenenti i contenuti dei documenti;
-    \item File \textbf{.pdf}: sono i risultati della compilazione dei file .tex e rappresentano i documenti veri e propri;
+    \item File \textbf{.tex}: file sorgenti \LaTeX\ contenenti i contenuti dei documenti;
     \item Immagini da inserire nei documenti;
     \item File \textbf{.md}: il formato del file README;
     \item \textbf{.gitignore}: contiene un riferimento a tutti i file non versionati.
