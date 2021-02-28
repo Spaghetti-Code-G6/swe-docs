@@ -26,9 +26,10 @@
 	SpaghettiCode
 }
 
-\setDescrizione{Riassunto dell'incontro realizzato dal gruppo SpaghettiCode tenutosi il 17 febbraio 2021 in forma di meeting online con Piccoli Gregorio.}
+\setDescrizione{Riassunto dell'incontro tenutosi il 17 febbraio 2021 realizzato dal gruppo SpaghettiCode in forma di meeting online con Piccoli Gregorio.}
 
 \setModifiche{
+	v0.2.0 & Contro Daniel Eduardo & Amministratore & 2021-02-27 & Corretto \refSec{sec:resoconto} \\
 	v0.1.0 & Contro Daniel Eduardo & Amministratore & 2021-02-26 & Modifiche a \refSec{sec:resoconto} \\
 	v0.0.1 & Contro Daniel Eduardo & Amministratore & 2021-02-25 & Creazione del documento e prima stesura
 }
@@ -47,7 +48,7 @@
 \label{sub:info_incontro}
 
 \begin{itemize}
-	\item \textbf{Luogo}: Applicazione desktop \glossario{Zoom};
+	\item \textbf{Luogo}: Applicazione \glossario{Zoom};
 	\item \textbf{Data}: 2021-02-17;
 	\item \textbf{Ora}: 11:30-12:30;
 	\item \textbf{Partecipanti}:
@@ -81,8 +82,6 @@ Di seguito vengono riportati i punti discussi durante l'incontro:
 		\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/RR/SpaghettiCode.pdf}
 \end{itemize}
 
-\newpage
-
 \section{Resoconto}
 \label{sec:resoconto}
 
@@ -101,14 +100,14 @@ dalla versione v1.0.3.
 
 \subsubsection*{Note Aggiuntive}
 Sono state consigliate diverse tecnologie per interfacciarsi con i vari DBMS, tra cui \glossario{Apache drill}. Il gruppo
-si prende la libert\`{a} di utilizzarle o meno, oltre all'aggiungere supporto ad ulteriori DBMS in futuro.
+si prende la libert\`{a} di utilizzarle o meno, oltre che di aggiungere supporto ad ulteriori DBMS in futuro.
 
 \subsection{Struttura dei file csv}
 \label{itm:2}
 
-I file csv, che verranno forniti al sistema dall'utente, si pu\`{o} assumere che abbiano la prima riga contenente i nomi 
-delle varie dimensioni, che i vari campi siano separati mediante il carattere ",", e che i campi stringa non contengano 
-frasi bens\`{i} dati categorici di poche parole.
+Riguardo i file csv, che verranno forniti al sistema dall'utente, si possono fare le seguenti assunzioni: hanno la prima 
+riga contenente i nomi delle varie dimensioni; i vari campi sono separati mediante il carattere ","; i campi stringa non 
+contengono frasi bens\`{i} dati categorici di poche parole.
 
 \subsection{Interazione con i database esterni}
 \label{itm:3}
@@ -133,6 +132,6 @@ La soluzione trovata sar\`{a} individuabile nel documento \textsc{Analisi dei Re
 Il gruppo si tiene comunque la libert\`{a} di aggiungere l'implementazione di ulteriori casi d'uso al PoC qualora lo ritenesse valido.
 \subsection{Note aggiuntive}
 \label{sub:note}
-Il proponente consiglia di effettuare i diversi calcoli di creazione e modifica dei grafici lato client e prevedere un meccanismo di feedback,
+Il proponente consiglia di effettuare i diversi calcoli di creazione e modifica dei grafici lato client e di prevedere un meccanismo di feedback,
 per evitare disorientamento da parte dell'utente nel caso essi abbiano una durata consistente.
 \end{document}
