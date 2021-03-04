@@ -80,37 +80,60 @@ La fase di consolidamento dei requisiti inizia subito dopo la fase di analisi e 
 %\end{figure}
 
 %TODO aggiugnere diagramma di Gantt per la fase appena aggiunta
-\subsection{Progettazione della technology baseline}
+\subsection{Progettazione e codifica della technology baseline}
 \label{sub:tech_baseline}
-Periodo: dal 19/01/2021 al 11/02/2021 \\
-Questa fase inizia subito dopo la presentazione della Revisione dei Requisiti e finisce con l'inizio del primo primo incremento.
-Vengono individuate soluzioni architetturali per cui i requisiti richiesti vengano soddisfatti.
+Periodo: dal 19/01/2021 al 01/03/2021. \\
+La fase di progettazione architetturale inizia subito dopo la presentazione della Revisione dei Requisiti.\\
+In questa fase verranno aggiornati e corretti i documenti redatti a seguito delle valutazioni ricevute, saranno adattati i requisiti in base ai feedback del proponente e verrà effettuato uno studio più approfondito delle tecnologie coinvolte, al fine di realizzare un \glossario{Proof of Concept}.
 
 \subsubsection{Attività}
 \begin{itemize}
     \item \textbf{Revisione/Aggiornamento}: revisione e/o aggiornamento di tutti i documenti \emph{v1.0.0} prodotti fino ad ora.
     \item \textbf{Ricerca tecnologie}: scelta di strumenti e tecnologie usate nella sucessiva fase di codifica del \glossario{Proof of Concept} previo studio autonomo;
     \item \textbf{Progettazione}: progettazione dell'architettura di sistema dell'applicazione;
+    \item \textbf{Codfica}: codifica del Proof of Concept. 
     \item \textbf{Verifica}.
 \end{itemize}
+In questo periodo vengono scelti alcuni dei requisiti più rilevanti individuati durante la fase di Analisi e sviluppati in vari incrementi.
+I requsiti sono stati concordati con il proponente \textsc{Zucchetti S.p.A}, come dichiarato nel verbale []%TODO INSERIRE VERBALE CALL CON ZUCCHETTI
+
+\subsubsection{I incremento}
+\paragraph{Attività}
+\begin{itemize}
+    \item Installazione e configurazione ambiente Node.
+\end{itemize}
+
+\subsubsection{II incremento}
+\paragraph{Attività}
+\begin{itemize}
+    \item Codifica del front-end dell'applicazione \emph{HD Viz}.
+\end{itemize}
+
+\subsubsection{III incremento}
+\paragraph{Attività}
+\begin{itemize}
+    \item Implementazione sistema di caricamento dati attraverso file CSV;
+    \item Implementazione del parser CSV e dell'assegnazione delle label in automatico.
+\end{itemize}
+
+\subsubsection{IV incremento}
+\paragraph{Attività}
+\begin{itemize}
+    \item Implementazione del grafico Scatter Plot Matrix per la visualizzazione dei dati importati.
+\end{itemize}
+
+\subsubsection{V incremento}
+\paragraph{Attività}
+\begin{itemize}
+    \item Implementazione delle sessioni utente.
+\end{itemize}
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=18cm]{src/img/gantt/4_3_tech_baseline.png}
     \caption{Diagramma di Gantt della fase di progettazione della technology baseline}
 \end{figure}
-
-\subsection{Codifica del Proof of Concept}
-Periodo: dal 11/02/2021 al 28/02/2021. \\
-In questo periodo vengono scelti alcuni dei requisiti più rilevanti individuati durante la fase di Analisi.
-I requsiti sono stati concordati con il proponente \textsc{Zucchetti S.p.A}, come dichiarato nel verbale []%TODO INSERIRE VERBALE CALL CON ZUCCHETTI
-
-\subsubsection{I incremento}
-\paragraph{Attività}
-
-\subsubsection{II incremento}
-\paragraph{Attività}
-
 
 \subsection{Progettazione e codifica di dettaglio}%
 \label{sub:prog_dett}
