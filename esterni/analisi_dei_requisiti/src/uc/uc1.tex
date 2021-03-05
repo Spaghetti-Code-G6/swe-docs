@@ -1,4 +1,4 @@
-\subsection{UC1 - Creazione ambiente}
+\subsection{UC1 - Preparazione ambiente}
 \label{sub:uc1}
 
 %TODO: Add correct image
@@ -18,9 +18,9 @@
 	
     \item \textbf{Attore primario}: Utente;
         
-    \item \textbf{Precondizione}:   L'utente decide di caricare i dati;
+    \item \textbf{Precondizione}:   L'applicazione è in esecuzione;
 
-    \item \textbf{Postcondizione}:  Viene selezionata la fonte dei dati desiderata e vengono inseriti i metadati di tipo;
+    \item \textbf{Postcondizione}:  Viene selezionata la fonte dei dati desiderata;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
@@ -28,12 +28,6 @@
             \item L'utente seleziona la fonte dei dati da importare;
         \end{enumerate}
    
-    \item \textbf{Scenari alternativi}:
-		%\begin{itemize}
-            \begin{enumerate}
-                \item L'utente inserisce manualmente i metadati di tipo mancanti (\hyperref[ssub:uc1.4]{UC1.4}).
-			\end{enumerate}
-        %\end{itemize}
 \end{itemize}
 
 \subsubsection{UC1.1 - Selezione fonte}
@@ -43,7 +37,7 @@
 
     \item \textbf{Attore primario}: Utente;
         
-    \item \textbf{Precondizione}:   L'utente decide di caricare i dati;
+    \item \textbf{Precondizione}:   L'applicazione è in esecuzione;
 
     \item \textbf{Postcondizione}:  Viene selezionata la fonte del dataset;
 
@@ -67,7 +61,7 @@
 
     \item \textbf{Attore primario}: Utente;
     
-    \item \textbf{Precondizione}:   L'utente decide di caricare i file da un file csv;
+    \item \textbf{Precondizione}:   L'applicazione è in esecuzione;
     \item \textbf{Postcondizione}:  Viene selezionato un file csv;
 
 	\item \textbf{Scenario principale}:
@@ -94,23 +88,3 @@
         \end{enumerate}
 
 \end{itemize}
-
-\subsubsection{UC1.4 - Inserimento metadati}
-\label{ssub:uc1.4}
-\begin{itemize}
-    \item \textbf{Descrizione}: L'utente assegna ad ogni dimensione del dataset importato, in cui non fossero già 
-    correttamente definiti, i relativi metadati che descrivono il tipo di dato;
-
-    \item \textbf{Attore primario}: Utente;
-    
-    \item \textbf{Precondizione}:   L'utente ha caricato un dataset e non tutti i suoi metadati sono validi o definiti;
-    \item \textbf{Postcondizione}:  Il dataset caricato è provvisto di metadati validi;
-
-	\item \textbf{Scenario principale}:
-		\begin{enumerate}
-            \item L'utente assegna ad ogni dimensione del dataset il relativo metadato di tipo scegliendo tra:
-                    Nominale, Ordinale, Intervallo o Rapporto.
-        \end{enumerate}
-
-\end{itemize}
-

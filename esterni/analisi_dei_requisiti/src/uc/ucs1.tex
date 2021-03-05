@@ -13,61 +13,63 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Descrizione}: La Web-App comunica la scelta della fonte dei dati al server che si occupa di importare i dati e di dare automaticamente un metadato di tipo ai campi del dataset.
+    \item \textbf{Descrizione}: La Web App comunica la scelta della fonte dei dati al server che si occupa di importare i dati e di dare automaticamente un metadato di tipo ai campi del dataset.
 	
-    \item \textbf{Attore primario}: Web-App;
+    \item \textbf{Attore primario}: Web App;
 	\item \textbf{Attore secondario}: Database;
         
-    \item \textbf{Precondizione}:   L'utente ha selezionato la fonte dei dati (UC1.1);
+    \item \textbf{Precondizione}:   La fonte dei dati è stata selezionata(\hyperref[ssub:uc1.1]{UC1.1});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato dall'utente con i metadati di tipo assegnati o viene visualizzato un messaggio d'errore;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset con i metadati di tipo assegnati e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item La web-app comunica al server la decisione dell'utente;
+			\item La web app comunica al server la fonte selezionata;
             \item Il server fa il fetch dei dati;
-			\item Il server assegna i metadati di tipo
+			\item Il server assegna i metadati di tipo.
         \end{enumerate}
    
 \end{itemize}
 
 \subsubsection{UCS1.1 - Fetch dei dati}
+\label{ssub:ucs1.1}
 
 \begin{itemize}
 
-	\item \textbf{Descrizione}: La Web-App comunica la scelta della fonte e il server fa il fetch dei dati.
+	\item \textbf{Descrizione}: La Web App comunica la scelta della fonte e il server fa il fetch dei dati.
 	
-    \item \textbf{Attore primario}: Web-App;
+    \item \textbf{Attore primario}: Web App;
 	\item \textbf{Attore secondario}: Database;
         
-    \item \textbf{Precondizione}:   L'utente ha selezionato la fonte dei dati (UC1.1);
+    \item \textbf{Precondizione}:   La fonte dei dati è stata selezionata (\hyperref[ssub:uc1.1]{UC1.1});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato dall'utente o viene visualizzato un messaggio d'errore;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato e vengono assegnati i metadati di tipo e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item La web-app comunica al server la decisione dell'utente;
-            \item Il server fa il fetch dei dati;
+			\item La web app comunica al server la fonte selezionata;
+            \item Il server fa il fetch dei dati.
         \end{enumerate}
 	
 \end{itemize}
 
 
 \subsubsection{UCS1.2 - Fetch dei dati da file csv}
+\label{ssub:ucs1.2}
 
 \begin{itemize}
 
-	\item \textbf{Descrizione}: La Web-App comunica la scelta di usare come fonte un file csv e il server fa il fetch dei dati.
+	\item \textbf{Descrizione}: La Web App comunica la scelta di usare come fonte un file csv e il server fa il fetch dei dati.
 	
-    \item \textbf{Attore primario}: Web-App;
+    \item \textbf{Attore primario}: Web App;
 	        
-    \item \textbf{Precondizione}:   L'utente ha selezionato come fonte dei dati un file csv(UC1.2);
+    \item \textbf{Precondizione}:   La fonte di dati selezionata è il file csv(\hyperref[ssub:uc1.2]{UC1.2});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato dall'utente o viene visualizzato un messaggio d'errore;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato  e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item La web-app comunica al server la decisione dell'utente di usare un file csv;
+			\item La web app comunica al server al decisione di usare un file csv;
             \item Il server fa il fetch dei dati;
         \end{enumerate}
 		
@@ -78,7 +80,7 @@
 			\begin{enumerate}
 				
 				\item Il caricamento dei dati viene interrotto;
-				\item Viene visualizzato un messaggio di errore(UC5)
+				\item Viene visualizzato un messaggio di errore(\hyperref[sub:uc5]{UC5}).
 				
 			\end{enumerate}
 		
@@ -94,21 +96,22 @@
 \end{figure}
 
 \subsubsection{UCS1.3 - Fetch dei dati da database}
+\label{ssub:ucs1.3}
 
 \begin{itemize}
 
-	\item \textbf{Descrizione}: La Web-App comunica la scelta di usare come fonte un database e sceglie il file di configurazione adatto. Il server fa il fetch dei dati.
+	\item \textbf{Descrizione}: La Web App comunica la scelta di usare come fonte un database e la query da utilizzare. Il server fa il fetch dei dati.
 	
-    \item \textbf{Attore primario}: Web-App;
+    \item \textbf{Attore primario}: Web App;
 	\item \textbf{Attore secondario}: Database;
 	        
-    \item \textbf{Precondizione}:   L'utente ha selezionato come fonte dei dati un database e ha scelto un file di configurazione(UC1.3);
+    \item \textbf{Precondizione}:   La fonte dei dati è un database ed è stata scelta una query(\hyperref[ssub:uc1.3]{UC1.3});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato dall'utente o viene visualizzato un messaggio d'errore;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item La web-app comunica al server la decisione dell'utente di usare un database e il file di configurazione;
+			\item La web app comunica al server la decisione di usare un database e la query scelta;
             \item Il server fa il fetch dei dati;
         \end{enumerate}
 		
@@ -119,7 +122,7 @@
 			\begin{enumerate}
 				
 				\item Il caricamento dei dati viene interrotto;
-				\item Viene visualizzato un messaggio di errore(UC6)
+				\item Viene visualizzato un messaggio di errore(\hyperref[sub:uc6]{UC6}).
 				
 			\end{enumerate}
 		
@@ -127,7 +130,7 @@
 			\begin{enumerate}
 				
 				\item Il caricamento dei dati non viene effettuato;
-				\item Viene visualizzato un messaggio di errore(UC7)
+				\item Viene visualizzato un messaggio di errore(\hyperref[sub:uc7]{UC7}).
 				
 			\end{enumerate}
 		
