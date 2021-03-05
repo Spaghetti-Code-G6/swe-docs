@@ -12,14 +12,16 @@ Qui di seguito verranno presentati i resoconti relativi ai test effettuati nella
 		\rowcolor{lightgray}
 		\textbf{Obiettivo}            			& \textbf{Metrica}              & \textbf{Risultato}                    & \textbf{Accettabile} & \textbf{Esito} \\
 		\hline
-		QPR01 Ritardo maturato        			& MPR02 Varianza pianificazione & 14 giorni                             & \(\leq 4\)           & Non Superato   \\
-		QPR02 Budget parziale intaccato        	& MPR03 Varianza costi          & superiore al 5\%									& 0\%                  & Non Superato   \\
-		QPR02.2 Budget finale intaccato        	& MPR03 Varianza costi          & Budget totale intatto					& 0\%                  & Superato       \\
-		QPR05 Rispetto obiettivi      			& MPR07 Obiettivi soddisfatti   & 100\%                                 & 100\%                & Superato       \\
-		QPR09 Rispetto delle norme   			& MPR08 Norme rispettate        & 100\%                                 & 100\%                & Superato       \\
-		QPR12 Verifica documenti      			& MPR10 Frequenza controllo     & Ogni Milestone e modifica         	& Ogni Milestone       & Superato       \\
-		OQP01 Leggibilità testo       			& MQP01 Indice di Gulpease      & 79,3                                  & \(\ge 60\)           & Superato       \\
-		OQP02 Correttezza ortografica 			& MQP02 Errori ortografici      & 0                                     & 0                    & Superato       \\
+		OPR01 Scadenze		        			& MPR01 Varianza pianificazione & 14 giorni                             & $\leq$ 4           & Non Superato   \\
+		OPR02 Budget parziale intaccato        	& MPR02 Varianza costi parziali & $>$ 5\%								& 0\%                  & Non Superato   \\
+		OPR03 Budget finale intaccato        	& MPR03 Varianza costi totali   & Budget totale intatto					& 0\%                  & Superato       \\
+		OPR04 Versionamento						& MPR04 Versionamento			& $>$25									&$>$25					& Superato	\\
+		OPR08 Rispetto obiettivi      			& MPR08 Obiettivi soddisfatti   & 100\%                                 & 100\%                & Superato       \\
+		OPR09 Rispetto delle norme   			& MPR09 Norme rispettate        & 100\%                                 & 100\%                & Superato       \\
+		OPR12 Verifica documenti      			& MPR10 Frequenza controllo     & Ogni Milestone e modifica         	& Ogni Milestone       & Superato       \\
+		OP01 Leggibilità testo       			& MQP01 Indice di Gulpease      & 79,3                                  & \(\ge 60\)           & Superato       \\
+		OP02 Correttezza ortografica 			& MQP02 Errori ortografici      & 0                                     & 0                    & Superato       \\
+		OP05 Assenza file senza intestazione	& MP05 File senza intestazione 	& 0										& 0						& Superato		\\
 		\hline
 	\end{tabular}
 	\caption{Esiti test fase di analisi}
