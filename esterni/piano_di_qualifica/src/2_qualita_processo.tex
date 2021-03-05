@@ -25,8 +25,8 @@ Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lav
 \smallbreak
 \begin{itemize}
 	\item \textbf{0PR01 Scadenze}: rispettare il più possibile le date di scadenza presenti all'interno del \textsc{Piano di Progetto};
-	\item \textbf{OPR02 Budget parziale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata;
-	\item \textbf{OPR03 Budget totale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata; 
+	\item \textbf{OPR02 Budget parziale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata; riuscire a contabilizzare dei consuntivi coerenti con i preventivi permetterà di ridurre al minimo l'oscillazione del prezzo finale;
+	\item \textbf{OPR03 Budget totale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata al fine di non avere oscillazioni sul prezzo finale;
 	\item \textbf{OPR04 Versionamento}: i prodotti devono essere versionati per poterne conoscere lo storico delle modifiche;
 \end{itemize}
 
@@ -64,14 +64,14 @@ Questo macro-processo si riferisce ad ogni tipo di analisi presente in questo pr
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPR05 Requisiti obbligatori};
-	\item \textbf{MPR06 Requisiti non obbligatori desiderabili};
-	\item \textbf{MPR07 Rischi non previsti}: 
-	\item \textbf{MPR08 Obiettivi soddisfatti};
-	\item \textbf{MPR09 Norme rispettate}.
+	\item \textbf{MPR05 Requisiti obbligatori}: sono i requisiti minimi;
+	\item \textbf{MPR06 Requisiti non obbligatori desiderabili}: sono i requisiti opzionali;
+	\item \textbf{MPR07 Rischi non previsti}: sono i rischi che si sono verificati e che non erano stati previsti in fase di pianificazione;
+	\item \textbf{MPR08 Obiettivi soddisfatti}: ovvero se sono statai soddisfatti tutti gli obiettivi pianificati entro la consegna;
+	\item \textbf{MPR09 Norme rispettate}: ovvero se tutte le norme stabilite nel documento \textsc{Norme di Progetto} sono state rispettate;
 \end{itemize}
 
-Nello specifico il calcolo usato per verificare la percentuale di requisiti soddisfatti sarà il seguente: \par
+Nello specifico il calcolo usato per verificare la percentuale di requisiti e obiettivi soddisfatti sarà il seguente: \par
 \begin{center}
 	$C = \frac{N_{fni}}{N_{fi}} * 100$
 \end{center}
@@ -120,7 +120,7 @@ Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano e
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPR10 Frequenza di controllo};
+	\item \textbf{MPR10 Frequenza di controllo}: è la frequenza con cui viene effettuata la verifica dei documenti o Issue portate a termine.
 \end{itemize}
 
 \subsection{Tabella qualità di processo}
@@ -141,16 +141,16 @@ Ogni obiettivo di qualità è indicato con:
 		\rowcolor{lightgray}
 		\textbf{Obiettivo}                          & \textbf{Metrica}                    & \textbf{Accettabile} & \textbf{Preferibile} \\
 		\hline
-		OPR01 Scadenze                              & MPR01 Varianza della pianificazione & 4 giorni             & 0 giorni             \\
-		OPR02 Budget parziale                       & MPR02 Varianza dei costi parziali   & $\pm$5\%             & 0\%                  \\
-		OPR03 Budget totale							& MPR03 Varianza dei costi totali	  & 0					& 0						\\
-		OPR04 Versionamento							& MPR04 Versionamento				&	25					& $\sim$25				\\
-		OPR05 Adempimento requisiti obbligatori     & MPR05 Requisiti obbligatori         & 100\%                & 100\%                \\
-		OPR06 Adempimento requisiti non obbligatori & MPR06 Requisiti non obbligatori     & da definire          & 100\%                \\
-		OPR07 Rischi non previsti 					& MPR07 Rischi inattesi					& 2					& 0						\\
-		OPR08 Rispetto obiettivi                    & MPR08 Obiettivi soddisfatti         & 100\%                & 100\%                \\
-		OPR09 Rispetto delle norme                  & MPR09 Norme rispettate              & 100\%                & 100\%                \\
-		OPR10 Verifica costante                     & MPR10 Frequenza di controllo        & Ad ogni Milestone    & Ad ogni modifica     \\
+		OPR01 Scadenze                              & MPR01 Varianza della pianificazione 	& 4 giorni             	& 0 giorni             	\\
+		OPR02 Budget parziale                       & MPR02 Varianza dei costi parziali   	& $\pm$5\%             	& 0\%                  	\\
+		OPR03 Budget totale							& MPR03 Varianza dei costi totali	  	& 0						& 0						\\
+		OPR04 Versionamento							& MPR04 Versionamento					& 25					& $\sim$25				\\
+		OPR05 Adempimento requisiti obbligatori     & MPR05 Requisiti obbligatori         	& 100\%                	& 100\%                	\\
+		OPR06 Adempimento requisiti non obbligatori & MPR06 Requisiti non obbligatori     	& da definire          	& 100\%                	\\
+		OPR07 Rischi non previsti 					& MPR07 Rischi inattesi					& 2						& 0						\\
+		OPR08 Rispetto obiettivi                    & MPR08 Obiettivi soddisfatti         	& 100\%                	& 100\%                	\\
+		OPR09 Rispetto delle norme                  & MPR09 Norme rispettate              	& 100\%                	& 100\%                	\\
+		OPR10 Verifica costante                     & MPR10 Frequenza di controllo        	& Ad ogni Milestone    	& Ad ogni modifica     	\\
 		\hline
 	\end{tabular}
 	\caption{Metriche qualità di processo}
