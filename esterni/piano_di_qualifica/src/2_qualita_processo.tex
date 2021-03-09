@@ -5,18 +5,7 @@
 \subsection{Scopo}
 In questa sezione saranno presentati gli obiettivi di qualità che si vogliono raggiungere relativi ai processi implementati e ai loro prodotti, così da rendere efficace la valutazione della qualità e di selezionare le migliori metriche.\\
 La qualità di un prodotto è fortemente influenzata dai processi utilizzati, per questo motivo si è deciso di usare come riferimento lo standard ISO/IEC 15504 (SPICE)  e il metodo PDCA (o \glossario{ciclo di Deming}) per il miglioramento continuo della qualità durante tutto l'arco del progetto.\\
-Saranno adottati i seguenti codici identificativi:\par
-
-\begin{center}
-	\textbf{QPR}[Qualità di processo]\textbf{ID}[Indice]\textbf{N}[Nome]\\
-	\textbf{MPR}[Metrica di processo]\textbf{ID}[Indice]\textbf{N}[Nome]
-\end{center}
-
 Per ogni processo sono elencate le sue funzioni principali, gli obiettivi prefissati e le metriche adottate per raggiungere quell’obiettivo.
-
-\begin{center}
-	\textbf{PROC}[Processo]\textbf{ID}[Indice]\textbf{N} [Nome]
-\end{center}
 
 \subsubsection{PROC01 Gestione progetto}
 Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lavoro da svolgere per adempiere ai requisiti trovati. L'esito dell'intero progetto è dipendente da questo processo, che deve strutturare il \glossario{way of working} del gruppo.\\
@@ -35,18 +24,19 @@ Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lav
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{QPR01 Scadenze}: rispettare il più possibile le date di scadenza presenti all'interno del \textsc{Piano di Progetto};
-	\item \textbf{QPR02 Budget}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata;
-	\item \textbf{QPR03 Miglioramento}: i processi devono seguire le fasi del ciclo di vita di Deming per migliorare la qualità;
-	\item \textbf{QPR04 Versionamento}: i prodotti devono essere versionati per poterne conoscere lo storico delle modifiche.
+	\item \textbf{OPR01 Scadenze}: rispettare il più possibile le date di scadenza presenti all'interno del \textsc{Piano di Progetto};
+	\item \textbf{OPR02 Budget parziale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata; riuscire a contabilizzare dei consuntivi coerenti con i preventivi permetterà di ridurre al minimo l'oscillazione del prezzo finale;
+	\item \textbf{OPR03 Budget totale}: mantenere le risorse messe a disposizione ad inizio progetto per tutta la sua durata al fine di non avere oscillazioni sul prezzo finale;
+	\item \textbf{OPR04 Versionamento}: i prodotti devono essere versionati per poterne conoscere lo storico delle modifiche;
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPR01 Rispetto degli standard};
-	\item \textbf{MPR02 Varianza della pianificazione};
-	\item \textbf{MPR03 Varianza dei costi}.
+	\item \textbf{MPR01 Varianza della pianificazione}: i documenti non devono essere completati oltre i 4 giorni di ritardo preventivati;
+	\item \textbf{MPR02 Varianza dei costi parziali}: il budget di ogni step di progetto deve mantenersi entro il $\pm$5\% del budget prefissato;
+	\item \textbf{MPR03 Varianza dei costi totali}: il budget totale non deve essere superato;
+	\item \textbf{MPR04 Versionamento}: i commit di una repository permettono di tenere una miglior traccia delle modifiche e di accedere facilmente all’ultima versione del prodotto. In base a sondaggi presenti in Internet, abbiamo constatato che un giusto numero di commit da effettuare in media durante una settimana produttiva è almeno 25;
 \end{itemize}
 
 \subsubsection{PROC02 Analisi}
@@ -64,23 +54,24 @@ Questo macro-processo si riferisce ad ogni tipo di analisi presente in questo pr
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{QPR05 Adempimento requisiti obbligatori}: tutti i requisiti obbligatori devono essere soddisfatti;
-	\item \textbf{QPR06 Adempimento requisiti non obbligatori}: i requisiti non obbligatori, cioè desiderabili e opzionali, potranno essere soddisfatti solo se tutti i requisiti obbligatori sono stati completati prima della fine del progetto;
-	\item \textbf{QPR07 Rischi non previsti}: non dovranno verificarsi rischi non previsti che potrebbero portare rallentamenti;
-	\item \textbf{QPR08 Rispetto obiettivi}: tutti gli obiettivi dovranno essere rispettati per avere un prodotto di qualità;
-	\item \textbf{QPR09 Rispetto delle norme}: tutte le norme dovranno essere seguite; se ci fosse necessità di fare diversamente, dovranno essere riadattate.
+	\item \textbf{OPR05 Adempimento requisiti obbligatori}: tutti i requisiti obbligatori devono essere soddisfatti;
+	\item \textbf{OPR06 Adempimento requisiti non obbligatori}: i requisiti non obbligatori, cioè desiderabili e opzionali, potranno essere soddisfatti solo se tutti i requisiti obbligatori sono stati completati prima della fine del progetto;
+	\item \textbf{OPR07 Rischi non previsti}: il verificarsi di imprevisti può accadere nel corso del progetto, ma devono poter essere rilevabili prima che succeda;
+	\item \textbf{OPR08 Rispetto obiettivi}: tutti gli obiettivi dovranno essere rispettati per avere un prodotto di qualità;
+	\item \textbf{OPR09 Rispetto delle norme}: tutte le norme dovranno essere seguite; se ci fosse necessità di fare diversamente, dovranno essere riadattate.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPR04 Requisiti obbligatori};
-	\item \textbf{MPR05 Requisiti non obbligatori desiderabili};
-	\item \textbf{MPR06 Obiettivi soddisfatti};
-	\item \textbf{MPR07 Norme rispettate}.
+	\item \textbf{MPR05 Requisiti obbligatori}: sono i requisiti minimi;
+	\item \textbf{MPR06 Requisiti non obbligatori desiderabili}: sono i requisiti opzionali;
+	\item \textbf{MPR07 Rischi non previsti}: sono i rischi che si sono verificati e che non erano stati previsti in fase di pianificazione;
+	\item \textbf{MPR08 Obiettivi soddisfatti}: ovvero se sono stati soddisfatti tutti gli obiettivi pianificati entro la consegna;
+	\item \textbf{MPR09 Norme rispettate}: ovvero se tutte le norme stabilite nel documento \textsc{Norme di Progetto} sono state rispettate;
 \end{itemize}
 
-Nello specifico il calcolo usato per verificare la percentuale di requisiti soddisfatti sarà il seguente: \par
+Nello specifico il calcolo usato per verificare la percentuale di requisiti e obiettivi soddisfatti sarà il seguente: \par
 \begin{center}
 	$C = \frac{N_{fni}}{N_{fi}} * 100$
 \end{center}
@@ -91,24 +82,24 @@ dove
 	\item N\textsubscript{FI} è il numero di funzionalità implementate.
 \end{enumerate}
 
-\subsubsection{PROC03 Documentazione}
-Questo processo ha lo scopo di garantire la produzione di documenti di qualità. Di seguito, si riportano le scelte effetturate, gli strumenti utilizzati e le modifiche attuate durante l'intero progetto.\\
+%\subsubsection{PROC03 Documentazione}
+%Questo processo ha lo scopo di garantire la produzione di documenti di qualità. Di seguito, si riportano le scelte effetturate, gli strumenti utilizzati e le modifiche attuate durante l'intero progetto.\\
+%
+%\textbf{Funzioni:}
+%\smallbreak
+%\begin{itemize}
+%	\item \textbf{Verifica documenti}: controllo dei documenti da parte dei verificatori;
+%	\item \textbf{Approvazione documenti}: controllo e approvazione finale da parte del responsabile.
+%\end{itemize}
+%
+%\textbf{Obiettivi:}
+%\smallbreak
+%\begin{itemize}
+%	\item \textbf{QPR10 Ciclo di vita dei documenti}: i documenti devono rispettare ogni fase del loro ciclo di vita e le scadenze prefissate;
+%	\item \textbf{QPR11 Leggibilità}: i documenti devono poter essere letti e capiti da chiunque abbia almeno una licenza media.
+%\end{itemize}
 
-\textbf{Funzioni:}
-\smallbreak
-\begin{itemize}
-	\item \textbf{Verifica documenti}: controllo dei documenti da parte dei verificatori;
-	\item \textbf{Approvazione documenti}: controllo e approvazione finale da parte del responsabile.
-\end{itemize}
-
-\textbf{Obiettivi:}
-\smallbreak
-\begin{itemize}
-	\item \textbf{QPR10 Ciclo di vita dei documenti}: i documenti devono rispettare ogni fase del loro ciclo di vita e le scadenze prefissate;
-	\item \textbf{QPR11 Leggibilità}: i documenti devono poter essere letti e capiti da chiunque abbia almeno una licenza media.
-\end{itemize}
-
-\subsubsection{PROC04 Verifica}
+\subsubsection{PROC03 Verifica}
 Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano errori, se rispettano gli obiettivi di qualità e se sono corretti nella loro forma e contenuto. \\
 
 \textbf{Funzioni:}
@@ -123,13 +114,13 @@ Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano e
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{QPR12 Verifica costante}: tutti i prodotti devono essere costantemente sotto verifica e le verifiche devono essere sempre le medesime, per avere consistenza con i risultati e poter apportare miglioramenti di qualità.
+	\item \textbf{OPR10 Verifica costante}: tutti i prodotti devono essere costantemente sotto verifica e le verifiche devono essere sempre le medesime, per avere consistenza con i risultati e poter apportare miglioramenti di qualità.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPR8 Frequenza di controllo};
+	\item \textbf{MPR10 Frequenza di controllo}: è la frequenza con cui viene effettuata la verifica dei documenti o Issue portate a termine.
 \end{itemize}
 
 \subsection{Tabella qualità di processo}
@@ -150,13 +141,16 @@ Ogni obiettivo di qualità è indicato con:
 		\rowcolor{lightgray}
 		\textbf{Obiettivo}                          & \textbf{Metrica}                    & \textbf{Accettabile} & \textbf{Preferibile} \\
 		\hline
-		QPR01 Scadenze                              & MPR02 Varianza della pianificazione & 4 giorni             & 0 giorni             \\
-		QPR02 Budget                                & MPR03 Varianza dei costi            & $\pm$5\%             & 0\%                  \\
-		QPR05 Adempimento requisiti obbligatori     & MPR04 Requisiti obbligatori         & 100\%                & 100\%                \\
-		QPR06 Adempimento requisiti non obbligatori & MPR05 Requisiti non obbligatori     & da definire          & 100\%                \\
-		QPR08 Rispetto obiettivi                    & MPR07 Obiettivi soddisfatti         & 100\%                & 100\%                \\
-		QPR09 Rispetto delle norme                  & MPR08 Norme rispettate              & 100\%                & 100\%                \\
-		QPR12 Verifica costante                     & MPR10 Frequenza di controllo        & Ad ogni Milestone    & Ad ogni modifica     \\
+		OPR01 Scadenze                              & MPR01 Varianza della pianificazione 	& 4 giorni             	& 0 giorni             	\\
+		OPR02 Budget parziale                       & MPR02 Varianza dei costi parziali   	& $\pm$5\%             	& 0\%                  	\\
+		OPR03 Budget totale							& MPR03 Varianza dei costi totali	  	& 0						& 0						\\
+		OPR04 Versionamento							& MPR04 Versionamento					& 25					& $\sim$25				\\
+		OPR05 Adempimento requisiti obbligatori     & MPR05 Requisiti obbligatori         	& 100\%                	& 100\%                	\\
+		OPR06 Adempimento requisiti non obbligatori & MPR06 Requisiti non obbligatori     	& da definire          	& 100\%                	\\
+		OPR07 Rischi non previsti 					& MPR07 Rischi inattesi					& 2						& 0						\\
+		OPR08 Rispetto obiettivi                    & MPR08 Obiettivi soddisfatti         	& 100\%                	& 100\%                	\\
+		OPR09 Rispetto delle norme                  & MPR09 Norme rispettate              	& 100\%                	& 100\%                	\\
+		OPR10 Verifica costante                     & MPR10 Frequenza di controllo        	& Ad ogni Milestone    	& Ad ogni modifica     	\\
 		\hline
 	\end{tabular}
 	\caption{Metriche qualità di processo}
