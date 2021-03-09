@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-02-26" view-index="0" gantt-divider-location="342" resource-divider-location="300" version="3.0.3000" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-02-26" view-index="0" gantt-divider-location="342" resource-divider-location="300" version="3.0.3002" locale="en_US">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Name" width="193" order="0"/>
@@ -36,19 +36,19 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Codifica requisiti obbligatori" color="#000000" meeting="false" start="2021-03-01" duration="11" complete="0" thirdDate="2021-01-21" thirdDate-constraint="0" expand="true">
-            <task id="68" name="Codifica" color="#8cb6ce" meeting="false" start="2021-03-01" duration="10" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
-            <task id="70" name="Verifica" color="#00ff66" meeting="false" start="2021-03-09" duration="3" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
+        <task id="0" name="Codifica requisiti obbligatori" color="#000000" meeting="false" start="2021-03-11" duration="3" complete="0" thirdDate="2021-01-21" thirdDate-constraint="0" expand="true">
+            <task id="68" name="Codifica" color="#8cb6ce" meeting="false" start="2021-03-11" duration="2" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
+            <task id="70" name="Verifica" color="#00ff66" meeting="false" start="2021-03-12" duration="2" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="59" name="Requisiti opzionali" color="#000000" meeting="false" start="2021-03-12" duration="7" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true">
             <task id="66" name="Codifica" color="#8cb6ce" meeting="false" start="2021-03-12" duration="6" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
             <task id="60" name="Verifica" color="#00ff66" meeting="false" start="2021-03-16" duration="3" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="58" name="Documenti" color="#000000" meeting="false" start="2021-03-01" duration="31" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true">
-            <task id="74" name="Aggiornamento" color="#8cb6ce" meeting="false" start="2021-03-01" duration="30" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
-            <task id="76" name="Stesura Manuale Utente" color="#8cb6ce" meeting="false" start="2021-03-01" duration="30" complete="0" thirdDate="2021-02-27" thirdDate-constraint="0" expand="true"/>
-            <task id="80" name="Stesura Manuale Manutentore" color="#8cb6ce" meeting="false" start="2021-03-01" duration="30" complete="0" thirdDate="2021-02-26" thirdDate-constraint="0" expand="true"/>
-            <task id="79" name="Stesura Specifica Tecnica" color="#8cb6ce" meeting="false" start="2021-03-01" duration="30" complete="0" thirdDate="2021-02-26" thirdDate-constraint="0" expand="true"/>
+        <task id="58" name="Documenti" color="#000000" meeting="false" start="2021-03-11" duration="21" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true">
+            <task id="74" name="Aggiornamento" color="#8cb6ce" meeting="false" start="2021-03-11" duration="20" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
+            <task id="76" name="Stesura Manuale Utente" color="#8cb6ce" meeting="false" start="2021-03-11" duration="20" complete="0" thirdDate="2021-02-27" thirdDate-constraint="0" expand="true"/>
+            <task id="80" name="Stesura Manuale Manutentore" color="#8cb6ce" meeting="false" start="2021-03-11" duration="20" complete="0" thirdDate="2021-02-26" thirdDate-constraint="0" expand="true"/>
+            <task id="79" name="Stesura Specifica Tecnica" color="#8cb6ce" meeting="false" start="2021-03-11" duration="20" complete="0" thirdDate="2021-02-26" thirdDate-constraint="0" expand="true"/>
             <task id="75" name="Verifica" color="#00ff66" meeting="false" start="2021-03-25" duration="7" complete="0" thirdDate="2021-01-18" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="55" name="Consegna RQ" color="#ff0033" meeting="true" start="2021-04-02" duration="0" complete="0" thirdDate="2021-02-08" thirdDate-constraint="0" priority="4" expand="true"/>
