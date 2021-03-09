@@ -13,20 +13,20 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Descrizione}: La Web App comunica la scelta della fonte dei dati al server che si occupa di importare i dati e di dare automaticamente un metadato di tipo ai campi del dataset.
+    \item \textbf{Descrizione}: La Web App comunica la scelta della fonte dei dati al server che si occupa di importare i dati e di dare automaticamente un metadato di tipo e visibilità ai campi del dataset.
 	
     \item \textbf{Attore primario}: Web App;
 	\item \textbf{Attore secondario}: Database;
         
     \item \textbf{Precondizione}:   La fonte dei dati è stata selezionata(\hyperref[ssub:uc1.1]{UC1.1});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset con i metadati di tipo assegnati e vengono comunicati i dati alla web app;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset con i metadati generati e vengono comunicati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item La web app comunica al server la fonte selezionata;
-            \item Il server fa il fetch dei dati;
-			\item Il server assegna i metadati di tipo.
+            \item Il server fa il fetch dei dati e costruisce il dataset;
+			\item Il server genera i metadati di tipo per il dataset.
         \end{enumerate}
    
 \end{itemize}
@@ -43,12 +43,12 @@
         
     \item \textbf{Precondizione}:   La fonte dei dati è stata selezionata (\hyperref[ssub:uc1.1]{UC1.1});
 
-    \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato e vengono assegnati i metadati di tipo e vengono comunicati i dati alla web app;
+    \item \textbf{Postcondizione}:  Viene caricato il dataset con i metadati generati e vengono comunicati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item La web app comunica al server la fonte selezionata;
-            \item Il server fa il fetch dei dati.
+            \item Il server fa il fetch dei dati e costruisce il dataset.
         \end{enumerate}
 	
 \end{itemize}
@@ -63,14 +63,14 @@
 	
     \item \textbf{Attore primario}: Web App;
 	        
-    \item \textbf{Precondizione}:   La fonte di dati selezionata è il file csv(\hyperref[ssub:uc1.2]{UC1.2});
+    \item \textbf{Precondizione}:   La fonte di dati selezionata è il file csv (\hyperref[ssub:uc1.2]{UC1.2});
 
     \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato  e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item La web app comunica al server al decisione di usare un file csv;
-            \item Il server fa il fetch dei dati;
+            \item Il server fa il fetch dei dati e costruisce il dataset.
         \end{enumerate}
 		
 	\item \textbf{Estensioni}:
@@ -100,19 +100,20 @@
 
 \begin{itemize}
 
-	\item \textbf{Descrizione}: La Web App comunica la scelta di usare come fonte un database e la query da utilizzare. Il server fa il fetch dei dati.
+	\item \textbf{Descrizione}: La Web App comunica la scelta di usare come fonte un database e la particolare configurazione da utilizzare tra quelle 
+	rese disponibili dal server. Viene successivamente eseguito il fetch dei dati.
 	
     \item \textbf{Attore primario}: Web App;
 	\item \textbf{Attore secondario}: Database;
 	        
-    \item \textbf{Precondizione}:   La fonte dei dati è un database ed è stata scelta una query(\hyperref[ssub:uc1.3]{UC1.3});
+    \item \textbf{Precondizione}:   La fonte dei dati è un database ed è stata scelta una query (\hyperref[ssub:uc1.3]{UC1.3});
 
     \item \textbf{Postcondizione}:  Viene caricato il dataset desiderato e vengono comunicati i dati alla web app;
 
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item La web app comunica al server la decisione di usare un database e la query scelta;
-            \item Il server fa il fetch dei dati;
+            \item Il server fa il fetch dei dati e costruisce il dataset.
         \end{enumerate}
 		
 	\item \textbf{Estensioni}:
@@ -122,7 +123,7 @@
 			\begin{enumerate}
 				
 				\item Il caricamento dei dati viene interrotto;
-				\item Viene visualizzato un messaggio di errore(\hyperref[sub:uc6]{UC6}).
+				\item Viene visualizzato un messaggio di errore (\hyperref[sub:uc6]{UC6}).
 				
 			\end{enumerate}
 		
@@ -130,7 +131,7 @@
 			\begin{enumerate}
 				
 				\item Il caricamento dei dati non viene effettuato;
-				\item Viene visualizzato un messaggio di errore(\hyperref[sub:uc7]{UC7}).
+				\item Viene visualizzato un messaggio di errore (\hyperref[sub:uc7]{UC7}).
 				
 			\end{enumerate}
 		
