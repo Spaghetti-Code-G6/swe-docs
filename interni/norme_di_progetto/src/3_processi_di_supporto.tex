@@ -42,7 +42,7 @@ incremento che corrisponderà ad una nuova versione di quel documento.
 \subsubsection{Template}
 \label{ssub:template}
 
-Il gruppo ha deciso di utilizzare, per la stesura dei documenti del progetto, il linguaggio \LaTeX. Al fine di 
+Il gruppo ha deciso di utilizzare per la stesura dei documenti del progetto il linguaggio \LaTeX. Al fine di 
 uniformare i documenti e velocizzare il processo di creazione e strutturazione degli stessi è stato definito un 
 template su cui ogni documento si basa.
 
@@ -218,22 +218,14 @@ pagina.
 \subsubsection{Strumenti}
 \label{ssub:strumenti}
 
-\paragraph{\LaTeX}
-\label{par:latex}
-
-Questo strumento è stato scelto dal gruppo per far sì che ci fosse uniformità nella stesura dei documenti e al contempo 
-per avere uno strumento che permettesse grande flessibilità nella stesura stessa.
-
-\paragraph{Draw.io}
-\label{par:drawio}
-
-Applicazione web molto versatile per disegnare grafici UML che offre la possibilità di lavorare contemporaneamente.
-
-\paragraph{Gantt project}
-\label{par:gantt_projecct}
-
-Software per la gestione di progetto che permette di creare diagrammi di Gantt in maniera rapida ed intuitiva.
-
+Di seguito vengono indicati gli strumenti utilizzati per il corretto svolgimento del processo:
+\begin{itemize}
+	\item \LaTeX: linguaggio di markup per la preparazione di testi altamente personalizzabile;
+	\item \textbf{Draw.io}: applicazione web molto versatile per disegnare grafici UML che offre la possibilità di lavorare 
+		contemporaneamente;
+	\item \textbf{Gantt project}: software per la gestione di progetto che permette di creare diagrammi di Gantt in maniera rapida ed \
+		intuitiva;
+\end{itemize}
 
 \subsection{Gestione delle configurazioni}
 \label{sub:gestione_configurazioni}
@@ -312,7 +304,7 @@ Il repository \emph{swe-docs} è strutturato come segue:
     \item \textbf{utils}: directory contenente script di utilità come compilazione dei sorgenti e rimozione dei file intermedi di 
     	compilazione.
     \item \textbf{.gitignore}
-    \item \textbf{README}
+    \item \textbf{README.md}
 \end{itemize}
 
 All'interno di \emph{swe-docs} sono presenti i seguenti tipi di file:
@@ -325,7 +317,7 @@ All'interno di \emph{swe-docs} sono presenti i seguenti tipi di file:
 \end{itemize}
 
 
-Il repository \emph{HD-Viz-PoC}, essendo un sistema protipale in continuo sviluppo, non possiede una struttura rigida.
+Il repository \emph{HD-Viz-PoC}, essendo un sistema prototipale in continuo sviluppo, non possiede una struttura rigida.
 
 Il repository \emph{HD-Viz} al momento non contiene elementi e risulta inutilizzato.
 % TODO: normare struttura del repo
@@ -572,7 +564,7 @@ Il processo di verifica è costituito dalle seguenti attività:
 \label{ssub:verifica:analisi_statica}
 
 Questa attività ha il compito di valutare la correttezza e la conformità dei prodotti di processo alle regole; essa può essere svolta sia 
-sui prodotti software che sui prodotti documentali del progetto in quanto valuta caratteristiche scisse dall'esecuzione del prodotto e 
+sui prodotti software che sui prodotti documentali del progetto, in quanto valuta caratteristiche scisse dall'esecuzione del prodotto e 
 dunque immutabili. Essa verrà svolta in parte automaticamente e in parte manualmente; in maniera automatica verranno verificati gli 
 aspetti riguardanti la formattazione e la presenza degli elementi nei prodotti, mentre manualmente verranno verificati i contenuti dei 
 prodotti seguendo un metodo di lettura \glossario{Inspection}, ossia valutando attentamente gli incrementi apportati in seguito alla 
@@ -594,18 +586,17 @@ Ciascun test è costituito dai seguenti elementi:
 \begin{itemize}
     \item \textbf{Oggetto}: elemento di cui si verifica il comportamento;
     \item \textbf{Input richiesti}: dati in ingresso con il quale viene eseguito il test;
-    \item \textbf{Output attesi}: gli output attesi in relazione agli input;
+    \item \textbf{Output attesi}: output attesi in relazione agli input;
     \item \textbf{Ambiente}: ambiente nel quale viene eseguito il test;
     \item \textbf{Stato iniziale}: stato iniziale dell'ambiente;
     \item \textbf{Passi di esecuzione}: passaggi che si desidera eseguire per giungere all'output atteso.
 \end{itemize}
 
 Inoltre i test vengono descritti da un codice identificativo univoco che permette di distinguerli e ne viene fornito lo stato che può 
-assumere uno dei i seguenti valori:
+assumere uno dei seguenti valori:
 \begin{itemize}
     \item \textbf{I}: il test è stato implementato;
     \item \textbf{NI}: il test non è ancora stato implementato;
-    \item \textbf{NE}: il test non è stato eseguito;
     \item \textbf{S}: il test è stato eseguito e superato;
     \item \textbf{NS}: il test è stato eseguito ma non è stato superato.
 \end{itemize}
@@ -647,6 +638,15 @@ Framework di testing per il linguaggio JavaScript incentrato sulla semplicità e
 
 Framework per il testing di applicazioni web.
 
+\paragraph{W3C HTML Validator}
+\label{par:html_validator}
+
+Strumento di analisi di codice HTML che verifica la validità dei file sorgenti, individuabile al link \url{https://validator.w3.org}.
+
+\paragraph{W3C CSS Validator}
+\label{par:css_validator}
+
+Strumento di analisi di codice CSS che verifica la validità dei file sorgenti, individuabile al link \url{https://jigsaw.w3.org/css-validator/}.
 \subsection{Validazione}
 
 \subsubsection{Descrizione}
@@ -669,13 +669,13 @@ Le attività che vengono svolte all'interno del processo sono le seguenti:
 \label{ssub:validazione:test_sistema}
 
 In questa attività, analoga per certi aspetti a quella di analisi dinamica, viene verificato il corretto comportamento del sistema e la 
-copertura di tuttti i requisiti del prodotto.
+copertura di tutti i requisiti del prodotto.
 
 \subsubsection{Collaudo}
 \label{ssub:validazione:collaudo}
 
 In questa attività, svolta sotto la supervisione del committente, viene dimostrata la conformità del prodotto rispetto al contratto tra le 
-parti verificando la corretttezza del prodotto rispetto ad alcuni casi di prova.
+parti verificando la correttezza del prodotto rispetto ad alcuni casi di prova.
 
 \subsubsection{Strumenti}
 \label{ssub:validazione:strumenti}
@@ -684,3 +684,24 @@ parti verificando la corretttezza del prodotto rispetto ad alcuni casi di prova.
 \label{par:verifica:selenium}
 
 Framework per il testing di applicazioni web.
+
+\paragraph{Metriche}
+
+Il gruppo ha deciso di tenere traccia del completamento del progetto in base ai requisiti implementati. A questo scopo è 
+stato deciso di calcolare una percentuale di completamento del progetto come il rapporto tra il numero di requisiti 
+implementati e il numero dei requisiti totali, moltiplicato per 100. Tale metrica permette così di individuare lo stato 
+di avanzamento del progetto in maniera immediata. Il valore di questo indice varia tra 0 e 100, dove 100 indica che il 
+progetto è completato, mentre 0 indica che deve ancora essere iniziato.
+\begin{center}
+    \textbf{Nota}: \emph{Il gruppo ha deciso di considerare, inizialmente, il numero totale di requisiti uguale al numero totale di requisiti obbligatori e si riserva la 
+    possibilità di aumentare il numero totale di requisiti in seguito ad eventuali negoziazioni con il proponente.}
+\end{center}
+
+\paragraph{Metriche}
+
+Il gruppo ritiene prematuro stabilire una metrica definitiva per misurare la leggibilità del codice, perciò ha definito 
+un indice indicativo che verrà integrato nei successivi stadi del progetto.\\
+La formula momentaneamente adottata è:
+\begin{center}
+    $Leggibilit\grave{a} = \frac{numero\ di\ linee\ di\ commento}{numero\ di\ linee\ di\ codice}$
+\end{center}
