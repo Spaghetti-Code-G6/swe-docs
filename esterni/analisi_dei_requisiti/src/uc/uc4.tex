@@ -1,12 +1,12 @@
-\subsection{UC4 - Modifica visualizzazione}
-\label{sub:uc4}
+\subsection{UCW4 - Modifica visualizzazione}
+\label{sub:ucw4}
 
 %TODO: Add correct image
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{diagrammi/UC4.pdf}
-    \caption{Diagramma rappresentante UC4}
-    \label{fig:UC4}
+    \caption{Diagramma rappresentante UCW4}
+    \label{fig:UCW4}
 \end{figure}
 
 
@@ -16,7 +16,7 @@
 
     \item \textbf{Attore primario}: Utente;
 
-    \item \textbf{Precondizione}:   È stato costruito correttamente un grafico (\hyperref[sub:uc2]{UC2});
+    \item \textbf{Precondizione}:   È stato costruito correttamente un grafico (\hyperref[sub:ucw2]{UCW2});
 
     \item \textbf{Postcondizione}:  Viene visualizzato il grafico modificato con i nuovi parametri;
 
@@ -33,15 +33,15 @@
         \begin{enumerate}
             \item L'utente seleziona la voce "Annulla" dal menù di modifica;
             \item Le modifiche vengono scartate e viene ripristinata la visualizzazione del grafico precedente 
-            (\hyperref[ssub:uc4.8]{UC4.8}).
+            (\hyperref[ssub:ucw4.8]{UCW4.8}).
         \end{enumerate}
     \end{itemize}
 
 \end{itemize}
 
 \newpage
-\subsubsection{UC4.1 - Modifica grafico}
-\label{ssub:uc4.1}
+\subsubsection{UCW4.1 - Modifica grafico}
+\label{ssub:ucw4.1}
 
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente effettua modifica specifiche al tipo di grafico precedentemente costruito e visualizzato,
@@ -49,31 +49,31 @@
 
     \item \textbf{Attore primario}: Utente;
 
-    \item \textbf{Precondizione}:   È stato costruito correttamente un grafico (\hyperref[sub:uc2]{UC2});
+    \item \textbf{Precondizione}:   È stato costruito correttamente un grafico (\hyperref[sub:ucw2]{UCW2});
 
     \item \textbf{Postcondizione}:  Viene aggiornato il grafico costruito e visualizzato con i nuovi parametri;
 
     \item \textbf{Generalizzazioni}:
         \begin{itemize}
-            \item Modifica Scatter Plot Matrix (\hyperref[ssub:uc4.2]{UC4.2});
-            \item Modifica a grafico con Matrice delle Distanze (\hyperref[ssub:uc4.3]{UC4.3});
+            \item Modifica Scatter Plot Matrix (\hyperref[ssub:ucw4.2]{UCW4.2});
+            \item Modifica a grafico con Matrice delle Distanze (\hyperref[ssub:ucw4.3]{UCW4.3});
             \begin{itemize}
-                \item Modifica Force Field (\hyperref[ssub:uc4.4]{UC4.4});
-                \item Modifica Distance Map (\hyperref[ssub:uc4.5]{UC4.5});
+                \item Modifica Force Field (\hyperref[ssub:ucw4.4]{UCW4.4});
+                \item Modifica Distance Map (\hyperref[ssub:ucw4.5]{UCW4.5});
              \end{itemize}
-            \item Modifica Heat Map (\hyperref[ssub:uc4.6]{UC4.6});
-            \item Modifica Proiezione Lineare Multi Asse (\hyperref[ssub:uc4.7]{UC4.7}).
+            \item Modifica Heat Map (\hyperref[ssub:ucw4.6]{UCW4.6});
+            \item Modifica Proiezione Lineare Multi Asse (\hyperref[ssub:ucw4.7]{UCW4.7}).
         \end{itemize}
 \end{itemize}
 
-\subsubsection{UC4.2 - Modifica Scatter Plot Matrix}
-\label{ssub:uc4.2}
+\subsubsection{UCW4.2 - Modifica Scatter Plot Matrix}
+\label{ssub:ucw4.2}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{diagrammi/UC4_2.pdf}
-    \caption{Diagramma rappresentante UC4.2}
-    \label{fig:UC4.2}
+    \caption{Diagramma rappresentante UCW4.2}
+    \label{fig:UCW4.2}
 \end{figure}
 
 
@@ -94,8 +94,8 @@
 \end{itemize}
 
 
-\paragraph{UC4.2.1 - Modifica dimensioni della matrice}
-\label{par:uc4.2.1}
+\paragraph{UCW4.2.1 - Modifica dimensioni della matrice}
+\label{par:ucw4.2.1}
 \begin{itemize}
     \item \textbf{Descrizione}:     L’utente dispone di dati con metadati assegnati e può
                                     scegliere fino a 5 dimensioni che possono essere visualizzate nello Scatter Plot
@@ -118,8 +118,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.2.2 - Modifica dimensione rappresentata mediante tinta}
-\label{par:uc4.2.2}
+\paragraph{UCW4.2.2 - Modifica dimensione rappresentata mediante tinta}
+\label{par:ucw4.2.2}
 \begin{itemize}
 
     \item \textbf{Descrizione}:     L'utente assegna ad una dimensione un insieme di tinte per poterla rappresentare
@@ -141,8 +141,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.2.3 - Modifica dimensione rappresentata mediante brillanza}
-\label{par:uc4.2.3}
+\paragraph{UCW4.2.3 - Modifica dimensione rappresentata mediante brillanza}
+\label{par:ucw4.2.3}
 \begin{itemize}
 
     \item \textbf{Descrizione}:     L'utente assegna ad una dimensione la rappresentazione mediante brillanza;
@@ -158,8 +158,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.2.4 - Selezione punto}
-\label{par:uc4.2.4}
+\paragraph{UCW4.2.4 - Selezione punto}
+\label{par:ucw4.2.4}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente seleziona un punto in uno Scatter Plot della matrice per vedere come
                                 esso viene rappresentato negli altri grafici a dispersione della visualizzazione corrente;
@@ -188,8 +188,8 @@
 \end{itemize}
 
 
-\paragraph{UC4.2.5 - Selezione insieme di punti}
-\label{par:uc4.2.5}
+\paragraph{UCW4.2.5 - Selezione insieme di punti}
+\label{par:ucw4.2.5}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente seleziona un insieme di punti in uno Scatter Plot della matrice per vedere come
                                 essi vengono rappresentati negli altri Scatterplot della matrice;
@@ -218,15 +218,15 @@
 \end{itemize}
 
 \newpage
-\subsubsection{UC4.3 - Modifica a grafico con matrice delle distanze}
-\label{ssub:uc4.3}
+\subsubsection{UCW4.3 - Modifica a grafico con matrice delle distanze}
+\label{ssub:ucw4.3}
 
 % TODO: Insert UC4.3 image
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8  \textwidth]{diagrammi/UC4_3.pdf}
-    \caption{Diagramma rappresentante UC4.3}
-    \label{fig:UC4.3}
+    \caption{Diagramma rappresentante UCW4.3}
+    \label{fig:UCW4.3}
 \end{figure}
 
 \begin{itemize}
@@ -242,13 +242,13 @@
     \end{enumerate}
     \item \textbf{Generalizzazioni}:
     \begin{itemize}
-        \item Modifica Force Field (\hyperref[ssub:uc4.4]{UC4.4});
-        \item Modifica Distance Map (\hyperref[ssub:uc4.5]{UC4.5}).
+        \item Modifica Force Field (\hyperref[ssub:ucw4.4]{UCW4.4});
+        \item Modifica Distance Map (\hyperref[ssub:ucw4.5]{UCW4.5}).
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.3.1 - Modifica della distanza}
-\label{par:uc4.3.1}
+\paragraph{UCW4.3.1 - Modifica della distanza}
+\label{par:ucw4.3.1}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente decide di cambiare l’algoritmo usato per il calcolo delle distanze;
 
@@ -266,13 +266,13 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.3.2 - Modifica preprocessing dei dati}
-\label{par:uc4.3.2}
+\paragraph{UCW4.3.2 - Modifica preprocessing dei dati}
+\label{par:ucw4.3.2}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente sceglie se normalizzare, standardizzare o non effettuare alcuna operazione preliminare sui dati;
 
     \item \textbf{Attore primario}: Utente;
-    \item \textbf{Precondizione}: L'utente ha selezionato la voce \emph{"Modifica preprocessing dei dati"} da (\hyperref[ssub:uc4.3]{UC4.3});
+    \item \textbf{Precondizione}: L'utente ha selezionato la voce \emph{"Modifica preprocessing dei dati"} da (\hyperref[ssub:ucw4.3]{UCW4.3});
     \item \textbf{Postcondizione}: La visualizzazione corrente viene aggiornata in funzione della matrice delle distanze ricalcolata;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
@@ -282,8 +282,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.3.3 - Modifica influenza di una dimensione}
-\label{par:uc4.3.3}
+\paragraph{UCW4.3.3 - Modifica influenza di una dimensione}
+\label{par:ucw4.3.3}
 \begin{itemize}
     \item \textbf{Descrizione}: Per visualizzare correttamente relazioni tra i dati,
                                 l’utente decide di assegnare manualmente dei pesi alle dimensioni;
@@ -301,14 +301,14 @@
 \end{itemize}
 
 \newpage
-\subsubsection{UC4.4 - Modifica Force Field}
-\label{ssub:uc4.4}
+\subsubsection{UCW4.4 - Modifica Force Field}
+\label{ssub:ucw4.4}
 % TODO: Create image for force field graph.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6  \textwidth]{diagrammi/UC4_4.pdf}
-    \caption{Diagramma rappresentante UC4.4}
-    \label{fig:UC4.4}
+    \caption{Diagramma rappresentante UCW4.4}
+    \label{fig:UCW4.4}
 \end{figure}
 
 
@@ -328,8 +328,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.4.1 - Modifica posizione dei nodi}
-\label{par:uc4.4.1}
+\paragraph{UCW4.4.1 - Modifica posizione dei nodi}
+\label{par:ucW4.4.1}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente modifica la posizione dei nodi del grafo, trascinandoli nell'area definita dal grafico;
 
@@ -345,8 +345,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.4.2 - Taglio degli archi}
-\label{par:uc4.4.2}
+\paragraph{UCW4.4.2 - Taglio degli archi}
+\label{par:ucw4.4.2}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente imposta un valore di soglia sulla distanza e vengono eliminati gli archi che collegano nodi con distanza al di fuori della soglia impostata;
     \item \textbf{Attore primario}: Utente;
@@ -361,13 +361,13 @@
 
     \item \textbf{Generalizzazioni}:
     \begin{itemize}
-        \item Taglio degli archi su limite inferiore (\hyperref[par:uc4.4.3]{UC4.4.3});
-        \item Taglio degli archi su limite superiore (\hyperref[par:uc4.4.4]{UC4.4.4}).
+        \item Taglio degli archi su limite inferiore (\hyperref[par:ucw4.4.3]{UCW4.4.3});
+        \item Taglio degli archi su limite superiore (\hyperref[par:ucw4.4.4]{UCW4.4.4}).
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.4.3 - Taglio degli archi su limite inferiore}
-\label{par:uc4.4.3}
+\paragraph{UCW4.4.3 - Taglio degli archi su limite inferiore}
+\label{par:ucw4.4.3}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente imposta il valore minimo della distanza e vengono eliminati gli archi che collegano nodi che nella matrice delle distanze hanno distanza minore al limite inferiore;
     \item \textbf{Attore primario}: Utente;
@@ -381,8 +381,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.4.4 - Taglio degli archi su limite superiore}
-\label{par:uc4.4.4}
+\paragraph{UCW4.4.4 - Taglio degli archi su limite superiore}
+\label{par:ucw4.4.4}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente imposta il valore minimo della distanza e vengono eliminati gli archi che collegano nodi che nella matrice delle distanze hanno distanza maggiore al limite superiore;
     \item \textbf{Attore primario}: Utente;
@@ -396,8 +396,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.4.5 - Modifica scala della forza}
-\label{par:uc4.4.5}
+\paragraph{UCW4.4.5 - Modifica scala della forza}
+\label{par:ucw4.4.5}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente decide di modificare la scala della forza di attrazione tra i nodi;
 
@@ -405,7 +405,7 @@
     \item \textbf{Attore primario}: Utente;
 
     \item \textbf{Precondizione}:   La visualizzazione correntemente costruita dal dataset è un Force Field;
-    \item \textbf{Postcondizione}:  Viene modificata l'intensità della forza di attrazione tra i nodi del grafo nella visualizzazione.
+    \item \textbf{Postcondizione}:  Viene modificata l'intensità della forza di attrazione tra i nodi del grafo nella visualizzazione;
 
 	\item \textbf{Scenario principale}:
         \begin{enumerate}
@@ -416,14 +416,14 @@
 \end{itemize}
 
 \newpage
-\subsubsection{UC4.5 - Modifica Distance Map}
-\label{ssub:uc4.5}
+\subsubsection{UCW4.5 - Modifica Distance Map}
+\label{ssub:ucw4.5}
 % TODO: Insert image for Distance Map
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{diagrammi/UC4_5.pdf}
-    \caption{Diagramma rappresentante UC4.5}
-    \label{fig:UC4.5}
+    \caption{Diagramma rappresentante UCW4.5}
+    \label{fig:UCW4.5}
 \end{figure}
 
 \begin{itemize}
@@ -437,8 +437,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.5.1 - Modifica gradiente di colori}
-\label{par:uc4.5.1}
+\paragraph{UCW4.5.1 - Modifica gradiente di colori}
+\label{par:ucw4.5.1}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di modificare la scala di colori applicata alla Distance Map scegliendo una tra le opzioni disponibili;
     \item \textbf{Attore primario}: Utente;
@@ -451,8 +451,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.5.2 - Ordinamento}
-\label{par:uc4.5.2}
+\paragraph{UCW4.5.2 - Ordinamento}
+\label{par:ucw4.5.2}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di ordinare le righe e le colonne del Distance Map al quale viene aggiunto un dendrogramma alla visualizzazione corrente;
     \item \textbf{Attore primario}: Utente;
@@ -461,12 +461,12 @@
     \item \textbf{Scenario principale}:
     \begin{itemize}
         \item L'utente seleziona la casella di ordinamento;
-        \item Le righe e le colonne della Distance Map vengono visualizzate secondo l'ordinamento selezionato;
+        \item Le righe e le colonne della Distance Map vengono visualizzate secondo l'ordinamento selezionato.
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.5.3 - Ordinamento clustering gerarchico}
-\label{par:uc4.5.3}
+\paragraph{UCW4.5.3 - Ordinamento clustering gerarchico}
+\label{par:ucw4.5.3}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di ordinare le righe e le colonne del Distance Map con l'algoritmo di clustering gerarchico il quale aggiunge un dendrogramma alla visualizzazione corrente;
     \item \textbf{Attore primario}: Utente;
@@ -479,8 +479,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.5.4 - Ordinamento originario}
-\label{par:uc4.5.4}
+\paragraph{UCW4.5.4 - Ordinamento originario}
+\label{par:ucw4.5.4}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di ordinare le righe e le colonne del Distance Map seguendo l'ordine originario del dataset corrente;
     \item \textbf{Attore primario}: Utente;
@@ -494,8 +494,8 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.5.5 - Ordinamento per dimensione}
-\label{par:uc4.5.5}
+\paragraph{UCW4.5.5 - Ordinamento per dimensione}
+\label{par:ucw4.5.5}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di ordinare in maniera crescente le righe e le colonne del Distance Map secondo il valore delle dimensioni;
     \item \textbf{Attore primario}: Utente;
@@ -510,8 +510,8 @@
 \end{itemize}
 
 
-\paragraph{UC4.5.6 - Modifica etichette}
-\label{par:uc4.5.6}
+\paragraph{UCW4.5.6 - Modifica etichette}
+\label{par:ucw4.5.6}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di modificare una etichetta associata alla Distance Map;
     \item \textbf{Attore primario}: Utente;
@@ -527,14 +527,14 @@
 
 
 \newpage
-\subsubsection{UC4.6 - Modifica Proiezione Lineare Multi Asse}
-\label{ssub:uc4.6}
+\subsubsection{UCW4.6 - Modifica Proiezione Lineare Multi Asse}
+\label{ssub:ucw4.6}
 % TODO: Create image for PLMA
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{diagrammi/UC4_6.pdf}
-    \caption{Diagramma rappresentante UC4.6}
-    \label{fig:UC4.6}
+    \caption{Diagramma rappresentante UCW4.6}
+    \label{fig:UCW4.6}
 \end{figure}
 
 \begin{itemize}
@@ -552,8 +552,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.6.1 - Aggiunta dimensione}
-\label{par:uc4.6.1}
+\paragraph{UCW4.6.1 - Aggiunta dimensione}
+\label{par:ucw4.6.1}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente aggiunge una dimensione del dataset importato al grafico;
 
@@ -570,8 +570,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.6.2 - Rimozione dimensione}
-\label{par:uc4.6.2}
+\paragraph{UCW4.6.2 - Rimozione dimensione}
+\label{par:ucw4.6.2}
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente decide di rimuovere una dimensione dalla Proiezione Lineare Multi Asse
                                 a patto che essa non sia monodimensionale;
@@ -589,8 +589,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.6.3 - Rotazione asse}
-\label{par:uc4.6.3}
+\paragraph{UCW4.6.3 - Rotazione asse}
+\label{par:ucw4.6.3}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente ruota gli assi nella visualizzazione per visualizzare diverse proiezioni dello stesso dataset;
     \item \textbf{Attore primario}: Utente;
@@ -605,14 +605,14 @@
 
 \newpage
 
-\subsubsection{UC4.7 - Modifica Heat Map}
-\label{ssub:uc4.7}
+\subsubsection{UCW4.7 - Modifica Heat Map}
+\label{ssub:ucw4.7}
 % TODO: Create image for force field graph.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{diagrammi/UC4_7.pdf}
-    \caption{Diagramma rappresentante UC4.7}
-    \label{fig:UC4.7}
+    \caption{Diagramma rappresentante UCW4.7}
+    \label{fig:UCW4.7}
 \end{figure}
 
 
@@ -631,8 +631,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.7.1 - Modifica gradiente di colori}
-\label{par:uc4.7.1}
+\paragraph{UCW4.7.1 - Modifica gradiente di colori}
+\label{par:ucw4.7.1}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di modificare la scala di colori applicata alla Heat Map scegliendo una tra le opzioni disponibili;
 
@@ -648,23 +648,8 @@
         \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.7.2 - Modifica etichette}
-\label{par:uc4.7.2}
-\begin{itemize}
-    \item \textbf{Descrizione}:     L'utente modifica l'etichetta associata all'asse della Heat Map;
-    \item \textbf{Attore primario}: Utente;
-    \item \textbf{Precondizione}:   La visualizzazione correntemente costruita dal dataset è una Heat Map;
-    \item \textbf{Postcondizione}:  Le etichette della Heat Map vengono modificate secondo la scelta effettuata dall'utente;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-        \item L'utente sceglie una etichetta da modificare;
-        \item L'utente sceglie una dimensione del dato da utilizzare come etichetta;
-        \item Viene aggiornata l'etichetta nella Distance Map.
-    \end{enumerate}
-\end{itemize}
-
-\paragraph{UC4.7.3 - Modifica etichette delle righe}
-\label{par:uc4.7.3}
+\paragraph{UCW4.7.2 - Modifica etichette delle righe}
+\label{par:ucw4.7.3}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente modifica l'etichetta associata alle righe della Heat Map;
     \item \textbf{Attore primario}: Utente;
@@ -678,8 +663,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.7.4 - Modifica etichette delle colonne}
-\label{par:uc4.7.4}
+\paragraph{UCW4.7.3 - Modifica etichette delle colonne}
+\label{par:ucw4.7.4}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente modifica l'etichetta associata alla colonna della Heat Map;
     \item \textbf{Attore primario}: Utente;
@@ -693,8 +678,8 @@
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC4.7.5 - Ordinamento grafico}
-\label{par:uc4.7.5}
+\paragraph{UCW4.7.4 - Ordinamento grafico}
+\label{par:ucw4.7.5}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente modifica l'ordinamento delle colonne della visualizzazione;
     \item \textbf{Attore primario}: Utente;
@@ -703,17 +688,17 @@
     \item \textbf{Scenario principale}:
     \begin{enumerate}
         \item L'utente seleziona uno tra i possibili ordinamenti delle colonne;
-        \item L'ordinamento del grafico viene modificato in base a quanto precedentemente selezionato.
+        \item L'ordinamento del grafico viene modificato in base a quanto precedentemente selezionato;
     \end{enumerate}
     \item \textbf{Generalizzazioni}:
     \begin{itemize}
-        \item Ordinamento clustering gerarchico (\hyperref[spar:uc4.7.5.6]{UC4.7.5.6});
-        \item Ordinamento secondo ordine originario (\hyperref[spar:uc4.7.5.7]{UC4.7.5.7}).
+        \item Ordinamento clustering gerarchico (\hyperref[spar:ucw4.7.5]{UCW4.7.5});
+        \item Ordinamento secondo ordine originario (\hyperref[spar:ucw4.7.6]{UCW4.7.6}).
     \end{itemize}
 \end{itemize}
 
-\subparagraph{UC4.7.5.6 - Ordinamento grafico mediante clustering gerarchico}
-\label{spar:uc4.7.5.6}
+\subparagraph{UCW4.7.5 - Ordinamento grafico mediante clustering gerarchico}
+\label{spar:ucw4.7.5}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente modifica l'ordinamento del grafico  della visualizzazione secondo l'algoritmo di clustering gerarchico;
     \item \textbf{Attore primario}: Utente;
@@ -727,8 +712,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subparagraph{UC4.7.5.7 - Ordinamento grafico secondo ordine originario }
-\label{spar:uc4.7.5.7}
+\subparagraph{UCW4.7.6 - Ordinamento grafico secondo ordine originario }
+\label{spar:ucw4.7.6}
 \begin{itemize}
     \item \textbf{Descrizione}:     L'utente modifica l'ordinamento del grafico secondo l'ordine in cui i dati sono disposti nel dataset;
     \item \textbf{Attore primario}: Utente;
@@ -744,8 +729,8 @@
 
 
 
-\subsubsection{UC4.8 - Annullamento delle modifiche}
-\label{ssub:uc4.8}
+\subsubsection{UCW4.8 - Annullamento delle modifiche}
+\label{ssub:ucw4.8}
 \begin{itemize}
     \item \textbf{Descrizione}: L'utente decide di scartare le modifiche fatte nella corrente selezione di modifica;
 

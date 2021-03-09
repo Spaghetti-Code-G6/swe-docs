@@ -39,7 +39,8 @@
     & Obbligatorio
     & \makecell{
         Capitolato \\
-        \hyperref[sub:uc1]{UC1}} \\
+        \hyperref[sub:uc1]{UC1}\\
+		\hyperref[sub:ucs1]{UCS1}} \\
 
 
     RFO1.1
@@ -47,56 +48,35 @@
     & Obbligatorio
     & \makecell{
         Capitolato \\
-        \hyperref[ssub:uc1.1]{UC1.1}} \\
+        \hyperref[ssub:ucs1.1]{UCS1.1}} \\
 
     RFO1.2
     & L'utente deve poter effettuare l'inserimento dei dati da file CSV
     & Obbligatorio
     & \makecell{
         Capitolato  \\
-        \hyperref[ssub:uc1.2]{UC1.2}} \\
+        \hyperref[ssub:ucs1.2]{UCS1.2}} \\
 
     RFO1.3
     & L'utente deve poter effettuare l'inserimento dei dati da database esterno
     & Obbligatorio
     & \makecell{
         Capitolato \\
-        \hyperref[ssub:uc1.3]{UC1.3}} \\
+        \hyperref[ssub:ucs1.3]{UCS1.3}} \\
 
     RFO1.3.1
-    &   L'utente deve poter aprire un collegamento con un server per poter
-        accedere ad uno dei suoi database
+    &   L'utente deve poter aprire un collegamento con un database
     & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[par:uc1.3.1]{UC1.3.1}}\\
-
-    RFO1.3.1.1
-    &   L'utente deve poter immettere l'indirizzo del server
-    & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[spar:uc1.3.1.1]{UC1.3.1.1}}\\
-
-    RFO1.3.1.2
-    &   L'utente deve poter immettere il nome di accesso al server
-    & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[spar:uc1.3.1.2]{UC1.3.1.2}}\\
-
-    RFO1.3.1.3
-    &   L'utente deve poter immettere la password di accesso al server
-    & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[spar:uc1.3.1.3]{UC1.3.1.3}}\\
+    & \makecell{ Interno \\  \hyperref[ssub:ucs1.3]{UCS1.3}}\\
 
     RFO1.3.2
     &   L'utente deve poter importare i dati nel sistema mediante la ricerca
         su un database tra quelli disponibili
     & Obbligatorio
-    & \makecell{ Interno \\ \hyperref[par:uc1.3.2]{UC1.3.2}}\\
-
-    RFO1.4
-    &   L'utente deve poter inserire i metadati di tipo delle dimensioni del dataset
-    & Obbligatorio
-    & \makecell{ Interno \\ \hyperref[ssub:uc1.4]{UC1.4}}\\
+    & \makecell{ Interno \\ \hyperref[ssub:ucs1.3]{UCS1.3}}\\
 
     RFO2
-    &  L'utente deve poter creare un grafico
+    & L'utente deve poter creare un grafico
     & Obbligatorio
     & \makecell{ Interno \\ \hyperref[sub:uc2]{UC2}}\\
 
@@ -392,35 +372,30 @@
     & Desiderabile
     & \makecell{ Interno \\  \hyperref[par:uc4.7.1]{UC4.7.1} }\\
 
-    RFD4.7.2.4
-    & L'utente deve poter modificare le etichette assocciate agli assi nell'Heat Map
+    RFD4.7.2
+    & L'utente deve poter modificare le etichette associate alle righe nell'Heat Map
     & Desiderabile
     & \makecell{ Interno \\  \hyperref[par:uc4.7.2]{UC4.7.2} }\\
 
     RFD4.7.3
-    & L'utente deve poter modificare le etichette associate alle righe nell'Heat Map
+    & L'utente deve poter modificare le etichette associate alle colonne nell'Heat Map
     & Desiderabile
     & \makecell{ Interno \\  \hyperref[par:uc4.7.3]{UC4.7.3} }\\
 
     RFD4.7.4
-    & L'utente deve poter modificare le etichette associate alle colonne nell'Heat Map
+    & L'utente deve poter ordinare gli elementi dell'Heat Map
     & Desiderabile
     & \makecell{ Interno \\  \hyperref[par:uc4.7.4]{UC4.7.4} }\\
 
     RFD4.7.5
-    & L'utente deve poter ordinare gli elementi dell'Heat Map
-    & Desiderabile
-    & \makecell{ Interno \\  \hyperref[par:uc4.7.5]{UC4.7.5} }\\
-
-    RFD4.7.5.6
     & L'utente deve poter ordinare gli elementi dell'Heat Map mediante clustering gerarchico
     & Desiderabile
-    & \makecell{ Interno \\  \hyperref[spar:uc4.7.5.6]{UC4.7.5.6} }\\
+    & \makecell{ Interno \\  \hyperref[spar:uc4.7.5]{UC4.7.5} }\\
 
-    RFD4.7.5.7
+    RFD4.7.5.6
     & L'utente deve poter modificare l'ordinamento degli elementi ritornando all'ordine originale del dataset
     & Desiderabile
-    & \makecell{ Interno \\  \hyperref[spar:uc4.7.5.7]{UC4.7.5.7} }\\
+    & \makecell{ Interno \\  \hyperref[spar:uc4.7.6]{UC4.7.6} }\\
 
     RFD4.8
     & L'utente deve poter ripristinare la visualizzazione corrente con le proprietà di default
@@ -428,34 +403,24 @@
     & \makecell{ Interno \\  \hyperref[ssub:uc4.8]{UC4.8} }\\
 
     RFO5
-    & L'utente deve essere informato in caso di errori
+    & L'utente deve essere informato in caso di errore durante l'inserimento di un file
     & Obbligatorio
     & \makecell{ Interno \\  \hyperref[sub:uc5]{UC5} }\\
 
     RFO6
-    & L'utente deve essere informato in caso di errore durante l'inserimento di un file
+    & L'utente deve essere informato in caso di errore durante l'accesso al database
     & Obbligatorio
     & \makecell{ Interno \\  \hyperref[sub:uc6]{UC6} }\\
 
     RFO7
-    & L'utente deve essere informato in caso di errore durante l'accesso al database
+    & L'utente deve essere informato in caso la query usata per recuperare i dati non ritorni nessun dato
     & Obbligatorio
     & \makecell{ Interno \\  \hyperref[sub:uc7]{UC7} }\\
 
     RFO8
-    & L'utente deve essere informato in caso di errore se il database non contiene alcun dato
-    & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[sub:uc8]{UC8} }\\
-
-    RFO9
-    & L'utente deve essere informato in caso la query usata per recuperare i dati non ritorni nessun dato
-    & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[sub:uc9]{UC9} }\\
-
-    RFO10
     & L'utente deve essere informato in caso provi a modificare la visibilità di un dato quando non può farlo
     & Obbligatorio
-    & \makecell{ Interno \\  \hyperref[sub:uc10]{UC10} }\\
+    & \makecell{ Interno \\  \hyperref[sub:uc8]{UC8} }\\
     \hline
     \rowcolor{white}
     \caption{Requisiti funzionali}%
