@@ -4,21 +4,12 @@
 \subsection{Documentazione}
 \label{sub:doc}
 
-\subsubsection{Scopo}
-\label{ssub:documentazione:scopo}
-Lo scopo del processo di documentazione è quello di riportare, in uno o più documenti, quanto sia necessario all'utilizzo corretto del 
-prodotto risultante al termine del progetto.
-
 \subsubsection{Descrizione}
 \label{ssub:documentazione:descrizione}
+
 La produzione della documentazione è un processo che si svolge durante tutto il ciclo di vita del progetto; consiste nel redarre dei 
 documenti di varia natura, riportati nella sezione \refSec{ssub:documenti_prodotti}, ognuno dei quali ricopre una specifica funzione. In 
 questa sezione del documento vengono riportate le norme adottate per ottenere una buona scrittura della documentazione.
-
-\subsubsection{Obiettivi}
-\label{ssub:documentazione:obiettivi}
-Questo processo ha come obiettivo principale la stesura di documenti chiari e che rispettino le regole di seguito definite, così da 
-permettere agli stessi di svolgere al meglio la loro funzione.
 
 \subsubsection{Ciclo di vita di un documento}
 \label{ssub:ciclo_vita_doc}
@@ -240,17 +231,13 @@ quali documenti e sistemi software.
 \textbf{NOTE}: all'interno di \refSec{sub:gestione_configurazioni} con \emph{oggetto} si intenderà un qualsiasi elemento sottoposto a 
 controllo di versione.
 
-\subsubsection{Obiettivi}
-\label{ssub:gestione_configurazione:obiettivi}
-
-Le aspettative per questo processo sono le seguenti:
-\begin{itemize}
-    \item Sistematizzare la produzione di codice e documenti;
-    \item Uniformare gli strumenti utilizzati.
-\end{itemize}
-
 \subsubsection{Versionamento}
 \label{ssub:gestione_configurazione:versionamento}
+
+\paragraph{Scopo}
+
+L'attività di versionamento ha come obiettivo fornire una corretta gestione e storico delle versioni degli oggetti, di seguito vengono 
+definite le norme e le convenzioni a cui il gruppo aderisce per poter facilitare ed automatizzare le modifiche agli oggetti.
 
 \paragraph{Codice di versione}
 \label{par:codice_versione}
@@ -269,13 +256,6 @@ pu\`{o} essere aumentata:
 \end{itemize}
 Ciascun incremento di \textbf{X}, \textbf{Y} e \textbf{Z} deve essere unitario e ciascuna modifica ad un documento o ad un prodotto 
 dev'essere rilasciata come una nuova versione.
-
-\paragraph{Strumenti}
-\label{par:gestione_configurazione:strumenti}
-
-Per il versionamento dei file è stato deciso di adottare il sistema di versionamento \emph{Git}, il repository pubblico adottato sarà 
-\emph{GitHub}, mentre in locale potrà essere utilizzato il client \glossario{GitHub Desktop} oppure lo strumento \emph{Git} da linea di 
-comando.
 
 \paragraph{Repository}
 \label{par:repo}
@@ -319,7 +299,7 @@ All'interno di \emph{swe-docs} sono presenti i seguenti tipi di file:
 
 Il repository \emph{HD-Viz-PoC}, essendo un sistema prototipale in continuo sviluppo, non possiede una struttura rigida.
 
-Il repository \emph{HD-Viz} al momento non contiene elementi e risulta inutilizzato.
+Il repository \emph{HD-Viz} al momento è inutilizzato e pertanto la sua struttura verrà normata successivamente.
 % TODO: normare struttura del repo
 % private/
 %
@@ -415,6 +395,16 @@ Per aggiungere le modifiche effettuate al repository locale e a quello remoto sv
 		\texttt{git push}
 \end{enumerate}
 
+\subsubsection{Strumenti}
+\label{sub:gestione_configurazione:strumenti}
+
+Gli strumenti utilizzati a supporto delle attività del processo sono i seguenti:
+\begin{itemize}
+	\item \textbf{Git}: software di controllo di versione distribuito;
+	\item \textbf{GitHub}: sistema di controllo di versione cloud;
+	\item \textbf{GitHub Desktop}: client desktop dell'omonimo sistema di versionamento;
+\end{itemize}
+
 \subsection{Accertamento della qualità}
 \label{sub:accertamento_qualita}
 
@@ -422,23 +412,24 @@ Per aggiungere le modifiche effettuate al repository locale e a quello remoto sv
 L'accertamento della qualità è un processo che racchiude all'interno diverse attività volte a provare e garantire oggettivamente il 
 soddisfacimento degli obiettivi di qualità di un prodotto o di un processo. Esso prende in ingresso l'elemento del quale si vuole 
 verificare la qualità e produce il documento \textsc{Piano di Qualifica}, nel quale sono presenti gli obiettivi di qualità stabiliti, le 
-relative metriche individuate e un'istantanea del livello di qualità dei diversi elementi presi in esame misurata sulla base delle metriche scelte.
-Di seguito vengono definiti gli strumenti utilizzati a supporto delle attività del processo, le norme e la struttura degli obiettivi di qualità e delle metriche.
-
-\subsubsection{Attività}
-Le attività racchiuse all'interno del processo sono le seguenti:
+relative metriche individuate e un'istantanea del livello di qualità dei diversi elementi presi in esame misurata sulla base delle 
+metriche scelte. Le attività aggregate dal processo in questione sono le seguenti:
 \begin{itemize}
-    \item \textbf{Pianificazione della qualità};
-    \item \textbf{Pianificazione dei controlli di qualità};
-    \item \textbf{Controllo di qualità}.
+    \item \textbf{Piano di Qualità};
+    \item \textbf{Controllo di Qualità}.
 \end{itemize}
 
-\subsubsection{Pianificazione della qualità}
+Di seguito vengono definiti gli strumenti utilizzati a supporto delle attività del processo, le norme e la struttura 
+degli obiettivi di qualità e delle metriche.
+
+\subsubsection{Piano di Qualità}
 \label{ssub:pianificazione_qualita}
 
+\paragraph{Scopo}
+
 In questa attività viene stabilito il concetto di qualità dell'elemento preso in esame; ciò avviene mediante l'individuazione di obiettivi 
-di qualità che si desidera raggiungere nello stesso. Inoltre è obbligatorio che gli obiettivi di qualità di un elemento siano tra loro 
-pienamente compatibili.
+di qualità che si desidera raggiungere nello stesso. Inoltre vengono stabilite le metriche con le quali viene misurato il livello di 
+raggiungimento degli obiettivi di qualità imposti, viene così definito implicitamente come perseguire la qualità.
 
 \paragraph{Obiettivo di qualità}
 \label{par:obiettivo_qualita}
@@ -450,9 +441,6 @@ Ciascun obiettivo di qualità è composto dai seguenti elementi:
 	\item descrizione: fornisce una spiegazione esaustiva.
 \end{itemize}
 
-\paragraph{Codice obiettivo di qualità}
-\label{par:codice_obiettivo}
-
 Il codice di un obiettivo di qualità deve avere la seguente forma:
 \begin{center}
 	\textbf{O[Tipologia][ID]}
@@ -463,12 +451,6 @@ All'interno del codice \textbf{Tipologia} indica a quale tipologia di elemento l
 	\item \textbf{P}: l'obiettivo è relativo ad un prodotto.
 \end{itemize}
 \textbf{ID} invece è un intero positivo che distingue univocamente gli obiettivi relativi a tipologie di elementi uguali.
-
-\subsubsection{Pianificazione dei controlli di qualità}
-\label{ssub:pianificazione_controlli_qualita}
-
-In questa attività vengono stabilite le metriche con le quali viene misurato il livello di raggiungimento degli obiettivi di qualità 
-precedentemente imposti.
 
 \paragraph{Metrica di qualità}
 \label{par:metrica_qualita}
@@ -482,8 +464,6 @@ Ciascuna metrica di qualità è associata ad uno e un solo obiettivo ed è compo
 	\item valore preferibile: definisce il valore della metrica che il gruppo punta a raggiungere.
 \end{itemize}
 
-\paragraph{Codice metrica}
-
 Il codice di una metrica di qualità deve avere la seguente forma:
 \begin{center}
     \textbf{M[Tipologia][ID]}
@@ -494,67 +474,34 @@ quello del codice dell'obiettivo associato e può assumere i seguenti valori:
 	\item \textbf{PR}: la metrica è relativa ad un processo;
 	\item \textbf{P}: la metrica è relativa ad un prodotto.
 \end{itemize}
-\textbf{ID} invece è un intero positivo che distingue univocamente le metriche relative a tipologie di elementi uguali; questo valore deve 
-coincidere con quello del codice dell'obiettivo associato.
+\textbf{ID} invece è un intero positivo che distingue univocamente le metriche relative a tipologie di elementi uguali.
 
-\subsubsection{Controllo di qualità}
+\subsubsection{Controllo di Qualità}
 \label{ssub:controllo_qualita}
 
 In questa attività vengono calcolate le metriche di controllo precedentemente stabilite dell'elemento preso in esame e ne viene verificato 
 il soddisfacimento o meno dei valori minimi e preferibili.
 
-\subsubsection{Istanziazione di un processo}
-Il gruppo ha deciso di seguire delle regole per l'istanziazione dei processi in modo da perseguire in maniera più 
-efficiente la qualità e rendere più semplice l'esecuzione del processo di gestione della qualità. Le regole imposte, 
-relative all'istanziazione dei processi, sono le seguenti:
-\begin{itemize}
-    \item Ogni processo deve avere un solo obiettivo;
-    \item L'obiettivo di un processo non deve sovrapporsi agli obiettivi di altri processi;
-    \item L'organizzazione delle risorse affidate a un processo deve tenere conto delle risorse già assegnate agli 
-    altri processi, allo scopo di massimizzare l'\glossario{efficienza} dell'impiego delle risorse umane;
-    \item Ogni processo deve essere pianificato;
-    \item Deve essere nota la durata dei processi e questi devono essere costantemente monitorati per far si che 
-    eventuali anticipi o ritardi vengano segnalati immediatamente.
-\end{itemize}
-
 \subsubsection{Strumenti}
 \label{ssub:gestione_qualita:strumenti}
 
-\paragraph{Farfalla project}
-\label{par:farfalla_project}
-
-Applicazione open source che fornisce strumenti di accessibilità, in particolare presenta uno strumento per il calcolo della leggibilità 
-del testo al link \url{https://farfalla-project.org/readability_static/}.
-
-\paragraph{Aspell}
-\label{par:aspell}
-
-\glossario{Aspell} è uno strumento da linea di comando per la correzione degli errori ortografici. 
+Di seguito vengono indicati gli strumenti utilizzati nell'attuazione del processo:
+\begin{itemize}
+	\item \textbf{Farfalla project}: applicazione open source che fornisce strumenti di accessibilità, in particolare presenta uno 
+		strumento per il calcolo della leggibilità del testo al link \url{https://farfalla-project.org/readability_static/};
+	\item \textbf{Aspell}: strumento da linea di comando per la correzione degli errori ortografici. 
+\end{itemize}
 
 \subsection{Verifica}
-
-\subsubsection{Scopo}
-Lo scopo della verifica è quello di avere dei prodotti che siano completi e coesi, oltre che corretti.
+\label{sub:verifica}
 
 \subsubsection{Descrizione}
 Questo processo racchiude un insieme di attività volte a fornire una prova oggettiva del soddisfacimento dei requisiti e delle norme dei 
 processi per la fase in esame. Ciò avviene prendendo in ingresso i prodotti dei processi attuati, controllando che essi siano completi e corretti 
-rispetto ai requisiti degli stessi e producendo un report delle valutazioni effettuate nel documento \textsc{Piano di Qualifica}.
+rispetto ai requisiti degli stessi e producendo un report delle valutazioni effettuate nel documento \textsc{Piano di Qualifica}; in 
+generale le operazioni di verifica sui prodotti devono essere chiare, oggettive ed affidabili.
 
-\subsubsection{Aspettative}
-La verifica rispetta i seguenti punti:
-\begin{itemize}
-    \item Viene effettuata seguendo passi precisi e predefiniti;
-    \item I criteri di verifica sono chiari, oggettivi e affidabili;
-    \item Tutti i prodotti vengono verificati, in ognuna delle fasi che attraversano;
-    \item La verifica lascia il prodotto o, nel caso di prodotti molto corposi, una sua sezione stabile;
-    \item Solo se il prodotto è interamente validato può passare ad essere validato.
-\end{itemize}
-
-\subsubsection{Attività}
-\label{sub:verifica:attivita}
-
-Il processo di verifica è costituito dalle seguenti attività:
+Il processo nello specifico è costituito dalle seguenti attività:
 \begin{itemize}
 	\item \textbf{Analisi statica};
 	\item \textbf{Analisi dinamica}.
@@ -563,6 +510,7 @@ Il processo di verifica è costituito dalle seguenti attività:
 \subsubsection{Analisi statica}
 \label{ssub:verifica:analisi_statica}
 
+\paragraph{Scopo}
 Questa attività ha il compito di valutare la correttezza e la conformità dei prodotti di processo alle regole; essa può essere svolta sia 
 sui prodotti software che sui prodotti documentali del progetto, in quanto valuta caratteristiche scisse dall'esecuzione del prodotto e 
 dunque immutabili. Essa verrà svolta in parte automaticamente e in parte manualmente; in maniera automatica verranno verificati gli 
@@ -572,6 +520,8 @@ precedente verifica e gli elementi strettamente legati ad essi.
 
 \subsubsection{Analisi dinamica}
 \label{ssub:verifica:analisi_dinamica}
+
+\paragraph{Scopo}
 
 Questa attività ha il compito di studiare e verificare il corretto comportamento del prodotto in un insieme finito di casi; ciò richiede 
 l'esecuzione dell'oggetto di verifica, che deve obbligatoriamente essere un prodotto software ed utilizza un insieme di prove denominate 
@@ -601,7 +551,6 @@ assumere uno dei seguenti valori:
     \item \textbf{NS}: il test è stato eseguito ma non è stato superato.
 \end{itemize}
 
-\paragraph{Codice identificativo dei test}
 Il codice identificativo si presenta nella forma:
 \begin{center}
     \textbf{T[Tipologia][ID]}
@@ -621,33 +570,19 @@ numerazione progressiva.
 \subsubsection{Strumenti}
 \label{ssub:verifica:strumenti}
 
-Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività del processo di verifica.
+Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività del processo di verifica:
+\begin{itemize}
+	\item \textbf{ESLint}: strumento open source di analisi statica di software in linguaggio JavaScript;
+	\item \textbf{Jest}: framework di testing per il linguaggio JavaScript incentrato sulla semplicità e l'espressività;
+	\item \textbf{Selenium}: framework per il testing di applicazioni web;
+	\item \textbf{W3C HTML Validator}: strumento di analisi di codice HTML che verifica la validità dei file sorgenti, individuabile al 
+		link \url{https://validator.w3.org};
+	\item \textbf{W3C CSS Validator}: strumento di analisi di codice CSS che verifica la validità dei file sorgenti, individuabile al 
+		link \url{https://jigsaw.w3.org/css-validator/}.
+\end{itemize}
 
-\paragraph{ESLint}
-\label{par:verifica:ESLint}
-
-Strumento open source di analisi statica di software in linguaggio JavaScript.
-
-\paragraph{Jest}
-\label{par:verifica:jest}
-
-Framework di testing per il linguaggio JavaScript incentrato sulla semplicità e l'espressività.
-
-\paragraph{Selenium}
-\label{par:verifica:selenium}
-
-Framework per il testing di applicazioni web.
-
-\paragraph{W3C HTML Validator}
-\label{par:html_validator}
-
-Strumento di analisi di codice HTML che verifica la validità dei file sorgenti, individuabile al link \url{https://validator.w3.org}.
-
-\paragraph{W3C CSS Validator}
-\label{par:css_validator}
-
-Strumento di analisi di codice CSS che verifica la validità dei file sorgenti, individuabile al link \url{https://jigsaw.w3.org/css-validator/}.
 \subsection{Validazione}
+\label{sub:validazione}
 
 \subsubsection{Descrizione}
 \label{ssub:descrizione}
@@ -655,9 +590,6 @@ Strumento di analisi di codice CSS che verifica la validità dei file sorgenti, 
 Questo processo ha il compito di verificare la correttezza e la completezza del prodotto software rispetto alle attese del committente e 
 del proponente. Il processo viene attuato al termine del processo di sviluppo, riceve in ingresso il prodotto software nella sua interezza 
 e produce il rilascio dello stesso.
-
-\subsubsection{Attività}
-\label{ssub:validazione:attivita}
 
 Le attività che vengono svolte all'interno del processo sono le seguenti:
 \begin{itemize}
@@ -680,28 +612,7 @@ parti verificando la correttezza del prodotto rispetto ad alcuni casi di prova.
 \subsubsection{Strumenti}
 \label{ssub:validazione:strumenti}
 
-\paragraph{Selenium}
-\label{par:verifica:selenium}
-
-Framework per il testing di applicazioni web.
-
-\paragraph{Metriche}
-
-Il gruppo ha deciso di tenere traccia del completamento del progetto in base ai requisiti implementati. A questo scopo è 
-stato deciso di calcolare una percentuale di completamento del progetto come il rapporto tra il numero di requisiti 
-implementati e il numero dei requisiti totali, moltiplicato per 100. Tale metrica permette così di individuare lo stato 
-di avanzamento del progetto in maniera immediata. Il valore di questo indice varia tra 0 e 100, dove 100 indica che il 
-progetto è completato, mentre 0 indica che deve ancora essere iniziato.
-\begin{center}
-    \textbf{Nota}: \emph{Il gruppo ha deciso di considerare, inizialmente, il numero totale di requisiti uguale al numero totale di requisiti obbligatori e si riserva la 
-    possibilità di aumentare il numero totale di requisiti in seguito ad eventuali negoziazioni con il proponente.}
-\end{center}
-
-\paragraph{Metriche}
-
-Il gruppo ritiene prematuro stabilire una metrica definitiva per misurare la leggibilità del codice, perciò ha definito 
-un indice indicativo che verrà integrato nei successivi stadi del progetto.\\
-La formula momentaneamente adottata è:
-\begin{center}
-    $Leggibilit\grave{a} = \frac{numero\ di\ linee\ di\ commento}{numero\ di\ linee\ di\ codice}$
-\end{center}
+Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività del processo di verifica:
+\begin{itemize}
+	\item \textbf{Selenium}: framework per il testing di applicazioni web;
+\end{itemize}

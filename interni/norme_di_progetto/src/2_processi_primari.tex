@@ -2,6 +2,7 @@
 \label{sec:processi_primari}
 
 \subsection{Fornitura}
+\label{sub:fornitura}
 
 \subsubsection{Descrizione}
 
@@ -109,47 +110,6 @@ Ogni rischio avrà, oltre al codice, due informazioni:
 	\item \textbf{Gravità}: indica la gravità del rischio.
 \end{itemize}
 
-\subsubsection{Strumenti}
-
-Saranno riportati di seguito gli strumenti che il gruppo ha deciso di utilizzare durante il progetto.
-
-\paragraph{GitHub}
-
-Il gruppo ha deciso, di comune accordo, di affidarsi a \emph{GitHub} come strumento di condivisione dei file e 
-\glossario{versionamento}, sia per quanto riguarda il codice, sia per quanto riguarda i documenti. La scelta è 
-ricaduta su questo strumento per la sua integrazione con un sistema di \glossario{issue tracking}, per la possibilità 
-di lavorare in più \glossario{branch} contemporaneamente e anche per la sua grande diffusione.
-
-\paragraph{Google Docs/Google Drive}
-
-Questo strumento viene utilizzato dal gruppo per la sua estrema semplicità, che permette una veloce creazione e stesura 
-di bozze. Nelle cartelle di Google Drive si troveranno quindi dei fogli di documenti di Google, ovvero documenti 
-informali generalmente bozze di documenti poi formalizzati o scalette dei documenti che devono essere scritti.
-
-\paragraph{\LaTeX}
-
-Il gruppo ha di comune accordo deciso, dopo aver valutato l'opzione, di usare lo strumento \LaTeX\ per la scrittura 
-formale dei documenti, perciò ha predisposto su \emph{GitHub} un \glossario{repository} in cui mantenere versionati i 
-file .tex in modo da avere uno storico dei documenti e gestire in maniera più semplice le modifiche.
-
-\paragraph{Discord}
-
-Questo strumento viene utilizzato dal gruppo come canale di comunicazione principale, per organizzare gli incontri, per 
-condividere risorse tra i membri e per suddividere in vari canali, corrispondenti ai diversi ruoli, così che ci sia una 
-maggiore organizzazione e divisione dei ruoli stessi.
-
-\paragraph{Telegram}
-
-Si è deciso di creare un gruppo \glossario{Telegram} per le comunicazioni di minore importanza e per avere un canale di 
-comunicazione alternativo in quanto lo strumento è stato considerato di più veloce accesso rispetto a \emph{Discord} 
-dai membri del gruppo.
-
-\paragraph{Trello e GitHub Projects}
-
-Il gruppo aveva inizialmente deciso di provvedere all'organizzazione tramite le board di \glossario{Trello}, tuttavia 
-successivamente è stato preferito l'utilizzo dei \glossario{GitHub Projects}. Entrambe sono delle applicazioni web per 
-la creazione di liste in stile Kanban.
-
 \subsection{Sviluppo}
 \label{sub:sviluppo}
 
@@ -238,8 +198,11 @@ all'interno del progetto. Tale codice si presenta nella seguente forma:
 \begin{center}
     \textbf{UC([Sistema])[CodiceBase](.[CodiceSottoCaso])*}
 \end{center}
-% TODO: terminare la definizione di sistema
-dove \textbf{Sistema} indica 
+dove \textbf{Sistema} indica dove ha luogo il caso d'uso, nel caso non sia specificato si assume che il sistema sia la Web app 
+\emph{HD Viz}, altrimenti il campo può assumere i seguenti valori:
+\begin{itemize}
+	\item \textbf{S}: il caso d'uso ha luogo nel server di \emph{HD Viz}.
+\end{itemize}
 \textbf{CodiceBase} è un intero positivo che distingue i casi d'uso, relativi allo stesso sistema, rispetto al primo livello di 
 granularità; \textbf{CodiceSottoCaso} invece è un intero positivo che distingue i casi d'uso relativi allo stesso sistema rispetto ai 
 livelli di granularità successivi nel caso siano presenti.
@@ -264,13 +227,11 @@ Questa notazione, spiegata nel dettaglio di seguito, permette di identificare in
 \begin{itemize}
     \item \textbf{Tipologia}: permette di identificare la tipologia del requisito e i possibili valori che può assumere sono:
     \begin{itemize}
-    	% TODO: correggere
         \item \textbf{V}: indica che è un requisito di vincolo, ossia una condizione imposta dal proponente circa i servizi offerti dal 
         	prodotto software all'utilizzatore finale;
-        \item \textbf{F}: indica che è un requisito funzionale, quindi viene usato per rappresentare le funzioni del prodotto;
-        \item \textbf{P}: indica che è un requisito prestazionale, quindi viene usato per dare delle limitazioni sulle prestazioni 
-        	del prodotto software;
-        \item \textbf{Q}: indica che è un requisito di qualità, quindi è un vincolo sulla qualità del prodotto.
+        \item \textbf{F}: indica che è un requisito funzionale, cioè un vincolo riguardo le funzioni del prodotto;
+        \item \textbf{P}: indica che è un requisito prestazionale, ossia specifica delle condizioni sulle prestazioni del prodotto software;
+        \item \textbf{Q}: indica che è un requisito di qualità, quindi pone dei vincoli sulla qualità del prodotto.
     \end{itemize}
     \item \textbf{Importanza}: permette di individuare quale sia la rilevanza del requisito ed i suoi possibili valori sono:
     \begin{itemize}
@@ -307,7 +268,6 @@ In quest'attività bisogna rispettare i seguenti vincoli:
     \item Ottimizzare l'uso di risorse.
 \end{itemize}
 
-\paragraph{Descrizione}
 La progettazione è divisa in due parti fondamentali:
 \begin{itemize}
     \item \glossario{Technology Baseline}: contiene le specifiche ad alto livello della progettazione del software, 
@@ -320,7 +280,7 @@ La progettazione è divisa in due parti fondamentali:
 
 La progettazione è un'attività svolta dai \emph{Progettisti}, volta a produrre l'architettura logica del prodotto. 
 L'architettura deve essere formata da componenti chiari, riusabili e utilizzabili in modo che ci sia coesione tra 
-le parti; inoltre è necessario rimanere entro i costi fissati.\\
+le parti.\\
 L'architettura dovrà necessariamente rispettare i seguenti punti: 
 \begin{itemize}
     \item Soddisfare i requisiti individuati dall'analisi dei requisiti;
@@ -338,7 +298,7 @@ L'architettura dovrà necessariamente rispettare i seguenti punti:
 
 La scelta dei \glossario{design pattern} da utilizzare è lasciata ai \emph{progettisti}, i quali dovranno 
 assicurarsi che le loro scelte portino a una soluzione che sia flessibile e lasci una certa libertà ai 
-\emph{Programmatori}. Ogni design pattern utilizzato andrà spiegato e rappresentato in modo da poterne esporre 
+\emph{programmatori}. Ogni design pattern utilizzato andrà spiegato e rappresentato in modo da poterne esporre 
 significato e struttura.
 
 \paragraph{Diagrammi UML}
@@ -351,12 +311,11 @@ utile.
 
 \paragraph{Test}
 
-Come specificato all'inizio, la definizione dei test è parte dell'attività di progettazione, quindi ogni 
-\emph{progettista} dovrà affiancare alla progettazione del sistema la definizione dei relativi test. Le regole di 
-nomenclatura da seguire sono le stesse valide per la nomenclatura dei metodi, descritte nella sezione 
-\refSec{par:stile_codifica}.
+Come specificato precedentemente, la definizione dei test è parte integrante dell'attività di progettazione in quanto ne garantisce le 
+caratteristiche qualitative, quindi ogni \emph{progettista} dovrà affiancare alla progettazione del sistema la definizione dei relativi test.
 
 \subsubsection{Codifica}
+\label{ssub:codifica}
  
 \paragraph{Scopo}
 \label{par:codifica:scopo}
@@ -376,7 +335,7 @@ prescindere dall tipo di file sorgente, valgono le seguenti norme:
     \item Indentazioni: i blocchi di codice annidati, commenti esclusi, devono presentare 4 spazi di rientro rispetto al livello precedente;
     \item Righe: ciascuna riga può contenere al massimo 140 caratteri;
     \item Wrapping: nel caso una riga contenga più di 140 caratteri essa deve essere suddivisa su più linee di modo che rispettino tutte 
-    	la lunghezza massima e le righe aggiunte devono essere indentate di un livello rispetto alla riga originale;
+    	la lunghezza massima e le righe aggiunte devono essere indentate di due livelli rispetto alla riga originale;
     \item Lingua: la lingua utilizzata per i nomi delle variabili e dei metodi deve essere l'inglese.
 \end{itemize}
 
@@ -385,29 +344,41 @@ prescindere dall tipo di file sorgente, valgono le seguenti norme:
 \paragraph{Linee guida JavaScript}
 \label{par:convenzioni_javascript}
 
-\textbf{Intestazione:} \\
-ciascun file sorgente JavaScript deve contenere la seguente intestazione specificando gli opportuni valori
-\begin{lstlisting}[style=htmlcssjs]
-	/**
-	 * @file <Descrizione del file>
-	 * 
-	 * @file           <Descrizione del file>
-	 *
-	 * Data Creazione: <Data di creazione>
-	 *
-	 * @version        <Versione prodotto>
-	 * @author         SpaghettiCode
-	 * @author         <Nome Cognome>
-	 * [@author        <Nome Cognome>]
-	 */
-\end{lstlisting}
-seguendo le norme in \refSec{par:date} e \refSec{par:codice_versione} rispettivamente per il formato della data e il codice di versione;
-% TODO: add method documentation
+Di seguito vengono specificate le linee guida per la codifica di codice JavaScript:
+\begin{itemize}
+	\item \textbf{Intestazione:} \\
+		ciascun file sorgente JavaScript deve contenere la seguente intestazione specificando gli opportuni valori
+		\begin{lstlisting}[style=htmlcssjs]
+			/**
+	 	 	 * @file <Descrizione del file>
+	 	 	 * 
+	 	 	 * @file           <Descrizione del file>
+	 	 	 *
+	 	 	 * Data Creazione: <Data di creazione>
+	 	 	 *
+	 	 	 * @version        <Versione prodotto>
+	 	 	 * @author         SpaghettiCode
+	 	 	 * @author         <Nome Cognome>
+	 	 	 * [@author        <Nome Cognome>]
+	 	 	 */
+		\end{lstlisting}
+		seguendo le norme in \refSec{par:date} e \refSec{par:codice_versione} rispettivamente per il formato della data e il codice di versione;
+	\item \textbf{Intestazione funzioni:} \\
+		ciascuna funzione e/o memtodo dev'essere preceduta dalla seguente intestazione specificando opportunamente i valori
+		\begin{lstlisting}[style=htmlcssjs]
+			/**
+			 * <Descrizione della funzione>
+			 *
+			 * [@param {<tipo parametro>} <Nome parametro> - <Descrizione parametro>]
+			 */
+		\end{lstlisting}
+\end{itemize}
 
 \subparagraph{Convenzioni sui nomi}
 
 Ciascun elemento deve avere un nome espressivo che esprima chiaramente che cosa rappresenta, in modo da migliorare la leggibilità e 
 semplificare la manutenzione.
+
 Di seguito vengono elencate le regole per l'assegnazione dei nomi di diversi componenti.
 \begin{itemize}
 	\item \textbf{Classi}:\\
@@ -468,6 +439,9 @@ Di seguito vengono elencate le regole per l'assegnazione dei nomi di diversi com
 
 \subparagraph{Formattazione}
 
+La formattazione del codice deve rendere immediata l'identificazione degli elementi e di conseguenza dev'essere incentrata sull'espressività 
+rispetto alla sinteticità.
+Di seguito vengono elencate le regole per quanto riguarda la formattazione del codice:
 \begin{itemize}
 	\item \textbf{Parentesi}:\\
 		tutte le strutture di controllo (\texttt{if}, \texttt{else}, \texttt{for}, \texttt{do}, \texttt{while}), anche se contenenti 
@@ -507,6 +481,8 @@ Di seguito vengono elencate le regole per l'assegnazione dei nomi di diversi com
 
 \subparagraph{Funzionalità del linguaggio}
 
+Alcune funzionalità peculiari del linguaggio sono preferibili ad altre nella codifica di software di qualità, pertanto di seguito vengono 
+specificati i costrutti del linguaggio consentiti:
 \begin{itemize}
 	\item \textbf{Variabili locali}:\\
 		per la definizione delle variabili vengono utilizzati i costrutti \texttt{const} e \texttt{let}; il costrutto \texttt{var} va 
@@ -554,7 +530,8 @@ Di seguito vengono elencate le regole per l'assegnazione dei nomi di diversi com
 \paragraph{Linee guida HTML}
 \label{par:convenzioni_html}
 
-\begin{enumerate}
+Di seguito vengono elencate le regole che dovranno essere adottate nello sviluppo di file HTML:
+\begin{itemize}
 	\item \textbf{Dichiarazione DOCTYPE}:\\
 		la prima linea di ciascun file deve contenere la dichiarazione del tipo di documento come segue\\
 		\begin{lstlisting}[style=html]
@@ -577,12 +554,14 @@ Di seguito vengono elencate le regole per l'assegnazione dei nomi di diversi com
 		\begin{lstlisting}[style=html]
 			<a id="id-value" class="class-value">Foo</a>
 		\end{lstlisting}
-\end{enumerate}
+\end{itemize}
 
-\paragraph{Strumenti}
+\subsubsection{Strumenti}
 
 Sono riportati di seguito gli strumenti utilizzati nel processo di sviluppo:
 \begin{itemize}
+	\item \textbf{Draw.io}: applicazione web molto versatile per disegnare grafici UML che offre la possibilità di lavorare 
+		contemporaneamente;
 	\item \textbf{HTML}: linguaggio utilizzato per lo sviluppo di pagine web utilizzato per specificare la struttura della pagina;
 	\item \textbf{CSS}: linguaggio utilizzato nello sviluppo di pagine web per gestire e personalizzare la presentazione;
 	\item \textbf{JavaScript}: linguaggio di scripting per web application richiesto dal proponente che fornisce la possibilità di 
