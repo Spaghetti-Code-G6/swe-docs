@@ -1,6 +1,8 @@
 \documentclass[../piano_di_qualifica.tex]{subfiles}
 \begin{document}
-\subsection{Test fase di analisi}
+\subsection{Primo periodo (RR)}
+\label{sub:periodo-RR}
+\paragraph{Risultati controlli di qualità fase di analisi}
 Qui di seguito verranno presentati i resoconti relativi ai test effettuati nella fase di analisi. \par
 
 \begin{table}[!ht]
@@ -8,15 +10,19 @@ Qui di seguito verranno presentati i resoconti relativi ai test effettuati nella
 	\begin{tabular}{|p{4cm}|p{4cm}|l|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}            & \textbf{Metrica}              & \textbf{Risultato}                     & \textbf{Accettabile} & \textbf{Esito} \\
+		\textbf{Obiettivo}            			& \textbf{Metrica}              & \textbf{Risultato}                    & \textbf{Accettabile} & \textbf{Esito} \\
 		\hline
-		QPR01 Ritardo maturato        & MPR02 Varianza pianificazione & 14 giorni                              & \(\leq 4\)           & Non Superato   \\
-		QPR02 Budget intaccato        & MPR03 Varianza costi          & Budget totale intatto & 0\%                  & Superato       \\
-		QPR05 Rispetto obiettivi      & MPR07 Obiettivi soddisfatti   & 100\%                                  & 100\%                & Superato       \\
-		QPR09 Rispetto delle norme    & MPR08 Norme rispettate        & 100\%                                  & 100\%                & Superato       \\
-		QPR12 Verifica documenti      & MPR10 Frequenza controllo     & Ogni Milestone e modifica         & Ogni Milestone       & Superato       \\
-		OQP01 Leggibilità testo       & MQP01 Indice di Gulpease      & 79,3                                   & \(\ge 60\)           & Superato       \\
-		OQP02 Correttezza ortografica & MQP02 Errori ortografici      & 0                                      & 0                    & Superato       \\
+		OPR01 Scadenze		        			& MPR01 Varianza pianificazione & 14 giorni                             & $\leq$ 4           	& Non Superato   \\
+		OPR02 Budget parziale intaccato        	& MPR02 Varianza costi parziali & $>$ 5\%								& 0\%                  	& Non Superato   \\
+		OPR03 Budget finale intaccato        	& MPR03 Varianza costi totali   & Budget totale intatto					& 0\%                  	& Superato       \\
+		OPR04 Versionamento						& MPR04 Versionamento			& $>$25									& $>$25					& Superato		 \\
+		OPR07 Rischi non previsti				& MPR07 Rischi inattesi			& $>$2									& 2						& Non Superato	 \\
+		OPR08 Rispetto obiettivi      			& MPR08 Obiettivi soddisfatti   & 100\%                                 & 100\%                	& Superato       \\
+		OPR09 Rispetto delle norme   			& MPR09 Norme rispettate        & 100\%                                 & 100\%                	& Superato       \\
+		OPR12 Verifica documenti      			& MPR10 Frequenza controllo     & Ogni Milestone e modifica         	& Ogni Milestone       	& Superato       \\
+		OP01 Leggibilità testo       			& MP01 Indice di Gulpease      	& 73                                 & \(\ge 60\)           	& Superato       \\
+		OP02 Correttezza ortografica 			& MP02 Errori ortografici      	& 0                                     & 0                    	& Superato       \\
+		OP05 Assenza file senza intestazione	& MP05 File senza intestazione 	& 0										& 0						& Superato		 \\
 		\hline
 	\end{tabular}
 	\caption{Esiti test fase di analisi}
@@ -47,9 +53,9 @@ Qui di seguito verranno presentati i resoconti relativi ai test effettuati nella
 
 		\endlastfoot
 
-		Analisi Dei Requisiti v1.0.0       & 86                 & Superato       \\
+		Analisi Dei Requisiti v1.0.0       & 72                 & Superato       \\
 		Piano di Progetto v1.0.0           & 70                 & Superato       \\
-		Piano di Qualifica v1.0.0          & 69                 & Superato       \\
+		Piano di Qualifica v1.0.0          & 63                 & Superato       \\
 		Norme di Progetto v1.0.0           & 71                 & Superato       \\
 		Studio di Fattibilità v1.0.0       & 71                 & Superato       \\
 		Glossario v1.0.0                   & 66                 & Superato       \\
@@ -67,6 +73,85 @@ Qui di seguito verranno presentati i resoconti relativi ai test effettuati nella
 	\centering
 	\includegraphics[width=12cm]{img/media_gul.jpg}
 	\caption{ Andamento Indice di Gulpease}
+\end{figure}
+
+\paragraph{Considerazioni sui risultati e sull’esito della revisione }
+I risultati ottenuti dall’esito della revisione sono stati poco soddisfacenti a livello personale, mentre i colloqui e commenti si sono rivelati essenziali e esaustivi al fine di comprendere le modifiche da apportare e soprattutto realizzare un prodotto migliore. \\
+Dopo l'esito ci siamo resi conto degli errori e delle imperfezioni fatte, e come poter ovviare a questi in modo da produrre un prodotto migliore, vedi \S\ref{par:retrospettiva-RR}. \\
+Abbiamo inoltre compreso la necessità di pianificare meglio le nostre attività e soprattutto di considerare ulteriori rischi che si possono verificare nello svolgimento del progetto.
+
+
+\subsection{Secondo periodo (RP)}
+\label{sub:periodo-RP}
+\paragraph{Risultati test fase di progettazione e codifica della technology baseline}
+Qui di seguito verranno presentati i resoconti relativi ai controlli di qualità effettuati nella fase di progettazione. \par
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|p{4cm}|p{4cm}|l|c|c|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Obiettivo}            			& \textbf{Metrica}              & \textbf{Risultato}                    & \textbf{Accettabile} & \textbf{Esito} \\
+		\hline
+		OPR01 Scadenze		        			& MPR01 Varianza pianificazione & 0                             		& $\leq$ 4           	& Superato   	\\
+		OPR02 Budget parziale intaccato        	& MPR02 Varianza costi parziali & $<$ 5\%								& 0\%                 	& Superato   	\\
+		OPR03 Budget finale intaccato        	& MPR03 Varianza costi totali   & Budget totale intatto					& 0\%                  	& Superato      \\
+		OPR04 Versionamento						& MPR04 Versionamento			& $>$25									& $>$25					& Superato		\\
+		OPR05 Adempimento requisiti obbligatori & MPR05 Requisiti obbligatori 	& 100\%									& 100\%					& Superato		\\
+		OPR07 Rischi non previsti				& MPR07 Rischi inattesi			& 0										& 2						& Superato	 	\\
+		OPR08 Rispetto obiettivi      			& MPR08 Obiettivi soddisfatti   & 100\%                                 & 100\%                	& Superato      \\
+		OPR09 Rispetto delle norme   			& MPR09 Norme rispettate        & 100\%                                 & 100\%                	& Superato      \\
+		OPR12 Verifica documenti      			& MPR10 Frequenza controllo     & Ogni Milestone e modifica         	& Ogni Milestone       	& Superato      \\
+		OP01 Leggibilità testo       			& MP01 Indice di Gulpease      	& 71                        			& \(\ge 60\)           	& Superato      \\
+		OP02 Correttezza ortografica 			& MP02 Errori ortografici      	& 0                                     & 0                    	& Superato      \\
+		OP05 Assenza file senza intestazione	& MP05 File senza intestazione 	& 0										& 0						& Superato		\\
+		\hline
+	\end{tabular}
+	\caption{Esiti test fase di progettazione e codifica della technology baseline}
+\end{table}
+
+\subsection{Esiti verifica indici di Gulpease}
+\label{sub:verif_gul}
+
+\begin{center}
+	\begin{longtable}{|l|c|c|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Documento}                 & \textbf{Risultato} & \textbf{Esito} \\
+		\hline
+		\endfirsthead
+	
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Documento}                 & \textbf{Risultato} & \textbf{Esito} \\
+		\hline
+		\endhead
+		
+		\hline
+		\multicolumn{3}{|c|}{\emph{Continua alla pagina successiva...}}\\
+		\hline
+		\endfoot
+
+		\endlastfoot
+
+		Analisi Dei Requisiti v1.3.0       & 72                 & Superato       \\
+		Piano di Progetto v1.4.1           & 66                 & Superato       \\
+		Piano di Qualifica v1.1.3          & 64                 & Superato       \\
+		Norme di Progetto v2.3.0           & 64                 & Superato       \\
+		Glossario v1.1.0                   & 65                 & Superato       \\
+		Verbale Interno 2021-03-05 v1.0.0  & 86                 & Superato       \\
+		Verbale Interno 2021-02-12 v1.0.0  & 62                 & Superato       \\
+		Verbale Interno 2021-02-17 v1.0.0  & 90                 & Superato       \\
+		Verbale esterno 2021-02-17 v1.0.0  & 72                 & Superato       \\
+		\hline
+		\caption{Esiti valutazioni dei documenti}
+	\end{longtable}
+\end{center}
+		
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/media_gul_RP.jpg}
+\caption{ Andamento Indice di Gulpease in fase di progettazione e codifica della technology baseline}
 \end{figure}
 
 
