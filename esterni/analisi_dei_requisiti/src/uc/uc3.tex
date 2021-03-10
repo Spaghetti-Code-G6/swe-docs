@@ -1,11 +1,11 @@
-\subsection{UC3 - Modifica dei Metadati}
-\label{sub:uc3}
+\subsection{UCW3 - Modifica dei Metadati}
+\label{sub:ucw3}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{diagrammi/UC3.pdf}
-    \caption{Diagramma rappresentante UC3}
-    \label{fig:UC3}
+    \caption{Diagramma rappresentante UCW3}
+    \label{fig:UCW3}
 \end{figure}
 
 %TODO: Modifica immagine
@@ -14,15 +14,15 @@
 	
     \item \textbf{Attore primario}: Utente;
     
-    \item \textbf{Precondizione}:   É stato creato un ambiente valido (\hyperref[sub:uc1]{UC1});
+    \item \textbf{Precondizione}:   É stato creato un ambiente valido (\hyperref[sub:ucs1]{UCS1});
     \item \textbf{Postcondizione}:  Sono stati aggiornati i metadati modificati della dimensione scelta dall'utente e 
     sono state aggiornate eventuali visualizzazioni presenti, in accordo con i metadati aggiornati;
 
 	\item \textbf{Scenario principale}:
         \begin{enumerate}
-                \item L'utente seleziona una dimensione da modificare (\hyperref[ssub:uc3.1]{UC3.1});
+                \item L'utente seleziona una dimensione da modificare (\hyperref[ssub:ucw3.1]{UCW3.1});
                 \item L'utente modifica il metadato di tipo e/o quello di visibilità della dimensione selezionata 
-                (\hyperref[ssub:uc3.2]{UC3.2} e \hyperref[ssub:uc3.3]{UC3.3});
+                (\hyperref[ssub:ucw3.2]{UCW3.2} e \hyperref[ssub:ucw3.3]{UCW3.3});
                 \item Vengono aggiornati i metadati modificati della dimensione selezionata;
                 \item Vengono aggiornate le eventuali visualizzazioni presenti, in accordo con i metadati 
                 aggiornati.
@@ -32,7 +32,7 @@
     \begin{itemize}
         \item L'utente interrompe le modifiche che stava apportando:
         \begin{enumerate}
-            \item L'utente seleziona una dimensione da modificare (\hyperref[ssub:uc3.1]{UC3.1});
+            \item L'utente seleziona una dimensione da modificare (\hyperref[ssub:ucw3.1]{UCW3.1});
             \item L'utente deseleziona la dimensione selezionata.
         \end{enumerate}
     \end{itemize}
@@ -40,8 +40,8 @@
 
 \newpage
 
-\subsubsection{UC3.1 - Scelta della dimensione da modificare}
-\label{ssub:uc3.1}
+\subsubsection{UCW3.1 - Scelta della dimensione da modificare}
+\label{ssub:ucw3.1}
 
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente seleziona una dimensione della quale modificare i metadati;
@@ -57,8 +57,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC3.2 - Modifica metadato di tipo}
-\label{ssub:uc3.2}
+\subsubsection{UCW3.2 - Modifica metadato di tipo}
+\label{ssub:ucw3.2}
 
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente modifica il metadato di tipo, della dimensione del dataset selezionata, 
@@ -67,7 +67,7 @@
     \item \textbf{Attore primario}: Utente;
     
     \item \textbf{Precondizione}:   L'utente ha selezionato una dimensione del dataset della quale desidera modificare 
-    i metadati (\hyperref[ssub:uc3.1]{UC3.1});
+    i metadati (\hyperref[ssub:ucw3.1]{UCW3.1});
     \item \textbf{Postcondizione}:  Viene modificato il metadato di tipo della dimensione selezionata;
 
 	\item \textbf{Scenario principale}:
@@ -81,8 +81,8 @@
 \end{itemize}
 
 
-\subsubsection{UC3.3 - Modifica metadato di visibilità}
-\label{ssub:uc3.3}
+\subsubsection{UCW3.3 - Modifica metadato di visibilità}
+\label{ssub:ucw3.3}
 
 \begin{itemize}
     \item \textbf{Descrizione}: L’utente modifica il metadato di visibilità della dimensione del dataset selezionata;
@@ -90,7 +90,7 @@
     \item \textbf{Attore primario}: Utente;
     
     \item \textbf{Precondizione}:   L'utente ha selezionato una dimensione del dataset della quale desidera modificare 
-    i metadati (\hyperref[ssub:uc3.1]{UC3.1});
+    i metadati (\hyperref[ssub:ucw3.1]{UCW3.1});
 
     \item \textbf{Postcondizione}:  Viene modificato il metadato di visibilità della dimensione selezionata;
 
@@ -107,7 +107,7 @@
         \begin{enumerate}
             \item Il metadato di visibilità della dimensione selezionata viene impostato a 
             visibile;
-            \item Viene visualizzato il messaggio di errore (\hyperref[sub:uc10]{UC10}).
+            \item Viene visualizzato il messaggio di errore (\hyperref[sub:ucw8]{UCW8}).
         \end{enumerate}
     \end{itemize}
 \end{itemize}

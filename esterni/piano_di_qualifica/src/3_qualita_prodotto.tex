@@ -3,12 +3,6 @@
 \begin{document}
 
 Per garantire la qualità del prodotto il gruppo ha deciso di fare riferimento allo \glossario{standard ISO/IEC 9126}, il quale regolamenta le modalità con cui produrre un software di buona qualità. Di questo standard il gruppo sceglie di seguire alcune delle metriche esposte, e sceglie di stabilirne altre da seguire per rendere il prodotto qualitativamente valido; qui di seguito vengono elencate. \\
-Saranno adottati i seguenti codici identificativi:\par
-
-\begin{center}
-	\textbf{M}[Metrica]\textbf{QP}[Qualità Prodotto]\textbf{ID}[Indice]\\
-	\textbf{O}[Obiettivo]\textbf{QP}[Qualità Prodotto]\textbf{ID}[Indice]
-\end{center}
 
 \subsection{Modello di qualità}
 Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.\par
@@ -50,15 +44,15 @@ Gli obiettivi per un documento sono quindi: \\
 \setlength{\parindent}{0pt}\textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OQP01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
-	\item \textbf{OQP02 Correttezza ortografica}: i documenti non devono presentare errori.
+	\item \textbf{OP01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
+	\item \textbf{OP02 Correttezza ortografica}: i documenti non devono presentare errori.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MQP01 Indice di Gulpease};
-	\item \textbf{MQP02 Errori ortografici}.
+	\item \textbf{MP01 Indice di Gulpease};
+	\item \textbf{MP02 Errori ortografici}.
 \end{itemize}
 
 Per verificare questi requisiti si farà ricorso all’ \glossario{indice di Gulpease}. L'Indice Gulpease è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
@@ -75,8 +69,8 @@ Come descritto nella seguente tabella, ci aspettiamo che i documenti siano entro
 		\rowcolor{lightgray}
 		\textbf{ID metrica}      & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
 		\hline
-		MQP01 Indice di Gulpease & \(\ge 80\)                  & \(\ge 60\)                  \\
-		MQP02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
+		MP01 Indice di Gulpease & \(\ge 80\)                  & \(\ge 60\)                  \\
+		MP02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
 		\hline
 	\end{tabular}
 	\caption{Indici di qualità per le metriche di comprensione del prodotto}
@@ -91,23 +85,23 @@ Di seguito presentiamo alcune delle metriche che intendiamo adottare. \\
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OQP03 Assenza di bug}: il prodotto non deve presentare bug;
-	\item \textbf{OQP04 Assenza di errori}: il prodotto deve presentare meno errori possibile;
-	\item \textbf{OQP05 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
-	\item \textbf{OQP05 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
+	\item \textbf{OP03 Assenza di bug}: il prodotto non deve presentare bug;
+	\item \textbf{OP04 Assenza di errori}: il prodotto deve presentare meno errori possibile;
+	\item \textbf{OP05 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
+	\item \textbf{OP06 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MQP03 Presenza di bug};
-	\item \textbf{MQP04 Densità di errori};
-	\item \textbf{MQP05 File senza intestazione};
-	\item \textbf{MQP06 Usabilità del prodotto}.
+	\item \textbf{MP03 Presenza di bug};
+	\item \textbf{MP04 Densità di errori};
+	\item \textbf{MP05 File senza intestazione};
+	\item \textbf{MP06 Usabilità del prodotto}.
 \end{itemize}
 
 
-\paragraph{MQP04 - Densità di errori}
+\paragraph{MP04 - Densità di errori}
 La densità di errori è l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:\par
 
 \begin{center}
@@ -123,7 +117,7 @@ dove
 
 Il valore preferibile è lo 0\%; il valore accettabile è inferiore al 10\%.
 
-\paragraph{MQP06 Usabilità del prodotto}
+\paragraph{MP06 Usabilità del prodotto}
 L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che vuole; viene rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato, infatti un software poco annidato è più usabile per l'utente medio.
 \smallbreak
 \begin{itemize}
@@ -148,13 +142,13 @@ Ogni obiettivo di qualità è indicato con:
 	\begin{tabular}{|l|l|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}                    & \textbf{Metrica}              & \textbf{Accettabile} & \textbf{Preferibile} \\
-		OQP01 Leggibilità del testo           & MQP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
-		OQP02 Correttezza ortografica         & MQP02 Errori ortografici      & 0                    & 0                    \\
-		OQP03 Assenza di bug                  & MQP03 Presenza di bug         & 0                    & 0                    \\
-		OQP04 Assenza di errori               & MQP04 Densità di errori       & 10\%                 & 0\%                  \\
-		OQP05 Assenza file senza intestazione & MQP05 File senza intestazione & 0                    & 0                    \\
-		OQP06 Usabilità del prodotto          & MQP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
+		\textbf{Obiettivo}                    	& \textbf{Metrica}             & \textbf{Accettabile} & \textbf{Preferibile} \\
+		OP01 Leggibilità del testo           	& MP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
+		OP02 Correttezza ortografica         	& MP02 Errori ortografici      & 0                    & 0                    \\
+		OP03 Assenza di bug                  	& MP03 Presenza di bug         & 0                    & 0                    \\
+		OP04 Assenza di errori              	& MP04 Densità di errori       & 10\%                 & 0\%                  \\
+		OP05 Assenza file senza intestazione 	& MP05 File senza intestazione & 0                    & 0                    \\
+		OP06 Usabilità del prodotto          	& MP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
 		\hline
 	\end{tabular}
 	\caption{Metriche qualità di prodotto}
