@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+%aggiungere percorsi dai quali il documento prende le immagini
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Manuale sviluppatore}
+
+\setVersione{1.0.0}
+
+\setResponsabile{Samuel Kostadinov}
+
+\setRedattori{
+  Giorgia Paparazzo \\ &
+  XY \\ &
+  XY
+}
+
+\setVerificatori{
+    XY \\ &
+	XY
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+  prof. Vardanega Tullio \\ &
+  prof. Cardin Riccardo \\ &
+  SpaghettiCode
+}
+
+\setDescrizione{Il presente documento ha lo scopo di presentare le tecnologie e l’architettura del sistema agli sviluppatori interessati alla estensione e al mantenimento del software \emph{HD-Viz}.}
+
+\setModifiche{
+    v0.1.0 & Giorgia Paparazzo & Progettista & 2021-03-26 & Redazione \S\ref{sec:introduzione}, \S\ref{sec:setup} \\
+    v0.0.1 & Giorgia Paparazzo & Progettista & 2021-03-26 & Creazione del documento
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Introduzione}
+\label{sec:introduzione}
+\subfile{src/1_introduzione.tex}
+
+\newpage
+\section{Tecnologie e librerie coinvolte}
+\label{sec:tech}
+\subfile{src/2_tecnologie.tex}
+
+\newpage
+\section{Setup}
+\label{sec:setup}
+\subfile{src/3_setup.tex}
+
+\newpage
+\section{Test}
+\label{sec:test}
+\subfile{src/4_test.tex}
+
+\newpage
+\section{Architettura del prodotto}
+\label{sec:arch}
+\subfile{src/5_architettura.tex}
+%
+%\newpage
+%\section{Estendere HD-Viz}
+%\label{sec:estendere}
+%\subfile{src/6_estendere.tex}
+
+%\newpage
+%\section{Glossario}
+%\label{sec:glossario}
+%\subfile{src/7_glossario.tex}
+\end{document}
