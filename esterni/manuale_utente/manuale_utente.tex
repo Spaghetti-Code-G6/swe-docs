@@ -1,0 +1,69 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+%aggiungere percorsi dai quali il documento prende le immagini
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Manuale Utente}
+
+\setVersione{1.0.0}
+
+\setResponsabile{Samuel Kostadinov}
+
+\setRedattori{
+  Giorgia Paparazzo \\ &
+  XY \\ &
+  XY
+}
+
+\setVerificatori{
+    XY \\ &
+	XY
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+  prof. Vardanega Tullio \\ &
+  prof. Cardin Riccardo \\ &
+  Zucchetti S.p.A. \\ &
+  SpaghettiCode
+}
+
+\setDescrizione{Il presente documento contiene la definizione delle funzionalità del software \emph{HD Viz}, ed una guida al suo utilizzo.}
+
+\setModifiche{
+  v0.3.0 & Giorgia Paparazzo & Progettista & 2021-03-24 & Redazione \S\ref{par:vis_scatt} \\
+  v0.2.0 & Giorgia Paparazzo & Progettista & 2021-03-20 & Inizio stesura \S\ref{sec:funz} \\
+  v0.1.0 & Giorgia Paparazzo & Progettista & 2021-03-18 & Redazione \S\ref{sec:introduzione}, \S\ref{sec:inst}	\\
+  v0.0.1 & Giorgia Paparazzo & Progettista & 2021-03-18 & Creazione del documento
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Introduzione}
+\label{sec:introduzione}
+\subfile{src/1_introduzione.tex}
+
+\newpage
+\section{Installazione e avvio}
+\label{sec:inst}
+\subfile{src/2_installazione.tex}
+
+\newpage
+\section{Funzionalità applicazione}
+\label{sec:funz}
+\subfile{src/3_funzionalita.tex}
+
+\newpage
+\appendix
+\section{Glossario}
+\label{sec:glossario}
+\subfile{src/4_glossario.tex}
+
+\end{document}
