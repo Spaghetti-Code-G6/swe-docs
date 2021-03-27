@@ -307,6 +307,7 @@ Il gruppo ha scelto di utilizzare diagrammi UML allo scopo di rendere più chiar
 progettazione. Tra questi spiccano i diagrammi delle attività e quelli di sequenza. I primi vengono
 usati per descrivere il flusso di operazioni di un'attività, i secondi per illustrare sequenze di azioni.\\
 Ci potranno essere, oltre ai due tipi già menzionati, diagrammi di altro tipo se i \emph{progettisti} lo riterranno
+<<<<<<< HEAD
 utile.\\
 Il gruppo ha deciso di aderire allo standard UML 2.0 presentato a lezione per la stesura dei diagrammi. Ogni eventuale
 distacco o aggiunta fatta allo standard al fine di ridurre eventuali incomprensioni deve essere normata nel presente
@@ -340,6 +341,9 @@ I diagrammi di attività sono redatti secondo quanto spiegato nella lezione E1 e
 I diagrammi di attività sono redatti secondo quanto spiegato nella lezione E2 e quanto riportato nelle slide
 \emph{Diagrammi di sequenza}.
 \end{enumerate}
+=======
+utile.
+>>>>>>> remotes/origin/fix/NdP/Processi_di_supporto/Verifica/Analisi_dinamica/Test
 
 \paragraph{Test}
 
@@ -510,6 +514,34 @@ Di seguito vengono elencate le regole per quanto riguarda la formattazione del c
 			let expression = firstNumber + secondNumber * secondNumber;
 		\end{lstlisting}
 \end{itemize}
+
+\subparagraph{Commenti}
+\label{ssub:codifica:commenti}
+Linea guida a cui attenersi per scrivere codice di qualità è quella di commentare il codice scritto.
+Ogni blocco di codice (classe, metodo, ecc..) potrà essere immediatamente preceduto, se ritenuto necessario, da un commento che ne descriva
+\emph{sinteticamente} il funzionamento, gli eventuali parametri e i risultati aspettati.
+I test sono codice di produzione e come tale, dovranno essere scritti e commentati in modo da soddifare i requisiti di qualità richiesti.
+Per fare chiarezza ed aumentare la manutenibilità del sorgente, è importante che ci siano di commenti in riga che vadano a documentare il
+comportamento delle singole istruzioni, se ritenuto opportuno.\\
+Se per descrivere il comportamento di una singola riga di codice risulta necessario
+scrivere più di qualche parola, sarà il caso di spostare il commento sopra la riga, e trattarlo come un.
+\begin{lstlisting}[style=htmlcssjs]
+    /**
+    * un'amichevole funzione foo
+    */
+    function foo() {
+        ...
+        a = b; //a assume il valore di b
+        ...
+        /**
+        * Corretto descrivere la seguende condizione qui
+        */
+        if (a||b && a||c != b && c) { //Potrebbe risultare difficile riassumere una condizione complessa in poche parole.
+            ...
+        }
+    }
+\end{lstlisting}
+
 
 \subparagraph{Funzionalità del linguaggio}
 
