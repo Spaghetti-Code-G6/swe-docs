@@ -557,15 +557,17 @@ Il codice identificativo si presenta nella forma:
 \end{center}
 Nella forma appena descritta \textbf{Tipologia} indica la tipologia del test e può assumere uno tra i seguenti valori:
 \begin{itemize}
-	\item \textbf{S}: si tratta di un test di sistema in quanto viene verificato il funzionamento del sistema nel suo complesso, 
-	\item \textbf{I}: si tratta di un test di integrazione in quanto viene verificato il funzionamento di diverse parti del sistema legate 
-		tra di loro da una definita relazione;
-	\item \textbf{U}: si tratta di un test di unità in quanto viene verificato il comportamento di una singola unità del prodotto, 
-		considerata indipendentemente dalle altre.
+	\item \textbf{S}: Sistema. \\ Testano l’applicazione nella sua interezza. Viene effettuato un controllo sulle componenti del sistema che devono risultare compatibili fra loro e conformi nelle loro interazioni. 
+    Questi test caratterizzano la validazione del prodotto finale.     
+	\item \textbf{I}: Integrazione. \\ Viene verificato il funzionamento di diverse parti del sistema legate tra di loro da una definita relazione. 
+    Rappresentano l’estensione logica dei test di unità e sono i predecessori del test di sistema. La strategia che i test d’integrazione adottano è una strategia di tipo incrementale: si basa nella prosecuzione per passi, aggiungendo parti fino al completamento.     
+	\item \textbf{U}: Unità. \\ Servono a verificare la correttezza di piccoli componenti. L’obiettivo è di isolare la parte più piccola di software testabile, chiamata unità, e poter stabilire il corretto funzionamento. 
+    Ogni singola unità deve essere testata prima di essere integrata. Per farlo si possono usare simulatori o drivers.
 \end{itemize}
 
 \textbf{ID} invece è un valore intero positivo che permette di identificare univocamente i test della stessa tipologia in base ad una 
 numerazione progressiva.
+
 
 \subsubsection{Strumenti}
 \label{ssub:verifica:strumenti}
@@ -588,26 +590,26 @@ Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività de
 \label{ssub:descrizione}
 
 Questo processo ha il compito di verificare la correttezza e la completezza del prodotto software rispetto alle attese del committente e 
-del proponente. Il processo viene attuato al termine del processo di sviluppo, riceve in ingresso il prodotto software nella sua interezza 
-e produce il rilascio dello stesso.
+del proponente. Successivamente alla validazione si garantisce che il software rispetta i requisiti richiesti dal committente. 
+Il processo viene attuato al termine del processo di sviluppo, riceve in ingresso il prodotto software nella sua interezza 
+e produce il rilascio dello stesso. Se i test danno esiti positivi, il responsabile può accettare ed approvare il prodotto oppure chiedere ulteriori verifiche con opportune indicazioni. 
 
 Le attività che vengono svolte all'interno del processo sono le seguenti:
 \begin{itemize}
-	\item \textbf{Test di sistema};
-	\item \textbf{Collaudo}.
+	\item \textbf{Test di sistema}: viene verificato il corretto comportamento del sistema e la 
+    copertura di tutti i requisiti del prodotto;
+	\item \textbf{Collaudo}: viene dimostrata la conformità del prodotto rispetto al contratto tra le 
+    parti verificando la correttezza del prodotto rispetto ad alcuni casi di prova.
 \end{itemize}
 
-\subsubsection{Test di sistema}
-\label{ssub:validazione:test_sistema}
-
-In questa attività, analoga per certi aspetti a quella di analisi dinamica, viene verificato il corretto comportamento del sistema e la 
-copertura di tutti i requisiti del prodotto.
-
-\subsubsection{Collaudo}
-\label{ssub:validazione:collaudo}
-
-In questa attività, svolta sotto la supervisione del committente, viene dimostrata la conformità del prodotto rispetto al contratto tra le 
-parti verificando la correttezza del prodotto rispetto ad alcuni casi di prova.
+I test di integrazione permettono l’esecuzione dei test di sistema svolgendo un controllo sulle funzionalità implementate, quindi si stabilisce con certezza che si sta rispettando quanto dichiarato. \\
+Il processo di validazione prevede:
+\begin{itemize}
+	\item Pianificazione e tracciamento dei test da eseguire sul codice prodotto
+    \item Esecuzione dei test dove vengono create situazioni di forzature del sistema nei suoi punti critici per evidenziare gli errori
+    \item Aggiornamento del piano dei test
+    \item Controllo dei risultati dove viene verificato se il sistema rispetta i requisiti 
+\end{itemize}
 
 \subsubsection{Strumenti}
 \label{ssub:validazione:strumenti}
@@ -616,3 +618,4 @@ Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività de
 \begin{itemize}
 	\item \textbf{Selenium}: framework per il testing di applicazioni web;
 \end{itemize}
+
