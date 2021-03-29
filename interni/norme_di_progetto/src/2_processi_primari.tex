@@ -276,6 +276,24 @@ La progettazione è divisa in due parti fondamentali:
     definisce i test necessari.
 \end{itemize}
 
+\subparagraph{Technology Baseline}
+È redatta dai \emph{Progettisti}, dovrà includere:
+\begin{itemize}
+\item Diagrammi UML: diagrammi di classe, diagrammi di package, diagrammi di attività, diagrammi di sequenza.
+\item Tecnologie utilizzate: dovranno essere descritte le tecnologie adottate specificandone l’utilizzo del progetto, i vantaggi e gli svantaggi.
+\item Design pattern: devono essere descritti i design pattern utilizzati per realizzare l’architettura. Ogni design pattern deve essere accompagnato da una descrizione e un diagramma che ne esponga significato e struttura.
+\item Tracciamento delle componenti: ogni requisito deve riferirsi al componente che lo soddisfa.
+\item Test di integrazione: l’unione delle parti, intese come classi di verifica, permette di verificare che ogni componente del sistema funzioni nella maniera attesa.
+\end{itemize}
+
+\subparagraph{Product Baseline}
+È a carico dei \emph{Progettisti}, dovrà presentare:
+\begin{itemize}
+\item Definizione delle classi: ogni classe deve essere descritta e presentarne scopo e funzionalità, evitando ridondanze. Bisognerà indicarne nome, visibilità, attributi, metodi, breve descrizione che include scopo e funzionalità.
+\item Test di unità: devono essere definiti al fine di verificare che le parti funzionino individualmente nel modo stabilito. 
+\end{itemize}
+
+
 \paragraph{Aspettative}
 
 La progettazione è un'attività svolta dai \emph{Progettisti}, volta a produrre l'architettura logica del prodotto. 
@@ -308,6 +326,16 @@ progettazione. Tra questi spiccano i diagrammi delle attività e quelli di seque
 usati per descrivere il flusso di operazioni di un'attività, i secondi per illustrare sequenze di azioni.\\
 Ci potranno essere, oltre ai due tipi già menzionati, diagrammi di altro tipo se i \emph{progettisti} lo riterranno 
 utile.
+L’utilizzo di design pattern permetterà di realizzare codice maggiormente leggibile, semplificherà l’individuazione e correzione di errori, permetterà di realizzare prototipi. \\
+Per realizzare ciò è necessario:
+\begin{itemize}
+\item evitare package vuoti, classi e parametri non utilizzati e parametri senza tipo; 
+\item evitare la presenza di dipendenze circolari; 
+\item evitare modi che ai servizi o erti dalle librerie esterne utilizzate; 
+\item utilizzare ove possibile interfacce e classi astratte; 
+\item utilizzare nomi signi cativi per le classi e i metodi in esse contenuti, in modo da facilitare la comprensione immediata di ogni componente; 
+\item assegnare ad ogni metodo e attributo la visibilità strettamente necessaria.
+\end{itemize}
 
 \paragraph{Test}
 
