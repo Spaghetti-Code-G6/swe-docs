@@ -44,15 +44,15 @@ Gli obiettivi per un documento sono quindi: \\
 \setlength{\parindent}{0pt}\textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OP01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
-	\item \textbf{OP02 Correttezza ortografica}: i documenti non devono presentare errori.
+	\item \textbf{OPD01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
+	\item \textbf{OPD02 Correttezza ortografica}: i documenti non devono presentare errori.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MP01 Indice di Gulpease};
-	\item \textbf{MP02 Errori ortografici}.
+	\item \textbf{MPD01 Indice di Gulpease};
+	\item \textbf{MPD02 Errori ortografici}.
 \end{itemize}
 
 Per verificare questi requisiti si farà ricorso all’ \glossario{indice di Gulpease}. L'Indice Gulpease è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
@@ -69,8 +69,8 @@ Come descritto nella seguente tabella, ci aspettiamo che i documenti siano entro
 		\rowcolor{lightgray}
 		\textbf{ID metrica}      & \textbf{Accettabile} & \textbf{ Ottimale} \\
 		\hline
-		MP01 Indice di Gulpease & \(\ge 60\)                  & \(\ge 80\)                  \\
-		MP02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
+		MPD01 Indice di Gulpease & \(\ge 60\)                  & \(\ge 80\)                  \\
+		MPD02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
 		\hline
 	\end{tabular}
 	\caption{Indici di qualità per le metriche di comprensione del prodotto}
@@ -85,23 +85,23 @@ Di seguito presentiamo alcune delle metriche che intendiamo adottare. \\
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OP03 Assenza di bug}: il prodotto non deve presentare bug;
-	\item \textbf{OP04 Assenza di errori}: il prodotto deve presentare meno errori possibile;
-	\item \textbf{OP05 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
-	\item \textbf{OP06 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
+	\item \textbf{OPS01 Assenza di bug}: il prodotto non deve presentare bug;
+	\item \textbf{OPS02 Assenza di errori}: il prodotto deve presentare meno errori possibile;
+	\item \textbf{OPS03 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
+	\item \textbf{OPS04 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MP03 Presenza di bug};
-	\item \textbf{MP04 Densità di errori};
-	\item \textbf{MP05 File senza intestazione};
-	\item \textbf{MP06 Usabilità del prodotto}.
+	\item \textbf{MPS01 Presenza di bug};
+	\item \textbf{MPS02 Densità di errori};
+	\item \textbf{MPS03 File senza intestazione};
+	\item \textbf{MPS04 Usabilità del prodotto}.
 \end{itemize}
 
 
-\paragraph{MP04 - Densità di errori}
+\paragraph{MPS02 - Densità di errori}
 La densità di errori è l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:\par
 
 \begin{center}
@@ -117,7 +117,7 @@ dove
 
 Il valore ottimale è lo 0\%; il valore accettabile è inferiore al 10\%.
 
-\paragraph{MP06 Usabilità del prodotto}
+\paragraph{MPS04 Usabilità del prodotto}
 L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che vuole; viene rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato, infatti un software poco annidato è più usabile per l'utente medio.
 \smallbreak
 \begin{itemize}
@@ -134,13 +134,17 @@ La seguente tabella indica gli obiettivi di qualità che i prodotti dovranno pos
 	\begin{tabular}{|l|l|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo qualità prodotto}                    	& \textbf{Metrica associata}             & \textbf{Accettabile} & \textbf{Ottimale} \\
-		OP01 Leggibilità del testo           	& MP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
-		OP02 Correttezza ortografica         	& MP02 Errori ortografici      & 0                    & 0                    \\
-		OP03 Assenza di bug                  	& MP03 Presenza di bug         & 0                    & 0                    \\
-		OP04 Assenza di errori              	& MP04 Densità di errori       & 10\%                 & 0\%                  \\
-		OP05 Assenza file senza intestazione 	& MP05 File senza intestazione & 0                    & 0                    \\
-		OP06 Usabilità del prodotto          	& MP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
+		\textbf{Obiettivo qualità prodotto}                    	& \textbf{Metrica associata}             & \textbf{Accettabile} & \textbf{Ottimale} \\	
+		\hline \rowcolor{lightgray} \multicolumn{4}{|c|}{Documenti} \\
+		\hline 
+		OPD01 Leggibilità del testo           	& MPD01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
+		OPD02 Correttezza ortografica         	& MPD02 Errori ortografici      & 0                    & 0                    \\
+		\hline \rowcolor{lightgray} \multicolumn{4}{|c|}{Software} \\
+		\hline
+		OPS01 Assenza di bug                  	& MPS01 Presenza di bug         & 0                    & 0                    \\
+		OPS02 Assenza di errori              	& MPS02 Densità di errori       & 10\%                 & 0\%                  \\
+		OPS03 Assenza file senza intestazione 	& MPS03 File senza intestazione & 0                    & 0                    \\
+		OPS04 Usabilità del prodotto          	& MPS04 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
 		\hline
 	\end{tabular}
 	\caption{Obiettivi di qualità di prodotto}
