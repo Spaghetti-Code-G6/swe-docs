@@ -101,7 +101,7 @@ Di seguito presentiamo alcune delle metriche che intendiamo adottare. \\
 \end{itemize}
 
 
-\subsubsection{MP04 - Densità di errori}
+\paragraph{MP04 - Densità di errori}
 La densità di errori è l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:\par
 
 \begin{center}
@@ -117,7 +117,7 @@ dove
 
 Il valore preferibile è lo 0\%; il valore accettabile è inferiore al 10\%.
 
-\subsubsection{MP06 Usabilità del prodotto}
+\paragraph{MP06 Usabilità del prodotto}
 L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che vuole; viene rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato, infatti un software poco annidato è più usabile per l'utente medio.
 \smallbreak
 \begin{itemize}
@@ -126,23 +126,15 @@ L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che 
 	\item valore accettabile: inferiore a 10.
 \end{itemize}
 
-\subsection{Tabella qualità di prodotto}
-La seguente tabella indica gli obiettivi di qualità che i prodotti devono possedere.\\
-Ogni obiettivo di qualità è indicato con:
-\smallbreak
-\begin{itemize}
-	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
-	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
-	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
-	\item \textbf{Preferibile}: indica il valore a cui si punta per avere la massima qualità.
-\end{itemize}
+\subsection{Obiettivi di qualità di prodotto}
+La seguente tabella indica gli obiettivi di qualità che i prodotti dovranno possedere e le metriche ad essi associate.\\
 
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|l|l|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}                    	& \textbf{Metrica}             & \textbf{Accettabile} & \textbf{Preferibile} \\
+		\textbf{Obiettivo qualità prodotto}                    	& \textbf{Metrica associata}             & \textbf{Accettabile} & \textbf{Preferibile} \\
 		OP01 Leggibilità del testo           	& MP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
 		OP02 Correttezza ortografica         	& MP02 Errori ortografici      & 0                    & 0                    \\
 		OP03 Assenza di bug                  	& MP03 Presenza di bug         & 0                    & 0                    \\
@@ -151,7 +143,7 @@ Ogni obiettivo di qualità è indicato con:
 		OP06 Usabilità del prodotto          	& MP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
 		\hline
 	\end{tabular}
-	\caption{Metriche qualità di prodotto}
+	\caption{Obiettivi di qualità di prodotto}
 \end{table}
 
 \clearpage
