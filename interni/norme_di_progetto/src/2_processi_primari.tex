@@ -34,9 +34,9 @@ Il processo di fornitura produce i seguenti output documentali:
 \subparagraph{Scopo}
 \label{par:iniziazione:scopo}
 In questa attività, il gruppo \emph{SpaghettiCode} si impegna ad eseguire uno studio di fattibilità per ogni capitolato presentato in data 2020-11-05, in modo da stabilire se lo svolgimento di un determinato capitolato è in grado di portare un ritorno sull'investimento di tempo e risorse.Questa attività ha come output il documento \textsc{Studio di fattibilità} da parte degli \emph{analisti}.\\
-Questa attività è composta dai seguenti compiti:
 \subparagraph{compiti}
 \label{par:iniziazione:compiti}
+Questa attività è composta dai seguenti compiti:
 \begin{itemize}
     \item \textbf{Raccolta di informazioni generali}: si raccolgono tutte le informazioni basilari riguardanti il
     capitolato che comprendono nome, proponente e committente;
@@ -194,22 +194,24 @@ Il processo di fornitura produce i seguenti output documentali:
 \subparagraph{Scopo}
 \label{par:analisi:scopo}
 In questa attività, gli \emph{analisti} individuano e stabiliscono le caratteristiche del prodotto di comune accordo con il proponente. Questa attività ha come output documentale il documento \textsc{Analisi dei Requisiti}, che funge da vincolo contrattuale tra fornitore e proponente, all'interno del quale vengono definite le funzionalità che il prodotto deve offrire e vengono specificati i requisiti che deve soddisfare.\\
+\subparagraph{compiti}
+\label{par:analisi:compiti}
 Questa attività è scomposta nei seguenti compiti:
 \begin{itemize}
 	\item \textbf{individuazione delle funzionalità}: Le funzionalità inoltre svolgono funzione di supporto per i requisiti, oltre ad essere
     di chiara comprensione anche per persone non esperte del settore informatico. Le funzionalità del prodotto vengono rappresentate mediante i casi d'uso e sono ricavate dalle seguenti fonti:
     \begin{itemize}
-        \item \textbf{Capitolato d'appalto}: prima descrizione del prodotto messa a disposizione dal proponente;
-        \item \textbf{Dominio del problema}: ambito nel quale rientra il problema;
-        \item \textbf{Incontri interni}: discussioni interne tra i membri del gruppo;
-        \item \textbf{Incontri esterni}: discussioni dei membri del gruppo con il proponente o con i committenti.
+        \item Capitolato d'appalto: prima descrizione del prodotto messa a disposizione dal proponente;
+        \item Dominio del problema: ambito nel quale rientra il problema;
+        \item Incontri interni: discussioni interne tra i membri del gruppo;
+        \item Incontri esterni: discussioni dei membri del gruppo con il proponente o con i committenti.
     \end{itemize};
 	\item \textbf{definizione dei requisiti}: i requisiti fissano le caratteristiche del prodotto concordate con il cliente, forniscono indicazioni chiare i progettisti ed ai verificatori. Inoltre permettono di stimare quanto lavoro è stato fatto e quanto ce ne sia ancora da fare. I requisiti possono essere ricavati dalle seguenti fonti:
     \begin{itemize}
-        \item \textbf{Capitolato d'appalto}: prima descrizione del prodotto messa a disposizione dal proponente;
-        \item \textbf{Casi d'uso}: funzionalità del prodotto;
-        \item \textbf{Incontri interni}: discussioni interne tra i membri del gruppo;
-        \item \textbf{Incontri esterni}: discussioni dei membri del gruppo con il proponente o con i committenti.
+        \item Capitolato d'appalto: prima descrizione del prodotto messa a disposizione dal proponente;
+        \item Casi d'uso: funzionalità del prodotto;
+        \item Incontri interni: discussioni interne tra i membri del gruppo;
+        \item Incontri esterni: discussioni dei membri del gruppo con il proponente o con i committenti.
     \end{itemize}
 \end{itemize}
 \paragraph{Analisi dei requisiti}
@@ -336,12 +338,24 @@ L'architettura dovrà necessariamente rispettare i seguenti punti:
     \item Presentare componenti semplici e con basso livello di accoppiamento.
 \end{itemize}
 
-\subparagraph{Design pattern}
+\subparagraph{Compiti}
+\label{par:progettazione:compiti}
+Questa attività è scomposta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Trasformazione dei requisiti individuati in un'architettura che descriva ed identifichi ad alto livello le componenti del software}: sarà necessario prima di procedere con l'attività di codifica stabilire a priori quali componenti software devono essere presenti, in modo che vengano soddisfatte le aspettative;
+    \item \textbf{Definizione ad alto livello delle interfacce tra le componenti del software}: per poter procedere in maniera organizzata con l'attività di codifica bisogna definire il comportamento delle varie componenti software;
+    \item \textbf{Stendere la manualistica necessaria per descrivere le componenti software}: per poter garantire manutenibilità e semplificare il funzionamento del software sarà necessario redigere della manualistica specializzata per gli sviluppatori che illustri il funzionamento del software.
+    \item \textbf{Stendere la manualistica necessaria per descrivere il funzionamento del software all'utente}: per poter garantire un semplice approccio dell'utente al software bisognerà redugere della manualistica che illustri all'utente il funzionamento del software.
+    \item \textbf{definire e documentare i test necessari per l'itegrazione del software}: stabilire un insieme di test che dovranno essere eseguiti al fine di verificare il funzionamento atteso del software.
+\end{itemize}
 
-La scelta dei \glossario{design pattern} da utilizzare è lasciata ai \emph{progettisti}, i quali dovranno
-assicurarsi che le loro scelte portino a una soluzione che sia flessibile e lasci una certa libertà ai
-\emph{programmatori}. Ogni design pattern utilizzato andrà spiegato e rappresentato in modo da poterne esporre
-significato e struttura.
+In particolare, vengono normati i seguenti compiti, in modo da dare una linea guida da seguire per svolgerli.
+
+%\subparagraph{Design pattern}
+%La scelta dei \glossario{design pattern} da utilizzare è lasciata ai \emph{progettisti}, i quali dovranno
+%assicurarsi che le loro scelte portino a una soluzione che sia flessibile e lasci una certa libertà ai
+%\emph{programmatori}. Ogni design pattern utilizzato andrà spiegato e rappresentato in modo da poterne esporre
+%significato e struttura.
 
 \subparagraph{Diagrammi UML}
 
@@ -351,10 +365,9 @@ usati per descrivere il flusso di operazioni di un'attività, i secondi per illu
 Ci potranno essere, oltre ai due tipi già menzionati, diagrammi di altro tipo se i \emph{progettisti} lo riterranno
 utile.
 
-\paragraph{Test}
+\subparagraph{Test}
 
-Come specificato precedentemente, la definizione dei test è parte integrante dell'attività di progettazione in quanto ne garantisce le
-caratteristiche qualitative, quindi ogni \emph{progettista} dovrà affiancare alla progettazione del sistema la definizione dei relativi test.
+Come specificato precedentemente, la definizione dei test è parte integrante dell'attività di progettazione in quanto ne garantisce le caratteristiche qualitative, quindi ogni \emph{progettista} dovrà affiancare alla progettazione del sistema la definizione dei relativi test.
 
 
 \paragraph{Codifica}
@@ -365,6 +378,23 @@ L'attività di codifica viene svolta da parte dei \emph{programmatori} ed ha il 
 standard qualitativi imposti e descritti all'interno del \textsc{Piano di Qualifica}, nel prodotto software. Di seguito vengono presentate
 le regole e le norme che il gruppo pone sull'attività al fine di garantire la leggibilità del codice e di agevolarne manutenzione,
 verifica e validazione.
+
+\subparagraph{Compiti}
+\label{par:codifica:Compiti}
+Questa attività è scomposta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Sviluppo delle unità software}: le unità definite dalla progettazione del software dovranno essere tradotte in codice;
+    \item \textbf{Testing delle unità del software}: Le unità tradotte in codice dovranno essere testate per verificarne il comportamento.
+    \item \textbf{Aggiornare i requisiti e la documentazione relativa}: i requisiti potrebbero cambiare durante lo sviluppo. Se la modifica dei requisiti dovesse portare a modifiche dell'architettura o del funzionamento dell'applicativo, queste modifiche dovranno essere estese anche alla relativa documentazione.
+    \item \textbf{tenere traccia delle metriche di qualità previste}: durante lo sviluppo bisognerà tenere traccia e considerare criteri come:
+        \begin{itemize}
+            \item tracciabilità dei requisiti;
+            \item coperetura dei requisiti;
+            \item conformità ai risultati aspettati;
+            \item conformità della copertura dei test.
+        \end{itemize}
+    \item \textbf{Integrare il software con le necessarie modifiche effettuate}: lo sviluppo verrà effettuato mediante successive iterazioni. Sarà necessario quindi, che ogni iterazione sia integrata con il software presistente.
+\end{itemize}
 
 \subparagraph{Regole generali di codifica}
 \label{par:stile_codifica}
@@ -610,14 +640,3 @@ Sono riportati di seguito gli strumenti utilizzati nel processo di sviluppo:
 	\item \textbf{D3.js}: libreria open source scritta in \emph{JavaScript} con lo scopo di facilitare la visualizzazione dei dati in
 		grafici, è lo strumento principale per la realizzazione del prodotto HD Viz.
 \end{itemize}
-
-
-\paragraph{Test}
-\label{ssub:test}
-
-
-
-
-
-\paragraph{Codifica}
-\label{ssub:codifica}
