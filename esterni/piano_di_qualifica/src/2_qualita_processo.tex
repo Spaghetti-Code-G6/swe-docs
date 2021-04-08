@@ -123,24 +123,29 @@ Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano e
 	\item \textbf{MPR10 Frequenza di controllo}: è la frequenza con cui viene effettuata la verifica dei documenti o Issue portate a termine.
 \end{itemize}
 
-\subsection{Tabella qualità di processo}
-La seguente tabella indica gli obiettivi di qualità che i processi devono possedere.\\
-Ogni obiettivo di qualità è indicato con:
-\smallbreak
-\begin{itemize}
-	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
-	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
-	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
-	\item \textbf{Ottimale}: indica il valore a cui si punta per avere la massima qualità;
-\end{itemize}
+\subsection{Obiettivi di qualità di processo}
+La seguente tabella indica gli obiettivi di qualità che i processi dovranno possedere e le metriche ad essi associate.\\
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|p{5.5cm}|p{4.5cm}|c|c|}
+\begin{center}
+	\begin{longtable}{|p{5.5cm}|p{4.5cm}|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}                          & \textbf{Metrica}                    & \textbf{Accettabile} & \textbf{Ottimale} \\
+		{\textbf{Obiettivo qualità processo}} & {\textbf{Metrica associata}} & {\textbf{Accettabile}} & {\textbf{Ottimale}} \\
 		\hline
+		\endfirsthead
+	
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Riferimento}} & {\textbf{Descrizione}}                                                                                                & {\textbf{implementazione}} \\
+		\hline
+		\endhead
+		
+		\hline
+		\multicolumn{4}{|c|}{\emph{Continua alla pagina successiva...}}\\
+		\hline
+		\endfoot
+		\endlastfoot
+
 		OPR01 Scadenze                              & MPR01 Varianza della pianificazione 	& 4 giorni             	& 0 giorni             	\\
 		OPR02 Budget parziale                       & MPR02 Varianza dei costi parziali   	& $\pm$5\%             	& 0\%                  	\\
 		OPR03 Budget totale							& MPR03 Varianza dei costi totali	  	& 0						& 0						\\
@@ -152,10 +157,9 @@ Ogni obiettivo di qualità è indicato con:
 		OPR09 Rispetto delle norme                  & MPR09 Norme rispettate              	& 100\%                	& 100\%                	\\
 		OPR10 Verifica costante                     & MPR10 Frequenza di controllo        	& Ad ogni Milestone    	& Ad ogni modifica     	\\
 		\hline
-	\end{tabular}
-	\caption{Metriche qualità di processo}
-\end{table}
-
-\clearpage
+		\rowcolor{white}
+		\caption{Obiettivi di qualità di processo}
+	\end{longtable}
+\end{center}
 
 \end{document}
