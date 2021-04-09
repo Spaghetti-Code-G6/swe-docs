@@ -127,6 +127,7 @@ I verbali invece si presentano nella seguente struttura:
     \item Informazioni generali riguardanti luogo, data ed orario dell'incontro e partecipanti;
     \item Ordine del giorno;
     \item Resoconto.
+    \item Tabella riassuntiva delle decisioni prese e relativo codice identificativo.
 \end{itemize}
 
 \subsubsection{Norme tipografiche}
@@ -250,12 +251,24 @@ dove \textbf{X}, \textbf{Y} e \textbf{Z} sono interi non negativi.\\
 Ciascun codice di versione viene assegnato ad una correzione o ad un incremento pianificato e a seconda dell'entit\`{a} della modifica
 pu\`{o} essere aumentata:
 \begin{itemize}
-	\item \textbf{X}: la modifica non è retrocompatibile con le versioni precedenti, inoltre \textbf{Y} e \textbf{Z} vengono azzerate;
-	\item \textbf{Y}: la modifica aggiunge feature ed è retrocompatibile con le versioni precedenti, inoltre \textbf{Z} viene azzerata;
-	\item \textbf{Z}: la modifica è correttiva.
+	\item \textbf{X}: incrementa quando un \emph{Responsabile} approva il documento;
+	\item \textbf{Y}: incrementa quando un verificatore effettua una verifica complessiva del prodotto; il valore Z viene azzerato;
+	\item \textbf{Z}: incrementa quando vengono aggiunte feature a paragrafi o capitoli. Ad ognuna di essa verrà indicato il nome del verificatore che ha verificato quella singola azione.
 \end{itemize}
 Ciascun incremento di \textbf{X}, \textbf{Y} e \textbf{Z} deve essere unitario e ciascuna modifica ad un documento o ad un prodotto
 dev'essere rilasciata come una nuova versione.
+
+\paragraph{Codice di versione unitario}
+Il prodotto software avrà a sua volta un suo codice identificativo che ne indichi lo stato di versione. Nello specifico il codice verrà espresso come segue:\\
+\begin{center}
+    \textbf{[A].[B]}
+\end{center}
+
+dove:
+\begin{itemize}
+\item \textbf{B} scatterà di versione ogni volta che verrà implementato un incremento pianificato nel \textsc{Piano di Progetto}; questo valore numerico partirà da 0 e crescerà. Non verrà mai azzerato.
+\item \textbf{A} scatterà ogni volta che il software verrà testato e ritenuto un prodotto stabile e rilasciabile. Anche questo valore partirà da 0 e non verrà mai azzerato.
+\end{itemize}
 
 \paragraph{Repository}
 \label{par:repo}
@@ -405,19 +418,24 @@ Gli strumenti utilizzati a supporto delle attività del processo sono i seguenti
 	\item \textbf{GitHub Desktop}: client desktop dell'omonimo sistema di versionamento;
 \end{itemize}
 
+
+
 \subsection{Accertamento della qualità}
 \label{sub:accertamento_qualita}
 
 \subsubsection{Descrizione}
 L'accertamento della qualità è un processo che racchiude all'interno diverse attività volte a provare e garantire oggettivamente il
-soddisfacimento degli obiettivi di qualità di un prodotto o di un processo. Esso prende in ingresso l'elemento del quale si vuole
-verificare la qualità e produce il documento \textsc{Piano di Qualifica}, nel quale sono presenti gli obiettivi di qualità stabiliti, le
+soddisfacimento degli obiettivi di qualità di un prodotto o di un processo. All'interno del documento \textsc{Piano di Qualifica} 
+andranno inseriti gli obiettivi di qualità stabiliti, le
 relative metriche individuate e un'istantanea del livello di qualità dei diversi elementi presi in esame misurata sulla base delle
-metriche scelte. Le attività aggregate dal processo in questione sono le seguenti:
-\begin{itemize}
-    \item \textbf{Piano di Qualità};
-    \item \textbf{Controllo di Qualità}.
-\end{itemize}
+metriche scelte. \\
+Per poter realizzare le seguenti attività il gruppo si baserà sugli \emph{standard ISO-12207}.\\
+
+%Le attività aggregate dal processo in questione sono le seguenti:
+%\begin{itemize}
+%    \item \textbf{Piano di Qualità};
+%    \item \textbf{Controllo di Qualità}.
+%\end{itemize}
 
 Di seguito vengono definiti gli strumenti utilizzati a supporto delle attività del processo, le norme e la struttura
 degli obiettivi di qualità e delle metriche.
@@ -430,6 +448,23 @@ degli obiettivi di qualità e delle metriche.
 In questa attività viene stabilito il concetto di qualità dell'elemento preso in esame; ciò avviene mediante l'individuazione di obiettivi
 di qualità che si desidera raggiungere nello stesso. Inoltre vengono stabilite le metriche con le quali viene misurato il livello di
 raggiungimento degli obiettivi di qualità imposti, viene così definito implicitamente come perseguire la qualità.
+
+\paragraph{Aspettative}
+Le aspettative di questo processo sono:
+\begin{itemize}
+    \item conseguimento della qualità nel prodotto secondo le richieste del proponente;
+    \item prova oggettiva della qualità del prodotto;
+    \item consegumento della qualità nell'organizzazione delle attività e dei processi;
+    \item raggiungimento della soddisfazione del proponente.
+\end{itemize}
+
+\paragraph{Attività}
+Le attività principali da svolgere sono:
+\begin{itemize}
+    \item \textbf{Pianificazione:} occorre porsi degli obiettivi di qualità, definire le strategie per raggiungerli, disporre delle risorse nel modo migliore;
+    \item \textbf{Valutazione:} mettere in atto la pianificazione monitorando i risultati;
+    \item \textbf{Reazione:} sulla base dei risultati rivedere le strategie applicate, se dovessero esser risultate non conformi.
+\end{itemize}
 
 \paragraph{Obiettivo di qualità}
 \label{par:obiettivo_qualita}
@@ -476,14 +511,14 @@ quello del codice dell'obiettivo associato e può assumere i seguenti valori:
 \end{itemize}
 \textbf{ID} invece è un intero positivo che distingue univocamente le metriche relative a tipologie di elementi uguali.
 
-\subsubsection{Controllo di Qualità}
-\label{ssub:controllo_qualita}
+\paragraph{Controllo di Qualità}
+\label{par:controllo_qualita}
 
 In questa attività vengono calcolate le metriche di controllo precedentemente stabilite dell'elemento preso in esame e ne viene verificato
 il soddisfacimento o meno dei valori minimi e preferibili.
 
-\subsubsection{Strumenti}
-\label{ssub:gestione_qualita:strumenti}
+\paragraph{Strumenti}
+\label{par:gestione_qualita:strumenti}
 
 Di seguito vengono indicati gli strumenti utilizzati nell'attuazione del processo:
 \begin{itemize}
@@ -492,6 +527,8 @@ Di seguito vengono indicati gli strumenti utilizzati nell'attuazione del process
 	\item \textbf{Aspell}: strumento da linea di comando per la correzione degli errori ortografici.
 \end{itemize}
 
+
+
 \subsection{Verifica}
 \label{sub:verifica}
 
@@ -499,18 +536,19 @@ Di seguito vengono indicati gli strumenti utilizzati nell'attuazione del process
 Questo processo racchiude un insieme di attività volte a fornire una prova oggettiva del soddisfacimento dei requisiti e delle norme dei
 processi per la fase in esame. Ciò avviene prendendo in ingresso i prodotti dei processi attuati, controllando che essi siano completi e corretti
 rispetto ai requisiti degli stessi e producendo un report delle valutazioni effettuate nel documento \textsc{Piano di Qualifica}; in
-generale le operazioni di verifica sui prodotti devono essere chiare, oggettive ed affidabili.
-
+generale le operazioni di verifica sui prodotti devono essere chiare, oggettive ed affidabili. \\
 Il processo nello specifico è costituito dalle seguenti attività:
 \begin{itemize}
 	\item \textbf{Analisi statica};
 	\item \textbf{Analisi dinamica}.
 \end{itemize}
 
-\subsubsection{Analisi statica}
-\label{ssub:verifica:analisi_statica}
 
-\paragraph{Scopo}
+\subsubsection{Attività}
+\paragraph{Analisi statica}
+\label{par:verifica:analisi_statica}
+
+\subparagraph{Scopo}
 Questa attività ha il compito di valutare la correttezza e la conformità dei prodotti di processo alle regole; essa può essere svolta sia
 sui prodotti software che sui prodotti documentali del progetto, in quanto valuta caratteristiche scisse dall'esecuzione del prodotto e
 dunque immutabili. Essa verrà svolta in parte automaticamente e in parte manualmente; in maniera automatica verranno verificati gli
@@ -518,16 +556,16 @@ aspetti riguardanti la formattazione e la presenza degli elementi nei prodotti, 
 prodotti seguendo un metodo di lettura \glossario{Inspection}, ossia valutando attentamente gli incrementi apportati in seguito alla
 precedente verifica e gli elementi strettamente legati ad essi.
 
-\subsubsection{Analisi dinamica}
+\paragraph{Analisi dinamica}
 \label{ssub:verifica:analisi_dinamica}
 
-\paragraph{Scopo}
+\subparagraph{Scopo}
 
 Questa attività ha il compito di studiare e verificare il corretto comportamento del prodotto in un insieme finito di casi; ciò richiede
 l'esecuzione dell'oggetto di verifica, che deve obbligatoriamente essere un prodotto software ed utilizza un insieme di prove denominate
 test.
 
-\paragraph{Test}
+\subparagraph{Test}
 \label{par:verifica:test}
 
 I test sono una componente fondamentale dell'analisi dinamica in quanto permettono di valutare il comportamento del prodotto software e
@@ -569,7 +607,7 @@ Nella forma appena descritta \textbf{Tipologia} indica la tipologia del test e p
 \textbf{ID} invece è un valore intero positivo che permette di identificare univocamente i test della stessa tipologia in base ad una
 numerazione progressiva.
 
-\subsubsection{Strumenti}
+\subparagraph{Strumenti}
 \label{ssub:verifica:strumenti}
 
 Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività del processo di verifica:
@@ -583,11 +621,11 @@ Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività de
 		link \url{https://jigsaw.w3.org/css-validator/}.
 \end{itemize}
 
-\subsection{Validazione}
+\subsubsection{Validazione}
 \label{sub:validazione}
 
-\subsubsection{Descrizione}
-\label{ssub:descrizione}
+\paragraph{Descrizione}
+\label{par:descrizione}
 
 Questo processo ha il compito di verificare la correttezza e la completezza del prodotto software rispetto alle attese del committente e 
 del proponente. Successivamente alla validazione si garantisce che il software rispetta i requisiti richiesti dal committente. 
@@ -612,8 +650,8 @@ Il processo di validazione prevede:
 \end{itemize}
 
 
-\subsubsection{Strumenti}
-\label{ssub:validazione:strumenti}
+\paragraph{Strumenti}
+\label{par:validazione:strumenti}
 
 Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività del processo di verifica:
 \begin{itemize}
