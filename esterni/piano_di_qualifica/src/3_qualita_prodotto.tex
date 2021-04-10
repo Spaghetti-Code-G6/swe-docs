@@ -73,9 +73,9 @@ Il software rilasciato deve essere di qualità, e per renderlo tale si farà rif
 \begin{itemize}
 	\item \textbf{OPS01 Assenza di bug}: il prodotto non deve presentare bug;
 	\item \textbf{OPS02 Assenza di errori}: il prodotto deve presentare meno errori possibile;
-	\item \textbf{OPS03 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
+	\item \textbf{OPS03 Assenza di file anonimi}: non ci devono essere file senza intestazione;
 	\item \textbf{OPS04 Usabilità del prodotto}: rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato dall'utente;
-	\item \textbf{OPS05 Superamento test}: i test ai quali il codice viene sottoposto;
+	\item \textbf{OPS05 Superamento test}: tutti i tipi di test ai quali il codice viene sottoposto;
 	\item \textbf{OPS06 Copertura test}: il codice deve essere completamente verificato dai test;
 	\item \textbf{OPS07 Manutenibilità codice}: il codice deve essere agevolmente manutenibile;
 	\item \textbf{OPS08 Leggibilità}: il codice deve essere comprensibile.
@@ -92,10 +92,10 @@ Il software rilasciato deve essere di qualità, e per renderlo tale si farà rif
 	      \subitem N\textsubscript{TE} indica il numero di test effettuati;
 	\item \textbf{MPS03 File senza intestazione};
 	\item \textbf{MPS04 Usabilità del prodotto};
-	\item \textbf{MPS05 Test superati};
-	\item \textbf{MPS06 Line coverage};
-	\item \textbf{MPS07 Densità duplicazione codice};
-	\item \textbf{MPS08 Rapporto tra righe di commento e righe di codice}.
+	\item \textbf{MPS05 Test superati}: percentuale di test passati;
+	\item \textbf{MPS06 Line coverage}: percentuale di righe di codice sottoposte a test;
+	\item \textbf{MPS07 Duplicazione codice: blocchi di codice che si ripetono più volte};
+	\item \textbf{MPS08 Densità commenti: rapporto tra righe di commento e righe di codice}.
 \end{itemize}
 
 \subsection{Tabella riassuntiva degli obiettivi di qualità di prodotto}
@@ -128,12 +128,12 @@ La seguente tabella indica gli obiettivi di qualità che i prodotti dovranno pos
 		\hline
 		OPS01 Assenza di bug                  & MPS01 Presenza di bug                                  & 0                    & 0                 \\
 		OPS02 Assenza di errori               & MPS02 Densità di errori                                & 10\%                 & 0\%               \\
-		OPS03 Assenza file senza intestazione & MPS03 File senza intestazione                          & 0                    & 0                 \\
+		OPS03 Assenza file anonimi & MPS03 File senza intestazione                          & 0                    & 0                 \\
 		OPS04 Usabilità del prodotto          & MPS04 Usabilità del prodotto                           & \(\leq10\) click     & \(\leq6\) click   \\
 		OPS05 Superamento test                & MPS05 Test superati                                    & \(\ge 80\%\)         & 100\%             \\
 		OPS06 Copertura test                  & MPS06 Line coverage                                    & \(\ge 80\%\)         & 100\%             \\
-		OPS07 Manutenibilità codice           & MPS07 Densità duplicazione codice                      & \(\leq 10\%\)        & 0\%               \\
-		OPS08 Leggibilità                     & MPS08 Rapporto tra righe di commento e righe di codice & \(\leq 10\%\)        & \(\leq 20\%\)     \\
+		OPS07 Manutenibilità codice           & MPS07  Duplicazione codice                      & \(\leq 10\%\)        & 0\%               \\
+		OPS08 Leggibilità                     & MPS08 Densità commenti & \(\leq 10\%\)        & \(\leq 20\%\)     \\
 		\hline
 		\rowcolor{white}
 		\caption{Obiettivi di qualità di prodotto}
