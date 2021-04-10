@@ -5,29 +5,36 @@
 Per garantire la qualità del prodotto il gruppo ha deciso di fare riferimento allo \glossario{standard ISO/IEC 9126}, il quale regolamenta le modalità con cui produrre un software di buona qualità. Di questo standard il gruppo sceglie di seguire alcune delle metriche esposte, e sceglie di stabilirne altre da seguire per rendere il prodotto qualitativamente valido; qui di seguito vengono elencate.
 
 \subsection{Modello di qualità}
-Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.\par
-Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:\par
+Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.
+
+Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:
+
 \begin{itemize}
 	\item \textbf{Funzionale}: è la capacità di un prodotto software di fornire funzioni che soddisfino esigenze stabilite, necessarie per operare sotto condizioni specifiche.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di fornire un appropriato insieme di funzioni per i compiti prefissati dall’utente; sarà in grado di fornire i risultati concordati con il proponente; sarà in grado di interagire ed operare con più sistemi specificati dal proponente; se richiesto dal proponente, sarà in grado di proteggere informazioni negando accessi non autorizzati.
 	      \end{itemize}
+
 	\item \textbf{Affidabile}: è la capacità del prodotto software di mantenere uno specificato livello di prestazioni quando usato in date condizioni e per un dato periodo.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di evitare errori e malfunzionamenti; in caso questi dovessero presentarsi sarà possibile recuperare i dati su cui si stava lavorando; sarà in grado di aderire agli standard definiti con il proponente.
 	      \end{itemize}
+
 	\item \textbf{Efficiente}: è la capacità di fornire appropriate prestazioni relative alla quantità di risorse usate.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di fornire adeguati tempi di risposta, elaborazione e velocità di attraversamento; sarà in grado di sfruttare adeguatamente le risorse e sarà efficiente.
 	      \end{itemize}
+
 	\item \textbf{Usabile}: è la capacità del prodotto software di essere capito, appreso e usato dall'utente.
 	      \begin{itemize}
 		      \item Il prodotto software sarà di facile comprensione per l’utente; assieme ad esso verrà consegnato il manuale d’utente per consentire a chiunque il suo utilizzo.
 	      \end{itemize}
+
 	\item \textbf{Mantenibile}: è la capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di essere analizzato lato codice; sarà in grado di essere modificato e soggetto ad evoluzioni; sarà facilmente testabile per verificare le modifiche apportate.
 	      \end{itemize}
+
 	\item \textbf{Portabile}: è la capacità del software di essere trasportato da un ambiente di lavoro ad un altro.
 	      \begin{itemize}
 		      \item il prodotto software sarà in grado di essere adattato a diversi ambienti sulla base degli accordi presi con il proponente.
@@ -40,8 +47,6 @@ Per prodotto si intende ciò che è concretamente utilizzabile, consultabile o e
 \subsubsection{Documenti}
 Come trattato nel precedente capitolo i documenti devono essere letti e capiti da chiunque abbia almeno la licenza media.
 
-Gli obiettivi per un documento sono quindi:
-
 \setlength{\parindent}{0pt}\textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
@@ -52,36 +57,16 @@ Gli obiettivi per un documento sono quindi:
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MPD01 Indice di Gulpease};
+	\item \textbf{MPD01 Indice di Gulpease}: è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+	La formula è la seguente:\par
+	\begin{center}
+		$G = 89\ +\ \frac{300 * (numero\ di\ frasi) - 10 * (numero\ di\ lettere)}{numero\ di\ parole} $
+	\end{center}
 	\item \textbf{MPD02 Errori ortografici}.
 \end{itemize}
 
-Per verificare questi requisiti si farà ricorso all’ \glossario{indice di Gulpease}. L'Indice Gulpease è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
-La formula è la seguente:\par
-\begin{center}
-	$G = 89\ +\ \frac{300 * (numero\ di\ frasi) - 10 * (numero\ di\ lettere)}{numero\ di\ parole} $
-\end{center}
-Come descritto nella seguente tabella, ci aspettiamo che i documenti siano entro uno specifico range di valori e che siano corretti, quindi che la quantità di errori presenti sia 0. \par
-
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\rowcolor{lightgray}
-		\textbf{ID metrica}      & \textbf{Accettabile} & \textbf{ Ottimale} \\
-		\hline
-		MPD01 Indice di Gulpease & \(\ge 60\)           & \(\ge 80\)         \\
-		MPD02 Errori ortografici & \(= 0\)              & \(= 0\)            \\
-		\hline
-	\end{tabular}
-	\caption{Indici di qualità per le metriche di comprensione del prodotto}
-\end{table}
-
-
 \subsubsection{Software}
 Il software rilasciato deve essere di qualità, e per renderlo tale si farà riferimento al \emph{Modello di qualità} descritto sopra.
-
-Di seguito presentiamo alcune delle metriche che intendiamo adottare.
 
 \textbf{Obiettivi:}
 \smallbreak
