@@ -7,27 +7,72 @@
 \subsubsection{Descrizione}
 \label{ssub:documentazione:descrizione}
 
-La produzione della documentazione è un processo che si svolge durante tutto il ciclo di vita del progetto; consiste nel redarre dei
-documenti di varia natura, riportati nella sezione \refSec{ssub:documenti_prodotti}, ognuno dei quali ricopre una specifica funzione. In
-questa sezione del documento vengono riportate le norme adottate per ottenere una buona scrittura della documentazione.
+Il processo di documentazione aggrega le diverse attività che il gruppo \emph{SpaghettiCode} dovrà svolgere al fine di fornire la documentazione necessaria a corredo del software \emph{HD Viz} del proponente \emph{Zucchetti S.p.A.} e dei committenti \emph{prof. Tullio Vardanega} e \emph{prof. Riccardo Cardin}.
 
-\subsubsection{Ciclo di vita di un documento}
-\label{ssub:ciclo_vita_doc}
-
-Il ciclo di vita di un documento deve seguire i seguenti passi:
+Il processo di documentazione adottato dal gruppo SpaghettiCode consiste nelle seguenti attività definite dallo standard
+di processo ISO/IEC 12207:1997, opportunamente adattate alle necessità del progetto didattico:
 \begin{itemize}
-    \item \textbf{Creazione del documento}: il documento viene creato a partire da un template, fornito del registro delle
-    	modifiche e degli elenchi di figure e tabelle;
-    \item \textbf{Stesura}: il documento viene scritto da più membri del gruppo, riportando i vari incrementi nel registro delle modifiche;
-    \item \textbf{Revisione}: in seguito a ciascun incremento del documento vengono revisionate le modifiche da uno o più
-    	\emph{verificatori}, i quali valutano se il documento rispetta le norme stabilite; \`{e} obbligatorio che un redattore non verifichi
-    	un incremento da lui svolto.
-    \item \textbf{Approvazione}: a seguito di ciascuna revisione il \emph{responsabile} pu\`{o} potenzialmente approvare il documento; una
-    	versione del documento approvata pu\`{o} essere rilasciata.
+    \item \textbf{Creazione};
+    \item \textbf{Stesura};
+    \item \textbf{Revisione};
+    \item \textbf{Approvazione}.
 \end{itemize}
 Essendo il modello di sviluppo adottato dal gruppo di tipo incrementale, ci saranno continue modifiche dei documenti, ad eccezione dei verbali.
-Dopo l'approvazione infatti, ogni documento potrà tornare ad eseguire il secondo passo del ciclo di vita, dando quindi inizio ad un nuovo
-incremento che corrisponderà ad una nuova versione di quel documento.
+Dopo l'approvazione infatti, ogni documento potrà essere esteso, dando quindi inizio ad un nuovo incremento che corrisponderà ad una nuova versione di quel documento.
+
+\subsubsection{Attività}
+\label{ssub:documentazione:attivita}
+
+\paragraph{Creazione}
+\label{par:creazione}
+\subparagraph{Scopo}
+\label{par:creazione:scopo}
+Identificati i destinatari, il titolo e lo scopo del documento, questo viene creato a partire da un template, fornito del registro delle modifiche e degli elenchi di figure e tabelle.
+\subparagraph{Compiti}
+\label{par:creazione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Creazione}: si identificano le caratteristiche del documento e lo si crea a partire da un template.
+\end{itemize}
+
+
+
+\paragraph{Stesura}
+\label{par:stesura}
+\subparagraph{Scopo}
+\label{par:stesura:scopo}
+Il documento viene scritto da più membri del gruppo, riportando i vari incrementi nel registro delle modifiche.
+\subparagraph{Compiti}
+\label{par:stesura:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Stesura}: si procede nella scrittura del documento, tracciando i cambiamenti attraverso il registro delle modifiche.
+\end{itemize}
+
+\paragraph{Revisione}
+\label{par:revisione}
+\subparagraph{Scopo}
+\label{par:revizione:scopo}
+In seguito a ciascun incremento del documento vengono revisionate le modifiche da uno o più \emph{verificatori}, i quali valutano se il documento rispetta le norme stabilite; è obbligatorio che un redattore non verifichi un incremento da lui svolto
+\subparagraph{Compiti}
+\label{par:revisione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Revisione}: si procede con la verifica la conformità del documento prodotto rispetto agli standard di qualità imposti.
+\end{itemize}
+
+\paragraph{Approvazione}
+\label{par:approvazione}
+\subparagraph{Scopo}
+\label{par:approvazione:scopo}
+A seguito di ciascuna revisione il \emph{Responsabile} può potenzialmente approvare il documento; una versione del documento approvata può essere rilasciata.
+\subparagraph{Compiti}
+\label{par:approvazione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Approvazione}: il \emph{Responsabile} può potenzialmente approvare il documento.
+\end{itemize}
+
 
 % TODO: duplicato di 3.1.8?
 \subsubsection{Template}
@@ -52,7 +97,7 @@ I documenti prodotti vengono suddivisi in due macrocategorie:
     \end{itemize}
 
     \item \textbf{Formali}: in questa macrocategoria rientrano tutti i documenti soggetti a versionamento; questi devono
-    essere approvati ad ogni loro versione dal \emph{responsabile} di progetto e viene considerata come corrente la
+    essere approvati ad ogni loro versione dal \emph{Responsabile} di progetto e viene considerata come corrente la
     versione più recentemente approvata. Un'ulteriore distinzione viene fatta tra:
     \begin{itemize}
         \item \textbf{Documenti Interni}: appartengono a questa categoria i documenti destinati ad uso interno al
@@ -231,6 +276,52 @@ quali documenti e sistemi software.
 \\
 \textbf{NOTE}: all'interno di \refSec{sub:gestione_configurazioni} con \emph{oggetto} si intenderà un qualsiasi elemento sottoposto a
 controllo di versione.
+\label{par:gestione_configurazione:compiti}
+Il processo di gestione delle configurazioni adottato dal gruppo \emph{SpaghettiCode} consiste nelle seguenti attività definite dallo standard di processo \emph{ISO/IEC 12207:1997}, opportunamente adattate alle necessità del progetto didattico:
+\begin{itemize}
+    \item \textbf{Pianificazione};
+    \item \textbf{Controllo della configurazione};
+    \item \textbf{Valutazione della configurazione}.
+\end{itemize}
+
+\subsubsection{Attività}
+
+\paragraph{Pianificazione}
+\label{par:pianificazione}
+\subparagraph{Scopo}
+\label{par:pianificazione:scopo}
+In questa attività si stabiliscono quali e come procedure da seguire e si decide quale software di versionamento usare.
+\subparagraph{Compiti}
+\label{par:pianificazione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Pianificazione}: si stabilisce la pianificazione per la gestione di configurazione.
+\end{itemize}
+
+\paragraph{Controllo della configurazione}
+\label{par:controllo_della_configurazione}
+\subparagraph{Scopo}
+\label{par:controllo_della_configurazione:scopo}
+In questa attività si identificano e si registrano le richieste di cambiamento, si analizzano, e conseguentemente, si accettano o rifiutano i cambiamenti.
+\subparagraph{Compiti}
+\label{par:controllo_della_configurazione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Controllo della configurazione}: Si controlla il cambiamento del prodotto. Si effettua verifica, implementazione e rilascio dei cambiamenti. Si storicizzano i cambiamenti e le richieste di cambiamento.
+\end{itemize}
+
+\paragraph{Valutazione della configurazione}
+\label{par:valutazione_della_configurazione}
+\subparagraph{Scopo}
+\label{par:valutazione_della_configurazione:scopo}
+In questa attività si valuta la completezza degli oggetti rispetto ai requisiti ed alla completezza fisica.
+\subparagraph{Compiti}
+\label{par:valutazione_della_configurazione:compiti}
+Questa attività è composta dal seguente compito:
+\begin{itemize}
+    \item \textbf{Valutazione}: si verifica se gli oggetti sono aggiornati rispetto alla loro codifica e design.
+\end{itemize}
+
 
 \subsubsection{Versionamento}
 \label{ssub:gestione_configurazione:versionamento}
@@ -425,17 +516,45 @@ Gli strumenti utilizzati a supporto delle attività del processo sono i seguenti
 
 \subsubsection{Descrizione}
 L'accertamento della qualità è un processo che racchiude all'interno diverse attività volte a provare e garantire oggettivamente il
-soddisfacimento degli obiettivi di qualità di un prodotto o di un processo. All'interno del documento \textsc{Piano di Qualifica} 
+soddisfacimento degli obiettivi di qualità di un prodotto o di un processo. All'interno del documento \textsc{Piano di Qualifica}
 andranno inseriti gli obiettivi di qualità stabiliti, le
 relative metriche individuate e un'istantanea del livello di qualità dei diversi elementi presi in esame misurata sulla base delle
-metriche scelte. \\
-Per poter realizzare le seguenti attività il gruppo si baserà sugli \emph{standard ISO-12207}.\\
+metriche scelte. Le attività aggregate dal processo in questione sono le seguenti:
+\begin{itemize}
+    \item \textbf{Qualità del prodotto};
+    \item \textbf{Qualità del processo};
+\end{itemize}
 
-%Le attività aggregate dal processo in questione sono le seguenti:
-%\begin{itemize}
-%    \item \textbf{Piano di Qualità};
-%    \item \textbf{Controllo di Qualità}.
-%\end{itemize}
+\subsubsection{Attività}
+
+\paragraph{Qualità del prodotto}
+\label{par:qualita_del_prodotto}
+\subparagraph{Scopo}
+\label{par:qualita_del_prodotto:scopo}
+In questa attività ci si assicura che il prodotto software e la documentazione ad esso associata rispetti gli standard di qualità.
+\subparagraph{Compiti}
+\label{par:qualita_del_prodotto:compiti}
+Questa attività è composta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Controllo della documentazione}: si controlla che tutta la documentazione richiesta dia fornita e che rispetti le convenzioni stabilite dal contratto;
+    \item \textbf{Controllo del prodotto software}: si controlla che il prodotto software rispetti i requisiti richiesti dal contratto;
+    \item \textbf{Preparazione alla consegna}: si controlla in preparazione alla consegna che tutti i prodotti abbiano soddisfatto a pieno i requisiti contrattuali.
+\end{itemize}
+
+\paragraph{Qualità del processo}
+\label{par:qualita_del_processo}
+\subparagraph{Scopo}
+\label{par:qualita_del_processo:scopo}
+In questa attività ci si assicura che ogni processo svolto rispetti gli standard di qualità.
+\subparagraph{Compiti}
+\label{par:qualita_del_processo:compiti}
+Questa attività è composta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Controllo del ciclo di vita}: si controlla che il ciclo di vita scelto sia applicato correttamente al prodotto;
+    \item \textbf{Controllo dell'ambiente di sviluppo}: si controlla che l'ambiente di sviluppo (pratiche ingegneristiche adottate, ambiente di test, librerie esterne...) rispettino la qualità richiesta dal contratto;
+    \item \textbf{Controllo delle metriche}: si controlla che le metriche di qualità siano in accordo con quanto stabilito;
+    \item \textbf{Controllo del personale}: si controlla che il personale tecnico abbia le competenze necessarie allo svolgimento del progetto e che ricevano la formazione adeguata.
+\end{itemize}
 
 Di seguito vengono definiti gli strumenti utilizzati a supporto delle attività del processo, le norme e la struttura
 degli obiettivi di qualità e delle metriche.
@@ -483,7 +602,8 @@ Il codice di un obiettivo di qualità deve avere la seguente forma:
 All'interno del codice \textbf{Tipologia} indica a quale tipologia di elemento l'obiettivo sia associato e può assumere i seguenti valori:
 \begin{itemize}
 	\item \textbf{PR}: l'obiettivo è relativo ad un processo;
-	\item \textbf{P}: l'obiettivo è relativo ad un prodotto.
+	\item \textbf{S}: l'obiettivo è relativo ad un prodotto software;
+    \item \textbf{D}: l'obiettivo è relativo ad un prodotto documentale.
 \end{itemize}
 \textbf{ID} invece è un intero positivo che distingue univocamente gli obiettivi relativi a tipologie di elementi uguali.
 
@@ -507,7 +627,8 @@ All'interno del codice \textbf{[Tipologia]} indica a quale tipologia di elemento
 quello del codice dell'obiettivo associato e può assumere i seguenti valori:
 \begin{itemize}
 	\item \textbf{PR}: la metrica è relativa ad un processo;
-	\item \textbf{P}: la metrica è relativa ad un prodotto.
+	\item \textbf{S}: la metrica è relativa ad un prodotto software;
+    \item \textbf{D}: la metrica è relativa ad un prodotto documentale.
 \end{itemize}
 \textbf{ID} invece è un intero positivo che distingue univocamente le metriche relative a tipologie di elementi uguali.
 
@@ -536,11 +657,29 @@ Di seguito vengono indicati gli strumenti utilizzati nell'attuazione del process
 Questo processo racchiude un insieme di attività volte a fornire una prova oggettiva del soddisfacimento dei requisiti e delle norme dei
 processi per la fase in esame. Ciò avviene prendendo in ingresso i prodotti dei processi attuati, controllando che essi siano completi e corretti
 rispetto ai requisiti degli stessi e producendo un report delle valutazioni effettuate nel documento \textsc{Piano di Qualifica}; in
-generale le operazioni di verifica sui prodotti devono essere chiare, oggettive ed affidabili. \\
-Il processo nello specifico è costituito dalle seguenti attività:
+generale le operazioni di verifica sui prodotti devono essere chiare, oggettive ed affidabili.
+
+Il processo di verifica adottato dal gruppo \emph{SpaghettiCode} consiste nelle seguenti attività definite dallo standard di processo \emph{ISO/IEC 12207:1997}, opportunamente adattate alle necessità del progetto didattico:
 \begin{itemize}
-	\item \textbf{Analisi statica};
-	\item \textbf{Analisi dinamica}.
+	\item \textbf{Iniziazione};
+	\item \textbf{Verifica}.
+\end{itemize}
+
+\subsubsection{Attività}
+
+\paragraph{Iniziazione}
+\label{par:iniziazione}
+\subparagraph{Scopo}
+\label{par:iniziazione:scopo}
+In questa attività si definiscono le criticità del processo di verifica e si stabilisce come svolgere al meglio il compito di verifica\\
+\subparagraph{Compiti}
+\label{par:iniziazione:compiti}
+Questa attività è composta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Definizione del processo di verifica}: si analizzano i requisiti del progetto e si pianifica il processo di verifica;
+    \item \textbf{Definizione delle attività di verifica}: si definiscono i metodi, le tecniche ed i mezzi per eseguire il compito di verifica;
+    \item \textbf{Documentazione delle attività di verifica}: si documenta il processo di verifica;
+    \item \textbf{Implementazione delle attività di verifica}: si implementano le attività di verifica. Le non conformità al modello stilato devono venire documentate, analizzate e risolte.
 \end{itemize}
 
 
@@ -595,11 +734,11 @@ Il codice identificativo si presenta nella forma:
 \end{center}
 Nella forma appena descritta \textbf{Tipologia} indica la tipologia del test e può assumere uno tra i seguenti valori:
 \begin{itemize}
-	\item \textbf{S}: Sistema. \\ Testano l’applicazione nella sua interezza. Viene effettuato un controllo sulle componenti del sistema che devono risultare compatibili fra loro e conformi nelle loro interazioni. 
-    Questi test caratterizzano la validazione del prodotto finale.     
-	\item \textbf{I}: Integrazione. \\ Viene verificato il funzionamento di diverse parti del sistema legate tra di loro da una definita relazione. 
-    Rappresentano l’estensione logica dei test di unità e sono i predecessori del test di sistema. La strategia che i test d’integrazione adottano è una strategia di tipo incrementale: si basa nella prosecuzione per passi, aggiungendo parti fino al completamento.     
-	\item \textbf{U}: Unità. \\ Servono a verificare la correttezza di piccoli componenti. L’obiettivo è di isolare la parte più piccola di software testabile, chiamata unità, e poter stabilire il corretto funzionamento. 
+	\item \textbf{S}: Sistema. \\ Testano l’applicazione nella sua interezza. Viene effettuato un controllo sulle componenti del sistema che devono risultare compatibili fra loro e conformi nelle loro interazioni.
+    Questi test caratterizzano la validazione del prodotto finale.
+	\item \textbf{I}: Integrazione. \\ Viene verificato il funzionamento di diverse parti del sistema legate tra di loro da una definita relazione.
+    Rappresentano l’estensione logica dei test di unità e sono i predecessori del test di sistema. La strategia che i test d’integrazione adottano è una strategia di tipo incrementale: si basa nella prosecuzione per passi, aggiungendo parti fino al completamento.
+	\item \textbf{U}: Unità. \\ Servono a verificare la correttezza di piccoli componenti. L’obiettivo è di isolare la parte più piccola di software testabile, chiamata unità, e poter stabilire il corretto funzionamento.
     Ogni singola unità deve essere testata prima di essere integrata. Per farlo si possono usare simulatori o driver.
 
 \end{itemize}
@@ -627,28 +766,61 @@ Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività de
 \paragraph{Descrizione}
 \label{par:descrizione}
 
-Questo processo ha il compito di verificare la correttezza e la completezza del prodotto software rispetto alle attese del committente e 
-del proponente. Successivamente alla validazione si garantisce che il software rispetta i requisiti richiesti dal committente. 
-Il processo viene attuato al termine del processo di sviluppo, riceve in ingresso il prodotto software nella sua interezza 
-e produce il rilascio dello stesso. Se i test danno esiti positivi, il responsabile può accettare ed approvare il prodotto oppure chiedere ulteriori verifiche con opportune indicazioni. 
+Questo processo ha il compito di verificare la correttezza e la completezza del prodotto software rispetto alle attese del committente e
+del proponente. Successivamente alla validazione si garantisce che il software rispetta i requisiti richiesti dal committente.
+Il processo viene attuato al termine del processo di sviluppo, riceve in ingresso il prodotto software nella sua interezza
+e produce il rilascio dello stesso. Se i test danno esiti positivi, il \emph{Responsabile} può accettare ed approvare il prodotto oppure chiedere ulteriori verifiche con opportune indicazioni.\\
 
-Le attività che vengono svolte all'interno del processo sono le seguenti:
+Il processo di validazione adottato dal gruppo \emph{SpaghettiCode} consiste nelle seguenti attività definite dallo standard di processo \emph{ISO/IEC 12207:1997}, opportunamente adattate alle necessità del progetto didattico:
 \begin{itemize}
-	\item \textbf{Test di sistema}: viene verificato il corretto comportamento del sistema e la 
+	\item \textbf{Iniziazione};
+	\item \textbf{validazione}.
+\end{itemize}
+
+\subsubsection{Attività}
+
+\paragraph{Iniziazione}
+\label{par:iniziazione}
+\subparagraph{Scopo}
+\label{par:iniziazione:scopo}
+In questa attività si definiscono le criticità del processo di validazione e si stabilisce come svolgere al meglio il compito di verifica\\
+\subparagraph{Compiti}
+\label{par:iniziazione:compiti}
+Questa attività è composta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Definizione del processo di validazione}: si analizzano i requisiti del progetto e si pianifica il processo di validazione;
+    \item \textbf{Definizione delle attività di validazione}: si definiscono i metodi, le tecniche ed i mezzi per eseguire il compito di validazione;
+    \item \textbf{Documentazione delle attività di verifica}: si documenta il processo di validazione;
+    \item \textbf{Implementazione delle attività di validazione}: si implementano le attività di validazione. Le non conformità al modello stilato devono venire documentate, analizzate e risolte.
+\end{itemize}
+
+\paragraph{Validazione}
+\label{par:validazione}
+\subparagraph{Scopo}
+\label{par:validazione:scopo}
+In questa attività si definiscono le criticità del processo di verifica e si stabilisce come svolgere al meglio il compito di verifica\\
+\subparagraph{Compiti}
+\label{par:validazione:compiti}
+Questa attività è composta dai seguenti compiti:
+\begin{itemize}
+    \item \textbf{Preparazione dei test}: si selezionano i requisiti e le specifiche per analizzare i test e i risultati dei test;
+    \item \textbf{Verifica dei requisiti dei test}: si verifica che i requisiti per i test soddisfino lo specifico caso del progetto;
+    \item \textbf{Esecuzione dei test}: si eseguono i test tra cui stress test e test dei valori limite. Si verifica che utenti rappresentativi dell'utente medio siano in grado di operare il software;
+    \item \textbf{validazione del software}: si verifica che il software funzioni in modo corretto.
+\end{itemize}
+
+\subsubsection{Test}
+\label{ssub:test}
+I test svolti al fine di validare il software sono le seguenti:
+\begin{itemize}
+	\item \textbf{Test di sistema}: viene verificato il corretto comportamento del sistema e la
     copertura di tutti i requisiti del prodotto;
-	\item \textbf{Collaudo}: viene dimostrata la conformità del prodotto rispetto al contratto tra le 
+	\item \textbf{Collaudo}: viene dimostrata la conformità del prodotto rispetto al contratto tra le
     parti verificando la correttezza del prodotto rispetto ad alcuni casi di prova.
 \end{itemize}
 
 I test di integrazione permettono l’esecuzione dei test di sistema svolgendo un controllo sulle funzionalità implementate, quindi si stabilisce con certezza che si sta rispettando quanto dichiarato. \\
 Il processo di validazione prevede:
-\begin{itemize}
-	\item Pianificazione e tracciamento dei test da eseguire sul codice prodotto
-    \item Esecuzione dei test dove vengono create situazioni di forzature del sistema nei suoi punti critici per evidenziare gli errori
-    \item Aggiornamento del piano dei test
-    \item Controllo dei risultati dove viene verificato se il sistema rispetta i requisiti 
-\end{itemize}
-
 
 \paragraph{Strumenti}
 \label{par:validazione:strumenti}
@@ -657,4 +829,3 @@ Di seguito vengono riportati gli strumenti utilizzati nelle diverse attività de
 \begin{itemize}
 	\item \textbf{Selenium}: framework per il testing di applicazioni web;
 \end{itemize}
-
