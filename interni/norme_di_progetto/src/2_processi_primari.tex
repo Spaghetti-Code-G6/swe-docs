@@ -360,13 +360,13 @@ In particolare, vengono normati i seguenti compiti, in modo da dare una linea gu
 \subparagraph{Diagrammi UML}
 
 Il gruppo ha scelto di utilizzare diagrammi UML allo scopo di rendere più chiare le scelte compiute in ambito di
-progettazione. Questi verranno realizzati dai \emph{Progettisti}, in particolare verranno realizzati i seguenti diagrammi:
+progettazione. Questi verranno realizzati dai \emph{Progettisti}. In particolare potranno essere realizzati i seguenti diagrammi se di valore aggiunto alla progettazione:
 \begin{itemize}
-	\item \textbf{Diagrammi di attività:} definiscono le caratteristiche dinamiche del sistema sia per attività e concetti legati all’implementazione dei metodi, che a livelli di astrazione più elevati.  
+	\item \textbf{Diagrammi di attività:} definiscono le caratteristiche dinamiche del sistema sia per attività e concetti legati all’implementazione dei metodi, che a livelli di astrazione più elevati.
 	\item \textbf{Diagrammi di classe:} definiscono le caratteristiche statiche di un sistema, in particolare classi, tipi, metodi, attributi e le relazioni che vi intercorrono.
 	\item \textbf{Diagrammi di package:} permettono la definizione dall'alto dell'architettura, infatti rappresentano raggruppamenti di classi e unità.
 	\item \textbf{Diagrammi di sequenza:} illustrano le azioni che avvengono tra oggetti/classi, ad esempio quanto vengono invocati metodi.
-	\item \textbf{Diagrammi dei casi d'uso:} rappresentano le funzionalità del sistema attraverso una visione esterna al sistema; è un insieme di scenari e sequenze di azioni che hanno in comune il medesimo obiettivo per l'utente. 
+	\item \textbf{Diagrammi dei casi d'uso:} rappresentano le funzionalità del sistema attraverso una visione esterna al sistema; è un insieme di scenari e sequenze di azioni che hanno in comune il medesimo obiettivo per l'utente.
 \end{itemize}
 Buona norma sarà:
 \begin{itemize}
@@ -374,6 +374,14 @@ Buona norma sarà:
 	\item evitare la presenza di dipendenze circolari;
 	\item utilizzare ove possibile interfacce e classi astratte;
 	\item utilizzare nomi significativi per le classi in modo da facilitarne la comprensione;
+\end{itemize}
+
+Il software HD Viz dovrà essere realizzato attraverso il linguaggio JavaScript. Questo porta a fare una considerazione: UML è stato pensato per i linguaggi ad oggetti, e di conseguenza, linguaggi non classificati tali, come JavaScript, non si prestano naturalmente alla notazione UML.
+Sono state effettuate dai \emph{progettisti} le scelte di mantenere nei diagrammi UML notazioni come classi, interfacce e classi astratte per esplicitare le relazioni tra le varie componenti del prodotto software, nonostante non ci sia una corrispondenza esatta tra i concetti di classi, interfacce e classi astratte, tipiche della programmazione orientata agli oggetti in JavaScript.
+\begin{itemize}
+	\item \textbf{Classi:} le classi dei diagrammi UML sono prototipi di oggetti che al loro interno contengono campi e metodi;
+	\item \textbf{Interfacce:} Essendo il js duck typed assumiamo le interfacce essere dei contratti che devono essere rispettati dagli oggetti di cui abbiamo dipendenza nel momento di utilizzo (per via della dinamicità delle proprietà);
+	\item \textbf{Classi Astratte:};
 \end{itemize}
 
 \subparagraph{Test}
