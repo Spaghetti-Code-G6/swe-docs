@@ -380,8 +380,9 @@ Il software HD Viz dovrà essere realizzato attraverso il linguaggio JavaScript.
 Sono state effettuate dai \emph{progettisti} le scelte di mantenere nei diagrammi UML notazioni come classi, interfacce e classi astratte per esplicitare le relazioni tra le varie componenti del prodotto software, nonostante non ci sia una corrispondenza esatta tra i concetti di classi, interfacce e classi astratte, tipiche della programmazione orientata agli oggetti in JavaScript.
 \begin{itemize}
 	\item \textbf{Classi:} le classi dei diagrammi UML sono prototipi di oggetti che al loro interno contengono campi e metodi;
-	\item \textbf{Interfacce:} Essendo il js duck typed assumiamo le interfacce essere dei contratti che devono essere rispettati dagli oggetti di cui abbiamo dipendenza nel momento di utilizzo (per via della dinamicità delle proprietà);
-	\item \textbf{Classi Astratte:};
+	\item \textbf{Interfacce:} essendo JavaScript \glossario{duck typed} si assume che le interfacce siano dei contratti che devono essere rispettati dagli oggetti.\\
+    Esempio: se una classe \emph{C} dipende da una interfaccia che richiede l'implementazione del metodo \emph{quack()}, allora si assume che la classe \emph{C} abbia una dipendenza verso un oggetto qualsiasi che implementi il metodo \emph{quack()}.
+	\item \textbf{Classi Astratte:} le classi astratte saranno classi che non verranno mai istanziate.
 \end{itemize}
 
 \subparagraph{Test}
