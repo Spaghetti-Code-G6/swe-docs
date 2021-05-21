@@ -20,8 +20,9 @@ Il ciclo di incremento risulta suddiviso nei seguenti passi:
     \item Test;
     \item Valutazione.
 \end{enumerate}
-Ogni ciclo di incremento permette lo sviluppo di una funzionalità aggiuntiva,
-la priorità viene data alle funzionalità con importanza maggiore. Seguendo questo modello le funzionalità principali e più importanti vengono implementate per prime, inserendo in questo modo le funzionalità meno significative in un sistema stabile.
+Ogni ciclo di incremento permette lo sviluppo di una funzionalità aggiuntiva.
+La priorità nell'implementazione viene data alle funzionalità con importanza maggiore, quindi tutte quelle funzionalità base richieste dal committente o le funzionalità che sono dipendenze di altre. 
+Seguendo questo modello le funzionalità principali e più importanti vengono implementate per prime, inserendo in questo modo quelle meno significative in un sistema stabile. 
 La ciclicità prevista dal modello incrementale facilita anche il versionamento del sistema,
 tracciando modifiche nette al software.\\
 L'iter che verrà seguito dal gruppo per ogni fase è il seguente:
@@ -60,13 +61,20 @@ Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato a
 	\begin{tabular}{|p{3cm}|p{3cm}|}
 	\hline
 	\rowcolor{lightgray}
-	\textbf{Incremento} & \textbf{UC/Requisiti}\\
-	\hline
+    \textbf{Incremento} & \textbf{UC/Requisiti}\\
+    \hline
+    \rowcolor{lightgray}
+	\multicolumn{2}{|p{6.44cm}|}{\textbf{Progettazione e codifica della technology baseline}}\\
+    \hline
         Incremento I & RVO3\\
         Incremento II & RVO1\\
         Incremento III & UCW1.2  UCW3 \\
         Incremento IV & UCW2.2 UCW4.2.1 UCW4.2.2 UCW4.2.4 UCW4.2.5\\
         Incremento V & UCW1.3\\
+    \hline
+    \rowcolor{lightgray}
+    \multicolumn{2}{|p{6.44cm}|}{\textbf{Progettazione e codifica di dettaglio}}\\
+    \hline
         Incremento VI & UCS1\\ %implementazione fetch dati importati
         Incremento VII & UCW5.2.3\\ %implementazione funzionalità mancanti SPM
         Incremento VIII & UCW5.8 \\ %implementazione annullamento delle modifiche
@@ -80,5 +88,5 @@ Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato a
 	\end{tabular}
 	\caption{Tabella tracciamento incremento-uc/requisiti}
 \end{table}
-
+%TODO eliminare incrementi non sviluppati in fase di RQ issue#116
 \end{document}
