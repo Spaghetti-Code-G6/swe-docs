@@ -328,8 +328,9 @@ Questa attività è composta dal seguente compito:
 
 \paragraph{Scopo}
 
-L'attività di versionamento ha come obiettivo fornire una corretta gestione e storico delle versioni degli oggetti, di seguito vengono
+L'attività di versionamento ha come obiettivo fornire una gestione e uno storico delle diverse versioni degli oggetti. Di seguito vengono
 definite le norme e le convenzioni a cui il gruppo aderisce per poter facilitare ed automatizzare le modifiche agli oggetti.
+Il sistema di versionamento adottato è il \glossario{versionamento semantico}, ed aderisce alle convenzioni stabilite, reperibili all'indirizzo: \url{https://semver.org/lang/it/}.
 
 \paragraph{Codice di versione}
 \label{par:codice_versione}
@@ -342,12 +343,13 @@ dove \textbf{X}, \textbf{Y} e \textbf{Z} sono interi non negativi.\\
 Ciascun codice di versione viene assegnato ad una correzione o ad un incremento pianificato e a seconda dell'entit\`{a} della modifica
 pu\`{o} essere aumentata:
 \begin{itemize}
-	\item \textbf{X}: incrementa quando un \emph{Responsabile} approva il documento;
-	\item \textbf{Y}: incrementa quando un verificatore effettua una verifica complessiva del prodotto; il valore Z viene azzerato;
-	\item \textbf{Z}: incrementa quando vengono aggiunte feature a paragrafi o capitoli. Ad ognuna di essa verrà indicato il nome del verificatore che ha verificato quella singola azione.
+	\item \textbf{X}: incrementa quando viene effettuata una \emph{modifica non retrocompatibile};
+	\item \textbf{Y}: incrementa quando si effettuano \emph{aggiunte  retrocompatibili}; il valore Z viene azzerato;
+	\item \textbf{Z}: incrementa quando vengono effettuate \emph{modifiche retrocompatibili}.
 \end{itemize}
 Ciascun incremento di \textbf{X}, \textbf{Y} e \textbf{Z} deve essere unitario e ciascuna modifica ad un documento o ad un prodotto
 dev'essere rilasciata come una nuova versione.
+Lo scatto di versione verrà effettuato solo in seguito alla verifica da parte di un verificatore della effettiva bontà della aggiunta/modifica effettuata.
 
 \paragraph{Codice di versione unitario}
 Il prodotto software avrà a sua volta un suo codice identificativo che ne indichi lo stato di versione. Nello specifico il codice verrà espresso come segue:\\
