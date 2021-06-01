@@ -1,0 +1,114 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Verbale Esterno 2021-05-14}
+
+\setVersione{v0.1.0}
+
+\setResponsabile{
+	Kostadinov Samuel
+}
+
+\setRedattori{
+	Rizzo Stefano
+}
+
+\setVerificatori{
+	Paparazzo Giorgia
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+	prof. Vardanega Tullio \\ &
+	prof. Cardin Riccardo \\ &
+	SpaghettiCode
+}
+
+\setDescrizione{Riassunto dell'incontro tenutosi il 14 Maggio 2021 realizzato dal gruppo SpaghettiCode in forma di meeting online con Piccoli Gregorio.}
+
+\setModifiche{
+	v0.1.0 & Rizzo Stefano & Amministratore & 2021-05-14 & Creazione del documento e prima stesura. Verificato da Paparazzo Giorgia.
+
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Informazioni generali}
+\label{sec:info_generali}
+
+\subsection{Informazioni incontro}
+\label{sub:info_incontro}
+
+\begin{itemize}
+	\item \textbf{Luogo}: Applicazione \glossario{Discord};
+	\item \textbf{Data}: 2021-05-14;
+	\item \textbf{Ora}: 14:30-15.00;
+	\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item Piccoli Gregorio
+		\item Contro Daniel Eduardo
+		\item Kostadinov Samuel
+		\item Rizzo Stefano
+		
+	\end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+A seguito di alcuni dubbi sorti durante la progettazione, si vede la necessità di discutere i seguenti punti:
+\begin{enumerate}
+	\item \nameref{itm:1};
+	\item \nameref{itm:2};
+\end{enumerate}
+
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+\begin{itemize}
+    \item \textsc{HD-Viz};
+    \item \textsc{Manuale Utente};
+    \end{itemize}
+
+\newpage
+\section{Resoconto}
+\label{sec:resoconto}
+
+Di seguito vengono riportate le decisioni concordate e gli esiti delle diverse discussioni.
+
+\subsection{Limite alla dimensione del dataset}
+\label{itm:1}
+
+Al crescere della dimensione del dataset i tempi per il calcolo possono aumentare considerevolmente. Pertanto, è stato interrograto il proponente circa la dimensione dei dataset utilizzati. Il proponente richiede che non vengano imposti limiti dall'applicativo.
+
+\subsection{Normalizzazione dei dati e calcolo della distanza}
+\label{itm:2}
+Dal momento che HD Viz dovrà normalizzare e calcolare distanze tra dati di tipi non solo numerici, è stato interrogato il proponente circa la modalità con la quale queste operazioni debbano essere svolte. 
+
+
+\section{Tabella delle decisioni}%
+\label{sub:decisioni}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|p{13cm}|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Codice} & \textbf{Descrizione} \\ 
+		\hline
+			VI0514-01 & Non viene imposto nessun limite superiore alla dimensione del dataset. \\
+            VI0514-02 & Si decide che i dati verranno calcolati e normalizzati secondo quanto descritto nel dettaglio nel \textsc{Manuale Utente}. \\
+		\hline
+	\end{tabular}
+	\caption{Tabella delle decisioni}
+\end{table}
+
+\end{document}
