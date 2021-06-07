@@ -170,13 +170,49 @@ Vengono stabiliti i seguenti obiettivi:
     \caption{Diagramma di Gantt della fase di progettazione della technology baseline}
 \end{figure}
 
-\subsection{Progettazione e codifica di dettaglio}%
-\label{sub:prog_dett}
-Periodo: dal 2021-03-01 al 2021-04-02.\\ \\
-Questa fase prevede la progettazione e l'implementazione delle funzionalità restanti dalla fase precedente; vi saranno aggiustamenti della pianificazione e aggiornamenti dei documenti. Verrà inoltre redatto il \textsc{\glossario{Manuale Utente}} e il \textsc{\glossario{Manuale Sviluppatore}}. \\
-Al completamento delle attività verrà redatta la lettera di presentazione per candidarsi alla \textsc{Revisione di Qualifica}. 
-Nella settimana successiva alla consegna della \textsc{Revisione di Qualifica} verrà redatta la presentazione da portare in sede di revisione programmata giorno 09/04/2021. 
-Questa fase viene divisa in due macro periodi.
+
+%===============================%
+
+%\subsection{Progettazione e codifica di dettaglio}%
+%\label{sub:prog_dett}
+%Periodo: dal 2021-03-01 al 2021-04-02.\\ \\
+%Questa fase prevede la progettazione e l'implementazione delle funzionalità restanti dalla fase precedente; vi saranno aggiustamenti della pianificazione e aggiornamenti dei documenti. Verrà inoltre redatto il \textsc{\glossario{Manuale Utente}} e il \textsc{\glossario{Manuale Sviluppatore}}. \\
+%Al completamento delle attività verrà redatta la lettera di presentazione per candidarsi alla \textsc{Revisione di Qualifica}. 
+%Nella settimana successiva alla consegna della \textsc{Revisione di Qualifica} verrà redatta la presentazione da portare in sede di revisione programmata giorno 09/04/2021. 
+%Questa fase viene divisa in due macro periodi.
+%
+%\subsubsection{Periodo I - Documenti}
+%Questo periodo ha una durata di 11 giorni. Viene collocato subito dopo i risultati della \textsc{Revisione di Progettazione} stimata per il 2021-03-17.
+%Le attività che verranno svolte in questo periodo sono:
+%\begin{itemize}
+%    \item Correzione dei documenti: vengono corretti i documenti secondo le indicazioni fornite al gruppo dal docente;
+%    \item Incremento dei documenti: vengono migliorati i documenti con modifiche e aggiunte;
+%    \item Verifica: attività svolta alla fine di ogni attività descritte in precedenza.
+%\end{itemize}
+%
+%\subsubsection{Periodo II - Product Baseline e codifica}
+%Le attività che verranno svolte in questo periodo sono:
+%\begin{itemize}
+%    \item Per ogni incremento individuato verranno svolte le attività seguenti: 
+%    \begin{itemize}
+%        \item Individuazione design pattern;
+%        \item Creazione diagrammi attività;
+%        \item Creazione diagrammi classi;
+%        \item Stesura codice;
+%        \item Stesura test;
+%        \item Stesura \textsc{Manuale Utente} e \textsc{Manuale Sviluppatore};
+%        \item Verifica.
+%    \end{itemize}
+%    \item Preparazione presentazione.
+%\end{itemize}
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=18cm]{src/img/gantt/03_RQ_alternative_2.png}
+%\caption{Diagramma di Gantt della fase di progettazione e codifica di dettaglio}
+%\end{figure}
+
+%===========%
 
 % \subsubsection{VI incremento}
 % Vengono stabiliti i seguenti obiettivi:
@@ -305,36 +341,75 @@ Questa fase viene divisa in due macro periodi.
 %     \caption{Diagramma di Gantt della fase di progettazione e codifica di dettaglio}
 % \end{figure}
 
-\subsubsection{Periodo I - Documenti}
-Questo periodo ha una durata di 11 giorni. Viene collocato subito dopo i risultati della \textsc{Revisione di Progettazione} stimata per il 2021-03-17.
-Le attività che verranno svolte in questo periodo sono:
+
+%======================================%
+
+\subsection{Progettazione e codifica di dettaglio}%
+\label{sub:prog_dett}
+\paragraph{Progettazione iniziale in data 2021-03-10}
+Periodo: dal 2021-03-10 al 2021-04-02.\\ \\
+Inizialmente in questa fase si era previsto di proseguire il software realizzato in precedenza, tuttavia si è ritenuto opportuno ripartire da zero e realizzare prima un'architettura 
+base che aiutasse successivamente nella programmazione. 
+In questa fase si realizza la presentazione per la Revisione di Progettazione, stimata per giorno 2021-03-17, e si procede subito con la modifica di alcuni documenti quali
+il \textsc{Piano di Progetto} per tracciare una prima pianificazione, e il \textsc{Piano di Qualifica} in quanto vi è necessità di iniziare a stilare obiettivi e metriche relativi al prodotto software.
+Complessivamente questa fase è caratterizzata da due processi, quello di \emph{documentazione} e quello di \emph{progettazione e codifica}. Ad ogni incremento segue anche la rispettiva verifica. \\
+\textbf{Documenti:}
 \begin{itemize}
-    \item Correzione dei documenti: vengono corretti i documenti secondo le indicazioni fornite al gruppo dal docente;
-    \item Incremento dei documenti: vengono migliorati i documenti con modifiche e aggiunte;
-    \item Verifica: attività svolta alla fine di ogni attività descritte in precedenza.
+    \item \textbf{Piano di progetto:}
+        \begin{itemize}
+            \item \textbf{Incremento I:} Si pianifica finemente la fase corrente, in quanto il tempo è poco e la successiva consegna è molto vicina;
+            \item \textbf{Incremento II:} A ridosso della codifica del software si individuano gli incrementi da implementare;
+            \item \textbf{Incremento III:} Si correggono eventuali errori segnalati tra gli esiti della Revisione di Progettazione;
+        \end{itemize}
+        \item \textbf{Piano di qualifica:}
+        \begin{itemize}
+            \item \textbf{Incremento I:} Si stilano le metriche e gli obiettivi relativi al prodotto software;
+            \item \textbf{Incremento II:} Si correggono eventuali errori segnalati tra gli esiti della Revisione di Progettazione;
+        \end{itemize}
+        \item \textbf{Norme di progetto:}
+        \begin{itemize}
+            \item \textbf{Incremento I:} Si normano i diagrammi UML, i test che verranno effettuati, ed eventuali cambiamenti nell'amministrazione della repository;
+            \item \textbf{Incremento II:} Si correggono eventuali errori segnalati tra gli esiti della Revisione di Progettazione;
+        \end{itemize}
+        \item \textbf{Manuale sviluppatore:}
+        \begin{itemize}
+            \item \textbf{Incremento I:} Si inizia la stesura generale del manuale sviluppatore;
+            \item \textbf{Incremento II:} Quando l'architettura è pronta, si termina la stesura del manuale;
+        \end{itemize}
+        \item \textbf{Manuale utente:}
+        \begin{itemize}
+            \item \textbf{Incremento I:} Si inizia la stesura generale del manuale utente;
+            \item \textbf{Incremento II:} Quando l'applicativo software è quasi terminato, si termina la stesura del manuale;
+        \end{itemize}
 \end{itemize}
 
-\subsubsection{Periodo II - Product Baseline e codifica}
-Le attività che verranno svolte in questo periodo sono:
+\textbf{HD-Viz:}
 \begin{itemize}
-    \item Per ogni incremento individuato verranno svolte le attività seguenti: 
+    \item \textbf{Individuazione dell'architettura:}
     \begin{itemize}
-        \item Individuazione design pattern;
-        \item Creazione diagrammi attività;
-        \item Creazione diagrammi classi;
-        \item Stesura codice;
-        \item Stesura test;
-        \item Stesura \textsc{Manuale Utente} e \textsc{Manuale Sviluppatore};
-        \item Verifica.
+        \item \textbf{Incremento I:} Si individuano i pattern che più si adattano alle necessità e ai vari componenti dell'applicazione;
     \end{itemize}
-    \item Preparazione presentazione.
+    \item \textbf{Creazione diagrammi UML:}
+    \begin{itemize}
+        \item \textbf{Incremento I:} Si creano i diagrammi relativi alla parte X;
+        \item \textbf{Incremento II:} Si creano i diagrammi relativi alla parte Y;
+        \item \textbf{Incremento III:} Si creano i diagrammi relativi alla parte Z;
+    \end{itemize}
+    \item \textbf{Codifica:}
+    \begin{itemize}
+        \item \textbf{Incremento I:} Si codifica la parte X e se ne realizzano i test;
+        \item \textbf{Incremento II:} Si codifica la parte Y e se ne realizzano i test;
+        \item \textbf{Incremento III:} Si codificala parte Z e se ne realizzano i test;
+    \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=18cm]{src/img/gantt/03_RQ_alternative_2.png}
-\caption{Diagramma di Gantt della fase di progettazione e codifica di dettaglio}
+\includegraphics[width=18cm]{src/img/gantt/pianificazione_iniziale_RQ.jpg}
+\caption{Diagramma di Gantt della fase di progettazione e codifica}
 \end{figure}
+
+%======================================%
 
 \subsection{Validazione e Collaudo}%
 \label{sub:valid_coll}
