@@ -47,46 +47,55 @@ L'utilizzo di questo modello permette di ottenere importanti vantaggi, quali:
     \item Possibilità di un maggior numero di feedback da parte del cliente, aumentando l'efficienza.
 \end{itemize}
 
-%TODO Allinenare incrementi in capitolo 3 - 4 - 5
+
 \subsubsection{Incrementi individuati}
 \label{ssub:incr_ind}
 
-%Nei periodi di \emph{Progettezione architetturale} e \emph{Progettazione di dettaglio e codifica} sono stati individuati degli incrementi.
-Di seguito viene riportato un tracciato incremento | Use case/requisito, in modo tale da comprendere più chiaramente gli UC o requisiti che verranno soddisfatti in ciascun incremento. 
-%I requisiti riportati nella tabella includono tutti i requisiti figli. Tutti i requisiti non riporta-ti nella tabella sono da intendersi soddisfatti, in parte, da ogni incremento. Tali requisiti sonoreperibili all’interno del documentoAnalisi dei Requisiti.
+Di seguito viene riportato un tracciato incremento | obiettivo, in modo tale da comprendere più chiaramente i requisiti che verranno soddisfatti in ciascun incremento. 
+Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato ad essi e verranno considerati soddisfatti in tutti gli incrementi successivi a quello di sviluppo.
 
-Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato ad essi e verranno considerati soddisfatti in tutti gli incrementi successivi a quello di sviluppo. Gli UC e i requisiti qui riportati sono reperibili all'interno del documento \textsc{Analisi dei Requisiti}.
+\subsubsection*{Progettazione e codifica della technology baseline}
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|}
+	\begin{tabular}{|p{3cm}|p{6.5cm}|}
 	\hline
 	\rowcolor{lightgray}
-    \textbf{Incremento} & \textbf{UC/Requisiti}\\
+    \textbf{Incremento} & \textbf{Obiettivi}\\
     \hline
-    \rowcolor{lightgray}
-	\multicolumn{2}{|p{6.44cm}|}{\textbf{Progettazione e codifica della technology baseline}}\\
+        Incremento I & Sviluppo ambiente di lavoro\\
+        Incremento II & Inserimento dati tramite file\\
+        Incremento III & Sviluppo grafico Scatterplot Matrix \\
+        Incremento IV & Modifica della dimensione dello ScatterPlot Matrix\\
+        Incremento V & Inserimento dati tramite database\\
     \hline
-        Incremento I & RVO3\\
-        Incremento II & RVO1\\
-        Incremento III & UCW1.2  UCW3 \\
-        Incremento IV & UCW2.2 UCW4.2.1 UCW4.2.2 UCW4.2.4 UCW4.2.5\\
-        Incremento V & UCW1.3\\
+    \end{tabular}
+    \caption{Tabella tracciamento incremento-obiettivi}
+\end{table}
+
+\subsubsection*{Progettazione e codifica di dettaglio}
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|p{3cm}|p{6.5cm}|}
+	\hline
+	\rowcolor{lightgray}
+    \textbf{Incremento} & \textbf{Obiettivi}\\
     \hline
-    \rowcolor{lightgray}
-    \multicolumn{2}{|p{6.44cm}|}{\textbf{Progettazione e codifica di dettaglio}}\\
-    \hline
-        Incremento VI & UCS1\\ %implementazione fetch dati importati
-        Incremento VII & UCW5.2.3\\ %implementazione funzionalità mancanti SPM
-        Incremento VIII & UCW5.8 \\ %implementazione annullamento delle modifiche
-        Incremento IX & UCW3.3 UCW5.4 UCW3.6  UCW5.5\\ %force field e distance map
-        Incremento X & UCW4 UCW5.3\\ %implementazione modifiche
-        Incremento XI & UCW3.4 UCW5.7\\ %heat map
-        Incremento XII & UCW3.5 UCW5.6\\ %proiezione lineare multi asse
-        Incremento XIII & UCW6 UCW7 UCW8 UCW9\\ %visualizzazione errori
-        
+        Incremento II & Sviluppo inserimento dati tramite file \\
+        Incremento III & Sviluppo Scatterplot Matrix \\
+        Incremento IV & Sviluppo modifica grafico Scatterplot Matrix \\
+        Incremento V & Sviluppo Distance Map e algoritmi di scelta \\	
+        Incremento VI & Sviluppo inserimento dati tramite database \\
+        Incremento VII & Sviluppo Force Field \\
+        Incremento VIII & Sviluppo Heat Map \\
+        Incremento IX & Sviluppo PLMA \\
+        Incremento X & Sviluppo modifiche Distance Map \\
+        Incremento XI & Sviluppo modifica colori \\
+        Incremento XII & Sviluppo modifica dimensioni \\
+        Incremento XIII & Sviluppo modifica etichette \\
+        Incremento XIV & Sviluppo visualizzazione errori \\        
     \hline	
 	\end{tabular}
-	\caption{Tabella tracciamento incremento-uc/requisiti}
+	\caption{Tabella tracciamento incremento-obiettivi}
 \end{table}
-%TODO eliminare incrementi non sviluppati in fase di RQ issue#116
+
 \end{document}
