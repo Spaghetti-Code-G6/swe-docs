@@ -2,32 +2,39 @@
 
 \begin{document}
 
-Per garantire la qualità del prodotto il gruppo ha deciso di fare riferimento allo \glossario{standard ISO/IEC 9126}, il quale regolamenta le modalità con cui produrre un software di buona qualità. Di questo standard il gruppo sceglie di seguire alcune delle metriche esposte, e sceglie di stabilirne altre da seguire per rendere il prodotto qualitativamente valido; qui di seguito vengono elencate. \\
+Per garantire la qualità del prodotto il gruppo ha deciso di fare riferimento allo \glossario{standard ISO/IEC 9126}, il quale regolamenta le modalità con cui produrre un software di buona qualità. Di questo standard il gruppo sceglie di seguire alcune delle metriche esposte, e sceglie di stabilirne altre da seguire per rendere il prodotto qualitativamente valido; qui di seguito vengono elencate.
 
 \subsection{Modello di qualità}
-Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.\par
-Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:\par
+Il gruppo intende seguire a pieno le caratteristiche descritte nello standard adottato circa il modello di qualità.
+
+Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:
+
 \begin{itemize}
 	\item \textbf{Funzionale}: è la capacità di un prodotto software di fornire funzioni che soddisfino esigenze stabilite, necessarie per operare sotto condizioni specifiche.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di fornire un appropriato insieme di funzioni per i compiti prefissati dall’utente; sarà in grado di fornire i risultati concordati con il proponente; sarà in grado di interagire ed operare con più sistemi specificati dal proponente; se richiesto dal proponente, sarà in grado di proteggere informazioni negando accessi non autorizzati.
 	      \end{itemize}
+
 	\item \textbf{Affidabile}: è la capacità del prodotto software di mantenere uno specificato livello di prestazioni quando usato in date condizioni e per un dato periodo.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di evitare errori e malfunzionamenti; in caso questi dovessero presentarsi sarà possibile recuperare i dati su cui si stava lavorando; sarà in grado di aderire agli standard definiti con il proponente.
 	      \end{itemize}
+
 	\item \textbf{Efficiente}: è la capacità di fornire appropriate prestazioni relative alla quantità di risorse usate.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di fornire adeguati tempi di risposta, elaborazione e velocità di attraversamento; sarà in grado di sfruttare adeguatamente le risorse e sarà efficiente.
 	      \end{itemize}
+
 	\item \textbf{Usabile}: è la capacità del prodotto software di essere capito, appreso e usato dall'utente.
 	      \begin{itemize}
 		      \item Il prodotto software sarà di facile comprensione per l’utente; assieme ad esso verrà consegnato il manuale d’utente per consentire a chiunque il suo utilizzo.
 	      \end{itemize}
+
 	\item \textbf{Mantenibile}: è la capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
 	      \begin{itemize}
 		      \item Il prodotto software sarà in grado di essere analizzato lato codice; sarà in grado di essere modificato e soggetto ad evoluzioni; sarà facilmente testabile per verificare le modifiche apportate.
 	      \end{itemize}
+
 	\item \textbf{Portabile}: è la capacità del software di essere trasportato da un ambiente di lavoro ad un altro.
 	      \begin{itemize}
 		      \item il prodotto software sarà in grado di essere adattato a diversi ambienti sulla base degli accordi presi con il proponente.
@@ -38,122 +45,100 @@ Il prodotto che \emph{SpaghettiCode} intende rilasciare deve essere:\par
 Per prodotto si intende ciò che è concretamente utilizzabile, consultabile o eseguibile. In questo caso si tratta dei documenti e del software.
 
 \subsubsection{Documenti}
-Come trattato nel precedente capitolo i documenti devono essere letti e capiti da chiunque abbia almeno la licenza media.\\
-Gli obiettivi per un documento sono quindi: \\
+Come trattato nel precedente capitolo i documenti devono essere letti e capiti da chiunque abbia almeno la licenza media.
 
 \setlength{\parindent}{0pt}\textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OP01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi; \\
-	\item \textbf{OP02 Correttezza ortografica}: i documenti non devono presentare errori.
+	\item \textbf{OPD01 Leggibilità del testo}: i documenti devono essere letti in modo fluido evitando periodi troppo lunghi;
+	\item \textbf{OPD02 Correttezza ortografica}: i documenti non devono presentare errori.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MP01 Indice di Gulpease};
-	\item \textbf{MP02 Errori ortografici}.
+	\item \textbf{MPD01 Indice di Gulpease}: è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+	La formula è la seguente:\par
+	\begin{center}
+		$G = 89\ +\ \frac{300 * (numero\ di\ frasi) - 10 * (numero\ di\ lettere)}{numero\ di\ parole} $
+	\end{center}
+	\item \textbf{MPD02 Errori ortografici}.
 \end{itemize}
 
-Per verificare questi requisiti si farà ricorso all’ \glossario{indice di Gulpease}. L'Indice Gulpease è un indice di leggibilità di un testo, è tarato sulla lingua italiana, e considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
-La formula è la seguente:\par
-\begin{center}
-	$G = 89\ +\ \frac{300 * (numero\ di\ frasi) - 10 * (numero\ di\ lettere)}{numero\ di\ parole} $
-\end{center}
-Come descritto nella seguente tabella, ci aspettiamo che i documenti siano entro uno specifico range di valori e che siano corretti, quindi che la quantità di errori presenti sia 0. \par
+\subsubsection{Software}
+Il software rilasciato deve essere di qualità, e per renderlo tale si farà riferimento al \emph{Modello di qualità} descritto sopra.
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\rowcolor{lightgray}
-		\textbf{ID metrica}      & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
-		\hline
-		MP01 Indice di Gulpease & \(\ge 80\)                  & \(\ge 60\)                  \\
-		MP02 Errori ortografici & \(= 0\)                     & \(= 0\)                     \\
-		\hline
-	\end{tabular}
-	\caption{Indici di qualità per le metriche di comprensione del prodotto}
-\end{table}
-
-\paragraph{Software}
-Il software rilasciato deve essere di qualità, e per renderlo tale si farà riferimento al \emph{Modello di qualità} descritto sopra. \\
-Di seguito presentiamo alcune delle metriche che intendiamo adottare. \\
-\emph{Questo paragrafo verrà ampliato in futuro, in quanto attualmente è ancora prematuro definire delle metriche più complete.} \\
-
-\smallbreak
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OP03 Assenza di bug}: il prodotto non deve presentare bug;
-	\item \textbf{OP04 Assenza di errori}: il prodotto deve presentare meno errori possibile;
-	\item \textbf{OP05 Assenza di file senza intestazione}: non ci devono essere file senza intestazione;
-	\item \textbf{OP06 Usabilità del prodotto}: il prodotto deve essere facilmente usabile.
+	\item \textbf{OPS01 Assenza di bug}: il prodotto non deve presentare bug;
+	\item \textbf{OPS02 Assenza di errori}: il prodotto deve presentare meno errori possibile;
+	\item \textbf{OPS03 Assenza di file anonimi}: non ci devono essere file senza intestazione;
+	\item \textbf{OPS04 Usabilità del prodotto}: rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato dall'utente;
+	\item \textbf{OPS05 Superamento test}: tutti i tipi di test ai quali il codice viene sottoposto;
+	\item \textbf{OPS06 Copertura test}: il codice deve essere completamente verificato dai test;
+	\item \textbf{OPS07 Manutenibilità codice}: il codice deve essere agevolmente manutenibile;
+	\item \textbf{OPS08 Leggibilità}: il codice deve essere comprensibile.
 \end{itemize}
 
 \textbf{Metriche:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{MP03 Presenza di bug};
-	\item \textbf{MP04 Densità di errori};
-	\item \textbf{MP05 File senza intestazione};
-	\item \textbf{MP06 Usabilità del prodotto}.
+	\item \textbf{MPS01 Presenza di bug};
+	\item \textbf{MPS02 Densità di errori}: l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:
+	      \begin{center} $M = \frac{N_{er}}{N_{te}} * 100$ \end{center}
+	      dove
+	      \subitem N\textsubscript{ER} indica il numero di errori rilevati durante il testing;
+	      \subitem N\textsubscript{TE} indica il numero di test effettuati;
+	\item \textbf{MPS03 File senza intestazione};
+	\item \textbf{MPS04 Usabilità del prodotto};
+	\item \textbf{MPS05 Test superati}: percentuale di test passati;
+	\item \textbf{MPS06 Line coverage}: percentuale di righe di codice sottoposte a test;
+	\item \textbf{MPS07 Duplicazione codice: blocchi di codice che si ripetono più volte};
+	\item \textbf{MPS08 Densità commenti: rapporto tra righe di commento e righe di codice}.
 \end{itemize}
 
-
-\paragraph{MP04 - Densità di errori}
-La densità di errori è l'abilità del prodotto di resistere a malfunzionamenti. Si calcola così:\par
+\subsection{Tabella riassuntiva degli obiettivi di qualità di prodotto}
+La seguente tabella indica gli obiettivi di qualità che i prodotti dovranno possedere e le metriche ad essi associate con i relativi valori accettabili e ottimali.
 
 \begin{center}
-	$M = \frac{N_{er}}{N_{te}} * 100$
-\end{center}
-
-dove
-\smallbreak
-\begin{itemize}
-	\item N\textsubscript{ER} indica il numero di errori rilevati durante il testing;
-	\item N\textsubscript{TE} indica il numero di test effettuati.
-\end{itemize}
-
-Il valore preferibile è lo 0\%; il valore accettabile è inferiore al 10\%.
-
-\paragraph{MP06 Usabilità del prodotto}
-L'usabilità del prodotto è la facilità con cui l’utente raggiunge ciò che vuole; viene rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato, infatti un software poco annidato è più usabile per l'utente medio.
-\smallbreak
-\begin{itemize}
-	\item misurazione: quantità di click per raggiungere l'obiettivo;
-	\item valore preferibile: inferiore a 6;
-	\item valore accettabile: inferiore a 10.
-\end{itemize}
-
-\subsection{Tabella qualità di prodotto}
-La seguente tabella indica gli obiettivi di qualità che i prodotti devono possedere.\\
-Ogni obiettivo di qualità è indicato con:
-\smallbreak
-\begin{itemize}
-	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
-	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
-	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
-	\item \textbf{Preferibile}: indica il valore a cui si punta per avere la massima qualità.
-\end{itemize}
-
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|l|c|c|}
+	\begin{longtable}{|p{5cm}|p{6cm}|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}                    	& \textbf{Metrica}             & \textbf{Accettabile} & \textbf{Preferibile} \\
-		OP01 Leggibilità del testo           	& MP01 Indice di Gulpease      & \(\ge 60\)           & \(\ge 80\)           \\
-		OP02 Correttezza ortografica         	& MP02 Errori ortografici      & 0                    & 0                    \\
-		OP03 Assenza di bug                  	& MP03 Presenza di bug         & 0                    & 0                    \\
-		OP04 Assenza di errori              	& MP04 Densità di errori       & 10\%                 & 0\%                  \\
-		OP05 Assenza file senza intestazione 	& MP05 File senza intestazione & 0                    & 0                    \\
-		OP06 Usabilità del prodotto          	& MP06 Usabilità del prodotto  & \(\leq10\) click     & \(\leq6\) click      \\
+		\textbf{Obiettivo qualità prodotto}   & \textbf{Metrica associata}                             & \textbf{Accettabile} & \textbf{Ottimale} \\
 		\hline
-	\end{tabular}
-	\caption{Metriche qualità di prodotto}
-\end{table}
+		\endfirsthead
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Obiettivo qualità prodotto}   & \textbf{Metrica associata}                             & \textbf{Accettabile} & \textbf{Ottimale} \\
+		\hline
+		\endhead
 
-\clearpage
+		\hline
+		\rowcolor{white}
+		\multicolumn{4}{|c|}{\emph{Continua alla pagina successiva...}}                                                                           \\
+		\hline
+		\endfoot
+		\endlastfoot
+		\rowcolor{lightgray} \multicolumn{4}{|c|}{Documenti}                                                                                      \\
+		\hline
+		OPD01 Leggibilità del testo           & MPD01 Indice di Gulpease                               & \(\ge 60\)           & \(\ge 80\)        \\
+		OPD02 Correttezza ortografica         & MPD02 Errori ortografici                               & 0                    & 0                 \\
+		\hline \rowcolor{lightgray} \multicolumn{4}{|c|}{Software}                                                                                \\
+		\hline
+		OPS01 Assenza di bug                  & MPS01 Presenza di bug                                  & 0                    & 0                 \\
+		OPS02 Assenza di errori               & MPS02 Densità di errori                                & 10\%                 & 0\%               \\
+		OPS03 Assenza file anonimi & MPS03 File senza intestazione                          & 0                    & 0                 \\
+		OPS04 Usabilità del prodotto          & MPS04 Usabilità del prodotto                           & \(\leq10\) click     & \(\leq6\) click   \\
+		OPS05 Superamento test                & MPS05 Test superati                                    & \(\ge 80\%\)         & 100\%             \\
+		OPS06 Copertura test                  & MPS06 Line coverage                                    & \(\ge 80\%\)         & 100\%             \\
+		OPS07 Manutenibilità codice           & MPS07  Duplicazione codice                      & \(\leq 10\%\)        & 0\%               \\
+		OPS08 Leggibilità                     & MPS08 Densità commenti & \(\leq 10\%\)        & \(\leq 20\%\)     \\
+		\hline
+		\rowcolor{white}
+		\caption{Obiettivi di qualità di prodotto}
+		\label{table:obiettiviQualitaProdotto}
+	\end{longtable}
+\end{center}
 
 \end{document}
