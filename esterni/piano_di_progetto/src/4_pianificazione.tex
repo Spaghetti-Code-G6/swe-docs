@@ -386,21 +386,23 @@ Complessivamente questa fase è caratterizzata da due processi, quello di \emph{
 
 \textbf{HD-Viz:}
 \begin{itemize}
-    \item \textbf{Individuazione dell'architettura:}
+    \item \textbf{Individuazione dell'architettura e creazione diagrammi:}
     \begin{itemize}
-        \item \textbf{Incremento I:} Si individuano i pattern che più si adattano alle necessità e ai vari componenti dell'applicazione;
+        \item \textbf{Incremento I:} MVP;
+        \item \textbf{Incremento II:} Dataset;
+        \item \textbf{Incremento III:} Grafici;
+        \item \textbf{Incremento IV:} Presenter e interfacce;
+        \item \textbf{Incremento V:} View;
+        \item \textbf{Incremento VI:} Interazioni tra i tipi;      
     \end{itemize}
-    \item \textbf{Creazione diagrammi UML:}
-    \begin{itemize}
-        \item \textbf{Incremento I:} Si creano i diagrammi relativi alla parte X;
-        \item \textbf{Incremento II:} Si creano i diagrammi relativi alla parte Y;
-        \item \textbf{Incremento III:} Si creano i diagrammi relativi alla parte Z;
-    \end{itemize}
+
     \item \textbf{Codifica:}
     \begin{itemize}
-        \item \textbf{Incremento I:} Si codifica la parte X e se ne realizzano i test;
-        \item \textbf{Incremento II:} Si codifica la parte Y e se ne realizzano i test;
-        \item \textbf{Incremento III:} Si codificala parte Z e se ne realizzano i test;
+        \item \textbf{Incremento I:} Si codifica la parte client-observer e se ne realizzano i test;
+        \item \textbf{Incremento II:} Si codifica la parte dataset e se ne realizzano i test;
+        \item \textbf{Incremento III:} Si codificano i grafici e se ne realizzano i test;
+        \item \textbf{Incremento IV:} Si codificano i presenters;
+        \item \textbf{Incrementi V:} Si codificano le views;
     \end{itemize}
 \end{itemize}
 
@@ -420,14 +422,15 @@ Il blocco imposto nei colloqui per la Product Baseline ha richiesto di rivedere 
 sia i vari errori emersi tra gli esisti della Revisione di Progettazione, hanno comportato parecchio ritardo. Il gruppo ha comunque iniziato a scrivere codice e contemporaneamente 
 i test necessari sia per valutare il raggiungimento degli obiettivi di qualità, sia per dimostrare effettivamente che l'architettura ideata è valida. \\
 Come nella precedente pianificazione, la fase si è composta da due processi, documentazione e programmazione. Per quanto riguarda i documenti, gli incrementi previsti 
-sono gli stessi della pianificazione precedente. Per quanto riguarda invece la codifica software si è dovuto rivalutare quanto lavoro svolgere. \\
+sono gli stessi della pianificazione precedente. Per quanto riguarda invece la codifica software si è dovuto rivalutare quanti requisiti sviluppare. \\
 
 \textbf{HD-Viz:}
 \begin{itemize}
     \item \textbf{Correzione dell'architettura:}
     \begin{itemize}
-        \item \textbf{Incremento I:} Si correggono i pattern relativi a X;
-        \item \textbf{Incremento II:} Si correggono i pattern relativi a Y;
+        \item \textbf{Incremento I:} Si correggono le interazioni tra i tipi;
+        \item \textbf{Incremento II:} Si corregge il server;
+        \item \textbf{Incremento III:} Si aggiungono nuovi tipi;
     \end{itemize}
     \item \textbf{Codifica:}
     \begin{itemize}
@@ -450,25 +453,18 @@ sono gli stessi della pianificazione precedente. Per quanto riguarda invece la c
 
 \subsection{Validazione e Collaudo}%
 \label{sub:valid_coll}
-Periodo: 2021-04-03 al 2021-05-03.\\ \\ 
+Periodo: X al Y \\ \\ 
 Questa fase terminerà con la \textsc{Revisione di Accettazione}. In questo periodo unico verranno svolte le seguenti attività:
-%aggiornati i documenti e verrà verificato il software creato. Saranno impiegati principalmente verificatori e programmatori al fine di effettuare un controllo serrato sul software che verrà rilasciato. Sarà completato il \textsc{Manuale d'utente} e sarà redatta la presentazione e la lettera finale. 
-%Nella settimana successiva alla consegna della \textsc{Revisione di Accettazione} verrà redatta la presentazione da portare in sede di revisione programmata giorno 10/05/2021.
 
 \begin{itemize}
-    \item Codifica: codifica della versione finale del prodotto;
+    \item Codifica: codifica della versione finale del prodotto, realizzando i requisiti opzionali rimanenti;
     \item Correzione e verifica dei documenti precedentemente redatti;
-    \item Aggiornamento e verifica manuali: stesura versione finale del \textsc{Manuale Utente} e \textsc{Manuale Sviluppatore};
-    \item Validazione: verifica di conformità rispetto ai requisiti;
-    \item Collaudo: test di collaudo per le ogni funzionalità del prodotto;
+    \item Aggiornamento e verifica manuali: stesura della versione finale del \textsc{Manuale Utente} e \textsc{Manuale Sviluppatore};
+    \item Validazione: verifica di conformità rispetto agli obiettivi;
+    \item Collaudo: test di collaudo per ogni funzionalità del prodotto;
     \item Preparazione presentazione.
 \end{itemize}
 
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=18cm]{src/img/gantt/04_RA.png}
-% \caption{Diagramma di Gantt della fase di validazione e collaudo}
-% \end{figure}
 
 \begin{figure}[H]
 \centering
