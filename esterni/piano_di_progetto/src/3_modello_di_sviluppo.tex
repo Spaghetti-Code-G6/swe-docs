@@ -20,10 +20,17 @@ Il ciclo di incremento risulta suddiviso nei seguenti passi:
     \item Test;
     \item Valutazione.
 \end{enumerate}
-Ogni ciclo di incremento permette lo sviluppo di una funzionalità aggiuntiva,
-preventivamente discussa con il cliente durante la fase iniziale del ciclo stesso.
-la ciclicità prevista dal modello incrementale facilita anche il versionamento del sistema,
-tracciando modifiche nette al software.
+Ogni ciclo di incremento permette lo sviluppo di una funzionalità aggiuntiva.
+La priorità nell'implementazione viene data alle funzionalità con importanza maggiore, quindi tutte quelle funzionalità base richieste dal committente o le funzionalità che sono dipendenze di altre. 
+Seguendo questo modello le funzionalità principali e più importanti vengono implementate per prime, inserendo in questo modo quelle meno significative in un sistema stabile. 
+La ciclicità prevista dal modello incrementale facilita anche il versionamento del sistema,
+tracciando modifiche nette al software.\\
+L'iter che verrà seguito dal gruppo per ogni fase è il seguente:
+\begin{itemize}
+    \item Il gruppo fissa degli incrementi e le relative date di scadenze entro le quali l'incremento deve essere concluso.
+    \item Il carico di lavoro viene suddiviso tra i membri del gruppo in base ai ruoli assegnati.
+    \item Al termine dell'incremento verrà analizzato il lavoro svolto e se gli obbiettivi sono stati rispettati (fase di \emph{verifica}).
+\end{itemize}
 
 \begin{figure}[H]
     \centering
@@ -40,28 +47,55 @@ L'utilizzo di questo modello permette di ottenere importanti vantaggi, quali:
     \item Possibilità di un maggior numero di feedback da parte del cliente, aumentando l'efficienza.
 \end{itemize}
 
-%TODO Allinenare incrementi in capitolo 3 - 4 - 5
+
 \subsubsection{Incrementi individuati}
 \label{ssub:incr_ind}
 
-Di seguito viene riportato un tracciato incremento | Use case/requisito, in modo tale da comprendere più chiaramente gli UC o requisiti che verranno soddisfatti in ciascun incremento. 
+Di seguito viene riportato un tracciato incremento | obiettivo, in modo tale da comprendere più chiaramente i requisiti che verranno soddisfatti in ciascun incremento. 
+Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato ad essi e verranno considerati soddisfatti in tutti gli incrementi successivi a quello di sviluppo.
 
-Gli UC o i requisiti verranno sviluppati all'interno dell'incremento associato ad essi e verranno considerati soddisfatti in tutti gli incrementi successivi a quello di sviluppo. Gli UC e i requisiti qui riportati sono reperibili all'interno del documento \textsc{Analisi dei Requisiti v1.0.0}.
+\subsubsection*{Progettazione e codifica della technology baseline}
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|p{3cm}|p{3cm}|}
+	\begin{tabular}{|p{3cm}|p{6.5cm}|}
 	\hline
 	\rowcolor{lightgray}
-	\textbf{Incremento} & \textbf{UC/Requisiti}\\
+    \textbf{Incremento} & \textbf{Obiettivi}\\
+    \hline
+        Incremento I & Sviluppo ambiente di lavoro\\
+        Incremento II & Inserimento dati tramite file\\
+        Incremento III & Sviluppo grafico Scatterplot Matrix \\
+        Incremento IV & Modifica della dimensione dello ScatterPlot Matrix\\
+        Incremento V & Inserimento dati tramite database\\
+    \hline
+    \end{tabular}
+    \caption{Tabella tracciamento incremento-obiettivi}
+\end{table}
+
+\subsubsection*{Progettazione e codifica di dettaglio}
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|p{3cm}|p{6.5cm}|}
 	\hline
-        Incremento 1 & RVO3\\
-        Incremento 2 & RVO1\\
-        Incremento 3 & UC1.2  UC3 \\
-        Incremento 4 & UC2.2 UC4.2.1 UC4.2.2 UC4.2.4 UC4.2.5\\
-        Incremento 5 & UC1.3\\
-	\hline	
+	\rowcolor{lightgray}
+    \textbf{Incremento} & \textbf{Obiettivi}\\
+    \hline
+        Incremento II & Sviluppo inserimento dati tramite file \\
+        Incremento III & Sviluppo Scatterplot Matrix \\
+        Incremento IV & Sviluppo modifica grafico Scatterplot Matrix \\
+        Incremento V & Sviluppo Distance Map e algoritmi di scelta \\	
+        Incremento VI & Sviluppo inserimento dati tramite database \\
+        Incremento VII & Sviluppo Force Field \\
+        Incremento VIII & Sviluppo Heat Map \\
+        Incremento IX & Sviluppo PLMA \\
+        Incremento X & Sviluppo modifiche Distance Map \\
+        Incremento XI & Sviluppo modifica colori \\
+        Incremento XII & Sviluppo modifica dimensioni \\
+        Incremento XIII & Sviluppo modifica etichette \\
+        Incremento XIV & Sviluppo visualizzazione errori \\        
+    \hline	
 	\end{tabular}
-	\caption{Tracciamento incremento UC/Requisiti}
+	\caption{Tabella tracciamento incremento-obiettivi}
 \end{table}
 
 \end{document}
