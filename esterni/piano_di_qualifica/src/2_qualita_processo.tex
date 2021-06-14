@@ -3,12 +3,12 @@
 \begin{document}
 
 \subsection{Scopo}
-In questa sezione saranno presentati gli obiettivi di qualità che si vogliono raggiungere relativi ai processi implementati e ai loro prodotti, così da rendere efficace la valutazione della qualità e di selezionare le migliori metriche.\\
+In questa sezione saranno presentati gli obiettivi di qualità che si vogliono raggiungere relativi ai processi implementati e ai loro prodotti; ad ogni obiettivo verrà associata una metriche che descriverà come calcolarne il risultato, e se questo sia entro gli standard qualitativi che ci siamo prefissati.\\
 La qualità di un prodotto è fortemente influenzata dai processi utilizzati, per questo motivo si è deciso di usare come riferimento lo standard ISO/IEC 15504 (SPICE)  e il metodo PDCA (o \glossario{ciclo di Deming}) per il miglioramento continuo della qualità durante tutto l'arco del progetto.\\
 Per ogni processo sono elencate le sue funzioni principali, gli obiettivi prefissati e le metriche adottate per raggiungere quell’obiettivo.
 
 \subsubsection{PROC01 Gestione progetto}
-Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lavoro da svolgere per adempiere ai requisiti trovati. L'esito dell'intero progetto è dipendente da questo processo, che deve strutturare il \glossario{way of working} del gruppo.\\
+Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lavoro da svolgere per adempiere ai requisiti trovati. L'esito dell'intero progetto è dipendente da questo processo, che deve strutturare il \glossario{way of working} del gruppo.
 
 \setlength{\parindent}{0pt}\textbf{Funzioni:}
 \smallbreak
@@ -40,7 +40,7 @@ Lo scopo di questo macro-processo è quello di pianificare ed organizzare il lav
 \end{itemize}
 
 \subsubsection{PROC02 Analisi}
-Questo macro-processo si riferisce ad ogni tipo di analisi presente in questo progetto, non solo l'analisi dei requisiti.\\
+Questo macro-processo si riferisce ad ogni tipo di analisi presente in questo progetto, non solo l'analisi dei requisiti.
 
 \textbf{Funzioni:}
 \smallbreak
@@ -100,21 +100,21 @@ dove
 %\end{itemize}
 
 \subsubsection{PROC03 Verifica}
-Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano errori, se rispettano gli obiettivi di qualità e se sono corretti nella loro forma e contenuto. \\
+Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano errori, se rispettano gli obiettivi di qualità e se sono corretti nella loro forma e contenuto.
 
 \textbf{Funzioni:}
 \smallbreak
 \begin{itemize}
 	\item \textbf{Verificare funzionalità}:  i prodotti devono rispettare i requisiti prefissati e quindi bisogna controllare che il loro output sia quello atteso;
 	\item \textbf{Verifica processi}:  controllare che i processi rispettino il loro ciclo di vita;
-	\item \textbf{Verifica qualità}:  bisogna verificare che le metriche degli obiettivi di qualità siano entro limiti accettabili;
-	\item \textbf{Verifica rispetto norme}: bisogna verificare costantemente che le norme prefissate siano sempre rispettate.
+	\item \textbf{Verifica qualità}:  verificare che le metriche degli obiettivi di qualità siano entro limiti accettabili;
+	\item \textbf{Verifica rispetto norme}: verificare che le norme prefissate siano sempre rispettate.
 \end{itemize}
 
 \textbf{Obiettivi:}
 \smallbreak
 \begin{itemize}
-	\item \textbf{OPR10 Verifica costante}: tutti i prodotti devono essere costantemente sotto verifica e le verifiche devono essere sempre le medesime, per avere consistenza con i risultati e poter apportare miglioramenti di qualità.
+	\item \textbf{OPR10 Verifica costante}: tutti i prodotti devono essere verificati ad ogni modifica, e periodicamente devono essere controllati globalmente, per avere consistenza con i risultati e poter apportare miglioramenti di qualità.
 \end{itemize}
 
 \textbf{Metriche:}
@@ -123,24 +123,30 @@ Questo processo ha lo scopo di valutare i prodotti per stabilire se presentano e
 	\item \textbf{MPR10 Frequenza di controllo}: è la frequenza con cui viene effettuata la verifica dei documenti o Issue portate a termine.
 \end{itemize}
 
-\subsection{Tabella qualità di processo}
-La seguente tabella indica gli obiettivi di qualità che i processi devono possedere.\\
-Ogni obiettivo di qualità è indicato con:
-\smallbreak
-\begin{itemize}
-	\item \textbf{Obiettivo}: contrassegnato dal suo codice identificativo;
-	\item \textbf{Metrica}: contrassegnato dal suo codice identificativo, indica come sarà garantita la qualità dell'obiettivo;
-	\item \textbf{Accettabile}: indica il valore sotto il quale non sarà garantita la qualità;
-	\item \textbf{Preferibile}: indica il valore a cui si punta per avere la massima qualità;
-\end{itemize}
+\subsection{Tabella riassuntiva degli obiettivi di qualità di processo}
+La seguente tabella indica gli obiettivi di qualità che i processi dovranno possedere e le metriche ad essi associate con i relativi valori accettabili e ottimali.
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|p{5.5cm}|p{4.5cm}|c|c|}
+\begin{center}
+	\begin{longtable}{|p{4.5cm}|p{5cm}|c|c|}
 		\hline
 		\rowcolor{lightgray}
-		\textbf{Obiettivo}                          & \textbf{Metrica}                    & \textbf{Accettabile} & \textbf{Preferibile} \\
+		{\textbf{Obiettivo qualità processo}} & {\textbf{Metrica associata}} & {\textbf{Accettabile}} & {\textbf{Ottimale}} \\
 		\hline
+		\endfirsthead
+
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Obiettivo qualità processo}} & {\textbf{Metrica associata}} & {\textbf{Accettabile}} & {\textbf{Ottimale}} \\
+		\hline
+		\endhead
+
+		\hline
+		\rowcolor{white}
+		\multicolumn{4}{|c|}{\emph{Continua alla pagina successiva...}}\\
+		\hline
+		\endfoot
+		\endlastfoot
+
 		OPR01 Scadenze                              & MPR01 Varianza della pianificazione 	& 4 giorni             	& 0 giorni             	\\
 		OPR02 Budget parziale                       & MPR02 Varianza dei costi parziali   	& $\pm$5\%             	& 0\%                  	\\
 		OPR03 Budget totale							& MPR03 Varianza dei costi totali	  	& 0						& 0						\\
@@ -152,10 +158,9 @@ Ogni obiettivo di qualità è indicato con:
 		OPR09 Rispetto delle norme                  & MPR09 Norme rispettate              	& 100\%                	& 100\%                	\\
 		OPR10 Verifica costante                     & MPR10 Frequenza di controllo        	& Ad ogni Milestone    	& Ad ogni modifica     	\\
 		\hline
-	\end{tabular}
-	\caption{Metriche qualità di processo}
-\end{table}
-
-\clearpage
+		\rowcolor{white}
+		\caption{Obiettivi di qualità di processo}
+	\end{longtable}
+\end{center}
 
 \end{document}
