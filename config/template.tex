@@ -23,24 +23,24 @@
 	\centering % allinea al centro la pagina
 	\hspace{0.05\textwidth}% spazio tra linea e testo
 	% lasciare questa riga per il corretto funzionamento di \parbox
-	\parbox[b]{0.4\textwidth}{% cambiando la larghezza del testo il paragrafo si muove a destra o a sinistra 
+	\parbox[b]{0.4\textwidth}{% cambiando la larghezza del testo il paragrafo si muove a destra o a sinistra
 	{\hspace{0.05\textwidth}\includegraphics[width=4cm,height=4cm]{logo_colori.png}}\\[3\baselineskip] % logo
 	{\Huge\bfseries SpaghettiCode}\\ [\baselineskip] %titolo
-	{\texttt{spaghetti.code.g6@gmail.com}}\\[\baselineskip]\\[4\baselineskip] % 
+	{\texttt{spaghetti.code.g6@gmail.com}}\\[\baselineskip]\\[4\baselineskip] %
 	{\Large\textsc\mbox{\placeholderTitle{}}}\\[4\baselineskip] % nome del documento
 	{\begin{tabular}{r|l}
 		\hline                                  \\
 		% testo in grassetto
 		\textbf{Versione}     & \versione{}     \\
-		\rule{0pt}{3ex}%  EXTRA vertical height 
+		\rule{0pt}{3ex}%  EXTRA vertical height
 		\textbf{Approvazione} & \responsabile{} \\
-		\rule{0pt}{3ex}%  EXTRA vertical height 
+		\rule{0pt}{3ex}%  EXTRA vertical height
 		\textbf{Redazione}    & \redattori{}    \\
-		\rule{0pt}{3ex}%  EXTRA vertical height 
+		\rule{0pt}{3ex}%  EXTRA vertical height
 		\textbf{Verifica}     & \verificatori{} \\
-		\rule{0pt}{3ex}%  EXTRA vertical height 
+		\rule{0pt}{3ex}%  EXTRA vertical height
 		\textbf{Uso}          & \uso{}          \\
-		\rule{0pt}{3ex}%  EXTRA vertical height 
+		\rule{0pt}{3ex}%  EXTRA vertical height
 		\textbf{Destinato a}  & \destinatari{}
 		\ifthenelse{\equal{\uso}{Esterno}}{
 		\\ & Zucchetti S.p.A.
@@ -87,29 +87,37 @@
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
 
 \begin{longtable}
-	[H]{|>{\centering\bfseries}m{2cm}|>{\centering}m{3.5cm}|>{\centering}m{2.5cm}|>{\centering}m{3cm}|>{\centering\arraybackslash}m{5cm}|}
-	
+	[H]{
+	|>{\centering\bfseries}m{1.4cm}
+	|>{\centering}m{3cm}
+	|>{\centering}m{2.3cm}
+	|>{\centering}m{1.7cm}
+	|>{\centering}m{4cm}
+	|>{\centering\arraybackslash}m{3cm}|}
+
 	\hline
 	\rowcolor{lightgray}
-	{\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}} \\
+	{\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}} & {\textbf{Verificatore}} \\
+
 	\hline
 	\endfirsthead
-	
+
 	\hline
 	\rowcolor{lightgray}
-	{\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}} \\
+	{\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}} & {\textbf{Verificatore}} \\
+
 	\hline
 	\endhead
-	
+
 	\hline
- 	\multicolumn{5}{|c|}{\emph{Continua alla pagina successiva......}}\\
-	
+	\rowcolor{white}
+	\multicolumn{6}{|c|}{\emph{Continua alla pagina successiva...}}                                                                     \\
+	\hline
 	\endfoot
 	\hline
 	\endlastfoot
-	
-	\modifiche{}
 
+	\modifiche{}
 \end{longtable}
 % section registro_delle_modifiche (end)
 
