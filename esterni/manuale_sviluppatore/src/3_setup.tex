@@ -48,10 +48,11 @@ Per eseguire l’applicazione HD-Viz bisogna seguire i seguenti passaggi:
 \item Scaricare l’applicazione, in formato zip, dalla repository del progetto: (inserire link)
 \item Estrarre il contenuto del file in una qualsiasi directory; 
 \item Aprire il prompt dei comandi (Windows) o il terminale (Linux/Mac); 
-\item Posizionarsi tramite il comando \verb|cd /percorso| nella cartella in cui sono stati estratti i file;
-\item Sarà necessario installare in primis tutte le dipendenze tramite il comando \verb|npm install|, seguito poi dal comando \verb|node server/server.js|
-\item In seguito si deve aprire su browser il percorso visibile sul terminale (Es. \url{http://localhost:8085}).
+\item Posizionarsi tramite il comando  \begin{center} \verb|cd /percorso| \end{center} nella cartella in cui sono stati estratti i file;
+\item Sarà necessario installare in primis tutte le dipendenze tramite il comando \begin{center} \verb|npm i| \end{center} seguito poi dal comando \begin{center}\verb|npx webpack ./server/modules/application.js --mode development|\end{center} e dal comando \begin{center}\verb|node ./server/server.js| \end{center}
+\item In seguito si deve aprire su browser il percorso visibile sul terminale (Es. \url{http://localhost:8085/public/index.html}).
 \end{itemize}
+
 
 \subsubsection{Linux}
     \label{subsub:linux_inst}
