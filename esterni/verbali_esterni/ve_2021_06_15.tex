@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\input{../../config/config.tex}
+
+\appendToGraphicspath{../../config/src/img/}
+
+\setTitle{Verbale Esterno 2021-06-15}
+
+\setVersione{v0.1.0}
+
+\setResponsabile{
+	Kostadinov Samuel
+}
+
+\setRedattori{
+	Paparazzo Giorgia
+}
+
+\setVerificatori{
+	Rizzo Stefano
+}
+
+\setUso{Interno}
+
+\setDestinatari{
+	prof. Vardanega Tullio \\ &
+	prof. Cardin Riccardo \\ &
+	SpaghettiCode
+}
+
+\setDescrizione{Riassunto dell'incontro tenutosi il 15 Giugno 2021 realizzato dal gruppo SpaghettiCode in forma di meeting online con Piccoli Gregorio.}
+
+\setModifiche{
+	v0.1.0 & Paparazzo Giorgia & Progettista & 2021-06-15 & Creazione del documento e prima stesura & Rizzo Stefano
+
+}
+
+\disabilitaElencoFigure
+\disabilitaElencoTabelle
+
+\begin{document}
+
+\input{../../config/template.tex}
+
+\section{Informazioni generali}
+\label{sec:info_generali}
+
+\subsection{Informazioni incontro}
+\label{sub:info_incontro}
+
+\begin{itemize}
+	\item \textbf{Luogo}: Applicazione \glossario{Discord};
+	\item \textbf{Data}: 2021-06-15;
+	\item \textbf{Ora}: 17:30-18.00;
+	\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item Piccoli Gregorio
+		\item Paparazzo Giorgia
+		\item Masevski Martin
+		\item Fichera Jacopo
+		\item Rizzo Stefano
+
+	\end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+A seguito del grande ritardo conseguito, si vede la necessità di discutere dei seguenti punti:
+\begin{enumerate}
+	\item \nameref{itm:1};
+	\item \nameref{itm:2};
+\end{enumerate}
+
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+\begin{itemize}
+    \item \textsc{HD-Viz};
+    \item \textsc{Manuale Utente};
+    \end{itemize}
+
+\newpage
+\section{Resoconto}
+\label{sec:resoconto}
+
+Di seguito vengono riportate le decisioni concordate e gli esiti delle diverse discussioni.
+
+\subsection{Requisiti da sviluppare}
+\label{itm:1}
+
+A seguito del ritardo maturato e della maggior parte dei componenti del gruppo in stage, si vede la necessità di concludere rapidamente il progetto. Questo implica che non è possibile sviluppare tutti i requisiti 
+individuati in fase di analisi, e quindi si chiede al proponente di indicarci quali sono i requisiti da mantenere e quali da scartare. \\
+Ci viene indicato di scartare la Proiezione Lineare Multiasse,  e di concentrarci sulla Distance Map e Force Field. \\
+A seguito del colloquio tenutosi, il gruppo coglie il suggerimento di inserire qualche algoritmo di ridimensionamento. 
+
+\section{Tabella delle decisioni}%
+\label{sub:decisioni}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|p{13cm}|}
+		\hline
+		\rowcolor{lightgray}
+		\textbf{Codice} & \textbf{Descrizione} \\
+		\hline
+			VI0615-01 & Si decide di scartare lo sviluppo della PLMA \\
+            VI0615-02 & Si decide di inserire nuovi algoritmi di ridimensionamento \\
+		\hline
+	\end{tabular}
+	\caption{Tabella delle decisioni}
+\end{table}
+
+\end{document}
