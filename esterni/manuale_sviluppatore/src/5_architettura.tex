@@ -2,9 +2,17 @@
 
 \begin{document}
 
-\subsection{Pattern architetturale: }
+\subsection{Pattern architetturale: MVP}
+Il pattern architetturale scelto è il \emph{Model View Presenter}. 
+Il model è un'interfaccia che definisce i dati da visualizzare o su cui agire nell'interfaccia utente.
+La view è un'interfaccia che visualizza i dati e indirizza i comandi dell'utente (eventi) al presentatore per agire su quei dati.
+Il presenter agisce sul model e sulla view. Recupera i dati e li formatta per la visualizzazione.\\
+Nella specifico nella nostra architettura sono presenti diversi componenti appartenenti a tale formato, e verranno descritti più nel dettaglio di seguito.\\
+Nella nostra architettura infatti ogni grafico avrà il suo model,  il suo presenter e la sua view. Ciascuno di questi componenti 
+farà capo ad un model master.
 
 \subsection{Architettura di dettaglio}
+\subsubsection{Il client}
 
 \begin{figure}[H]
 	\centering
@@ -24,7 +32,7 @@ presenter e il modello del grafico relativo. \\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{img/core-hdvizmanager.jpg}
-	\caption{Introduzione a Hd-Viz}
+	\caption{HD-Viz Manager}
 \end{figure}
 
 Graphs contiene le diverse visualizzazioni che la nostra applicazione metterà a disposizione, Component mette a disposizione una serie di componenti che permettono di aggiungere funzionalità ai grafici.
@@ -34,7 +42,7 @@ infatti tramite le interfacce ogni grafico implementerà dimensioni e colori a m
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{img/graph-e-hdviz.jpg}
-	\caption{Introduzione a Hd-Viz}
+	\caption{Relazioni tra graph e HD-Viz}
 \end{figure}
 
 
@@ -43,11 +51,26 @@ Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impo
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{img/graphs-e-components.jpg}
-	\caption{Introduzione a Hd-Viz}
+	\caption{Relazioni tra graphs e components}
 \end{figure}
 
 
 Collegando il model al presenter, i vari componenti che modificano la visualizzazione notificheranno il model, che si aggiornerà, e dirà al presenter di aggiornarsi perchè la visualizzazione è cambiata. 
 Ciò avverrà tramite i metodi update. In particolare verrà aggiornato l'EventType.
+
+\subsubsection{Il server}
+
+Il lato server è stato realizzato con \emph{Express}, il quale si occuperà di gestire la sessione per collegarsi al server.
+SQLApplication si occuperà di caricare la configurazione, che verrà passata ad SQLRoute.\\
+Configuration e ConfigurationController si occuperanno di raccogliere le informazioni relative alla connessione con un database, la quale verrà stabilita tramite un file
+json dove vi sarà presente la query.\\
+MDataset (MinimalDataset) controllerà che il dataset passato sia valido perchè potrebbero esserci oggetti che non possono essere rappresentati. Successivamente
+CSVApplication si occuperà di creare un file JSON che contenga i dati letti, se il file è corretto, allora CSVRuoute risponderà positivamente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/server.jpg}
+	\caption{Server HD-Viz}
+\end{figure}
 
 \end{document}
