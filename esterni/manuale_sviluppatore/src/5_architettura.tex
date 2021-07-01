@@ -7,7 +7,7 @@ Il pattern architetturale scelto è il \emph{Model View Presenter}.
 Il model è un'interfaccia che definisce i dati da visualizzare o su cui agire nell'interfaccia utente; farà inoltre i calcoli necessari, ad esempio la \emph{Distance Matrix}.
 La view è un'interfaccia che visualizza i dati e indirizza i comandi dell'utente (eventi) al presenter per agire su quei dati.
 Il presenter agisce sul model e sulla view. Recupera i dati e li formatta per la visualizzazione.\\
-Nella specifico nella nostra architettura sono presenti diversi componenti appartenenti a tale formato, e verranno descritti più nel dettaglio di seguito.\\
+Nello specifico nella nostra architettura sono presenti diversi componenti appartenenti a tale formato, e verranno descritti più nel dettaglio di seguito.\\
 Nella nostra architettura le componenti hanno il presenter e la view, non hanno un modello perchè non ci saranno calcoli bensì eventi da aggiornare. Nel caso dei
 grafici la view viene realizzata tramite le funzionalità di D3.
 
@@ -23,11 +23,11 @@ grafici la view viene realizzata tramite le funzionalità di D3.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{img/core.jpg}
-	\caption{Introduzione a Hd-Viz}
+	\caption{Struttura generale Hd-Viz}
 \end{figure}
 
 \emph{HD Viz manager} è il core dell'architettura, si delegherà la visualizzazione ai vari Manager, inoltre terrà traccia 
-dei dati per evitare istanze multiple del Dataset, della DistanceMap e dei grafici una volta creati. Nel momento in cui 
+dei dati per evitare istanze multiple del Dataset, della Distance Matrix e dei grafici una volta creati. Nel momento in cui 
 verrà modificato il dataset per modificare le visualizzazioni, farà da tramite creando una copia del dataset originale e usando
 tali copie per le modifiche, cosicchè il dataset originale resti invariato.
 Collaborerà poi assieme al \emph{GraphCreatorManager} che gestirà le factories per i vari modelli dei grafici. 
@@ -63,7 +63,7 @@ Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impo
 
 Collegando il model al presenter, i vari componenti che modificano la visualizzazione notificheranno il presenter; a sua volte modificherà il model, il quale si aggiornerà di conseguenza, 
 e notificherà al presenter dei cambiamenti.
-Ciò avverrà tramite i metodi update. In particolare verrà aggiornato l'EventType.
+Ciò avverrà tramite i metodi update. In particolare al presenter verrà passato l'EventType, ovvero il tipo di evento occorso; in base a ciò si aggiornerà il modello, e quindi la visualizzazione.
 
 \subsubsection{Il server}
 
