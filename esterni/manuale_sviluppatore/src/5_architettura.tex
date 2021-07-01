@@ -4,12 +4,12 @@
 
 \subsection{Pattern architetturale: MVP}
 Il pattern architetturale scelto è il \emph{Model View Presenter}. 
-Il model è un'interfaccia che definisce i dati da visualizzare o su cui agire nell'interfaccia utente.
-La view è un'interfaccia che visualizza i dati e indirizza i comandi dell'utente (eventi) al presentatore per agire su quei dati.
+Il model è un'interfaccia che definisce i dati da visualizzare o su cui agire nell'interfaccia utente; farà inoltre i calcoli necessari, ad esempio la \emph{Distance Matrix}.
+La view è un'interfaccia che visualizza i dati e indirizza i comandi dell'utente (eventi) al presenter per agire su quei dati.
 Il presenter agisce sul model e sulla view. Recupera i dati e li formatta per la visualizzazione.\\
 Nella specifico nella nostra architettura sono presenti diversi componenti appartenenti a tale formato, e verranno descritti più nel dettaglio di seguito.\\
-Nella nostra architettura infatti ogni grafico avrà il suo model,  il suo presenter e la sua view. Ciascuno di questi componenti 
-farà capo ad un model master.
+Nella nostra architettura le componenti hanno il presenter e la view, non hanno un modello perchè non ci saranno calcoli bensì eventi da aggiornare. Nel caso dei
+grafici la view viene realizzata tramite le funzionalità di D3.
 
 \subsection{Architettura di dettaglio}
 \subsubsection{Il client}
@@ -55,7 +55,8 @@ Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impo
 \end{figure}
 
 
-Collegando il model al presenter, i vari componenti che modificano la visualizzazione notificheranno il model, che si aggiornerà, e dirà al presenter di aggiornarsi perchè la visualizzazione è cambiata. 
+Collegando il model al presenter, i vari componenti che modificano la visualizzazione notificheranno il presenter; a sua volte modificherà il model, il quale si aggiornerà di conseguenza, 
+e notificherà al presenter dei cambiamenti.
 Ciò avverrà tramite i metodi update. In particolare verrà aggiornato l'EventType.
 
 \subsubsection{Il server}
