@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Pattern architetturale: MVP}
-Il pattern architetturale scelto è il \emph{Model View Presenter}. 
+Il pattern architetturale scelto è il \glossario{Model View Presenter}. 
 Il model è un'interfaccia che definisce i dati da visualizzare o su cui agire nell'interfaccia utente; farà inoltre i calcoli necessari, ad esempio la \emph{Distance Matrix}.
 La view è un'interfaccia che visualizza i dati e indirizza i comandi dell'utente (eventi) al presenter per agire su quei dati.
 Il presenter agisce sul model e sulla view. Recupera i dati e li formatta per la visualizzazione.\\
@@ -27,7 +27,7 @@ grafici la view viene realizzata tramite le funzionalità di D3.
 \end{figure}
 
 \emph{HD Viz manager} è il core dell'architettura, si delegherà la visualizzazione ai vari Manager, inoltre terrà traccia 
-dei dati per evitare istanze multiple del Dataset, della Distance Matrix e dei grafici una volta creati. Nel momento in cui 
+dei dati per evitare istanze multiple del \glossario{Dataset}, della Distance Matrix e dei grafici una volta creati. Nel momento in cui 
 verrà modificato il dataset per modificare le visualizzazioni, farà da tramite creando una copia del dataset originale e usando
 tali copie per le modifiche, cosicchè il dataset originale resti invariato.
 Collaborerà poi assieme al \emph{GraphCreatorManager} che gestirà le factories per i vari modelli dei grafici. 
