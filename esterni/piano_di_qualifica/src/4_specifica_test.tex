@@ -83,14 +83,104 @@ Per assicurare che il progetto rispetti i requisiti identificati nel documento \
 	\end{longtable}
 \end{center}
 
-% \subsection{Test di integrazione}%
-% \label{sub:test_int}
+\subsection{Test di integrazione}%
+\label{sub:test_int}
 
-% TODO
+\begin{center}
+	\begin{longtable}{|c|p{10cm}|c|}
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                                                                   & {\textbf{Implementazione}} \\
+		\hline
+		\endfirsthead
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                                                                   & {\textbf{Implementazione}} \\
+		\hline
+		\endhead
 
-% \subsection{Test di unità}%
-% \label{sub:test_unit}
+		\hline
+		\rowcolor{white}
+		\multicolumn{3}{|c|}{\emph{Continua alla pagina successiva...}}                                                                                                                           \\
+		\hline
+		\endfoot
+		\endlastfoot
 
-% TODO
+
+		TI1               & Viene verificata la corretta integrazione tra il modulo di caricamento dei file e il server                                              & Sì                         \\
+		TI2               & Viene verificata la corretta integrazione tra il database e il server                                                                    & Sì                         \\
+		TI3               & Viene verificata la corretta integrazione tra i moduli responsabili della gestione dei grafici e la libreria D3.js                       & Sì                         \\
+		TI4               & Viene verificata la corretta integrazione tra i dati letti da file e la loro manipolazione con la libreria D3.js                         & Sì                         \\
+		TI5               & Viene verificata la corretta integrazione tra i dati letti da database e la loro manipolazione con la libreria D3.js                     & Sì                         \\
+		TI6               & Viene verificata la corretta integrazione tra le componenti GUI e la logica del modello                                                  & Sì                         \\
+		TI7               & Viene verificata la corretta integrazione tra la persistenza della sessione nel browser e la gestione della sessione da parte del server & Sì                         \\
+		TI8               & Viene verificata la corretta integrazione dei moduli presenter e observer dei vari grafici                                               & Sì                         \\
+		TI9               & Viene verificata la corretta integrazione della GUI con i vari grafici                                                                   & Sì                         \\
+		TI10              & Viene verificata la corretta integrazione con il server e il cambio di file da GUI                                                       & Sì                         \\
+
+		\hline
+		\rowcolor{white}
+		\caption{Riepilogo dei test di sistema}
+	\end{longtable}
+\end{center}
+
+\subsection{Test di unità}%
+\label{sub:test_unit}
+
+\begin{center}
+	\begin{longtable}{|c|p{10cm}|c|}
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                  & {\textbf{Implementazione}} \\
+		\hline
+		\endfirsthead
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                  & {\textbf{Implementazione}} \\
+		\hline
+		\endhead
+
+		\hline
+		\rowcolor{white}
+		\multicolumn{3}{|c|}{\emph{Continua alla pagina successiva...}}                                                                          \\
+		\hline
+		\endfoot
+		\endlastfoot
+
+		TU1               & Viene verificato che il pulsante di caricamento chiama la funzione corretta             & Sì                         \\
+		TU2               & Viene verificato il corretto funzionamento del bottone di invio del file                & Sì                         \\
+		TU3               & Viene verificato che sono i file corretti possono essere caricati                       & Sì                         \\
+		TU4               & Viene verificato che il caricamento del file avviene correttamente                      & Sì                         \\
+		TU5               & Viene verificato il corretto funzionamento dei bottoni di selezione del grafico         & Sì                         \\
+		TU6               & Viene verificata la possibilità di cambiare tipologia al grafico                        & Sì                         \\
+		TU7               & Viene verificato il numero dei dati letti dal file                                      & Sì                         \\
+		TU8               & Viene verificato che il menù delle dimensioni contiene solo le dimensioni corrette      & Sì                         \\
+		TU9               & Viene verificata la possibilità di deselezionare le dimensioni                          & Sì                         \\
+		TU10              & Viene verificata la possibilità di selezionare al massimo 5 dimensioni (Scatter Plot)   & Sì                         \\
+		TU11              & Viene verificato che le dimensioni plottate siano effettivamente quelle selezionate     & Sì                         \\
+		TU12              & Viene verificato che cambiando le dimensioni da plottare cambino anche nei grafici      & Sì                         \\
+		TU13              & Viene verificata la possibilità di selezionare le dimensioni da colorare                & Sì                         \\
+		TU14              & Viene verificato che la selezione dei colori funziona correttamente                     & Sì                         \\
+		TU15              & Viene verificato che funzioni correttamente la selezione dei gradienti                  & Sì                         \\
+		TU16              & Viene verificato che la selezione della brillanza funzioni correttamente                & Sì                         \\
+		TU17              & Viene verificato il corretto funzionamento della selezione della brillanza del grafico  & Sì                         \\
+		TU18              & Viene verificato che gli algoritmi di distanza vengano visualizzati correttamente       & Sì                         \\
+		TU19              & Viene verificato che gli algoritmi di distanza modifichino correttamente il grafico     & Sì                         \\
+		TU20              & Viene verificato che la selezione degli algoritmi di ordinamento funzioni correttamente & Sì                         \\
+		TU21              & Viene verificata la persistenza della sessione                                          & Sì                         \\
+		TU22              & Viene verificato il corretto collegamento al database                                   & Sì                         \\
+		TU23              & Viene verificato che solo i file con una certa dimensione possano essere caricati       & Sì                         \\
+		TU24              & Viene verificato il corretto funzionamento degli alert                                  & Sì                         \\
+		%TU25              & Longdescsomuchlongdescr  & Sì\\
+		%TU26              & Longdescsomuchlongdescr& Sì\\
+		%TU27              & Longdescsomuchlongdescr& Sì\\
+		%TU28              & Longdescsomuchlongdescr& Sì\\
+		%TU29              & Longdescsomuchlongdescr& Sì\\
+		%TU30              & Longdescsomuchlongdescr& Sì\\
+		\hline
+		\rowcolor{white}
+		\caption{Riepilogo dei test di sistema}
+	\end{longtable}
+\end{center}
 
 \end{document}
