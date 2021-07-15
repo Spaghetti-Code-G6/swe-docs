@@ -5,12 +5,13 @@ Questo capitolo ha lo scopo di indicare agli sviluppatori in che modo opera il c
 Vengono di seguito esposti gli strumenti utilizzati per effettuare i test di analisi statica e dinamica.
 
 \subsection{Jest}
-Il framework di testing Jest viene utilizzato per effettuare i test di unità. La configurazione del framework è presente nella directory principale del progetto con il nome \\
-\begin{center}
-    \verb|npm install --save-dev @babel/plugin-transform-runtime|
-\end{center}
+Il framework di testing Jest viene utilizzato per effettuare i test di unità. La configurazione del 
+framework utilizzata è quella di default, ed eventuali mock sono stati definiti all'interno dei singoli 
+file dei test di unità, oppure all'interno della cartella \emph{\_\_mocks\_\_}, presente nella 
+directory principale del progetto, nel caso fossero comuni a più file di test.\\
 
-Per eseguire i test sarà sufficiente eseguire il comando \\
+Per eseguire i test di unità, una volta installato correttamente il prodotto e le dipendenze, sarà 
+sufficiente eseguire il comando \\
 \begin{center}
 \verb|npm test|
 \end{center}
