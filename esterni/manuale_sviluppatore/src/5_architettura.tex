@@ -121,21 +121,25 @@ accodareli all'applicativo express finale.
 	\caption{Diagramma package lato server.}
 \end{figure}
 
-\par Presentata la struttura del diagramma di package si riconoscono diversi package.
+\par Presentata la struttura del diagramma di package si riconoscono diversi package, la cui descrizione segue.
 
 NB: Al fine di rendere la compresione più chiara vengono riportati frammenti dei diversi diagrammi delle classi, 
 quindi verranno eventualmente omesse delle parti laddove non considerate significative.
+\newpage
 
 \begin{itemize}
 	
-	\item \textbf{Core} Cuore dell'applicativo a lato server, contiene le classi per la gestione del server
-	e la definizione di nuovi percorsi da accodare. La classe App definisce il funzionamento del server al quale
-	vengono accodate le possibili implemntazioni della classe astratta \emph{Route}, percorsi dinamici,
-	e in costruzione i possibili percorsi statici che devono essere resi accessibili. Si occupa inoltre della
-	generazione di un ambiento dotato di sessione per il quale ogni percorso implementante \emph{Route} e quindi dotato
-	di un Router ha accesso in fase di esecuzione, non essendo tuttavia vincolante per la realizzazione del percorso.
-	La creazione della sessione si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore}
-	che combinate creano uno store virtuale di oggetti memorizzati per ogni utente che accede al servizio.
+	\item \textbf{Core:} Nucleo dell'applicativo, contiene le classi per la gestione del server
+	e la definizione di nuovi percorsi da creare mediante la classe astratta \emph{Route}. 
+	
+	La classe App definisce il funzionamento del server al quale è possibile accodate le 
+	possibili implementazioni di \emph{Route} e, solamente in costruzione, i possibili 
+	percorsi statici che devono essere resi accessibili. 
+	
+	\emph{Application} si occupa inoltre della generazione di un ambiento dotato di sessione, essa 
+	si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore}
+	che combinate creano uno store virtuale di oggetti memorizzati, di tipo \emph{DataSession}, per ogni 
+	utente che accede al servizio.
 		
 	\begin{figure}[H]
 		\centering
@@ -143,10 +147,13 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 		\caption{Classi del package di Core}
 	\end{figure}
 
-	\item \textbf{Csv} Package per la gestione delle richieste al server di file csv caricati da client in particolare da \emph{CsvRoute}.
-	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso di \emph{fs} per la lettura del file dato in input
-	crea una rappresentazione temporanea del dataset al fine di spedire al client un risultato già manipolabile, creando quindi un \emph{MDataset}.
-	MDataset non è altro che una rappresentazione dummy del dataset priva di funzionalità.
+	\newpage
+	\item \textbf{Csv:} Package per la gestione di file csv caricati da client. 
+	Le richieste HTTP vengono gestite dalla \emph{CsvRoute} che realizza la classe astratta \emph{Route}.
+	
+	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso della liberira \emph{fs} di Node.js per la 
+	lettura del file dato in input. La classe crea una rappresentazione temporanea del dataset al fine di spedire al client un risultato 
+	già manipolabile, creando quindi un \emph{MDataset}.
 	
 	\begin{figure}[H]
 		\centering
@@ -154,12 +161,16 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 		\caption{Classi del package di Csv}
 	\end{figure}
 
+	\newpage
+	\item \textbf{Database:} Il package per il riperimento dei dati da un database su un dato server.
+	
+	Il funzionamento si basa sull'uso di configurazioni che vengono date in costruzione alla classe \emph{RelationalDbApplication} 
+	che permettono di eseguire query sui database dalle informazioni date, sfruttando l'ORM Sequelize. 
+	
+	Dalla query eseguita sul server si costruisce un \emph{MDataset} che viene rispedito al client. 
 
-	\item \textbf{Database} Il package per il riperimento dei dati da un database su un dato server.
-	Il funzionamento si basa sull'uso di configurazioni che vengono date in costruzione alla classe 
-	\emph{RelationalDbApplication} che permettono di eseguire query su un determinato database date le informazioni 
-	sfruttando l'ORM Sequelize. Il Dataset costruito dalla query eseguita sul dato server SQL viene poi rispetito al client
-	come avviene nel package Csv, la \emph{RelationalDbRoute} infatti, realizzando la classe \emph{Route} è in grado di gestire richieste HTTP e di emetterne.
+	Tutte le operazioni, come per il package di \emph{Csv}, vengono generate da richieste HTTP entranti alla \emph{Route} del package, 
+	in questo particolare caso \emph{RelationalDbRoute}.
 
 	\begin{figure}[H]
 		\centering
@@ -168,48 +179,26 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 	\end{figure}
 
 
-	\item \textbf{Configuration e Group} Il package di Group contiene delle semplici classi per il controllo di gruppi
+	\newpage
+	\item \textbf{Configuration e Group:} Il package di Group contiene delle semplici classi per il controllo di gruppi
 	di file con lo stesso nome ma diversa estensione in un determinato percorso, questo si presta al reperimento delle 
 	configurazioni per accedere ad un database che sono divise in un file .json e uno .sql, per la query. 
-	Infatti il \emph{Configuration Collector} dato un \emph{Group} è in grado di ricostruire configurazioni che 
+
+	Il \emph{Configuration Collector} dato un \emph{Group} è in grado di ricostruire le \emph{Configuration} che 
 	come già detto, sono una rappresentazione di tutte le informazioni necessarie per accedere ad una determinata fonte di dati.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=18cm]{img/server-group.png}
 		\caption{Classi del package di Configuration e Group}
 	\end{figure}
 
-	\item \textbf{MDataset} Package conentente una rappresentazione in versione minimal, priva quindi di funzionalità, del dataset
+	\item \textbf{MDataset:} Package conentente una rappresentazione in versione minimal, priva quindi di funzionalità, del dataset
 	che viene calcolato a lato server e spedito al client, in particolare usate dai package \emph{Csv, Database}.
 
-	\item \textbf{Session} Package che contiene la classe per la gestione e il mantenimento della sessione per ogni utente che 
-	accede al servizio di HdViz, esso permette di ottenere informazioni sulla propria \emph{DataSession} o di  
-	memorizzare delle modifiche avvenute a lato client sulla sessione.
+	\item \textbf{Session:} Package che contiene la classe per la gestione e il mantenimento della sessione per ogni utente che 
+	accede al servizio di HdViz, esso permette di ottenere informazioni sulla propria \emph{DataSession} o di memorizzare delle 
+	modifiche avvenute a lato client sulla sessione.
 
 \end{itemize}
-
-
-
-
-Per mantenere i dati coerenti durante l'esecuzione dell'applicativo il server si mette in ascolto  
-ad eventuali notifiche che vengono gestite dal \emph{SessionRoute}.
-
-\paragraph{Route e Application} La logica principale del server viene gestita dalla classe \emph{Application},
-essa infatti prende una qualsiasi \emph{Route}, classe astratta, e ne gestisce l'aggiunta sul principale
-componente di esecuzione di \emph{Express}.
-
-
-Il lato server è stato realizzato con \emph{Express}, il quale si occuperà di gestire la sessione per collegarsi al server.
-SQLApplication si occuperà di caricare la configurazione, che verrà passata ad SQLRoute.\\
-Configuration e ConfigurationController si occuperanno di raccogliere le informazioni relative alla connessione con un database, la quale verrà stabilita tramite un file
-json dove vi sarà presente la query.\\
-MDataset (MinimalDataset) controllerà che il dataset passato sia valido perchè potrebbero esserci oggetti che non possono essere rappresentati. Successivamente
-CSVApplication si occuperà di creare un file JSON che contenga i dati letti, se il file è corretto, allora CSVRuoute risponderà positivamente.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{src/img/server.jpg}
-	\caption{Server HD-Viz}
-\end{figure}
-
 \end{document}
