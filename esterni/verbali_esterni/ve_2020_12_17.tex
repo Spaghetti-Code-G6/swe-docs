@@ -31,17 +31,17 @@
 \setDescrizione{Riassunto dell'incontro realizzato dal gruppo SpaghettiCode tenutosi il 17 Dicembre 2020 in forma di meeting online con Piccoli Gregorio.}
 
 \setModifiche{
-    v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-01 & Approvazione del documento \\
-	v0.1.0 & Rizzo Stefano & Verificatore & 2020-12-29 & Verifica del documento \\
-	v0.0.1 & Masevski Martin & Amministratore & 2020-12-17 & Creazione del documento e prima stesura
+    v1.0.0 & Paparazzo Giorgia & Responsabile & 2021-01-01 & Approvazione del documento & // \\
+	v0.1.0 & Rizzo Stefano & Verificatore & 2020-12-29 & Verifica del documento & // \\
+	v0.0.1 & Masevski Martin & Amministratore & 2020-12-17 & Creazione del documento e prima stesura & //
 }
 
 \disabilitaElencoFigure
 \disabilitaElencoTabelle
 
 \begin{document}
-	
-\input{../../config/template.tex}	
+
+\input{../../config/template.tex}
 
 \section{Informazioni generali}
 \label{sec:info_generali}
@@ -62,7 +62,7 @@
 		\item Piccoli Gregorio
 	\end{itemize}
 \end{itemize}
-    
+
 \subsection{Riferimenti}%
 \label{sub:riferimenti}
 
@@ -99,11 +99,11 @@
 	\subsection{Necessità di gestire autenticazione e registrazione}
 	\label{sub:domanda_01}
     La gestione della sicurezza non è una priorità: la visualizzazione dei grafici lo è. L'autenticazione viene lasciata a discrezione del gruppo.
-    
+
     \subsection{Necessità di prevedere formati di file diversi da .csv}
 	\label{sub:domanda_02}
 	Per recuperare i dati si potrà eseguire query da database o da file, il formato .csv è quello più comune e facile da ottenere. È necessario permettere l'upload diretto di un file.
-	
+
     \subsection{Supporto ai browser}
     \label{sub:domanda_03}
     La retrocompatibilità con i browser più datati non è un requisito necessario. I browser presi in considerazione sono Firefox e Google Chrome. Viene espresso il desiderio di poter usare il software anche da piattaforme mobile, ma l'implementazione viene lasciata a discrezione del gruppo.
@@ -127,11 +127,11 @@
     \subsection{Necessità di salvare il lavoro}
     \label{sub:domanda_08}
     Viene consigliato di non introdurre questa funzionalità, in quanto renderebbe più complessa la preparazione degli ambienti di test.
-    
+
     \subsection{Necessità di esportare i grafici}
     \label{sub:domanda_09}
     La funzionalità non è prevista.
-    
+
     \subsection{Necessità di effettuare pulizia sui dati forniti}
     \label{sub:domanda_10}
     Verranno forniti dati a molte dimensioni anonimizzati. Viene consigliato di cominciare lo sviluppo con dataset facilmente reperibili su Internet. Se ci sarà la necessità di pulire i dataset forniti ci verrà detto più avanti. Verosimilmente i dati saranno da visualizzare as-is. Non si dovrà fare analisi sul contenuto dei dati, ma sulla loro visualizzazione. Ogni possibile scrematura dei dati dovrà essere sempre finalizzata alla visualizzazione.
@@ -150,7 +150,7 @@
 
     \subsection{Limite alle dimensioni dei dati}
     \label{sub:domanda_14}
-    Mediante operazioni di riduzione dimensionale è possibile ridurre il numero di dimensioni. Non sarà necessario effettuare operazioni di riduzione dimensionale.  
+    Mediante operazioni di riduzione dimensionale è possibile ridurre il numero di dimensioni. Non sarà necessario effettuare operazioni di riduzione dimensionale.
     Viene presentato un esempio relativo al grafico scatter plot, che è in grado di includere al massimo 6 dimensioni. le rimanenti (15-6) 9 verranno rappresentate mediante altri grafici.
 
     \subsection{Formazione autonoma o verranno forniti materiali di studio}
@@ -163,8 +163,8 @@
 
     \subsection{Consigli sulle librerie}
     \label{sub:domanda_17}
-    ml.js raccoglie molti modi diversi di calcolare le distanza. D3.js permette la visualizzazione ed è caldamente consigliata, tuttavia non è un obbligo. 
-    convnet.js fornisce metodi di riduzione dimensionale. Vengono anche mostrati algoritmi per la visualizzazione di cluster come karpathy/tsnejs e umap-js. 
+    ml.js raccoglie molti modi diversi di calcolare le distanza. D3.js permette la visualizzazione ed è caldamente consigliata, tuttavia non è un obbligo.
+    convnet.js fornisce metodi di riduzione dimensionale. Vengono anche mostrati algoritmi per la visualizzazione di cluster come karpathy/tsnejs e umap-js.
 
     \subsection{Presenza di requisiti particolari per il Front-End?}
     \label{sub:domanda_18}
@@ -172,7 +172,7 @@
 
     \subsection{Utilizzo di tipi diversi di grafici per dati diversi}
     \label{sub:domanda_19}
-    Bisogna poter visualizzare i dati con vari grafici. 
+    Bisogna poter visualizzare i dati con vari grafici.
 
 \section{Conclusione dell'incontro}
 \label{sec:conclusione}

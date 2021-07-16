@@ -31,9 +31,9 @@
 \setDescrizione{Riassunto dell'incontro tenutosi il 17 febbraio 2021 realizzato dal gruppo SpaghettiCode in forma di meeting online con Piccoli Gregorio.}
 
 \setModifiche{
-	v0.2.0 & Contro Daniel Eduardo & Amministratore & 2021-02-27 & Corretto \refSec{sec:resoconto} \\
-	v0.1.0 & Contro Daniel Eduardo & Amministratore & 2021-02-26 & Modifiche a \refSec{sec:resoconto} \\
-	v0.0.1 & Contro Daniel Eduardo & Amministratore & 2021-02-25 & Creazione del documento e prima stesura
+	v0.2.0 & Contro Daniel Eduardo & Amministratore & 2021-02-27 & Corretto \refSec{sec:resoconto} & // \\
+	v0.1.0 & Contro Daniel Eduardo & Amministratore & 2021-02-26 & Modifiche a \refSec{sec:resoconto} & // \\
+	v0.0.1 & Contro Daniel Eduardo & Amministratore & 2021-02-25 & Creazione del documento e prima stesura & //
 }
 
 \disabilitaElencoFigure
@@ -87,17 +87,17 @@ Di seguito vengono riportati i punti discussi durante l'incontro:
 \section{Resoconto}
 \label{sec:resoconto}
 
-Di seguito vengono riportate le decisioni concordate e gli esiti delle diverse discussioni con il proponente, oltre a 
+Di seguito vengono riportate le decisioni concordate e gli esiti delle diverse discussioni con il proponente, oltre a
 delle note aggiuntive.
 
 \subsection{Database supportati dal prodotto}
 \label{itm:1}
 
-\`{E} stato accordato che il prodotto supporter\`{a}, e permetter\`{a} di eseguire \glossario{query SQL}, sui \glossario{DBMS}: 
+\`{E} stato accordato che il prodotto supporter\`{a}, e permetter\`{a} di eseguire \glossario{query SQL}, sui \glossario{DBMS}:
 \glossario{MySQL}, \glossario{MariaDB},  \glossario{PostgreSQL}, \glossario{SQL Lite} e \glossario{Microsoft SQL Server}.
 
 \subsubsection*{Documenti coinvolti}
-Le modifiche relative alle decisioni prese saranno individuabili nel documento \textsc{Analisi dei Requisiti} a partire 
+Le modifiche relative alle decisioni prese saranno individuabili nel documento \textsc{Analisi dei Requisiti} a partire
 dalla versione v1.1.0.
 
 \subsubsection*{Note Aggiuntive}
@@ -107,13 +107,13 @@ si prende la libert\`{a} di utilizzarle o meno, oltre che di aggiungere supporto
 \subsection{Struttura dei file csv}
 \label{itm:2}
 
-Riguardo i file csv, che verranno forniti al sistema dall'utente, si possono fare le seguenti assunzioni: hanno la prima 
-riga contenente i nomi delle varie dimensioni; i vari campi sono separati mediante il carattere ","; i campi stringa non 
+Riguardo i file csv, che verranno forniti al sistema dall'utente, si possono fare le seguenti assunzioni: hanno la prima
+riga contenente i nomi delle varie dimensioni; i vari campi sono separati mediante il carattere ","; i campi stringa non
 contengono frasi bens\`{i} dati categorici di poche parole.
 
 \subsection{Interazione con i database esterni}
 \label{itm:3}
-\`{E} stato deciso che l'interazione dell'utente con i database esterni si limiter\`{a} alla scelta di una delle query 
+\`{E} stato deciso che l'interazione dell'utente con i database esterni si limiter\`{a} alla scelta di una delle query
 preconfigurate disponibili.
 
 \subsubsection*{Documenti coinvolti}
