@@ -40,13 +40,13 @@ Grazie al menu a tendina in alto a sinistra sarà possibile cambiare grafico pas
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=.5\linewidth]{img/seleziona_dataset.jpg}
+	  \includegraphics[width=.5\linewidth]{src/img/seleziona_dataset.jpg}
 	  \caption{Seleziona fonte}
 	  \label{fig:sub1}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=.5\linewidth]{img/seleziona_grafico.jpg}
+	  \includegraphics[width=.5\linewidth]{src/img/seleziona_grafico.jpg}
 	  \caption{Seleziona grafico}
 	  \label{fig:sub2}
 	\end{minipage}
@@ -89,7 +89,7 @@ Quando si va a dare colore alla lunghezza dei sepali, il risultato è il seguent
 \end{figure}
 
 
-Qui invece vi è un esempio con un \glossario{dataset} da 1000 records. È possibile cambiare le dimensioni rappresentate escludendone una ed aggiungendone un'altra, come rappresentato in figura.
+È possibile cambiare le dimensioni rappresentate escludendone una ed aggiungendone un'altra, cliccando sulla checkbox associata alla dimensione che vogliamo escludere/aggiungere.
 
 \begin{figure}[H]
 	\centering
@@ -100,54 +100,53 @@ Qui invece vi è un esempio con un \glossario{dataset} da 1000 records. È possi
 
 \paragraph{Distance Map}
     \label{par:vis_distance}
-Si occupa di misurare la prossimità fra due unità statistiche adottando diversi algoritmi.\\
-Dopo aver selezionato il grafico DistanceMap in alto a sinistra, i vari algoritmi compariranno nel menu sottostante. Qui ad esempio si mostra come appare il dataset dell'Iris
-dopo aver selezionato il grafico DistanceMap:
+Si occupa di misurare la similarità di due unità statistiche adottando diversi algoritmi di calcolo.\\
+Dopo aver selezionato la visualizzazione Distance Map in alto a sinistra, varie opzioni per la manipolazione delle distanze compaiono nel menu sottostante. Qui ad esempio si mostra come appare il dataset dell'Iris
+dopo aver selezionato la visualizzazione Distance Map e modificato opportunamente i metadati di tipo:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/dm/iris_base_dm.jpg}
-	\caption{DistanceMap applicata all'Iris}
+	\includegraphics[width=18cm]{src/img/dm/iris_base_dm.jpg}
+	\caption{Distance Map applicata all'Iris}
 \end{figure}
 
-Comer per ScatterPlot, è possibile manipolare il dataset tramite le impostazioni presenti a sinistra, nonchè manipolare più impostazioni per ottenere risultati differenti.\\
+Come per ScatterPlot, è possibile ridurre il dataset tramite le impostazioni presenti a sinistra.
+Inoltre, è possibile manipolare impostazioni come l'algoritmo utilizzato per il calcolo della distanza, per l'assegnazione di pesi alle dimensioni, per standardizzare i dati e per clusterizzare unità statistiche tra loro vicine. Ogni manipolazione modifica dinamicamente la visualizzazione, permettendo all'analista di estrarre informazioni dai dati.\\
 Di seguito per esempio si mostra come appare il dataset dell'Iris dopo aver selezionato come colore la scala di grigi, e l'ordinamento "Hierarichal Clustering".
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/dm/iris_clustering_euclideo_dm.jpg}
+	\includegraphics[width=18cm]{src/img/dm/iris_clustering_euclideo_dm.jpg}
 	\caption{DistanceMap applicata all'Iris}
 \end{figure}
 
 
 \paragraph{Force Field}
     \label{par:vis_force_field}
-Il grafico \glossario{Force Field} traduce le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio. 
-Questo grafico esegue una riduzione dimensionale preservando, o addirittura evidenziando, le strutture presenti nei dati. Più semplicemente, le entità vengono
-rappersentate tramite nodi, e le linee che le uniscono rappresentano le connessioni, o forze di attrazione. Al caricamento del grafico i punti si muovono in maniera
-casuale in cui i punti si spostano in base alle forze a cui sono soggetti. 
+Il grafico \glossario{Force Field} traduce le distanze tra unità statistiche in forze di attrazione e repulsione tra queste unità. Permette di rappresentare proiettate nello spazio le unità statistiche sotto forma di nodi e le distanze tra loro come archi. 
+Questo grafico esegue una riduzione dimensionale preservando, o addirittura evidenziando, le strutture ed i cluster presenti nei dati.  Al caricamento del grafico i punti si dispongono nello spazio in base alle forze a cui sono soggetti. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_0_1}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_0_1}
 	\caption{ForceField applicata all'Iris - caricamento}
 \end{figure}
 
-Dopo poco si raggiunge una condizione di equilibrio stabile dove si evidenzia la geometria. 
+Dopo poco si raggiunge una condizione di equilibrio. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_0_2}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_0_2}
 	\caption{ForceField applicata all'Iris - equilibrio}
 \end{figure}
 
 
-Come per gli altri grafici sarà possibile manipolare il dataset ottenendo risultati differenti, come di seguito. 
+Come per gli altri grafici è possibile manipolare il dataset ottenendo risultati differenti. Per esempio si può scalare la forza di attrazione tra nodi e si possono tagliare gli archi che collegano nodi con distanze al di fuori di quelle specificate
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_1}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_1}
 	\caption{ForceField applicata all'Iris - modifica dataset}
 \end{figure}
 
@@ -157,46 +156,45 @@ come rappresentato di seguito:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_2}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_2}
 	\caption{ForceField applicata all'Iris - modifica force intensity}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_3}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_3}
 	\caption{ForceField applicata all'Iris - modifica force range}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_4}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_4}
 	\caption{ForceField applicata all'Iris - modifica force range e force intensity}
 \end{figure}
 
-È anche possibile selezionare un punto e allontanarlo dal centro:
+È anche possibile interagire con i nodi e ridisporre dinamicamente i punti:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/ff/ff_iris_5}
+	\includegraphics[width=18cm]{src/img/ff/ff_iris_5}
 	\caption{ForceField applicata all'Iris - manipolazione dei punti}
 \end{figure}
 
 \paragraph{HeatMap}
     \label{par:vis_heatmap}
 
-Il grafico \glossario{Heat map} trasforma la distanza tra i punti i colori più o meno intensi, facendo così capire quali oggetti sono vicini tra loro e quali sono distanti. \\
-Come per gli altri grafici è possibile usufruire delle impostazioni nel menu a sinistra per poter modificare il grafico. Qui di seguito per esempio si mostra la differenza 
-tra la Heat Map base, e la Heat Map con colori in scala di grigi:
+Il grafico \glossario{Heat map} trasforma i diversi valori delle dimensioni del dataset in colori più o meno intensi, permettendo di evidenziare eventuali ripetizioni o pattern all'interno del dataset. \\
+Come per gli altri grafici è possibile usufruire delle impostazioni nel menu a sinistra per poter modificare il grafico. Qui di seguito si mostra la differenza tra scale cromatiche differenti:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/hm/heat_map_base.jpg}
+	\includegraphics[width=18cm]{src/img/hm/heat_map_base.jpg}
 	\caption{Heat Map base}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/hm/heat_map_base_gray.jpg}
+	\includegraphics[width=18cm]{src/img/hm/heat_map_base_gray.jpg}
 	\caption{Heat Map in scala di grigi}
 \end{figure}
 
