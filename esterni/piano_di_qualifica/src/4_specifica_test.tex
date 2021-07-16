@@ -12,8 +12,8 @@ Per garantire la qualità di prodotto è necessario stabilire delle metriche per
 		\rowcolor{lightgray}
 		\textbf{Metrica} & \textbf{Nome}                          & \textbf{Accettabile} & \textbf{Ottimale} \\
 		\hline
-		MTS1             & Test eseguiti in rapporto ai requisiti & 100\%                       & 100\%                       \\
-		MTS2             & Percentuale test passati               & 85\%                        & 100\%                       \\
+		MTS1             & Test eseguiti in rapporto ai requisiti & 100\%                & 100\%             \\
+		MTS2             & Percentuale test passati               & 85\%                 & 100\%             \\
 		\hline
 	\end{tabular}
 	\caption{Metriche dei test}
@@ -26,59 +26,57 @@ Questi test si dividono in test di sistema, test di integrazione e test di unit�
 
 \subsection{Test di sistema}%
 \label{sub:test_sist}
-Per assicurare che il progetto rispetti i requisiti identificati nel documento \textsc{Analisi dei Requisiti} verranno eseguiti i seguenti test. Attualmente questo documento deve considerarsi incompleto, altri test verranno preventivati in futuro.
+Per assicurare che il progetto rispetti i requisiti identificati nel documento \textsc{Analisi dei Requisiti} verranno eseguiti i seguenti test.
 
 \begin{center}
 	\begin{longtable}{|c|c|p{8cm}|c|}
 		\hline
 		\rowcolor{lightgray}
-		{\textbf{Codice}} & {\textbf{Riferimento}} & {\textbf{Descrizione}} & {\textbf{Implementazione}} \\
+		{\textbf{Codice}} & {\textbf{Riferimento}} & {\textbf{Descrizione}}                                                                                                    & {\textbf{Implementazione}} \\
 		\hline
 		\endfirsthead
 		\hline
 		\rowcolor{lightgray}
-		{\textbf{Codice}} & {\textbf{Riferimento}} & {\textbf{Descrizione}} & {\textbf{Implementazione}} \\
+		{\textbf{Codice}} & {\textbf{Riferimento}} & {\textbf{Descrizione}}                                                                                                    & {\textbf{Implementazione}} \\
 		\hline
 		\endhead
 
 		\hline
 		\rowcolor{white}
-		\multicolumn{4}{|c|}{\emph{Continua alla pagina successiva...}} \\
+		\multicolumn{4}{|c|}{\emph{Continua alla pagina successiva...}}                                                                                                                                     \\
 		\hline
 		\endfoot
 		\endlastfoot
 
-		TS0   & RFO1            & Si verifichi che l'utente possa creare un ambiente di lavoro     & NI                         \\
-		TS1   & RFO1.1          & Si verifichi che l'utente possa inserire dati nel sistema & NI                         \\
-		TS2   & RFO1.2 			& Si verifichi che l'utente possa importare dati tramite file CSV         & NI                         \\
-		TS3   & RFO1.3          & Si verifichi che l'utente possa importare dati tramite un database esterno   & NI                  \\
-		TS4   & RFO1.3.1      	& Si verifichi che l'utente possa aprire un collegamento con un database & NI                         \\
-		TS5   & RFO1.3.2      	& Si verifichi che l'utente possa importare i dati nel sistema mediante la ricerca su un databae tra quelli disponibili & NI  \\
-		TS6   & RFO2      		& Si verifichi che l'utente possa creare  un grafico & NI  \\
-		TS7   & RFO2.1      	& Si verifichi che l'utente possa selezionare la costruzione di un grafico di sua scelta & NI  \\
-		TS8   & RFO2.2      	& Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Scatter Plot Matrix & NI  \\
-		TS9   & RFO2.3     		& Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Force Field & NI  \\
-		TS10  & RFO2.4     		& Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Heat Map & NI  \\
-		TS11  & RFO2.5     		& Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo PLMA & NI \\
-		TS12  & RFO2.6     		& Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Distance Map & NI \\
-		TS13  & RFO3     		& Si verifichi che l'utente possa modificare i metadati associati al dataset & NI \\
-		TS14  & RFO3.1     		& Si verifichi che l'utente possa selezionare di quale dimensione desidera modificare i metadati & NI \\
-		TS15  & RFO3.2     		& Si verifichi che l'utente possa modificare i metadati di tipo associati al dataset & NI \\
-		TS16  & RFO3.3     		& Si verifichi che l'utente possa modificare i metadati di visibilità delle dimensioni del dataset & NI \\
-		TS17  & RFO4.5.2     	& Si verifichi che l'utente possa ordinare la Distance Map & NI \\
-		TS18  & RFO4.5.3.1     	& Si verifichi che l'utente possa ordinare la Distance Map mediante clustering gerarchico & NI \\
-
-		TS19  & RFO4.5.3.2   	& Si verifichi che l'utente possa associare un dendrogramma al clustering gerarchico nella Distance Map & NI \\
-		TS20  & RFO5     		& Si verifichi che l'utente possa essere informato in caso di errori durante l'inserimento di un file & NI \\
-		TS21  & RFO6     		& Si verifichi che l'utente possa essere informato in caso di errore durante l'acceso al database & NI \\
-		TS22  & RFO7     		& Si verifichi che l'utente possa essere informato in caso la query usata per recuperare i dati non ritorni nessun dato & NI \\
-		TS23  & RFO8    		& Si verifichi che l'utente possa essere informato in caso provi a modificare la visibilità di un dato quando non può farlo & NI \\
-
-		TS24  &  RVO4    		& Si verifichi che l'applicativo possa visualizzare dati ad almeno 15 dimensioni & NI \\
-		TS25  & RVO5    		& Si verifichi che l'applicativo sia supportato dal browser Google Chrome dalla versione 87.0.0 & NI \\
-		TS26  & RVO6        	& Si verifichi che l'applicativo sia supportato dal browser Mozilla Firefox dalla versione 85.0.0  & NI \\
-		TS27  & RVO7        	& Si verifichi che l'applicativo sia supportato dal browser Opera dalla versione 74.0.0  & NI \\
-		TS28  & RVO8      		& Si verifichi che l'applicativo sia supportato dal browser Safari, nella sua versione per Mac, dalla versione 14.0.0  & NI \\
+		TS0               & RFO1                   & Si verifichi che l'utente possa creare un ambiente di lavoro                                                              & Sì                         \\
+		TS1               & RFO1.1                 & Si verifichi che l'utente possa inserire dati nel sistema                                                                 & Sì                         \\
+		TS2               & RFO1.2                 & Si verifichi che l'utente possa importare dati tramite file CSV                                                           & Sì                         \\
+		TS3               & RFO1.3                 & Si verifichi che l'utente possa importare dati tramite un database esterno                                                & Sì                         \\
+		TS4               & RFO1.3.1               & Si verifichi che l'utente possa aprire un collegamento con un database                                                    & Sì                         \\
+		TS5               & RFO1.3.2               & Si verifichi che l'utente possa importare i dati nel sistema mediante la ricerca su un database tra quelli disponibili    & Sì                         \\
+		TS6               & RFO2                   & Si verifichi che l'utente possa creare  un grafico                                                                        & Sì                         \\
+		TS7               & RFO2.1                 & Si verifichi che l'utente possa selezionare la costruzione di un grafico di sua scelta                                    & Sì                         \\
+		TS8               & RFO2.2                 & Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Scatter Plot Matrix            & Sì                         \\
+		TS9               & RFO2.3                 & Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Force Field                    & Sì                         \\
+		TS10              & RFO2.4                 & Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Heat Map                       & Sì                         \\
+		TS11              & RFO2.5                 & Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo PLMA                           & Sì                         \\
+		TS12              & RFO2.6                 & Si verifichi che l'utente possa selezionare l'opzione di costruzione di un grafico di tipo Distance Map                   & Sì                         \\
+		TS13              & RFO3                   & Si verifichi che l'utente possa modificare i metadati associati al dataset                                                & Sì                         \\
+		TS14              & RFO3.1                 & Si verifichi che l'utente possa selezionare di quale dimensione desidera modificare i metadati                            & Sì                         \\
+		TS15              & RFO3.2                 & Si verifichi che l'utente possa modificare i metadati di tipo associati al dataset                                        & Sì                         \\
+		TS16              & RFO3.3                 & Si verifichi che l'utente possa modificare i metadati di visibilità delle dimensioni del dataset                          & Sì                         \\
+		TS17              & RFO4.5.2               & Si verifichi che l'utente possa ordinare la Distance Map                                                                  & Sì                         \\
+		TS18              & RFO4.5.3.1             & Si verifichi che l'utente possa ordinare la Distance Map mediante clustering gerarchico                                   & Sì                         \\
+		TS19              & RFO4.5.3.2             & Si verifichi che l'utente possa associare un dendrogramma al clustering gerarchico nella Distance Map                     & Sì                         \\
+		TS20              & RFO5                   & Si verifichi che l'utente possa essere informato in caso di errori durante l'inserimento di un file                       & Sì                         \\
+		TS21              & RFO6                   & Si verifichi che l'utente possa essere informato in caso di errore durante l'acceso al database                           & Sì                         \\
+		TS22              & RFO7                   & Si verifichi che l'utente possa essere informato in caso la query usata per recuperare i dati non ritorni nessun dato     & Sì                         \\
+		TS23              & RFO8                   & Si verifichi che l'utente possa essere informato in caso provi a modificare la visibilità di un dato quando non può farlo & Sì                         \\
+		TS24              & RVO4                   & Si verifichi che l'applicativo possa visualizzare dati ad almeno 15 dimensioni                                            & Sì                         \\
+		TS25              & RVO5                   & Si verifichi che l'applicativo sia supportato dal browser Google Chrome dalla versione 87.0.0                             & Sì                         \\
+		TS26              & RVO6                   & Si verifichi che l'applicativo sia supportato dal browser Mozilla Firefox dalla versione 85.0.0                           & Sì                         \\
+		TS27              & RVO7                   & Si verifichi che l'applicativo sia supportato dal browser Opera dalla versione 74.0.0                                     & Sì                         \\
+		TS28              & RVO8                   & Si verifichi che l'applicativo sia supportato dal browser Safari, nella sua versione per Mac, dalla versione 14.0.0       & Sì                         \\
 		\hline
 		\rowcolor{white}
 		\caption{Riepilogo dei test di sistema}
@@ -88,11 +86,101 @@ Per assicurare che il progetto rispetti i requisiti identificati nel documento \
 \subsection{Test di integrazione}%
 \label{sub:test_int}
 
-TODO
+\begin{center}
+	\begin{longtable}{|c|p{10cm}|c|}
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                                                                   & {\textbf{Implementazione}} \\
+		\hline
+		\endfirsthead
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                                                                   & {\textbf{Implementazione}} \\
+		\hline
+		\endhead
+
+		\hline
+		\rowcolor{white}
+		\multicolumn{3}{|c|}{\emph{Continua alla pagina successiva...}}                                                                                                                           \\
+		\hline
+		\endfoot
+		\endlastfoot
+
+
+		TI1               & Viene verificata la corretta integrazione tra il modulo di caricamento dei file e il server                                              & Sì                         \\
+		TI2               & Viene verificata la corretta integrazione tra il database e il server                                                                    & Sì                         \\
+		TI3               & Viene verificata la corretta integrazione tra i moduli responsabili della gestione dei grafici e la libreria D3.js                       & Sì                         \\
+		TI4               & Viene verificata la corretta integrazione tra i dati letti da file e la loro manipolazione con la libreria D3.js                         & Sì                         \\
+		TI5               & Viene verificata la corretta integrazione tra i dati letti da database e la loro manipolazione con la libreria D3.js                     & Sì                         \\
+		TI6               & Viene verificata la corretta integrazione tra le componenti GUI e la logica del modello                                                  & Sì                         \\
+		TI7               & Viene verificata la corretta integrazione tra la persistenza della sessione nel browser e la gestione della sessione da parte del server & Sì                         \\
+		TI8               & Viene verificata la corretta integrazione dei moduli presenter e observer dei vari grafici                                               & Sì                         \\
+		TI9               & Viene verificata la corretta integrazione della GUI con i vari grafici                                                                   & Sì                         \\
+		TI10              & Viene verificata la corretta integrazione con il server e il cambio di file da GUI                                                       & Sì                         \\
+
+		\hline
+		\rowcolor{white}
+		\caption{Riepilogo dei test di sistema}
+	\end{longtable}
+\end{center}
 
 \subsection{Test di unità}%
 \label{sub:test_unit}
 
-TODO
+\begin{center}
+	\begin{longtable}{|c|p{10cm}|c|}
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                  & {\textbf{Implementazione}} \\
+		\hline
+		\endfirsthead
+		\hline
+		\rowcolor{lightgray}
+		{\textbf{Codice}} & {\textbf{Descrizione}}                                                                  & {\textbf{Implementazione}} \\
+		\hline
+		\endhead
+
+		\hline
+		\rowcolor{white}
+		\multicolumn{3}{|c|}{\emph{Continua alla pagina successiva...}}                                                                          \\
+		\hline
+		\endfoot
+		\endlastfoot
+
+		TU1               & Viene verificato che il pulsante di caricamento chiama la funzione corretta             & Sì                         \\
+		TU2               & Viene verificato il corretto funzionamento del bottone di invio del file                & Sì                         \\
+		TU3               & Viene verificato che sono i file corretti possono essere caricati                       & Sì                         \\
+		TU4               & Viene verificato che il caricamento del file avviene correttamente                      & Sì                         \\
+		TU5               & Viene verificato il corretto funzionamento dei bottoni di selezione del grafico         & Sì                         \\
+		TU6               & Viene verificata la possibilità di cambiare tipologia al grafico                        & Sì                         \\
+		TU7               & Viene verificato il numero dei dati letti dal file                                      & Sì                         \\
+		TU8               & Viene verificato che il menù delle dimensioni contiene solo le dimensioni corrette      & Sì                         \\
+		TU9               & Viene verificata la possibilità di deselezionare le dimensioni                          & Sì                         \\
+		TU10              & Viene verificata la possibilità di selezionare al massimo 5 dimensioni (Scatter Plot)   & Sì                         \\
+		TU11              & Viene verificato che le dimensioni plottate siano effettivamente quelle selezionate     & Sì                         \\
+		TU12              & Viene verificato che cambiando le dimensioni da plottare cambino anche nei grafici      & Sì                         \\
+		TU13              & Viene verificata la possibilità di selezionare le dimensioni da colorare                & Sì                         \\
+		TU14              & Viene verificato che la selezione dei colori funziona correttamente                     & Sì                         \\
+		TU15              & Viene verificato che funzioni correttamente la selezione dei gradienti                  & Sì                         \\
+		TU16              & Viene verificato che la selezione della brillanza funzioni correttamente                & Sì                         \\
+		TU17              & Viene verificato il corretto funzionamento della selezione della brillanza del grafico  & Sì                         \\
+		TU18              & Viene verificato che gli algoritmi di distanza vengano visualizzati correttamente       & Sì                         \\
+		TU19              & Viene verificato che gli algoritmi di distanza modifichino correttamente il grafico     & Sì                         \\
+		TU20              & Viene verificato che la selezione degli algoritmi di ordinamento funzioni correttamente & Sì                         \\
+		TU21              & Viene verificata la persistenza della sessione                                          & Sì                         \\
+		TU22              & Viene verificato il corretto collegamento al database                                   & Sì                         \\
+		TU23              & Viene verificato che solo i file con una certa dimensione possano essere caricati       & Sì                         \\
+		TU24              & Viene verificato il corretto funzionamento degli alert                                  & Sì                         \\
+		%TU25              & Longdescsomuchlongdescr  & Sì\\
+		%TU26              & Longdescsomuchlongdescr& Sì\\
+		%TU27              & Longdescsomuchlongdescr& Sì\\
+		%TU28              & Longdescsomuchlongdescr& Sì\\
+		%TU29              & Longdescsomuchlongdescr& Sì\\
+		%TU30              & Longdescsomuchlongdescr& Sì\\
+		\hline
+		\rowcolor{white}
+		\caption{Riepilogo dei test di sistema}
+	\end{longtable}
+\end{center}
 
 \end{document}
