@@ -94,9 +94,9 @@ Qui invece vi è un esempio con un \glossario{dataset} da 1000 records. È possi
 
 \paragraph{Distance Map}
     \label{par:vis_distance}
-Si occupa di misurare la ”prossimita”` fra due unità statistiche adottando diversi algoritmi.\\
-Dopo aver selezionato il grafico "DistanceMap" in alto a sinistra, i vari algoritmi compariranno nel menu a sinistra. Qui ad esempio si mostra come appare il dataset dell'Iris
-dopo aver selezionato come grafico DistanceMap
+Si occupa di misurare la prossimità fra due unità statistiche adottando diversi algoritmi.\\
+Dopo aver selezionato il grafico DistanceMap in alto a sinistra, i vari algoritmi compariranno nel menu sottostante. Qui ad esempio si mostra come appare il dataset dell'Iris
+dopo aver selezionato il grafico DistanceMap:
 
 \begin{figure}[H]
 	\centering
@@ -117,7 +117,7 @@ Di seguito per esempio si mostra come appare il dataset dell'Iris dopo aver sele
 
 \paragraph{Force Field}
     \label{par:vis_force_field}
-Il grafico “Force Field” traduce le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio. 
+Il grafico \glossario{Force Field} traduce le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio. 
 Questo grafico esegue una riduzione dimensionale preservando, o addirittura evidenziando, le strutture presenti nei dati. Più semplicemente, le entità vengono
 rappersentate tramite nodi, e le linee che le uniscono rappresentano le connessioni, o forze di attrazione. Al caricamento del grafico i punti si muovono in maniera
 casuale in cui i punti si spostano in base alle forze a cui sono soggetti. 
@@ -167,35 +167,34 @@ come rappresentato di seguito:
 	\caption{ForceField applicata all'Iris - modifica force range e force intensity}
 \end{figure}
 
+È anche possibile selezionare un punto e allontanarlo dal centro:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_5}
+	\caption{ForceField applicata all'Iris - manipolazione dei punti}
+\end{figure}
+
+\paragraph{HeatMap}
+    \label{par:vis_heatmap}
+
+Il grafico \glossario{Heat map} trasforma la distanza tra i punti i colori più o meno intensi, facendo così capire quali oggetti sono vicini tra loro e quali sono distanti. \\
+Come per gli altri grafici è possibile usufruire delle impostazioni nel menu a sinistra per poter modificare il grafico. Qui di seguito per esempio si mostra la differenza 
+tra la Heat Map base, e la Heat Map con colori in scala di grigi:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/hm/heat_map_base.jpg}
+	\caption{Heat Map base}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/hm/heat_map_base_gray.jpg}
+	\caption{Heat Map in scala di grigi}
+\end{figure}
 
 
-%
-%\subsection{Modifica workflow}
-%    \label{sub:mod_work}
-%\subsubsection{Modifica dati}
-%    \label{subsub:mod_dati}
-%
-%HD-Viz offre la possibilità di manipolare i grafici forniti, intervenendo sulle dimensioni tramite un pannello di controllo presente alla sinistra di ogni grafico. 
-%Tra le varie modifiche che è possibile fare vi è la possibilità di: 
-%\begin{itemize}
-%	\item \emph{modificare la dimensione del dataset corrente};
-%	\item \emph{modificare la dimensione della matrice per lo ScatterPlot Matrix};
-%	\item \emph{modificare la dimensione rappresentata mediante tinta per lo ScatterPlot Matrix};
-%	\item \emph{modificare la dimensione rappresentata mediante brillanza per lo ScatterPlot Matrix};
-%	\item \emph{modificare la distanza nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare il preprocessing dei dati nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare l’influenza di una dimensione nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare la posizione dei nodi nel grafico ForceField};
-%	\item \emph{rimuovere degli archi nel grafico ForceField};
-%	\item \emph{modificare la scala della forza nel grafico ForceField};
-%	\item \emph{modificare il gradiente di colori nel grafico DistanceMap};
-%	\item \emph{modificare l’ordinamento nel grafico DistanceMap};
-%	\item \emph{modificare le etichette nel grafico DistanceMap};
-%
-%	\item \emph{modificare il gradiente di colori nel grafico HeatMap};
-%	\item \emph{modificare le etichette nel grafico HeatMap};
-%	\item \emph{modificare l’ordinamento nel grafico HeatMap}.
-%\end{itemize}
 
 
 \end{document}
