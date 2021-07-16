@@ -13,7 +13,8 @@ Il primo passo per poter utilizzare HD-Viz è importare dei dati. È possibile f
     \item caricamento di dati tramite query da un database esterno
 \end{itemize}
 In seguito l’utente potrà esplorare e manipolare i grafici al fine di analizzare i dati, trarne conclusioni e similitudini tra essi. \\
-Per importare un file da locale è sufficiente andare nella sezione \emph{“Carica file”}  in alto a sinistra, cliccare su \emph{“scegli file”}, scegliere un file CSV presente sul proprio dispositivo e poi cliccare su \emph{“Carica”}. 
+Per importare un file da locale è sufficiente andare nella sezione \emph{“Carica file”}  in alto a sinistra, cliccare su \emph{“scegli file”}, 
+scegliere un file CSV presente sul proprio dispositivo e poi cliccare su \emph{“Carica”}. 
 Per importare dati tramite database bisogna cliccare sul bottone \emph{“Carica”} presente nel riquadro in alto a sinistra, relativo al caricamento database.
 In questo modo il database verrà caricato tramite un file di configurazione presente nella cartella  \verb|server/src/dbConfig|
 
@@ -23,16 +24,37 @@ In questo modo il database verrà caricato tramite un file di configurazione pre
 	\caption{Introduzione a Hd-Viz}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{src/img/seleziona_dataset.jpg}
-	\caption{Seleziona fonte}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=18cm]{src/img/seleziona_dataset.jpg}
+%	\caption{Seleziona fonte}
+%\end{figure}
+
 
 \subsubsection{Visualizzazione grafico}
     \label{subsub:vis_graf}
 Una volta che il file è stato caricato, il grafico principale, lo \glossario{ScatterPlot Matrix}, verrà definito con i dati appena passati. \\
-Grazie al menu a tendina in alto a sinistra sarà possibile cambiare grafico passando per esempio al Force Field, all’Heat Map etc.
+Grazie al menu a tendina in alto a sinistra sarà possibile cambiare grafico passando per esempio al Force Field, all’Heat Map e alla Distance Map.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.5\linewidth]{img/seleziona_dataset.jpg}
+	  \caption{Seleziona fonte}
+	  \label{fig:sub1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.5\linewidth]{img/seleziona_grafico.jpg}
+	  \caption{Seleziona grafico}
+	  \label{fig:sub2}
+	\end{minipage}
+	\caption{Selezione fonte e grafico}
+	\label{fig:test}
+\end{figure}
+
+\newpage
 
 \paragraph{ScatterPlot Matrix}
     \label{par:vis_scatt}
@@ -76,33 +98,109 @@ Qui invece vi è un esempio con un \glossario{dataset} da 1000 records. È possi
 \end{figure}
 
 
-%
-%\subsection{Modifica workflow}
-%    \label{sub:mod_work}
-%\subsubsection{Modifica dati}
-%    \label{subsub:mod_dati}
-%
-%HD-Viz offre la possibilità di manipolare i grafici forniti, intervenendo sulle dimensioni tramite un pannello di controllo presente alla sinistra di ogni grafico. 
-%Tra le varie modifiche che è possibile fare vi è la possibilità di: 
-%\begin{itemize}
-%	\item \emph{modificare la dimensione del dataset corrente};
-%	\item \emph{modificare la dimensione della matrice per lo ScatterPlot Matrix};
-%	\item \emph{modificare la dimensione rappresentata mediante tinta per lo ScatterPlot Matrix};
-%	\item \emph{modificare la dimensione rappresentata mediante brillanza per lo ScatterPlot Matrix};
-%	\item \emph{modificare la distanza nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare il preprocessing dei dati nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare l’influenza di una dimensione nel grafico DistanceMap, ForceField};
-%	\item \emph{modificare la posizione dei nodi nel grafico ForceField};
-%	\item \emph{rimuovere degli archi nel grafico ForceField};
-%	\item \emph{modificare la scala della forza nel grafico ForceField};
-%	\item \emph{modificare il gradiente di colori nel grafico DistanceMap};
-%	\item \emph{modificare l’ordinamento nel grafico DistanceMap};
-%	\item \emph{modificare le etichette nel grafico DistanceMap};
-%
-%	\item \emph{modificare il gradiente di colori nel grafico HeatMap};
-%	\item \emph{modificare le etichette nel grafico HeatMap};
-%	\item \emph{modificare l’ordinamento nel grafico HeatMap}.
-%\end{itemize}
+\paragraph{Distance Map}
+    \label{par:vis_distance}
+Si occupa di misurare la prossimità fra due unità statistiche adottando diversi algoritmi.\\
+Dopo aver selezionato il grafico DistanceMap in alto a sinistra, i vari algoritmi compariranno nel menu sottostante. Qui ad esempio si mostra come appare il dataset dell'Iris
+dopo aver selezionato il grafico DistanceMap:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/dm/iris_base_dm.jpg}
+	\caption{DistanceMap applicata all'Iris}
+\end{figure}
+
+Comer per ScatterPlot, è possibile manipolare il dataset tramite le impostazioni presenti a sinistra, nonchè manipolare più impostazioni per ottenere risultati differenti.\\
+Di seguito per esempio si mostra come appare il dataset dell'Iris dopo aver selezionato come colore la scala di grigi, e l'ordinamento "Hierarichal Clustering".
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/dm/iris_clustering_euclideo_dm.jpg}
+	\caption{DistanceMap applicata all'Iris}
+\end{figure}
+
+
+\paragraph{Force Field}
+    \label{par:vis_force_field}
+Il grafico \glossario{Force Field} traduce le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio. 
+Questo grafico esegue una riduzione dimensionale preservando, o addirittura evidenziando, le strutture presenti nei dati. Più semplicemente, le entità vengono
+rappersentate tramite nodi, e le linee che le uniscono rappresentano le connessioni, o forze di attrazione. Al caricamento del grafico i punti si muovono in maniera
+casuale in cui i punti si spostano in base alle forze a cui sono soggetti. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_0_1}
+	\caption{ForceField applicata all'Iris - caricamento}
+\end{figure}
+
+Dopo poco si raggiunge una condizione di equilibrio stabile dove si evidenzia la geometria. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_0_2}
+	\caption{ForceField applicata all'Iris - equilibrio}
+\end{figure}
+
+
+Come per gli altri grafici sarà possibile manipolare il dataset ottenendo risultati differenti, come di seguito. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_1}
+	\caption{ForceField applicata all'Iris - modifica dataset}
+\end{figure}
+
+
+Il ForceField è caratterizzato dalla possibilità di modificare le forze di attrazione, e il rispettivo range. Ad ogni manipolazione si possono ottenere quindi risultati differenti, 
+come rappresentato di seguito:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_2}
+	\caption{ForceField applicata all'Iris - modifica force intensity}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_3}
+	\caption{ForceField applicata all'Iris - modifica force range}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_4}
+	\caption{ForceField applicata all'Iris - modifica force range e force intensity}
+\end{figure}
+
+È anche possibile selezionare un punto e allontanarlo dal centro:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_5}
+	\caption{ForceField applicata all'Iris - manipolazione dei punti}
+\end{figure}
+
+\paragraph{HeatMap}
+    \label{par:vis_heatmap}
+
+Il grafico \glossario{Heat map} trasforma la distanza tra i punti i colori più o meno intensi, facendo così capire quali oggetti sono vicini tra loro e quali sono distanti. \\
+Come per gli altri grafici è possibile usufruire delle impostazioni nel menu a sinistra per poter modificare il grafico. Qui di seguito per esempio si mostra la differenza 
+tra la Heat Map base, e la Heat Map con colori in scala di grigi:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/hm/heat_map_base.jpg}
+	\caption{Heat Map base}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/hm/heat_map_base_gray.jpg}
+	\caption{Heat Map in scala di grigi}
+\end{figure}
+
+
 
 
 \end{document}
