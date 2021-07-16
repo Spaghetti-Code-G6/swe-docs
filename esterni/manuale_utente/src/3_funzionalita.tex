@@ -13,7 +13,8 @@ Il primo passo per poter utilizzare HD-Viz è importare dei dati. È possibile f
     \item caricamento di dati tramite query da un database esterno
 \end{itemize}
 In seguito l’utente potrà esplorare e manipolare i grafici al fine di analizzare i dati, trarne conclusioni e similitudini tra essi. \\
-Per importare un file da locale è sufficiente andare nella sezione \emph{“Carica file”}  in alto a sinistra, cliccare su \emph{“scegli file”}, scegliere un file CSV presente sul proprio dispositivo e poi cliccare su \emph{“Carica”}. 
+Per importare un file da locale è sufficiente andare nella sezione \emph{“Carica file”}  in alto a sinistra, cliccare su \emph{“scegli file”}, 
+scegliere un file CSV presente sul proprio dispositivo e poi cliccare su \emph{“Carica”}. 
 Per importare dati tramite database bisogna cliccare sul bottone \emph{“Carica”} presente nel riquadro in alto a sinistra, relativo al caricamento database.
 In questo modo il database verrà caricato tramite un file di configurazione presente nella cartella  \verb|server/src/dbConfig|
 
@@ -23,16 +24,31 @@ In questo modo il database verrà caricato tramite un file di configurazione pre
 	\caption{Introduzione a Hd-Viz}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{img/seleziona_dataset.jpg}
-	\caption{Seleziona fonte}
-\end{figure}
 
 \subsubsection{Visualizzazione grafico}
     \label{subsub:vis_graf}
 Una volta che il file è stato caricato, il grafico principale, lo \glossario{ScatterPlot Matrix}, verrà definito con i dati appena passati. \\
-Grazie al menu a tendina in alto a sinistra sarà possibile cambiare grafico passando per esempio al Force Field, all’Heat Map etc.
+Grazie al menu a tendina in alto a sinistra sarà possibile cambiare grafico passando per esempio al Force Field, all’Heat Map e alla Distance Map.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.5\linewidth]{img/seleziona_dataset.jpg}
+	  \caption{Seleziona fonte}
+	  \label{fig:sub1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=.5\linewidth]{img/seleziona_grafico.jpg}
+	  \caption{Seleziona grafico}
+	  \label{fig:sub2}
+	\end{minipage}
+	\caption{Selezione fonte e grafico}
+	\label{fig:test}
+\end{figure}
+
+\newpage
 
 \paragraph{ScatterPlot Matrix}
     \label{par:vis_scatt}
@@ -97,6 +113,61 @@ Di seguito per esempio si mostra come appare il dataset dell'Iris dopo aver sele
 	\includegraphics[width=18cm]{img/dm/iris_clustering_euclideo_dm.jpg}
 	\caption{DistanceMap applicata all'Iris}
 \end{figure}
+
+
+\paragraph{Force Field}
+    \label{par:vis_force_field}
+Il grafico “Force Field” traduce le distanze nello spazio a molte dimensioni in forze di attrazione e repulsione tra i punti proiettati nello spazio. 
+Questo grafico esegue una riduzione dimensionale preservando, o addirittura evidenziando, le strutture presenti nei dati. Più semplicemente, le entità vengono
+rappersentate tramite nodi, e le linee che le uniscono rappresentano le connessioni, o forze di attrazione. Al caricamento del grafico i punti si muovono in maniera
+casuale in cui i punti si spostano in base alle forze a cui sono soggetti. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_0_1}
+	\caption{ForceField applicata all'Iris - caricamento}
+\end{figure}
+
+Dopo poco si raggiunge una condizione di equilibrio stabile dove si evidenzia la geometria. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_0_2}
+	\caption{ForceField applicata all'Iris - equilibrio}
+\end{figure}
+
+
+Come per gli altri grafici sarà possibile manipolare il dataset ottenendo risultati differenti, come di seguito. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_1}
+	\caption{ForceField applicata all'Iris - modifica dataset}
+\end{figure}
+
+
+Il ForceField è caratterizzato dalla possibilità di modificare le forze di attrazione, e il rispettivo range. Ad ogni manipolazione si possono ottenere quindi risultati differenti, 
+come rappresentato di seguito:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_2}
+	\caption{ForceField applicata all'Iris - modifica force intensity}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_3}
+	\caption{ForceField applicata all'Iris - modifica force range}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/ff/ff_iris_4}
+	\caption{ForceField applicata all'Iris - modifica force range e force intensity}
+\end{figure}
+
+
 
 %
 %\subsection{Modifica workflow}
