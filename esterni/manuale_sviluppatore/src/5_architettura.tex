@@ -3,29 +3,32 @@
 \begin{document}
 
 \subsection{Design Pattern architetturale: MVP}
-Il design pattern architetturale scelto per il prodotto è il \glossario{Model View Presenter}. 
-Di conseguenza le componenti principali del prodotto sono le seguenti:
+Il design pattern architetturale scelto per il prodotto è il \glossario{Model View Presenter}, di 
+conseguenza le componenti principali del prodotto sono le seguenti:
 \begin{itemize}
 	\item \textbf{Model}: tra i model figurano tutti i tipi che hanno il compito di mantenere i dati 
-	del dominio, nello specifico vi sono il dataset, la matrice delle distanze e i modelli delle visualizzazioni 
-	che preservano la configurazione delle stesse;
+	del dominio, nello specifico vi sono \emph{Dataset} (rappresentante il dataset caricato 
+	nell'applicazione), \emph{DistanceMatrix} (rappresentante la matrice delle distanze associata 
+	al dataset caricato)e i modelli delle visualizzazioni che preservano la configurazione delle 
+	stesse;
 	\item \textbf{Presenter}: tra i presenter figurano tutti i tipi che implementano la logica di 
-	business e la logica di visualizzazione, in particolare vi sono i presenter delle visualizzazioni, 
-	degli elementi di modifica dei grafici e i manager dell'applicazione che ne gestiscono il corretto funzionamento;
-	\item \textbf{View}: le view sono dei tipi sostanzialmente passivi che visualizzano i dati di dominio 
-	secondo la configurazione dell'applicazione, ed indirizzano gli eventi ai presenter affinchè essi 
-	li elaborino e producano degli aggiornamenti coerenti con li stessi; tra le view vi sono il 
-	codice HTML dei grafici e i diversi tipi degli elementi di modifica dei grafici.
-
+	business e la logica di visualizzazione, in particolare vi sono i presenter delle 
+	visualizzazioni, dei \glossario{components} e i manager dell'applicazione che ne gestiscono il 
+	corretto funzionamento;
+	\item \textbf{View}: le view sono dei tipi sostanzialmente passivi che visualizzano i dati di 
+	dominio secondo la configurazione dell'applicazione, ed indirizzano gli eventi ai presenter 
+	affinchè essi li elaborino e producano degli aggiornamenti coerenti con li stessi; tra le view 
+	vi sono il codice HTML dei grafici e i diversi tipi degli elementi di modifica dei grafici.
 \end{itemize}
-Nella nostra architettura le componenti (elementi per la modifica delle proprietà dei grafici) 
-dispongono ciascuno di un presenter e di una view, non hanno un loro modello specifico in quanto i 
-loro dati dipendono dal modello dei grafici, dal dataset o dalla matrice delle distanze. Nel caso dei
-grafici invece la view viene realizzata tramite le funzionalità di D3.
+
+Nell'architettura di \emph{HD-Viz} ciascun component è composto da un presenter e da una view, 
+non necessita di un modello specifico in quanto i dati dipendono dal modello dei grafici, dal 
+dataset o dalla matrice delle distanze. Nel caso dei grafici invece la view viene realizzata 
+tramite le funzionalità di D3.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/patternMVP.jpg}
+	\includegraphics[width=18cm]{src/img/patternMVP.jpg}
 	\caption{Pattern MVP}
 \end{figure}
 
@@ -35,6 +38,13 @@ grafici invece la view viene realizzata tramite le funzionalità di D3.
 Per la definizione dei package del prodotto si è deciso di seguire il principio di progettazione 
 \emph{Common Reuse Principle}, di modo da avere tipi che vengono utilizzati assieme all'interno 
 dello stesso package.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{src/img/packageDiagramOverview.pdf}
+	\caption{Struttura generale HD-Viz}
+\end{figure}
+
 I package principali sono:
 \begin{itemize}
 	\item \textbf{Util}: all'interno del package sono presenti tutti i tipi di supporto necessari 
@@ -45,20 +55,14 @@ I package principali sono:
 	all'implementazione del design pattern strategy per la scelta della distanza da utilizzare;
 	\item \textbf{HD-Viz}: contiene i manager, tipi che realizzano la \emph{dependency inversion} e 
 	garantiscono il corretto funzionamento dell'applicazione;
-	\item \textbf{Graphs}: package che contiene i tidi dei modelli, dei presenter e le view dei 
+	\item \textbf{Graphs}: package che contiene i tipi dei modelli, dei presenter e le view dei 
 	grafici di HD-Viz;
 	\item \textbf{Components}: contiene i tipi dei presenters e delle views dei diversi componenti, 
 	ossia quegli elementi che si interfacciano con il \emph{Dataset}, la \emph{DistanceMatrix} o i 
 	modelli dei grafici e ne modificano i dati o le proprietà di visualizzazione.
 \end{itemize}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{img/core.jpg}
-	\caption{Struttura generale Hd-Viz}
-\end{figure}
-
-\emph{HD Viz manager} è il core dell'architettura, esso implementa la \emph{dependency inversion}, 
+Il tipo \emph{HDVizmanager} è il core dell'architettura, esso implementa la \emph{dependency inversion}, 
 infatti si occupa di tener traccia dei dati per evitare istanze multiple del \glossario{Dataset}, 
 della \emph{DistanceMatrix} e dei grafici una volta creati. 
 Nel momento in cui viene modificato il dataset originale per modificare le visualizzazioni, esso 
@@ -68,12 +72,12 @@ dataset originale resti invariato.
 specifici dell'applicazione, come ad esempio \emph{GraphCreatorManager} che gestisce le factories 
 per la creazione dei vari modelli dei grafici. 
 Il \emph{CurrentGraphManager} verifica se le factories sono in grado di costruire il grafico, 
-quindi si occupa di comunicare con il presenter e il modello del grafico relativo. \\
+quindi si occupa di comunicare con il presenter e il modello del grafico relativo.
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/core-hdvizmanager.jpg}
+	\includegraphics[width=18cm]{src/img/core-hdvizmanager.jpg}
 	\caption{HD-Viz Manager}
 \end{figure}
 
@@ -83,16 +87,16 @@ infatti tramite le interfacce ogni grafico implementerà dimensioni e colori a m
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/graph-e-hdviz.jpg}
+	\includegraphics[width=18cm]{src/img/graph-e-hdviz.jpg}
 	\caption{Relazioni tra graph e HD-Viz}
 \end{figure}
 
 
-Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impostazioni del grafico, ad esempio il gradiente colori, il dataset, i label delle righe ed altro.
+Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impostazioni del grafico, ad esempio il gradiente dei colori, il dataset, le label delle righe ed altro.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/graphs-e-components.jpg}
+	\includegraphics[width=18cm]{src/img/graphs-e-components.jpg}
 	\caption{Relazioni tra graphs e components}
 \end{figure}
 
@@ -204,7 +208,7 @@ CSVApplication si occuperà di creare un file JSON che contenga i dati letti, se
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{img/server.jpg}
+	\includegraphics[width=18cm]{src/img/server.jpg}
 	\caption{Server HD-Viz}
 \end{figure}
 
