@@ -101,7 +101,99 @@ Collegando il model al presenter, i vari componenti che modificano la visualizza
 e notificherà al presenter dei cambiamenti.
 Ciò avverrà tramite i metodi update. In particolare al presenter verrà passato l'EventType, ovvero il tipo di evento occorso; in base a ciò si aggiornerà il modello, e quindi la visualizzazione.
 
-\subsubsection{Il server}
+\subsubsection{Il Server}
+
+Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}.
+
+Questo si occupa della creazione e gestione di un servizio HTTP. 
+
+\emph{Express} fornisce inoltre un particolare modulo, \emph{Router}, con il quale è possibile definire dei percorsi 
+al fine di gestire delle richieste indipendentemente dalla implementazione attuale del server, questo rende possibile
+accodareli all'applicativo express finale.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{img/package-server.png}
+	\caption{Diagramma package lato server.}
+\end{figure}
+
+\par Presentata la struttura del diagramma di package si riconoscono diversi package.
+
+NB: Al fine di rendere la compresione più chiara vengono riportati frammenti dei diversi diagrammi delle classi, 
+quindi verranno eventualmente omesse delle parti laddove non considerate significative.
+
+\begin{itemize}
+	
+	\item \textbf{Core} Cuore dell'applicativo a lato server, contiene le classi per la gestione del server
+	e la definizione di nuovi percorsi da accodare. La classe App definisce il funzionamento del server al quale
+	vengono accodate le possibili implemntazioni della classe astratta \emph{Route}, percorsi dinamici,
+	e in costruzione i possibili percorsi statici che devono essere resi accessibili. Si occupa inoltre della
+	generazione di un ambiento dotato di sessione per il quale ogni percorso implementante \emph{Route} e quindi dotato
+	di un Router ha accesso in fase di esecuzione, non essendo tuttavia vincolante per la realizzazione del percorso.
+	La creazione della sessione si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore}
+	che combinate creano uno store virtuale di oggetti memorizzati per ogni utente che accede al servizio.
+		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=18cm]{img/server-core.png}
+		\caption{Classi del package di Core}
+	\end{figure}
+
+	\item \textbf{Csv} Package per la gestione delle richieste al server di file csv caricati da client in particolare da \emph{CsvRoute}.
+	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso di \emph{fs} per la lettura del file dato in input
+	crea una rappresentazione temporanea del dataset al fine di spedire al client un risultato già manipolabile, creando quindi un \emph{MDataset}.
+	MDataset non è altro che una rappresentazione dummy del dataset priva di funzionalità.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=18cm]{img/server-csv.png}
+		\caption{Classi del package di Csv}
+	\end{figure}
+
+
+	\item \textbf{Database} Il package per il riperimento dei dati da un database su un dato server.
+	Il funzionamento si basa sull'uso di configurazioni che vengono date in costruzione alla classe 
+	\emph{RelationalDbApplication} che permettono di eseguire query su un determinato database date le informazioni 
+	sfruttando l'ORM Sequelize. Il Dataset costruito dalla query eseguita sul dato server SQL viene poi rispetito al client
+	come avviene nel package Csv, la \emph{RelationalDbRoute} infatti, realizzando la classe \emph{Route} è in grado di gestire richieste HTTP e di emetterne.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=18cm]{img/server-database.png}
+		\caption{Classi del package di Database}
+	\end{figure}
+
+
+	\item \textbf{Configuration e Group} Il package di Group contiene delle semplici classi per il controllo di gruppi
+	di file con lo stesso nome ma diversa estensione in un determinato percorso, questo si presta al reperimento delle 
+	configurazioni per accedere ad un database che sono divise in un file .json e uno .sql, per la query. 
+	Infatti il \emph{Configuration Collector} dato un \emph{Group} è in grado di ricostruire configurazioni che 
+	come già detto, sono una rappresentazione di tutte le informazioni necessarie per accedere ad una determinata fonte di dati.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=18cm]{img/server-group.png}
+		\caption{Classi del package di Configuration e Group}
+	\end{figure}
+
+	\item \textbf{MDataset} Package conentente una rappresentazione in versione minimal, priva quindi di funzionalità, del dataset
+	che viene calcolato a lato server e spedito al client, in particolare usate dai package \emph{Csv, Database}.
+
+	\item \textbf{Session} Package che contiene la classe per la gestione e il mantenimento della sessione per ogni utente che 
+	accede al servizio di HdViz, esso permette di ottenere informazioni sulla propria \emph{DataSession} o di  
+	memorizzare delle modifiche avvenute a lato client sulla sessione.
+
+\end{itemize}
+
+
+
+
+Per mantenere i dati coerenti durante l'esecuzione dell'applicativo il server si mette in ascolto  
+ad eventuali notifiche che vengono gestite dal \emph{SessionRoute}.
+
+\paragraph{Route e Application} La logica principale del server viene gestita dalla classe \emph{Application},
+essa infatti prende una qualsiasi \emph{Route}, classe astratta, e ne gestisce l'aggiunta sul principale
+componente di esecuzione di \emph{Express}.
+
 
 Il lato server è stato realizzato con \emph{Express}, il quale si occuperà di gestire la sessione per collegarsi al server.
 SQLApplication si occuperà di caricare la configurazione, che verrà passata ad SQLRoute.\\
