@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{rotating}
+\usepackage{graphicx}
 
 \input{../../config/config.tex}
 %aggiungere percorsi dai quali il documento prende le immagini
@@ -6,22 +8,24 @@
 
 \setTitle{Piano di Progetto}
 
-\setVersione{v1.4.1}
+\setVersione{v1.5.9}
 
 \setResponsabile{
-  Masevski Martin
+  Contro Daniel Eduardo
 }
 
 \setRedattori{
-  Paparazzo Giorgia \\ &
-  Masevski Martin \\ &
-  Pagotto Manuel
+  Pagotto Manuel \\ &
+  Contro Daniel Eduardo \\ &
+  Kostadinov Samuel
 }
 
 \setVerificatori{
-  Paparazzo Giorgia \\ &
-  Masevski Martin \\ &
-  Kostadinov Samuel
+  Pagotto Manuel \\ &
+  Contro Daniel Eduardo \\ &
+  Kostadinov Samuel \\ &
+  Rizzo Stefano \\ &
+  Paparazzo Giorgia
 }
 
 \setUso{Esterno}
@@ -34,25 +38,38 @@
 \setDescrizione{Questo documento ha lo scopo di descrivere la pianificazione del gruppo \emph{SpaghettiCode} nello sviluppo del capitolato \emph{C4 - HD Viz}.}
 
 \setModifiche{
-  v1.4.1 & Masevski Martin & Responsabile & 2021-03-10 & Aggiornato \S\ref{sec:cons} \\
-  v1.4.0 & Masevski Martin & Responsabile & 2021-03-09 & Aggiornato \S\ref{sec:org} \\
-  v1.4.0 & Pagotto Manuel & Responsabile & 2021-03-08 & Aggiunta consuntivo di periodo \S\ref{sub:cons_prog_tech}\\
-  v1.3.1 & Masevski Martin & Responsabile & 2021-02-22 & Modifica \S\ref{sec:rischi} \\
-  v1.3.0 & Masevski Martin & Responsabile & 2021-02-19 & Aggiunta sottosezione \S\ref{ssub:incr_ind} \\
-  v1.2.1 & Pagotto Manuel & Responsabile & 2021-02-18 & Modifica \S\ref{sub:tech_baseline}  \\ 
-  v1.2.0 & Pagotto Manuel & Responsabile & 2021-02-17 & Stesura \S\ref{sec:rischi_riscontrati}  \\ 
-  v1.1.1 & Masevski Martin & Responsabile & 2021-02-14 & Correzione e verifica \S\ref{sec:pianif} secondo VI 2021-02-12 \\
-  v1.1.0 & Pagotto Manuel & Responsabile & 2021-01-27 & Aggiunta sottosezione \S\ref{sub:cons_cons_req} \\
-  v1.0.0 & Masevski Martin & Responsabile & 2021-01-18 & Approvazione documento \\
-  v0.2.1 & Paparazzo Giorgia & Responsabile & 2021-01-16 & Modifica \S\ref{sec:cons} \\
-  v0.2.0 & Kostadinov Samuel & Verificatore & 2021-01-07 & Verifica \S\ref{sec:introduzione}, \S\ref{sec:rischi}, \S\ref{sec:sviluppo} \\
-  v0.1.0 & Pagotto Manuel & Verificatore & 2021-01-06 & Verifica \S\ref{sec:pianif}, \S\ref{sec:prev}, \S\ref{sec:cons}, \S\ref{sec:org} \\
-  v0.0.6 & Paparazzo Giorgia & Responsabile & 2021-01-05 & Modifica \S\ref{sec:pianif}, \S\ref{sec:org} \\
-  v0.0.5 & Paparazzo Giorgia  & Responsabile & 2021-01-04 & Modifica \S\ref{sec:rischi}, \S\ref{sec:prev}, \S\ref{sec:cons} \\
-  v0.0.4 & Paparazzo Giorgia & Responsabile & 2020-12-27 & Modifica  \S\ref{sec:org}, \S\ref{sec:cons}, \S\ref{sec:prev} \\
-  v0.0.3 & Paparazzo Giorgia & Responsabile & 2020-12-21 & Inizio \S\ref{sec:prev}, proseguimento \S\ref{sec:pianif}  \\
-  v0.0.2 & Paparazzo Giorgia & Responsabile & 2020-12-18 & Stesura \S\ref{sec:introduzione}, \S\ref{sec:rischi} ,\S\ref{sec:sviluppo}, \S\ref{sec:pianif}  \\
-  v0.0.1 & Paparazzo Giorgia & Responsabile & 2020-12-17 & Inizio stesura \S\ref{sec:org}
+  v1.5.9 & Contro Daniel Eduardo & Responsabile & 2021-07-15 & Modificato \S\ref{sec:cons} & Pagotto Manuel \\
+  v1.5.8 & Kostadinov Samuel & Responsabile & 2021-07-05 & Modificato \S\ref{sec:sviluppo} & Pagotto Manuel \\
+  v1.5.7 & Contro Daniel Eduardo & Responsabile & 2021-06-09 & Modificato \S\ref{sub:prog_dett} &  Rizzo Stefano \\ 
+  v1.5.6 & Pagotto Manuel & Responsabile & 2021-05-26 & Modificato \S\ref{sec:rischi}, \S\ref{sec:rischi_riscontrati} secondo VI0525-0 &  Paparazzo Giorgia \\
+  v1.5.4 & Contro Daniel Eduardo & Responsabile & 2021-05-20 & Modificato \S\ref{sub:prog_dett} secondo VI0520-01 & Rizzo Stefano \\
+  v1.5.3 & Kostadinov Samuel & Responsabile & 2021-04-13 & Modificato \S\ref{sub:prog_dett} secondo VI0412-01 & Contro Daniel Eduardo \\
+  v1.5.2 & Kostadinov Samuel & Responsabile & 2021-04-06 & Modificato \S\ref{ssub:incr_ind} secondo VI0401-02 & Pagotto Manuel \\
+  v1.5.1 & Contro Daniel Eduardo & Responsabile & 2021-04-02 & Modificato \S\ref{sub:prog_dett} secondo VI0401-03 & Kostadinov Samuel \\
+  v1.5.0 & Pagotto Manuel & Responsabile & 2021-03-28 & Modificato \S\ref{sec:rischi_riscontrati} & Kostadinov Samuel \\
+  v1.4.4 & Pagotto Manuel & Responsabile & 2021-03-24 & Modificato \S\ref{sec:rischi} & Kostadinov Samuel \\
+  v1.4.3 & Pagotto Manuel & Responsabile & 2021-03-20 & Aggiornato \S\ref{ssub:incr_ind} secondo VI0320-01 & Contro Daniel Eduardo \\ 
+  v1.4.2 & Pagotto Manuel & Responsabile & 2021-03-11 & Modificato \S\ref{sub:prog_dett} & Kostadinov Samuel \\
+
+  v1.4.1 & Masevski Martin & Responsabile & 2021-03-10 & Aggiornato \S\ref{sec:cons} & // \\
+  v1.4.0 & Masevski Martin & Responsabile & 2021-03-09 & Aggiornato \S\ref{sec:org} & // \\
+  v1.4.0 & Pagotto Manuel & Responsabile & 2021-03-08 & Aggiunta consuntivo di periodo \S\ref{sub:cons_prog_tech} & // \\
+  v1.3.1 & Masevski Martin & Responsabile & 2021-02-22 & Modifica \S\ref{sec:rischi} & // \\
+  v1.3.0 & Masevski Martin & Responsabile & 2021-02-19 & Aggiunta sottosezione \S\ref{ssub:incr_ind} & // \\
+  v1.2.1 & Pagotto Manuel & Responsabile & 2021-02-18 & Modifica \S\ref{sub:tech_baseline} & // \\
+  v1.2.0 & Pagotto Manuel & Responsabile & 2021-02-17 & Stesura \S\ref{sec:rischi_riscontrati} & // \\
+  v1.1.1 & Masevski Martin & Responsabile & 2021-02-14 & Correzione e verifica \S\ref{sec:pianif} secondo VI 2021-02-12 & // \\
+  v1.1.0 & Pagotto Manuel & Responsabile & 2021-01-27 & Aggiunta sottosezione \S\ref{sub:cons_cons_req} & // \\
+  v1.0.0 & Masevski Martin & Responsabile & 2021-01-18 & Approvazione documento & // \\
+  v0.2.1 & Paparazzo Giorgia & Responsabile & 2021-01-16 & Modifica \S\ref{sec:cons} & // \\
+  v0.2.0 & Kostadinov Samuel & Verificatore & 2021-01-07 & Verifica \S\ref{sec:introduzione}, \S\ref{sec:rischi}, \S\ref{sec:sviluppo} & // \\
+  v0.1.0 & Pagotto Manuel & Verificatore & 2021-01-06 & Verifica \S\ref{sec:pianif}, \S\ref{sec:prev}, \S\ref{sec:cons}, \S\ref{sec:org} & // \\
+  v0.0.6 & Paparazzo Giorgia & Responsabile & 2021-01-05 & Modifica \S\ref{sec:pianif}, \S\ref{sec:org} & // \\
+  v0.0.5 & Paparazzo Giorgia  & Responsabile & 2021-01-04 & Modifica \S\ref{sec:rischi}, \S\ref{sec:prev}, \S\ref{sec:cons} & // \\
+  v0.0.4 & Paparazzo Giorgia & Responsabile & 2020-12-27 & Modifica  \S\ref{sec:org}, \S\ref{sec:cons}, \S\ref{sec:prev} & // \\
+  v0.0.3 & Paparazzo Giorgia & Responsabile & 2020-12-21 & Inizio \S\ref{sec:prev}, proseguimento \S\ref{sec:pianif} & // \\
+  v0.0.2 & Paparazzo Giorgia & Responsabile & 2020-12-18 & Stesura \S\ref{sec:introduzione}, \S\ref{sec:rischi} ,\S\ref{sec:sviluppo}, \S\ref{sec:pianif} & // \\
+  v0.0.1 & Paparazzo Giorgia & Responsabile & 2020-12-17 & Inizio stesura \S\ref{sec:org} & //
 }
 
 \begin{document}
@@ -84,7 +101,7 @@
 \subfile{src/5_preventivo.tex}
 
 \newpage
-\section{Consuntivo}
+\section{Consuntivo di periodo}
 \label{sec:cons}
 \subfile{src/6_consuntivo.tex}
 
