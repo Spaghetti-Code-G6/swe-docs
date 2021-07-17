@@ -33,7 +33,8 @@ tramite le funzionalità di D3.js.
 \end{figure}
 
 \subsection{Architettura di dettaglio}
-\subsubsection{Il client}
+\subsubsection{Client}
+\label{ssub:client}
 
 Per la definizione dei package del prodotto si è deciso di seguire il principio di progettazione 
 \emph{Common Reuse Principle}, di modo da avere tipi che vengono utilizzati assieme all'interno 
@@ -102,7 +103,7 @@ grafico relativo.
 
 Il package Graphs presenta al suo interno un sottopackage per visualizzazione; ciascun sottopackage 
 presenta un tipo \emph{model} ed un tipo \emph{presenter}. Il primo estende \emph{GraphModel}, che 
-a sua volta estende emph{Subject} e implementa \emph{Observer} ed ha il compito di gestire la 
+a sua volta estende \emph{Subject} e implementa \emph{Observer} ed ha il compito di gestire la 
 configurazione della visualizzazione, il modello della visualizzaizone inoltre implementa diverse 
 interfacce, congrue alle  funzionalità ed alla tipologia della visualizzazione stessa. Il 
 \emph{presenter} invece estende \emph{GraphPresenter}, il quale implementa \emph{Observer}, ed ha 
@@ -130,7 +131,8 @@ lega metodi del presenter a determinate azioni sull'interfaccia utente.
 	\caption{Diagramma delle classi del package Components}
 \end{figure}
 
-\subsubsection{Il Server}
+\subsubsection{Server}
+\label{ssub:server}
 
 Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}, che 
 si occupa della creazione e gestione di un servizio HTTP. \\
