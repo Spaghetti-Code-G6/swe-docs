@@ -1,0 +1,81 @@
+\documentclass[../manuale_sviluppatore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Requisiti}
+    \label{sec:requisiti}
+\subsubsection{Requisiti Hardware raccomandati}
+    \label{subsub:req_h}
+
+\paragraph{Windows}
+    \label{par:Windows_req}
+
+\begin{itemize}
+    \item Sistema Operativo: Windows 7 o versioni successive
+    \item Processore: Intel o AMD con almeno 4 core;
+    \item RAM: almeno 4 GB di RAM*
+    \item Browser: uno tra \begin{itemize}
+        \vspace{-5pt}
+        \item Google Chrome v.87.0.0 o superiore;
+        \item Mozilla Firefox v.85.0.0 o superiore;
+        \item Opera v.74.0.0 o superiore;
+        \item Safari v.14.0.0 o superiore;
+    \end{itemize}
+    \item Altri requisiti: connessione internet.
+\end{itemize}
+
+*In base alla grandezza del dataset, può essere richiesto un quantitativo di RAM superiore.
+
+\paragraph{MacOS}
+    \label{par:mac_req}
+
+\begin{itemize}
+    \item Sistema Operativo: MacOS Sierra o versioni successive;
+    \item Processore: Intel o AMD con almeno 4 core;
+    \item RAM: almeno 4 GB di RAM*
+    \item Browser: uno tra \begin{itemize}
+        \vspace{-5pt}
+        \item Google Chrome v.87.0.0 o superiore;
+        \item Mozilla Firefox v.85.0.0 o superiore;
+        \item Opera v.74.0.0 o superiore;
+        \item Safari v.14.0.0 o superiore;
+    \end{itemize}
+    \item Altri requisiti: connessione internet.
+\end{itemize}
+
+*In base alla grandezza del dataset, può essere richiesto un quantitativo di RAM superiore.
+
+\subsubsection{Requisiti Software}
+    \label{subsub:req_s}
+\paragraph{Node.js}
+    \label{par:node}
+Node.js è una runtime di JavaScript open-source multipiattaforma, event-driven, per l’esecuzione di codice JavaScript. Molti dei suoi moduli base sono scritti in JavaScript. 
+\emph{Versione utilizzata: 14.5}.\\
+Link per il download: \url{https://nodejs.org/it/download/}
+
+\subsection{Installazione}
+    \label{sub:inst}
+
+Per eseguire l’applicazione HD-Viz bisogna seguire i seguenti passaggi:
+\begin{itemize}
+
+\item Installare Node.js versione 14.5;
+\item Scaricare l’applicazione, in formato zip, dalla repository del progetto: \url{https://github.com/Spaghetti-Code-G6/HD-Viz}
+\item Estrarre il contenuto del file in una qualsiasi directory; 
+\item Aprire il prompt dei comandi (Windows) o il terminale (Linux/Mac); 
+\item Posizionarsi tramite il comando \verb|cd /percorso_alla_cartella|;
+\item Sarà necessario installare in primis tutte le dipendenze tramite il comando \verb|npm install|, seguito poi dal comando \verb|node server/server.js|
+\item In seguito si deve aprire su browser il percorso visibile sul terminale (Es. \url{http://localhost:8085/public/index.html}).
+\end{itemize}
+
+
+\subsection{Ambiente di lavoro}
+
+\paragraph{Node.js}
+NodeJS è la runtime JavaScript necessaria alla compilazione del codice. L'installazione di questa applicazione è essenziale per il corretto funzionamento di HD-Viz.\\
+Le istruzioni per il suo setup vengono rimandate alla documentazione ufficiale:
+\begin{center}
+\url{https://nodejs.org/it/download/}
+\end{center}
+
+\end{document}

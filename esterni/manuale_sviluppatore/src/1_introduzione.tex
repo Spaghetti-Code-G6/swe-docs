@@ -1,0 +1,57 @@
+\documentclass[../manuale_sviluppatore.tex]{subfiles}
+\begin{document}
+
+\subsection{Scopo del documento}
+\label{sub:scopo_doc}
+Lo scopo del Manuale Sviluppatore è presentare l’architettura del prodotto \emph{HD-Viz}, l’organizzazione del codice sorgente e in particolare fornire informazioni utili al mantenimento e all’estensione del progetto. 
+Questo documento ha inoltre il fine di  illustrare le procedure di installazione e di sviluppo in locale, citare i framework e le librerie di terze parti coinvolte e di presentare la struttura del progetto a livelli progressivi di dettaglio, grazie all’utilizzo di diagrammi dei package, di classe e di sequenza.
+
+\subsection{Scopo del prodotto}
+\label{sub:scopo_prod}
+Il capitolato \emph{ C4 HD Viz} richiede lo sviluppo di una web application che abbia come scopo la traduzione di dati con molte dimensioni in grafici che aiutino l’utente a trarre delle interpretazioni e conclusioni sugli stessi. \\
+Il gruppo SpaghettiCode si propone di sviluppare per l’azienda \emph{Zucchetti S.p.A.}  il prodotto richiesto.
+
+\subsection{Prerequisiti per la comprensione}
+\label{sub:prereq}
+Per poter comprendere al meglio il contenuto del documento, in particolare i diagrammi
+presentati nelle sezioni successive, è opportuno che il lettore abbia almeno delle conoscenze generali
+del linguaggio \emph{UML2.0}, dei grafici di Data Analysis, e di linguaggi di programmazione.  
+
+\subsection{Glossario}
+\label{sub:glossario}
+All’interno del documento sono presenti termini che possono presentare significati ambigui o incongruenti a seconda del contesto. 
+Al fine quindi di evitare l’insorgere di incomprensioni viene fornito un glossario individuabile nell’appendice §A, posta alla fine di questo documento, contenente i suddetti termini e la loro spiegazione. 
+Nella seguente documentazione per favorire maggiore chiarezza ed evitare inutili ridondanze tali parole vengono indicate mettendo una "G" a pedice di ogni prima occorrenza del termine che si incontri ad ogni inizio di sezione. 
+
+\subsection{Riferimenti}
+\label{sub:rif}
+\subsubsection{Normativi}
+\begin{itemize}
+    \item \textbf{Capitolato d'appalto \textsc{C4}}: \\
+    \url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf}
+    \item \textbf{Ulteriori informazioni sul capitolato C4}: \\
+    \url{https://www.dropbox.com/s/nslvtrq2wcycoqw/HD\%20Viz.mp4?dl=0}
+\end{itemize}
+
+\subsubsection{Informativi}
+\begin{itemize}
+    \item Model-View Patterns - Materiale didattico del corso di Ingegneria del Software: \\
+        \url{https://www.math.unipd.it/~rcardin/sweb/2020/L02.pdf}
+    \item SOLID Principles - Materiale didattico del corso di Ingegneria del Software: \\
+        \url{https://www.math.unipd.it/~rcardin/swea/2021/SOLID%20Principles%20of%20Object-Oriented%20Design_4x4.pdf}
+    \item Diagrammi delle classi - Materiale didattico del corso di Ingegneria del Software: \\
+        \url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi%20delle%20Classi_4x4.pdf}
+    \item Diagrammi dei package - Materiale didattico del corso di Ingegneria del Software: \\
+        \url{math.unipd.it/~rcardin/swea/2021/Diagrammi%20dei%20Package_4x4.pdf}
+    \item Diagrammi di sequenza- Materiale didattico del corso di Ingegneria del Software: \\
+        \url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi%20di%20Sequenza_4x4.pdf}
+    \item Design Pattern Comportamentali - Materiale didattico del corso di Ingegneria del Software: \\
+        \url{https://www.math.unipd.it/~rcardin/swea/2021/Design%20Pattern%20Comportamentali_4x4.pdf}
+\end{itemize}
+
+\subsubsection{Legali}
+\begin{itemize}
+    \item Licenza MIT: \url{https://opensource.org/licenses/MIT}
+\end{itemize}
+
+\end{document}
