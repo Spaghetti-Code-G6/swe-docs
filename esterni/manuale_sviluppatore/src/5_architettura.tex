@@ -17,7 +17,7 @@ conseguenza le componenti principali del prodotto sono le seguenti:
 	corretto funzionamento;
 	\item \textbf{View}: le view sono dei tipi sostanzialmente passivi che visualizzano i dati di 
 	dominio secondo la configurazione dell'applicazione, ed indirizzano gli eventi ai presenter 
-	affinchè essi li elaborino e producano degli aggiornamenti coerenti con li stessi; tra le view 
+	affinché essi li elaborino e producano degli aggiornamenti coerenti con li stessi; tra le view 
 	vi sono il codice HTML dei grafici e i diversi tipi degli elementi di modifica dei grafici.
 \end{itemize}
 
@@ -57,21 +57,21 @@ I package principali sono:
 	garantiscono il corretto funzionamento dell'applicazione;
 	\item \textbf{Graphs}: package che contiene i tipi dei modelli, dei presenter e le view dei 
 	grafici di HD-Viz;
-	\item \textbf{Components}: contiene i tipi dei presenters e delle views dei diversi componenti, 
+	\item \textbf{Components}: contiene i tipi dei presenter e delle view dei diversi componenti, 
 	ossia quegli elementi che si interfacciano con il \emph{Dataset}, la \emph{DistanceMatrix} o i 
 	modelli dei grafici e ne modificano i dati o le proprietà di visualizzazione.
 \end{itemize}
 
-Il tipo \emph{HDVizmanager} è il core dell'architettura, esso implementa la \emph{dependency inversion}, 
-infatti si occupa di tener traccia dei dati per evitare istanze multiple del \glossario{Dataset}, 
+Il tipo \emph{HDVizmanager} è il core dell'architettura, esso implementa la \emph{dependency inversion}.
+Infatti, si occupa di tener traccia dei dati per evitare istanze multiple del \glossario{Dataset}, 
 della \emph{DistanceMatrix} e dei grafici una volta creati. 
 Nel momento in cui viene modificato il dataset originale per modificare le visualizzazioni, esso 
-funge da tramite creando una copia del dataset e usando quest'ultima per le modifiche, cosicchè il 
+funge da tramite creando una copia del dataset e usando quest'ultima per le modifiche, cosicché il 
 dataset originale resti invariato.
 \emph{HdVizManager} collabora con diversi altri manager che si occupano di gestire aspetti più 
-specifici dell'applicazione, come ad esempio \emph{GraphCreatorManager} che gestisce le factories 
+specifici dell'applicazione, come ad esempio \emph{GraphCreatorManager} che gestisce le factory
 per la creazione dei vari modelli dei grafici. 
-Il \emph{CurrentGraphManager} verifica se le factories sono in grado di costruire il grafico, 
+Il \emph{CurrentGraphManager} verifica se le factory sono in grado di costruire il grafico, 
 quindi si occupa di comunicare con il presenter e il modello del grafico relativo.
 
 
@@ -107,13 +107,12 @@ Ciò avverrà tramite i metodi update. In particolare al presenter verrà passat
 
 \subsubsection{Il Server}
 
-Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}.
+Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}, che si occupa della creazione e gestione di un servizio HTTP. \\
+\emph{Express} fornisce un particolare modulo, \emph{Router}, con il quale è possibile definire dei percorsi 
+al fine di gestire delle richieste HTTP indipendentemente dalla implementazione del server. Questo rende possibile
+accordarli all'applicativo express finale.
 
-Questo si occupa della creazione e gestione di un servizio HTTP. 
-
-\emph{Express} fornisce inoltre un particolare modulo, \emph{Router}, con il quale è possibile definire dei percorsi 
-al fine di gestire delle richieste indipendentemente dalla implementazione attuale del server, questo rende possibile
-accodareli all'applicativo express finale.
+\par dal seguente diagramma di package si possono riconoscere diversi package, di cui segue la descrizione.\\
 
 \begin{figure}[H]
 	\centering
@@ -121,10 +120,8 @@ accodareli all'applicativo express finale.
 	\caption{Diagramma package lato server.}
 \end{figure}
 
-\par Presentata la struttura del diagramma di package si riconoscono diversi package, la cui descrizione segue.
-
-NB: Al fine di rendere la compresione più chiara vengono riportati frammenti dei diversi diagrammi delle classi, 
-quindi verranno eventualmente omesse delle parti laddove non considerate significative.
+\textbf{NB}: Al fine di rendere la comprensione più chiara, vengono riportati frammenti dei diversi diagrammi delle classi.
+Verranno quindi omesse le parti considerate non significative.
 \newpage
 
 \begin{itemize}
@@ -132,13 +129,13 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 	\item \textbf{Core:} Nucleo dell'applicativo, contiene le classi per la gestione del server
 	e la definizione di nuovi percorsi da creare mediante la classe astratta \emph{Route}. 
 	
-	La classe App definisce il funzionamento del server al quale è possibile accodate le 
+	La classe App definisce il funzionamento del server al quale è possibile accordare le 
 	possibili implementazioni di \emph{Route} e, solamente in costruzione, i possibili 
 	percorsi statici che devono essere resi accessibili. 
 	
-	\emph{Application} si occupa inoltre della generazione di un ambiento dotato di sessione, essa 
+	\emph{Application} si occupa inoltre della generazione di un ambiente dotato di sessione. Essa 
 	si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore}
-	che combinate creano uno store virtuale di oggetti memorizzati, di tipo \emph{DataSession}, per ogni 
+	che combinate, creano uno store virtuale di oggetti memorizzati di tipo \emph{DataSession}, per ogni 
 	utente che accede al servizio.
 		
 	\begin{figure}[H]
@@ -152,7 +149,7 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 	
 	Le richieste HTTP vengono gestite dalla \emph{CsvRoute} che realizza la classe astratta \emph{Route}.
 	
-	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso della liberira \emph{fs} di Node.js per la 
+	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso della libreria \emph{fs} di Node.js per la 
 	lettura del file dato in input. La classe crea una rappresentazione temporanea del dataset al fine di spedire al client un risultato 
 	già manipolabile, creando quindi un \emph{MDataset}.
 	
@@ -163,7 +160,7 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 	\end{figure}
 
 	\newpage
-	\item \textbf{Database:} Il package per il riperimento dei dati da un database su un dato server.
+	\item \textbf{Database:} Il package per il reperimento dei dati da un database su un dato server.
 	
 	Il funzionamento si basa sull'uso di configurazioni che vengono date in costruzione alla classe \emph{RelationalDbApplication} 
 	che permettono di eseguire query sui database dalle informazioni date, sfruttando l'ORM Sequelize. 
@@ -181,12 +178,12 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 
 
 	\newpage
-	\item \textbf{Configuration e Group:} Il package di Group contiene delle semplici classi per il controllo di gruppi
-	di file con lo stesso nome ma diversa estensione in un determinato percorso, questo si presta al reperimento delle 
-	configurazioni per accedere ad un database che sono divise in un file .json e uno .sql, per la query. 
+	\item \textbf{Configuration e Group:} Il package di Group contiene delle classi per il controllo di gruppi
+	di file con lo stesso nome ma diversa estensione in un determinato percorso. Questo si presta al reperimento delle 
+	configurazioni per accedere ad un database, che sono divise in un file .json e uno .sql, per la query. 
 
 	Il \emph{Configuration Collector} dato un \emph{Group} è in grado di ricostruire le \emph{Configuration} che 
-	come già detto, sono una rappresentazione di tutte le informazioni necessarie per accedere ad una determinata fonte di dati.
+	è una rappresentazione di tutte le informazioni necessarie per accedere ad una determinata fonte di dati.
 	
 	\begin{figure}[H]
 		\centering
@@ -194,11 +191,11 @@ quindi verranno eventualmente omesse delle parti laddove non considerate signifi
 		\caption{Classi del package di Configuration e Group}
 	\end{figure}
 
-	\item \textbf{MDataset:} Package conentente una rappresentazione in versione minimal, priva quindi di funzionalità, del dataset
-	che viene calcolato a lato server e spedito al client, in particolare usate dai package \emph{Csv, Database}.
+	\item \textbf{MDataset:} Package contenente una rappresentazione in versione minimale, priva quindi delle funzionalità del dataset
+	che viene calcolato lato server e spedito al client, in particolare usate dai package \emph{Csv, Database}.
 
-	\item \textbf{Session:} Package che contiene la classe per la gestione e il mantenimento della sessione per ogni utente che 
-	accede al servizio di HdViz, esso permette di ottenere informazioni sulla propria \emph{DataSession} o di memorizzare delle 
+	\item \textbf{Session:} Package che contiene la classe per la gestione ed il mantenimento della sessione per ogni utente che 
+	accede al servizio di HdViz. Esso permette di ottenere informazioni sulla propria \emph{DataSession} o di memorizzare delle 
 	modifiche avvenute a lato client sulla sessione.
 
 \end{itemize}
