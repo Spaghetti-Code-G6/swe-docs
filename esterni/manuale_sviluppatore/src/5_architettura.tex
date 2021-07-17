@@ -24,11 +24,11 @@ conseguenza le componenti principali del prodotto sono le seguenti:
 Nell'architettura di \emph{HD-Viz} ciascun component è composto da un presenter e da una view, 
 non necessita di un modello specifico in quanto i dati dipendono dal modello dei grafici, dal 
 dataset o dalla matrice delle distanze. Nel caso dei grafici invece la view viene realizzata 
-tramite le funzionalità di D3.
+tramite le funzionalità di D3.js.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{src/img/patternMVP.jpg}
+	\includegraphics[width=13cm]{src/img/patternMVP.jpg}
 	\caption{Pattern MVP}
 \end{figure}
 
@@ -51,8 +51,7 @@ I package principali sono:
 	nell'applicazione, come per esempio l'implementazione del design pattern observer, largamente 
 	utilizzata all'interno del prodotto;
 	\item \textbf{Core}: all'interno del package vi sono tutti i tipi relativi alle strutture dati 
-	cardine del prodotto, ossia il \emph{Dataset} e la \emph{DistanceMatrix}, oltre 
-	all'implementazione del design pattern strategy per la scelta della distanza da utilizzare;
+	cardine del prodotto, ossia il \emph{Dataset} e la \emph{DistanceMatrix};
 	\item \textbf{HD-Viz}: contiene i manager, tipi che realizzano la \emph{dependency inversion} e 
 	garantiscono il corretto funzionamento dell'applicazione;
 	\item \textbf{Graphs}: package che contiene i tipi dei modelli, dei presenter e le view dei 
@@ -62,57 +61,85 @@ I package principali sono:
 	modelli dei grafici e ne modificano i dati o le proprietà di visualizzazione.
 \end{itemize}
 
-Il tipo \emph{HDVizmanager} è il core dell'architettura, esso implementa la \emph{dependency inversion}.
-Infatti, si occupa di tener traccia dei dati per evitare istanze multiple del \glossario{Dataset}, 
-della \emph{DistanceMatrix} e dei grafici una volta creati. 
-Nel momento in cui viene modificato il dataset originale per modificare le visualizzazioni, esso 
-funge da tramite creando una copia del dataset e usando quest'ultima per le modifiche, cosicché il 
-dataset originale resti invariato.
-\emph{HdVizManager} collabora con diversi altri manager che si occupano di gestire aspetti più 
-specifici dell'applicazione, come ad esempio \emph{GraphCreatorManager} che gestisce le factory
-per la creazione dei vari modelli dei grafici. 
-Il \emph{CurrentGraphManager} verifica se le factory sono in grado di costruire il grafico, 
-quindi si occupa di comunicare con il presenter e il modello del grafico relativo.
+\newpage
 
+\subsubsection*{Core}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{src/img/core-hdvizmanager.jpg}
-	\caption{HD-Viz Manager}
-\end{figure}
-
-Graphs contiene le diverse visualizzazioni che la nostra applicazione metterà a disposizione, Component mette a disposizione una serie di componenti che permettono di aggiungere funzionalità ai grafici.
-Questi ultimi modificano le proprietà di visualizzazione dei grafici, dialogando con modelli tramite interfacce. Ciascun component ha un \emph{Presenter} che gestisce la logica e la \emph{View} che renderizza il tutto,
-infatti tramite le interfacce ogni grafico implementerà dimensioni e colori a modo proprio.
+Il package \emph{Core} presenta al suo interno i principali costituenti dei dati di dominio 
+dell'applicazione, che sono anche i tipi fondamentali per il funzionamento di HD-Viz, ossia 
+\emph{Dataset} e \emph{DistanceMatrix}, i quali hanno rispettivamente il compito di mantenere lo 
+stato del dataset sul quale si basano le visualizzazioni e la matrice delle distanze associata al 
+dataset stesso. In più vi sono numerosi tipi per gestire lo stato interno delle strutture dati, 
+comportando così una restrizione maggiore delle resonsabilità di ciascun tipo. All'interno del 
+package viene fatto un largo uso del design pattern observer per la notifica delle modifiche 
+effettuate sulle strutture dati da cui dipendono le visualizzazioni, infatti \emph{Dataset}, 
+\emph{DistanceMatrix} e \emph{Dimension} implementano il tipo astratto \emph{Subject}, mentre 
+\emph{Dataset} e \emph{DistanceMatrix} implementano l'interfaccia \emph{Observer}. Inoltre è 
+presente la realizzazione del design pattern strategy per la scelta della tipologia di distanza da 
+utilizare per il calcolo della matrice delle distanze.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{src/img/graph-e-hdviz.jpg}
-	\caption{Relazioni tra graph e HD-Viz}
+	\includegraphics[width=18cm]{src/img/core.pdf}
+	\caption{Diagramma delle classi del package Core}
 \end{figure}
 
+\subsubsection*{HD-Viz}
 
-Ciascun grafico eredita il \emph{GraphModel}; dentro il modello salverà le impostazioni del grafico, ad esempio il gradiente dei colori, il dataset, le label delle righe ed altro.
+All'interno del package HD-Viz sono presenti diversi tipi \emph{manager} che realizzano la 
+\emph{dependency injection} e gestiscono funzionalità di alto livello. Il tipo \emph{HDVizmanager} 
+a livello logico è il nucleo dell'applicazione infatti si occupa di tener traccia dei dati per 
+evitare istanze multiple del \glossario{Dataset}, della \emph{DistanceMatrix} e dei grafici una 
+volta creati. Nel momento in cui viene modificato il dataset originale per modificare le 
+visualizzazioni, esso funge da tramite creando una copia del dataset e usando quest'ultima per le 
+modifiche, cosicchè il dataset originale resti invariato.
+Tra gli altri manager vi sono \emph{GraphCreatorManager} che gestisce le factories per la 
+creazione dei vari modelli dei grafici. Il \emph{CurrentGraphManager} verifica se le factories sono 
+in grado di costruire il grafico, quindi si occupa di comunicare con il presenter e il modello del 
+grafico relativo.
+
+\subsubsection*{Graphs}
+
+Il package Graphs presenta al suo interno un sottopackage per visualizzazione; ciascun sottopackage 
+presenta un tipo \emph{model} ed un tipo \emph{presenter}. Il primo estende \emph{GraphModel}, che 
+a sua volta estende emph{Subject} e implementa \emph{Observer} ed ha il compito di gestire la 
+configurazione della visualizzazione, il modello della visualizzaizone inoltre implementa diverse 
+interfacce, congrue alle  funzionalità ed alla tipologia della visualizzazione stessa. Il 
+\emph{presenter} invece estende \emph{GraphPresenter}, il quale implementa \emph{Observer}, ed ha 
+il compito di gestire le proprietà grafiche della visualizzazione oltre che generare la 
+vista grazie a D3.js.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=18cm]{src/img/graphs-e-components.jpg}
-	\caption{Relazioni tra graphs e components}
+	\includegraphics[width=18cm]{src/img/graphs.pdf}
+	\caption{Diagramma delle classi del package Graphs}
 \end{figure}
 
 
-Collegando il model al presenter, i vari componenti che modificano la visualizzazione notificheranno il presenter; a sua volte modificherà il model, il quale si aggiornerà di conseguenza, 
-e notificherà al presenter dei cambiamenti.
-Ciò avverrà tramite i metodi update. In particolare al presenter verrà passato l'EventType, ovvero il tipo di evento occorso; in base a ciò si aggiornerà il modello, e quindi la visualizzazione.
+\subsubsection*{Components}
+
+Il package Components racchiude al suo interno tutti i diversi components; ciascuno di essi è 
+costituito da un presenter ed una view. Il primo estende \emph{Subject} ed implementa 
+\emph{Observer}, gestisce la logica per effettuare le modifiche nei modelli delle visualizzazioni e/o 
+sulle strutture dati di Core; la view invece presenta semplicemente il codice HTML del component e 
+lega metodi del presenter a determinate azioni sull'interfaccia utente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{src/img/components.pdf}
+	\caption{Diagramma delle classi del package Components}
+\end{figure}
 
 \subsubsection{Il Server}
 
-Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}, che si occupa della creazione e gestione di un servizio HTTP. \\
-\emph{Express} fornisce un particolare modulo, \emph{Router}, con il quale è possibile definire dei percorsi 
-al fine di gestire delle richieste HTTP indipendentemente dalla implementazione del server. Questo rende possibile
-accordarli all'applicativo express finale.
+Il lato server dell'applicativo è stato realizzato mediante l'uso del framework \emph{Express}, che 
+si occupa della creazione e gestione di un servizio HTTP. \\
+\emph{Express} fornisce un particolare modulo, \emph{Router}, con il quale è possibile definire dei 
+percorsi al fine di gestire delle richieste HTTP indipendentemente dalla implementazione del server. 
+Questo rende possibile accordarli all'applicativo express finale.
 
-\par dal seguente diagramma di package si possono riconoscere diversi package, di cui segue la descrizione.\\
+\par dal seguente diagramma di package si possono riconoscere diversi package, di cui segue la 
+descrizione.\\
 
 \begin{figure}[H]
 	\centering
@@ -120,8 +147,8 @@ accordarli all'applicativo express finale.
 	\caption{Diagramma package lato server.}
 \end{figure}
 
-\textbf{NB}: Al fine di rendere la comprensione più chiara, vengono riportati frammenti dei diversi diagrammi delle classi.
-Verranno quindi omesse le parti considerate non significative.
+\textbf{NB}: Al fine di rendere la comprensione più chiara, vengono riportati frammenti dei diversi 
+diagrammi delle classi. Verranno quindi omesse le parti considerate non significative.
 \newpage
 
 \begin{itemize}
@@ -134,8 +161,8 @@ Verranno quindi omesse le parti considerate non significative.
 	percorsi statici che devono essere resi accessibili. 
 	
 	\emph{Application} si occupa inoltre della generazione di un ambiente dotato di sessione. Essa 
-	si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore}
-	che combinate, creano uno store virtuale di oggetti memorizzati di tipo \emph{DataSession}, per ogni 
+	si basa sull'uso delle librerie esterne \emph{express-session} e \emph{memorystore} che 
+	combinate, creano uno store virtuale di oggetti memorizzati di tipo \emph{DataSession}, per ogni 
 	utente che accede al servizio.
 		
 	\begin{figure}[H]
@@ -147,11 +174,13 @@ Verranno quindi omesse le parti considerate non significative.
 	\newpage
 	\item \textbf{Csv:} Package per la gestione di file csv caricati da client. 
 	
-	Le richieste HTTP vengono gestite dalla \emph{CsvRoute} che realizza la classe astratta \emph{Route}.
+	Le richieste HTTP vengono gestite dalla \emph{CsvRoute} che realizza la classe astratta 
+	\emph{Route}.
 	
-	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso della libreria \emph{fs} di Node.js per la 
-	lettura del file dato in input. La classe crea una rappresentazione temporanea del dataset al fine di spedire al client un risultato 
-	già manipolabile, creando quindi un \emph{MDataset}.
+	L'elaborazione, che ricade nella classe \emph{CsvApplication}, avviene mediante l'uso della 
+	libreria \emph{fs} di Node.js per la lettura del file dato in input. La classe crea una 
+	rappresentazione temporanea del dataset al fine di spedire al client un risultato già 
+	manipolabile, creando quindi un \emph{MDataset}.
 	
 	\begin{figure}[H]
 		\centering
