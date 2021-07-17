@@ -6,19 +6,22 @@
 
 \setTitle{Manuale sviluppatore}
 
-\setVersione{1.0.0}
+\setVersione{0.7.0}
 
 \setResponsabile{Samuel Kostadinov}
 
 \setRedattori{
   Giorgia Paparazzo \\ &
-  XY \\ &
-  XY
+  Contro Daniel Eduardo \\ &
+  Fichera Jacopo
 }
 
 \setVerificatori{
-    XY \\ &
-	XY
+    Paparazzo Giorgia \\ &
+    Rizzo Stefano \\ &
+    Daniel Contro Eduardo \\ &
+    Kostadinov Samuel \\ &
+    Masevski Martin
 }
 
 \setUso{Esterno}
@@ -32,10 +35,22 @@
 \setDescrizione{Il presente documento ha lo scopo di presentare le tecnologie e l’architettura del sistema agli sviluppatori interessati alla estensione e al mantenimento del software \emph{HD-Viz}.}
 
 \setModifiche{
-    v0.1.2 & Paparazzo Giorgia & Progettista & 2021-06-25 & Modifica \S\ref{sec:tech}, \S\ref{sec:setup} & \S\ref{sec:test} - \\
-    v0.1.1 & Paparazzo Giorgia & Progettista & 2021-04-10 & Redazione \S\ref{sec:tech} & - \\
-    v0.1.0 & Paparazzo Giorgia & Progettista & 2021-03-26 & Redazione \S\ref{sec:introduzione}, \S\ref{sec:setup} & - \\
-    v0.0.1 & Paparazzo Giorgia & Progettista & 2021-03-26 & Creazione del documento & -
+    v0.7.0 & Contro Daniel Eduardo & Progettista & 2021-07-12 & Aggiunta \S\ref{ssub:client} & Rizzo Stefano \\
+    v0.6.0 & Jacopo Fichera & Progettista & 2021-07-09 & Aggiunta \S\ref{ssub:server} & Rizzo Stefano \\
+    v0.5.1 & Contro Daniel Eduardo & Progettista & 2021-07-07 & Modifica \S\ref{sec:estendere} & Rizzo Stefano \\
+    v0.5.0 & Contro Daniel Eduardo & Progettista & 2021-07-05 & Redazione \S\ref{sec:estendere} & Paparazzo Giorgia \\
+    v0.4.2 & Fichera Jacopo & Progettista & 2021-07-04 & Modifica \S\ref{sec:arch} & Daniel Contro Eduardo \\
+    v0.4.1 & Contro Daniel Eduardo & Progettista & 2021-07-03 & Modifica \S\ref{sec:arch} & Paparazzo Giorgia \\
+    v0.4.0 & Paparazzo Giorgia & Progettista & 2021-07-02 & Redazione \S\ref{sec:glossario} & Rizzo Stefano \\
+    v0.3.4 & Paparazzo Giorgia & Progettista & 2021-07-01 & Modifica \S\ref{sec:arch} & Masevski Martin \\
+    v0.3.3 & Paparazzo Giorgia & Progettista & 2021-06-30 & Redazione \S\ref{sec:arch} & Kostadinov Samuel \\
+    v0.3.2 & Paparazzo Giorgia & Progettista & 2021-06-28 & Redazione \S\ref{sec:arch} & Kostadinov Samuel\\
+    v0.3.1 & Paparazzo Giorgia & Progettista & 2021-06-24 & Inizio stesura \S\ref{sec:arch} & Kostadinov Samuel \\
+    v0.3.0 & Paparazzo Giorgia & Progettista & 2021-04-10 & Redazione \S\ref{sec:tech} & Kostadinov Samuel \\
+    v0.2.0 & Paparazzo Giorgia & Progettista & 2021-03-26 & Redazione \S\ref{sec:introduzione}, \S\ref{sec:setup} & Kostadinov Samuel \\
+    v0.1.2 & Paparazzo Giorgia & Progettista & 2021-06-25 & Modifica \S\ref{sec:tech}, \S\ref{sec:setup}, \S\ref{sec:test}  & Kostadinov Samuel\\
+    v0.1.1 & Paparazzo Giorgia & Progettista & 2021-04-10 & Redazione \S\ref{sec:tech} & Kostadinov Samuel \\
+    v0.1.0 & Paparazzo Giorgia & Progettista & 2021-03-26 & Creazione del documento & Rizzo Stefano 
 }
 
 \disabilitaElencoFigure
@@ -68,14 +83,14 @@
 \section{Architettura del prodotto}
 \label{sec:arch}
 \subfile{src/5_architettura.tex}
-%
-%\newpage
-%\section{Estendere HD-Viz}
-%\label{sec:estendere}
-%\subfile{src/6_estendere.tex}
 
-%\newpage
-%\section{Glossario}
-%\label{sec:glossario}
-%\subfile{src/7_glossario.tex}
+\newpage
+\section{Estendere HD-Viz}
+\label{sec:estendere}
+\subfile{src/6_estendere.tex}
+
+\newpage
+\section{Glossario}
+\label{sec:glossario}
+\subfile{src/7_glossario.tex}
 \end{document}
